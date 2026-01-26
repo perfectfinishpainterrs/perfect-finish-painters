@@ -217,11 +217,11 @@ export default function QuizPage() {
           <div className="absolute inset-0 bg-[#1e3a5f]/60" />
           <div className="absolute bottom-8 left-8 right-8">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Perfect Finish Painters"
               width={200}
               height={60}
-              className="h-16 w-auto brightness-0 invert mb-4"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-white/80 text-lg">Perfect Job Every Time</p>
           </div>
@@ -265,11 +265,11 @@ export default function QuizPage() {
         <div className="absolute inset-0 flex flex-col justify-between p-8">
           <Link href="/">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Perfect Finish Painters"
               width={220}
               height={70}
-              className="h-16 w-auto brightness-0 invert"
+              className="h-16 w-auto"
             />
           </Link>
           <div>

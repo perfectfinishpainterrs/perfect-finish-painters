@@ -10,11 +10,11 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Perfect Finish Painters"
-                width={240}
-                height={60}
-                className="h-16 w-auto brightness-0 invert"
+                width={320}
+                height={80}
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-[#94a3b8] text-sm max-w-md mb-4">
