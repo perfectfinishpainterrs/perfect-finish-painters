@@ -313,7 +313,7 @@ export default function Home() {
             {/* Reel 1 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1EwUHHwbNs%2F&show_text=false&width=267&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1JN2bX3QFs%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style={{ border: 'none', overflow: 'hidden' }}
@@ -327,7 +327,7 @@ export default function Home() {
             {/* Reel 2 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F18y3dnKZYt%2F&show_text=false&width=267&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1CB5gEivPT%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style={{ border: 'none', overflow: 'hidden' }}
@@ -341,7 +341,7 @@ export default function Home() {
             {/* Reel 3 */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F14XEn4C833G%2F&show_text=false&width=267&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1JnPHiod6p%2F&show_text=false&width=267&t=0"
                 width="267"
                 height="476"
                 style={{ border: 'none', overflow: 'hidden' }}

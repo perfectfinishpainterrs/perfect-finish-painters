@@ -14,11 +14,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Perfect Finish Painters"
-              width={280}
-              height={70}
-              className="h-14 sm:h-16 w-auto"
+              width={320}
+              height={80}
+              className="h-16 sm:h-20 w-auto"
               priority
             />
           </Link>
