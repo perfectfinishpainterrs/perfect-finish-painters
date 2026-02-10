@@ -37,6 +37,9 @@ export default function Header() {
             <Link href="/#reels" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors">
               Videos
             </Link>
+            <Link href="/#reviews" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors">
+              Reviews
+            </Link>
             <Link href="/#contact" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors">
               Contact
             </Link>
@@ -91,6 +94,9 @@ export default function Header() {
               </Link>
               <Link href="/#reels" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Videos
+              </Link>
+              <Link href="/#reviews" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Reviews
               </Link>
               <Link href="/#contact" className="text-[#64748b] hover:text-[#1e3a5f] transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Contact

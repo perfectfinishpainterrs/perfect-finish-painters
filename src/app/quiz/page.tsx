@@ -4,7 +4,7 @@ import { useState, useRef, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
 type QuizStep = {
   id: string;

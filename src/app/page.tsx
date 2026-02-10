@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AboutOwner from "@/components/AboutOwner";
+import ReviewsSection from "@/components/ReviewsSection";
 
 export default function Home() {
   return (
@@ -181,6 +183,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AboutOwner />
 
       {/* Our Work / Portfolio Section */}
       <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -465,6 +469,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection />
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
