@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 type QuizStep = {
   id: string;
@@ -11,8 +13,8 @@ type QuizStep = {
   options?: { value: string; label: string; icon?: string }[];
 };
 
-const quizSteps: QuizStep[] = [
-  {
+const allSteps: Record<string, QuizStep> = {
+  projectType: {
     id: "projectType",
     question: "What type of project do you need?",
     type: "multiple",
@@ -25,7 +27,7 @@ const quizSteps: QuizStep[] = [
       { value: "other", label: "Other" },
     ],
   },
-  {
+  propertyType: {
     id: "propertyType",
     question: "What type of property is this?",
     type: "single",
@@ -36,7 +38,7 @@ const quizSteps: QuizStep[] = [
       { value: "commercial", label: "Commercial" },
     ],
   },
-  {
+  rooms: {
     id: "rooms",
     question: "How many rooms need work?",
     type: "single",
@@ -47,7 +49,21 @@ const quizSteps: QuizStep[] = [
       { value: "6+", label: "6+ rooms / Whole house" },
     ],
   },
-  {
+  exteriorAreas: {
+    id: "exteriorAreas",
+    question: "What exterior areas need work?",
+    type: "multiple",
+    options: [
+      { value: "siding", label: "Siding" },
+      { value: "trim", label: "Trim" },
+      { value: "shutters", label: "Shutters" },
+      { value: "doors", label: "Doors" },
+      { value: "deck", label: "Deck" },
+      { value: "fence", label: "Fence" },
+      { value: "garage", label: "Garage" },
+    ],
+  },
+  condition: {
     id: "condition",
     question: "What's the current condition?",
     type: "single",
@@ -58,7 +74,7 @@ const quizSteps: QuizStep[] = [
       { value: "unsure", label: "Not sure - Need assessment" },
     ],
   },
-  {
+  timeline: {
     id: "timeline",
     question: "When do you want to start?",
     type: "single",
@@ -69,17 +85,17 @@ const quizSteps: QuizStep[] = [
       { value: "flexible", label: "Flexible / Just getting quotes" },
     ],
   },
-  {
+  photos: {
     id: "photos",
     question: "Got any photos of the area?",
     type: "upload",
   },
-  {
+  contact: {
     id: "contact",
     question: "Great! Where should we send your estimate?",
     type: "contact",
   },
-];
+};
 
 export default function QuizPage() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -97,6 +113,28 @@ export default function QuizPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Compute active steps based on project type selection
+  const activeSteps = useMemo(() => {
+    const projectTypes = (answers.projectType as string[]) || [];
+    const hasInterior = projectTypes.some((t) => t !== "exterior");
+    const hasExterior = projectTypes.includes("exterior");
+    const onlyExterior = projectTypes.length > 0 && projectTypes.every((t) => t === "exterior");
+
+    const steps: QuizStep[] = [allSteps.projectType, allSteps.propertyType];
+
+    // Show rooms if interior-type work selected (or nothing selected yet - default)
+    if (!onlyExterior) {
+      steps.push(allSteps.rooms);
+    }
+    // Show exterior areas if exterior is selected
+    if (hasExterior) {
+      steps.push(allSteps.exteriorAreas);
+    }
+
+    steps.push(allSteps.condition, allSteps.timeline, allSteps.photos, allSteps.contact);
+    return steps;
+  }, [answers.projectType]);
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     if (files.length > 0) {
@@ -112,12 +150,12 @@ export default function QuizPage() {
     setPreviewUrls((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const currentQuestion = quizSteps[currentStep];
-  const progress = ((currentStep + 1) / quizSteps.length) * 100;
+  const currentQuestion = activeSteps[currentStep];
+  const progress = ((currentStep + 1) / activeSteps.length) * 100;
 
   const handleSingleSelect = (value: string) => {
     setAnswers({ ...answers, [currentQuestion.id]: value });
-    if (currentStep < quizSteps.length - 1) {
+    if (currentStep < activeSteps.length - 1) {
       setTimeout(() => setCurrentStep(currentStep + 1), 300);
     }
   };
@@ -137,7 +175,7 @@ export default function QuizPage() {
   };
 
   const handleNext = () => {
-    if (currentStep < quizSteps.length - 1) {
+    if (currentStep < activeSteps.length - 1) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -145,30 +183,29 @@ export default function QuizPage() {
   const handleSubmit = async () => {
     setIsSubmitting(true);
 
-    // Format the quiz answers for the email
     const projectTypes = (answers.projectType as string[])?.join(", ") || "Not specified";
-    const propertyType = answers.propertyType || "Not specified";
-    const rooms = answers.rooms || "Not specified";
-    const condition = answers.condition || "Not specified";
-    const timeline = answers.timeline || "Not specified";
+    const propertyType = (answers.propertyType as string) || "Not specified";
+    const rooms = (answers.rooms as string) || "";
+    const exteriorAreas = (answers.exteriorAreas as string[])?.join(", ") || "";
+    const condition = (answers.condition as string) || "Not specified";
+    const timeline = (answers.timeline as string) || "Not specified";
 
     const formData = {
       name: contactInfo.name,
       phone: contactInfo.phone,
-      email: contactInfo.email || "Not provided",
-      address: contactInfo.address || "Not provided",
+      email: contactInfo.email || "",
+      address: contactInfo.address || "",
       projectTypes,
       propertyType,
       rooms,
+      exteriorAreas,
       condition,
       timeline,
-      notes: contactInfo.notes || "None",
-      _subject: `New Estimate Request from ${contactInfo.name}`,
+      notes: contactInfo.notes || "",
     };
 
     try {
-      // Submit to Formspree - replace YOUR_FORM_ID with your actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch(`${API_URL}/api/quiz-submission`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -336,7 +373,7 @@ export default function QuizPage() {
             {/* Step Counter */}
             <div className="text-center mb-6">
               <span className="text-[#64748b] text-sm">
-                Question {currentStep + 1} of {quizSteps.length}
+                Question {currentStep + 1} of {activeSteps.length}
               </span>
             </div>
 
