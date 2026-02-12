@@ -91,6 +91,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Google Maps */}
+        <div className="mt-8 pt-8 border-t border-[#2d4a6f]">
+          <h3 className="text-white font-semibold mb-4">Serving Mays Landing &amp; South Jersey</h3>
+          <div className="rounded-xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49068.94837150971!2d-74.73!3d39.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0ea2080cc9d87%3A0x5765dcbe46cacb!2sMays%20Landing%2C%20Hamilton%20Township%2C%20NJ!5e0!3m2!1sen!2sus!4v1707000000000"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Perfect Finish Painters - Mays Landing NJ"
+            />
+          </div>
+        </div>
+
         <div className="border-t border-[#2d4a6f] mt-8 pt-8 text-center">
           <p className="text-[#94a3b8] text-sm">
             &copy; {new Date().getFullYear()} Perfect Finish Painters. All rights reserved.
