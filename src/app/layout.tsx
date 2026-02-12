@@ -38,8 +38,68 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "PaintingContractor",
+    name: "Perfect Finish Painters",
+    description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
+    url: "https://perfectfinishpainters.com",
+    telephone: "+1-609-377-4226",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Mays Landing",
+      addressRegion: "NJ",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 39.45,
+      longitude: -74.73,
+    },
+    areaServed: [
+      { "@type": "City", name: "Mays Landing, NJ" },
+      { "@type": "City", name: "Egg Harbor Township, NJ" },
+      { "@type": "City", name: "Hammonton, NJ" },
+      { "@type": "City", name: "Vineland, NJ" },
+      { "@type": "City", name: "Galloway, NJ" },
+      { "@type": "City", name: "Somers Point, NJ" },
+      { "@type": "City", name: "Northfield, NJ" },
+      { "@type": "City", name: "Linwood, NJ" },
+      { "@type": "City", name: "Absecon, NJ" },
+      { "@type": "City", name: "Pleasantville, NJ" },
+    ],
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
+    ],
+    priceRange: "$$",
+    image: "https://perfectfinishpainters.com/logo.png",
+    sameAs: [
+      "https://www.facebook.com/PerfectFinishPainters",
+      "https://www.instagram.com/perfectfinishpainter/",
+      "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Painting Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } },
+      ],
+    },
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
