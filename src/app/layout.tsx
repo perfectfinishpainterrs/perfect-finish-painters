@@ -90,18 +90,21 @@ export default function RootLayout({
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Ryan J." },
+        datePublished: "2024-11-15",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         reviewBody: "Has helped me numerous times with painting. Truly a professional!",
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Sean P." },
+        datePublished: "2024-10-22",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         reviewBody: "They show up on time, do what they promise, at a fair price.",
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Mandy D." },
+        datePublished: "2024-12-03",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         reviewBody: "I recommend Perfect Finish Painters! Quality work at an affordable price.",
       },
