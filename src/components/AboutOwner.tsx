@@ -1,19 +1,19 @@
+import Image from "next/image";
+
 export default function AboutOwner() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="bg-[#2563eb]/10 rounded-2xl p-8 flex items-center justify-center">
-              {/* Placeholder — replace with owner photo */}
-              <div className="w-full aspect-[4/3] bg-[#1e3a5f]/10 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-20 h-20 text-[#2563eb]/40 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-[#64748b] text-sm">Owner photo coming soon</p>
-                </div>
-              </div>
+            <div className="bg-[#2563eb]/10 rounded-2xl p-8">
+              <Image
+                src="/project-6.jpg"
+                alt="Brandon - Owner of Perfect Finish Painters"
+                width={600}
+                height={450}
+                className="rounded-xl shadow-lg w-full h-auto"
+              />
             </div>
           </div>
           <div className="order-1 lg:order-2">
