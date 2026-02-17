@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "What areas in South Jersey do you serve?",
     answer:
-      "We serve Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, and the greater Atlantic County area.",
+      "We serve Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, Atlantic City, and the greater Atlantic County area.",
   },
   {
     question: "Do you offer free painting estimates?",
@@ -27,6 +27,31 @@ const faqs = [
     question: "How long does it take to paint a house?",
     answer:
       "A single room typically takes 1 day. A full interior can take 3\u20135 days depending on size and prep work needed. We\u2019ll give you a timeline with your estimate so there are no surprises.",
+  },
+  {
+    question: "What is the best paint for exterior in South Jersey?",
+    answer:
+      "For South Jersey exteriors, we recommend 100% acrylic latex paint with built-in UV and mildew resistance. Brands like Benjamin Moore Aura Exterior and Sherwin-Williams Duration hold up well against coastal humidity, salt air, and seasonal temperature swings. We always apply a quality primer first for maximum adhesion and longevity.",
+  },
+  {
+    question: "How do I prepare my house for painting?",
+    answer:
+      "For interior painting, move furniture to the center of the room or out of it, remove wall decorations and outlet covers, and fill small nail holes with spackle. For exterior painting, power wash the siding, scrape loose paint, and trim back bushes touching the house. Our team at Perfect Finish Painters handles most prep work as part of the job.",
+  },
+  {
+    question: "Do painters move furniture?",
+    answer:
+      "Yes, Perfect Finish Painters moves furniture as part of our service. We shift furniture to the center of the room and cover it with drop cloths to protect it from paint. For larger or fragile items, we may ask you to move them before we arrive. We always leave the room clean and put furniture back when we\u2019re done.",
+  },
+  {
+    question: "What\u2019s the difference between interior and exterior paint?",
+    answer:
+      "Exterior paint is formulated to resist UV rays, moisture, mildew, and temperature changes. It contains more flexible resins that expand and contract with the weather. Interior paint prioritizes low odor, easy cleanup, stain resistance, and a smooth finish. Using the wrong type can lead to peeling, fading, or poor indoor air quality.",
+  },
+  {
+    question: "How often should you repaint your house in NJ?",
+    answer:
+      "In New Jersey, exterior paint typically lasts 5\u20137 years depending on sun exposure, weather conditions, and paint quality. Homes closer to the shore may need repainting sooner due to salt air. Interior paint lasts 5\u201310 years in most rooms, though high-traffic areas like hallways and kitchens may need refreshing sooner.",
   },
 ];
 

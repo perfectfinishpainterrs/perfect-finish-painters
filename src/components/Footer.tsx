@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { serviceAreas } from "@/data/service-areas";
 
 export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -124,6 +125,30 @@ export default function Footer() {
                   <p>Saturday: 9am - 5pm</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="mt-8 pt-8 border-t border-[#2d4a6f]">
+            <h3 className="text-white font-semibold mb-4">
+              Service Areas
+            </h3>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              <Link
+                href="/"
+                className="text-[#94a3b8] hover:text-white transition-colors text-sm"
+              >
+                Mays Landing, NJ
+              </Link>
+              {serviceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/${area.slug}`}
+                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
+                >
+                  {area.name}, NJ
+                </Link>
+              ))}
             </div>
           </div>
 

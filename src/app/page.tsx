@@ -10,6 +10,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import LazyIframe from "@/components/LazyIframe";
+import { serviceAreas } from "@/data/service-areas";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/project-1.jpg"
-            alt="Professional painting work"
+            alt="Professional interior and exterior painting by Perfect Finish Painters in Mays Landing NJ"
             fill
             className="object-cover"
             priority
@@ -87,10 +88,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              Our Services
+              Interior &amp; Exterior Painting Services in South Jersey
             </h2>
             <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
-              From interior walls to exterior siding, we handle all your painting and home improvement needs.
+              From interior walls to exterior siding, Perfect Finish Painters handles all your painting and home improvement needs in Mays Landing and throughout Atlantic County.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -384,6 +385,47 @@ export default function Home() {
       <ScrollReveal>
         <FAQSection />
       </ScrollReveal>
+
+      {/* Painting Services Long-Form GEO Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
+              Painting Services in Mays Landing NJ &amp; South Jersey
+            </h2>
+            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+              Perfect Finish Painters is a locally owned and operated painting company based in Mays Landing, New Jersey. We provide professional interior painting, exterior painting, drywall repair, flooring installation, and deck &amp; fence staining to homeowners and businesses throughout Atlantic County and South Jersey. Our team is led by Brandon, who personally oversees every project to ensure quality craftsmanship and customer satisfaction.
+            </p>
+            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+              For interior painting, most rooms in the Mays Landing area cost between $200 and $500 depending on room size, wall condition, and paint quality. A single room typically takes one day to complete, while a full interior takes 3 to 5 days. We use premium paints from trusted brands and always include proper surface preparation — filling holes, sanding, taping, and priming — before applying paint.
+            </p>
+            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+              For exterior painting in South Jersey, we recommend 100% acrylic latex paints with UV and mildew resistance to stand up to the coastal humidity, salt air, and seasonal weather changes common in the Atlantic County area. We power wash surfaces, scrape and sand loose paint, apply primer to bare wood, and caulk gaps before painting. Exterior projects are quoted after a free on-site or photo-based assessment.
+            </p>
+            <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
+              Perfect Finish Painters serves Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, Atlantic City, and surrounding communities. We&apos;re available Monday through Friday from 9am to 6pm and Saturdays from 9am to 5pm. Call us at (609) 377-4226 or take our free 60-second online quiz to get a personalized estimate with no obligation.
+            </p>
+          </ScrollReveal>
+
+          {/* Service Area Links */}
+          <ScrollReveal>
+            <h3 className="text-2xl font-bold text-[#1e3a5f] mb-4">
+              Areas We Serve
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {serviceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/${area.slug}`}
+                  className="bg-[#f1f5f9] text-[#1e3a5f] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#2563eb] hover:text-white transition-colors"
+                >
+                  {area.name}, NJ
+                </Link>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
 
       <ScrollReveal>
         <ContactForm />

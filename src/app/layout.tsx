@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://perfectfinishpainters.com"),
   title: "Painters in Mays Landing NJ | Perfect Finish Painters — South Jersey Painting Company",
   description: "Looking for painters in Mays Landing NJ? Perfect Finish Painters is a trusted South Jersey painting company offering interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds — call (609) 377-4226.",
   keywords: "painters in Mays Landing NJ, South Jersey painting company, Mays Landing painters, interior painting South Jersey, exterior painting NJ, drywall repair Mays Landing, house painters near me, painting contractors Atlantic County",
@@ -22,11 +23,21 @@ export const metadata: Metadata = {
     description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
     type: "website",
     locale: "en_US",
+    url: "https://perfectfinishpainters.com",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 200,
+        alt: "Perfect Finish Painters logo",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Painters in Mays Landing NJ | Perfect Finish Painters",
     description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
+    images: ["/logo.png"],
   },
   alternates: {
     canonical: "https://perfectfinishpainters.com",
@@ -67,6 +78,7 @@ export default function RootLayout({
       { "@type": "City", name: "Linwood, NJ" },
       { "@type": "City", name: "Absecon, NJ" },
       { "@type": "City", name: "Pleasantville, NJ" },
+      { "@type": "City", name: "Atlantic City, NJ" },
     ],
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
@@ -120,6 +132,18 @@ export default function RootLayout({
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } },
       ],
     },
+    potentialAction: [
+      {
+        "@type": "ReserveAction",
+        name: "Get Free Estimate",
+        target: "https://perfectfinishpainters.com/quiz",
+      },
+      {
+        "@type": "CommunicateAction",
+        name: "Call for Estimate",
+        target: "tel:+16093774226",
+      },
+    ],
   };
 
   const faqJsonLd = {
@@ -139,7 +163,7 @@ export default function RootLayout({
         name: "What areas in South Jersey do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, and the greater Atlantic County area.",
+          text: "We serve Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, Atlantic City, and the greater Atlantic County area.",
         },
       },
       {
@@ -166,6 +190,78 @@ export default function RootLayout({
           text: "A single room typically takes 1 day. A full interior can take 3–5 days depending on size and prep work needed. We'll give you a timeline with your estimate so there are no surprises.",
         },
       },
+      {
+        "@type": "Question",
+        name: "What is the best paint for exterior in South Jersey?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For South Jersey exteriors, we recommend 100% acrylic latex paint with built-in UV and mildew resistance. Brands like Benjamin Moore Aura Exterior and Sherwin-Williams Duration hold up well against coastal humidity, salt air, and seasonal temperature swings. We always apply a quality primer first for maximum adhesion and longevity.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I prepare my house for painting?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For interior painting, move furniture to the center of the room or out of it, remove wall decorations and outlet covers, and fill small nail holes with spackle. For exterior painting, power wash the siding, scrape loose paint, and trim back bushes touching the house. Our team handles most prep work as part of the job, so just let us know your timeline and we'll guide you through what's needed.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do painters move furniture?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, Perfect Finish Painters moves furniture as part of our service. We shift furniture to the center of the room and cover it with drop cloths to protect it from paint. For larger or fragile items, we may ask you to move them before we arrive. We always leave the room clean and put furniture back when we're done.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What's the difference between interior and exterior paint?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Exterior paint is formulated to resist UV rays, moisture, mildew, and temperature changes. It contains more flexible resins that expand and contract with the weather. Interior paint prioritizes low odor, easy cleanup, stain resistance, and a smooth finish. Using the wrong type can lead to peeling, fading, or poor indoor air quality. Our team always uses the right product for the job.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How often should you repaint your house in NJ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "In New Jersey, exterior paint typically lasts 5–7 years depending on sun exposure, weather conditions, and paint quality. Homes closer to the shore may need repainting sooner due to salt air. Interior paint lasts 5–10 years in most rooms, though high-traffic areas like hallways and kitchens may need refreshing sooner. Regular maintenance and quality paint extend the life of any paint job.",
+        },
+      },
+    ],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Perfect Finish Painters",
+    url: "https://perfectfinishpainters.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://perfectfinishpainters.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Perfect Finish Painters",
+    url: "https://perfectfinishpainters.com",
+    logo: "https://perfectfinishpainters.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-609-377-4226",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
+    sameAs: [
+      "https://www.facebook.com/PerfectFinishPainters",
+      "https://www.instagram.com/perfectfinishpainter/",
+      "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
     ],
   };
 
@@ -179,6 +275,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body
