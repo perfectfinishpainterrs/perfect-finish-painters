@@ -10,6 +10,7 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import LazyIframe from "@/components/LazyIframe";
+import ServicesSection from "@/components/ServicesSection";
 import { serviceAreas } from "@/data/service-areas";
 
 export default function Home() {
@@ -83,80 +84,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              Interior &amp; Exterior Painting Services in South Jersey
-            </h2>
-            <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
-              From interior walls to exterior siding, Perfect Finish Painters handles all your painting and home improvement needs in Mays Landing and throughout Atlantic County.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Interior Painting */}
-            <ScrollReveal delay={0}>
-              <div className="bg-[#f1f5f9] rounded-2xl p-6 hover:bg-[#e2e8f0] transition-colors group h-full">
-                <div className="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563eb]/20 transition-colors">
-                  <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Interior Painting</h3>
-                <p className="text-[#64748b] text-sm">
-                  Transform any room with fresh, vibrant colors. Walls, ceilings, trim, and more.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Exterior Painting */}
-            <ScrollReveal delay={100}>
-              <div className="bg-[#f1f5f9] rounded-2xl p-6 hover:bg-[#e2e8f0] transition-colors group h-full">
-                <div className="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563eb]/20 transition-colors">
-                  <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Exterior Painting</h3>
-                <p className="text-[#64748b] text-sm">
-                  Boost curb appeal and protect your home from the elements with quality exterior paint.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Drywall Repairs */}
-            <ScrollReveal delay={200}>
-              <div className="bg-[#f1f5f9] rounded-2xl p-6 hover:bg-[#e2e8f0] transition-colors group h-full">
-                <div className="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563eb]/20 transition-colors">
-                  <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Drywall Repairs</h3>
-                <p className="text-[#64748b] text-sm">
-                  Fix holes, cracks, and damage. We restore your walls to a smooth, paint-ready finish.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Flooring */}
-            <ScrollReveal delay={300}>
-              <div className="bg-[#f1f5f9] rounded-2xl p-6 hover:bg-[#e2e8f0] transition-colors group h-full">
-                <div className="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563eb]/20 transition-colors">
-                  <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Flooring</h3>
-                <p className="text-[#64748b] text-sm">
-                  Complete your renovation with professional flooring installation and refinishing.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <ScrollReveal>
+        <ServicesSection />
+      </ScrollReveal>
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
