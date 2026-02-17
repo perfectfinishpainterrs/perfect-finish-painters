@@ -95,48 +95,48 @@ export default function ServicesSection() {
         <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
           From interior walls to exterior siding, Perfect Finish Painters handles all your painting and home improvement needs in Mays Landing and throughout Atlantic County.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map((service, i) => {
             const isExpanded = expandedIndex === i;
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-2xl shadow-lg border border-[#e2e8f0] overflow-hidden group hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-md border border-[#e2e8f0] overflow-hidden group hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Image */}
-                <div className="relative h-48 sm:h-56 overflow-hidden">
+                <div className="relative h-36 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={`${service.title} by Perfect Finish Painters in South Jersey`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                    <div className="w-10 h-10 bg-white/90 backdrop-blur rounded-lg flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/70 to-transparent" />
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                    <div className="w-8 h-8 bg-white/90 backdrop-blur rounded-md flex items-center justify-center">
                       {service.icon}
                     </div>
-                    <h3 className="text-white font-bold text-xl drop-shadow-lg">
+                    <h3 className="text-white font-bold text-base drop-shadow-lg">
                       {service.title}
                     </h3>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <p className="text-[#64748b] mb-4">
+                <div className="p-4">
+                  <p className="text-[#64748b] text-sm mb-3">
                     {service.shortDesc}
                   </p>
 
                   {/* Expand button */}
                   <button
                     onClick={() => toggle(i)}
-                    className="inline-flex items-center gap-2 text-[#2563eb] font-semibold text-sm hover:text-[#1d4ed8] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-[#2563eb] font-semibold text-xs hover:text-[#1d4ed8] transition-colors cursor-pointer"
                     aria-expanded={isExpanded}
                   >
                     {isExpanded ? "Show less" : "What\u2019s included"}
                     <svg
-                      className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
+                      className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -151,10 +151,10 @@ export default function ServicesSection() {
                     style={{ gridTemplateRows: isExpanded ? "1fr" : "0fr" }}
                   >
                     <div className="overflow-hidden">
-                      <ul className="mt-4 space-y-2 border-t border-[#e2e8f0] pt-4">
+                      <ul className="mt-3 space-y-1.5 border-t border-[#e2e8f0] pt-3">
                         {service.details.map((detail) => (
-                          <li key={detail} className="flex items-start gap-2 text-[#64748b] text-sm">
-                            <svg className="w-4 h-4 text-[#2563eb] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <li key={detail} className="flex items-start gap-1.5 text-[#64748b] text-xs">
+                            <svg className="w-3.5 h-3.5 text-[#2563eb] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                             </svg>
                             {detail}
@@ -163,10 +163,10 @@ export default function ServicesSection() {
                       </ul>
                       <Link
                         href="/quiz"
-                        className="mt-4 inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors"
+                        className="mt-3 inline-flex items-center gap-1.5 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-full text-xs font-semibold transition-colors"
                       >
                         Get Free Estimate
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       </Link>
