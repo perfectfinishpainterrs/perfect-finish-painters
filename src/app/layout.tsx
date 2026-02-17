@@ -79,6 +79,9 @@ export default function RootLayout({
       { "@type": "City", name: "Absecon, NJ" },
       { "@type": "City", name: "Pleasantville, NJ" },
       { "@type": "City", name: "Atlantic City, NJ" },
+      { "@type": "City", name: "Margate, NJ" },
+      { "@type": "City", name: "Ventnor, NJ" },
+      { "@type": "City", name: "Brigantine, NJ" },
     ],
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
@@ -115,11 +118,29 @@ export default function RootLayout({
       },
       {
         "@type": "Review",
+        author: { "@type": "Person", name: "Audie M." },
+        datePublished: "2024-11-01",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "They came out quickly and touched up my house.",
+      },
+      {
+        "@type": "Review",
         author: { "@type": "Person", name: "Mandy D." },
         datePublished: "2024-12-03",
         reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
         reviewBody: "I recommend Perfect Finish Painters! Quality work at an affordable price.",
       },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Sean D." },
+        datePublished: "2024-12-10",
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Brandon came out and touched up painting my house after other painters stopped contacting me.",
+      },
+    ],
+    award: [
+      "5-Star Rated on Facebook",
+      "Top Rated Painter on Yelp — Mays Landing",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -233,6 +254,19 @@ export default function RootLayout({
     ],
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://perfectfinishpainters.com",
+      },
+    ],
+  };
+
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -275,6 +309,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
         <script
           type="application/ld+json"

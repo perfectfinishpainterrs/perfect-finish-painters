@@ -17,9 +17,100 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://perfectfinishpainters.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://perfectfinishpainters.com/services",
+      },
+    ],
+  };
+
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Painting Services by Perfect Finish Painters",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Service",
+          name: "Interior Painting",
+          description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day, starting at $500.",
+          provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters" },
+          areaServed: { "@type": "State", name: "New Jersey" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Service",
+          name: "Exterior Painting",
+          description: "Full exterior painting for siding, stucco, brick, shutters, doors, trim, and fascia. Includes power washing, scraping, priming, and weather-resistant acrylic latex paint application.",
+          provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters" },
+          areaServed: { "@type": "State", name: "New Jersey" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Service",
+          name: "Drywall Repair",
+          description: "Drywall patching, crack repair, water damage restoration, and texture matching. Smooth, seamless finish ready for paint. Same-day repairs available for small jobs.",
+          provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters" },
+          areaServed: { "@type": "State", name: "New Jersey" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Service",
+          name: "Flooring Installation",
+          description: "Hardwood, laminate, vinyl plank, and tile flooring installation. Includes subfloor preparation, leveling, and baseboard installation.",
+          provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters" },
+          areaServed: { "@type": "State", name: "New Jersey" },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Service",
+          name: "Deck & Fence Staining",
+          description: "Protect and beautify outdoor wood surfaces with professional staining and sealing. Weather-resistant products designed for South Jersey coastal conditions.",
+          provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters" },
+          areaServed: { "@type": "State", name: "New Jersey" },
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
 
       {/* Hero */}
       <section className="pt-36 pb-12 px-4 sm:px-6 lg:px-8">
