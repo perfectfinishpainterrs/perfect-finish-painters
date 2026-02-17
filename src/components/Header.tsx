@@ -50,13 +50,19 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             <Link
-              href="/#about"
+              href="/"
+              className={`${textColor} ${textHover} transition-colors`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
               className={`${textColor} ${textHover} transition-colors`}
             >
               About
             </Link>
             <Link
-              href="/#services"
+              href="/services"
               className={`${textColor} ${textHover} transition-colors`}
             >
               Services
@@ -68,22 +74,10 @@ export default function Header() {
               Our Work
             </Link>
             <Link
-              href="/#reels"
-              className={`${textColor} ${textHover} transition-colors`}
-            >
-              Videos
-            </Link>
-            <Link
               href="/#reviews"
               className={`${textColor} ${textHover} transition-colors`}
             >
               Reviews
-            </Link>
-            <Link
-              href="/#faq"
-              className={`${textColor} ${textHover} transition-colors`}
-            >
-              FAQ
             </Link>
             <Link
               href="/#contact"
@@ -157,14 +151,21 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-[#e2e8f0] bg-white rounded-b-xl">
             <nav className="flex flex-col gap-4">
               <Link
-                href="/#about"
+                href="/"
+                className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
-                href="/#services"
+                href="/services"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -178,25 +179,11 @@ export default function Header() {
                 Our Work
               </Link>
               <Link
-                href="/#reels"
-                className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Videos
-              </Link>
-              <Link
                 href="/#reviews"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reviews
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
               </Link>
               <Link
                 href="/#contact"

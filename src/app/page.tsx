@@ -4,13 +4,34 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
-import FAQSection from "@/components/FAQSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import LazyIframe from "@/components/LazyIframe";
-import ServicesSection from "@/components/ServicesSection";
 import { serviceAreas } from "@/data/service-areas";
+
+const services = [
+  {
+    title: "Interior Painting",
+    desc: "Walls, ceilings, trim, and accent walls.",
+    image: "/project-2.jpg",
+  },
+  {
+    title: "Exterior Painting",
+    desc: "Siding, shutters, doors, and trim.",
+    image: "/project-1.jpg",
+  },
+  {
+    title: "Drywall Repairs",
+    desc: "Holes, cracks, and surface restoration.",
+    image: "/project-7.jpg",
+  },
+  {
+    title: "Flooring",
+    desc: "Hardwood, laminate, vinyl, and tile.",
+    image: "/project-4.jpg",
+  },
+];
 
 export default function Home() {
   return (
@@ -19,7 +40,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[600px] flex items-center">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/project-1.jpg"
@@ -83,17 +103,61 @@ export default function Home() {
         </div>
       </section>
 
-      <ScrollReveal>
-        <ServicesSection />
-      </ScrollReveal>
-
-      {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+      {/* Services Preview */}
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <ScrollReveal>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
+              Interior &amp; Exterior Painting Services
+            </h2>
+            <p className="text-[#64748b] text-center mb-10 max-w-2xl mx-auto">
+              Professional painting and home improvement in Mays Landing and throughout South Jersey.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {services.map((s) => (
+              <ScrollReveal key={s.title}>
+                <Link href="/services" className="group block">
+                  <div className="relative h-40 sm:h-48 rounded-xl overflow-hidden">
+                    <Image
+                      src={s.image}
+                      alt={`${s.title} by Perfect Finish Painters`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/80 to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="text-white font-bold text-sm sm:text-base">{s.title}</h3>
+                      <p className="text-white/80 text-xs hidden sm:block">{s.desc}</p>
+                    </div>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal>
+            <div className="text-center mt-8">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] font-semibold transition-colors"
+              >
+                View all services &amp; pricing
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <ScrollReveal direction="right">
               <div className="relative">
-                <div className="bg-[#2563eb]/10 rounded-2xl p-8">
+                <div className="bg-[#2563eb]/10 rounded-2xl p-6">
                   <Image
                     src="/owner.jpg"
                     alt="Brandon - Owner of Perfect Finish Painters in Mays Landing NJ"
@@ -107,53 +171,53 @@ export default function Home() {
             <ScrollReveal direction="left">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-2">
-                  About Perfect Finish Painters
+                  Locally Owned &amp; Operated
                 </h2>
-                <h3 className="text-xl font-semibold text-[#2563eb] mb-4">Meet Brandon, Owner</h3>
+                <h3 className="text-lg font-semibold text-[#2563eb] mb-4">Meet Brandon, Owner</h3>
                 <p className="text-[#64748b] text-lg mb-6">
-                  With a hands-on approach and a genuine passion for transforming spaces,
                   Brandon founded Perfect Finish Painters to bring quality craftsmanship
                   to every home in South Jersey — at a price that&apos;s fair and honest.
+                  He personally oversees every project because your home deserves a perfect finish.
                 </p>
-                <p className="text-[#64748b] text-lg mb-6">
-                  What started as helping out friends and family quickly grew into a
-                  full-service painting business built on reliability, clean work, and
-                  real results. Brandon personally oversees every project to make sure
-                  it meets his standard — because your home deserves a perfect finish.
-                </p>
-                <div className="flex flex-wrap gap-4 mt-8">
-                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
-                    <div className="text-2xl font-bold text-[#2563eb]">100+</div>
+                <div className="flex flex-wrap gap-4 mb-6">
+                  <div className="bg-white rounded-xl px-4 py-2 shadow-md text-center">
+                    <div className="text-xl font-bold text-[#2563eb]">100+</div>
                     <div className="text-[#64748b] text-xs">Happy Customers</div>
                   </div>
-                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
-                    <div className="text-2xl font-bold text-[#2563eb]">5★</div>
-                    <div className="text-[#64748b] text-xs">Facebook Rating</div>
-                  </div>
-                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
-                    <div className="text-2xl font-bold text-[#2563eb]">South Jersey</div>
-                    <div className="text-[#64748b] text-xs">Proudly Local</div>
+                  <div className="bg-white rounded-xl px-4 py-2 shadow-md text-center">
+                    <div className="text-xl font-bold text-[#2563eb]">5★</div>
+                    <div className="text-[#64748b] text-xs">Rating</div>
                   </div>
                 </div>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] font-semibold transition-colors"
+                >
+                  Learn more about us
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
+      {/* Portfolio */}
       <ScrollReveal>
         <PortfolioSection />
       </ScrollReveal>
 
-      {/* Facebook Reels Section */}
-      <section id="reels" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+      {/* Facebook Reels */}
+      <section id="reels" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
               Watch Us Work
             </h2>
-            <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
-              Check out our latest project videos and transformations on Facebook.
+            <p className="text-[#64748b] text-center mb-10 max-w-2xl mx-auto">
+              Check out our latest project videos and transformations.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -206,156 +270,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              How It Works
-            </h2>
-            <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
-              Getting your project started is simple. Just three easy steps.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ScrollReveal delay={0}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg shadow-blue-500/25">
-                  1
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">Take the Quiz</h3>
-                <p className="text-[#64748b]">
-                  Answer a few quick questions about your project — room size, paint type, timeline, and more.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg shadow-blue-500/25">
-                  2
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">Get Your Estimate</h3>
-                <p className="text-[#64748b]">
-                  Receive a personalized estimate within 24 hours. No obligation, no pressure.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg shadow-blue-500/25">
-                  3
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">Schedule & Relax</h3>
-                <p className="text-[#64748b]">
-                  If you love the estimate, we schedule your project and handle everything from there.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section id="why-us" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              Why Choose Us
-            </h2>
-            <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
-              We believe everyone deserves a space meant solely for them, at an affordable price.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ScrollReveal delay={0}>
-              <div className="bg-white rounded-2xl p-8 text-center shadow-lg h-full">
-                <div className="w-16 h-16 bg-[#2563eb]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">We Are Efficient</h3>
-                <p className="text-[#64748b]">
-                  Our skilled team completes projects quickly without compromising quality.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="bg-white rounded-2xl p-8 text-center shadow-lg h-full">
-                <div className="w-16 h-16 bg-[#2563eb]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">We Are Reliable</h3>
-                <p className="text-[#64748b]">
-                  Our team shows up on time and will not leave until the job is complete.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="bg-white rounded-2xl p-8 text-center shadow-lg h-full">
-                <div className="w-16 h-16 bg-[#2563eb]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-[#1e3a5f] font-semibold text-xl mb-3">We Are Clean</h3>
-                <p className="text-[#64748b]">
-                  We ensure every job is neat, leaving no mess behind.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
+      {/* Reviews */}
       <ScrollReveal>
         <ReviewsSection />
       </ScrollReveal>
 
-      <ScrollReveal>
-        <FAQSection />
-      </ScrollReveal>
-
-      {/* Painting Services Long-Form GEO Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+      {/* How It Works - Condensed */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
-              Painting Services in Mays Landing NJ &amp; South Jersey
+            <h2 className="text-3xl font-bold text-[#1e3a5f] text-center mb-10">
+              How It Works
             </h2>
-            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-              Perfect Finish Painters is a locally owned and operated painting company based in Mays Landing, New Jersey. We provide professional interior painting, exterior painting, drywall repair, flooring installation, and deck &amp; fence staining to homeowners and businesses throughout Atlantic County and South Jersey. Our team is led by Brandon, who personally oversees every project to ensure quality craftsmanship and customer satisfaction.
-            </p>
-            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-              For interior painting, most rooms in the Mays Landing area cost between $500 and $1,000 depending on room size, wall condition, and paint quality. A single room typically takes one day to complete, while a full interior takes 3 to 5 days. We use premium paints from trusted brands and always include proper surface preparation — filling holes, sanding, taping, and priming — before applying paint.
-            </p>
-            <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-              For exterior painting in South Jersey, we recommend 100% acrylic latex paints with UV and mildew resistance to stand up to the coastal humidity, salt air, and seasonal weather changes common in the Atlantic County area. We power wash surfaces, scrape and sand loose paint, apply primer to bare wood, and caulk gaps before painting. Exterior projects are quoted after a free on-site or photo-based assessment.
-            </p>
-            <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
-              Perfect Finish Painters serves Mays Landing, Egg Harbor Township, Hammonton, Vineland, Galloway, Somers Point, Northfield, Linwood, Absecon, Pleasantville, Atlantic City, and surrounding communities. We&apos;re available Monday through Friday from 9am to 6pm and Saturdays from 9am to 5pm. Call us at (609) 377-4226 or take our free 60-second online quiz to get a personalized estimate with no obligation.
-            </p>
           </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ScrollReveal delay={0}>
+              <div className="text-center">
+                <div className="w-14 h-14 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg shadow-blue-500/25">
+                  1
+                </div>
+                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Take the Quiz</h3>
+                <p className="text-[#64748b] text-sm">Answer a few quick questions about your project.</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="text-center">
+                <div className="w-14 h-14 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg shadow-blue-500/25">
+                  2
+                </div>
+                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Get Your Estimate</h3>
+                <p className="text-[#64748b] text-sm">Personalized estimate within 24 hours. No obligation.</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="text-center">
+                <div className="w-14 h-14 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold shadow-lg shadow-blue-500/25">
+                  3
+                </div>
+                <h3 className="text-[#1e3a5f] font-semibold text-lg mb-2">Schedule &amp; Relax</h3>
+                <p className="text-[#64748b] text-sm">We handle everything from there.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
 
-          {/* Service Area Links */}
-          <ScrollReveal>
-            <h3 className="text-2xl font-bold text-[#1e3a5f] mb-4">
-              Areas We Serve
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {serviceAreas.map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/${area.slug}`}
-                  className="bg-[#f1f5f9] text-[#1e3a5f] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#2563eb] hover:text-white transition-colors"
-                >
-                  {area.name}, NJ
-                </Link>
-              ))}
-            </div>
-          </ScrollReveal>
+      {/* Service Areas */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Areas We Serve</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {serviceAreas.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/${area.slug}`}
+                className="bg-white text-[#1e3a5f] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#2563eb] hover:text-white transition-colors border border-[#e2e8f0]"
+              >
+                {area.name}, NJ
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
