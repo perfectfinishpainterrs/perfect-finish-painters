@@ -4,10 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
-import PortfolioSection from "@/components/PortfolioSection";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
-import LazyIframe from "@/components/LazyIframe";
 import { serviceAreas } from "@/data/service-areas";
 
 const services = [
@@ -151,67 +149,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio */}
-      <ScrollReveal>
-        <PortfolioSection />
-      </ScrollReveal>
-
-      {/* Facebook Reels */}
-      <section id="reels" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+      {/* Why Perfect Finish */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              Watch Us Work
-            </h2>
-            <p className="text-[#64748b] text-center mb-10 max-w-2xl mx-auto">
-              Check out our latest project videos and transformations.
-            </p>
+            <div className="text-center mb-14">
+              <span className="inline-block bg-[#2563eb]/10 text-[#2563eb] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                South Jersey&apos;s Trusted Painters
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-4">
+                Local First. Professional Always.
+              </h2>
+              <p className="text-[#64748b] text-lg max-w-2xl mx-auto">
+                We&apos;re not a franchise. We&apos;re your neighbors. Every job gets the same standard — prep it right, paint it clean, leave it perfect.
+              </p>
+            </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ScrollReveal delay={0}>
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
-                <LazyIframe
-                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F842594715448570%2F&show_text=false&width=267&t=0"
-                  width="267"
-                  height="476"
-                  title="Facebook Reel 1"
-                />
+              <div className="bg-white rounded-2xl p-8 shadow-lg h-full border-t-4 border-[#2563eb] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="w-14 h-14 bg-[#2563eb]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-[#1e3a5f] font-bold text-xl mb-3">Proudly Local</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  Born and based in Mays Landing, we know South Jersey homes inside and out. When you hire us, you&apos;re supporting a local business that genuinely cares about this community — not a call center three states away.
+                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
-                <LazyIframe
-                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F784802237928184%2F&show_text=false&width=267&t=0"
-                  width="267"
-                  height="476"
-                  title="Facebook Reel 2"
-                />
+              <div className="bg-white rounded-2xl p-8 shadow-lg h-full border-t-4 border-[#2563eb] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="w-14 h-14 bg-[#2563eb]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-[#1e3a5f] font-bold text-xl mb-3">Professional Standard</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  Every surface gets proper prep — sanding, patching, priming, and taping — before a single coat goes on. We use premium paints, protect your furniture and floors, and we don&apos;t cut corners. Period.
+                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex justify-center">
-                <LazyIframe
-                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2538592819873891%2F&show_text=false&width=267&t=0"
-                  width="267"
-                  height="476"
-                  title="Facebook Reel 3"
-                />
+              <div className="bg-white rounded-2xl p-8 shadow-lg h-full border-t-4 border-[#2563eb] hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="w-14 h-14 bg-[#2563eb]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-[#1e3a5f] font-bold text-xl mb-3">Spotless Every Time</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  We treat your home like it&apos;s our own. Drop cloths down, tape lines sharp, and when we&apos;re done, we clean up everything. You&apos;ll come home to fresh walls and zero mess — guaranteed.
+                </p>
               </div>
             </ScrollReveal>
           </div>
+
           <ScrollReveal>
-            <div className="text-center mt-8">
-              <a
-                href="https://www.facebook.com/PerfectFinishPainters"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] font-medium transition-colors"
+            <div className="text-center mt-12">
+              <Link
+                href="/our-work"
+                className="inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] font-semibold transition-colors"
               >
-                See more on Facebook
+                See our work in action
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
