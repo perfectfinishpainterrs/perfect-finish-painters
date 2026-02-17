@@ -3,10 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,14 +21,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBg = scrolled
+  // On inner pages (not home), always use the solid white header
+  const useSolidHeader = !isHome || scrolled;
+
+  const headerBg = useSolidHeader
     ? "bg-white/95 backdrop-blur-sm border-b border-[#e2e8f0] shadow-sm"
     : "bg-transparent border-b border-transparent";
 
-  const textColor = scrolled ? "text-[#64748b]" : "text-white/90";
-  const textHover = scrolled ? "hover:text-[#1e3a5f]" : "hover:text-white";
-  const brandColor = scrolled ? "text-[#1e3a5f]" : "text-white";
-  const phoneColor = scrolled ? "text-[#64748b]" : "text-white/80";
+  const textColor = useSolidHeader ? "text-[#64748b]" : "text-white/90";
+  const textHover = useSolidHeader ? "hover:text-[#1e3a5f]" : "hover:text-white";
+  const brandColor = useSolidHeader ? "text-[#1e3a5f]" : "text-white";
+  const phoneColor = useSolidHeader ? "text-[#64748b]" : "text-white/80";
 
   return (
     <header
@@ -41,7 +47,7 @@ export default function Header() {
               width={320}
               height={80}
               className={`h-16 sm:h-20 w-auto transition-all duration-300 ${
-                scrolled ? "" : "brightness-0 invert"
+                useSolidHeader ? "" : "brightness-0 invert"
               }`}
               priority
             />
@@ -68,7 +74,7 @@ export default function Header() {
               Services
             </Link>
             <Link
-              href="/#portfolio"
+              href="/our-work"
               className={`${textColor} ${textHover} transition-colors`}
             >
               Our Work
@@ -172,7 +178,7 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                href="/#portfolio"
+                href="/our-work"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
