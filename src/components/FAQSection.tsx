@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "How much does it cost to hire a painter in Mays Landing NJ?",
     answer:
-      "Painting costs in Mays Landing vary based on room size, condition, and paint quality. Most interior rooms cost between $200\u2013$500. Take our free 60-second quiz for a personalized estimate \u2014 no obligation.",
+      "Painting costs in Mays Landing vary based on room size, condition, and paint quality. Most interior rooms cost between $500\u2013$1,000. Take our free 60-second quiz for a personalized estimate \u2014 no obligation.",
   },
   {
     question: "What areas in South Jersey do you serve?",

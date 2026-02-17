@@ -15,7 +15,7 @@ const services = [
       "Ceiling and crown molding painting",
       "Trim, baseboards, doors & window frames",
       "Proper prep: sanding, patching, priming & taping",
-      "Most rooms completed in 1 day — starting at $200",
+      "Most rooms completed in 1 day — starting at $500",
     ],
     icon: (
       <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
