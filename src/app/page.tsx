@@ -151,59 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Preview */}
-      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="bg-[#2563eb]/10 rounded-2xl p-6">
-                  <Image
-                    src="/owner.jpg"
-                    alt="Brandon - Owner of Perfect Finish Painters in Mays Landing NJ"
-                    width={600}
-                    height={450}
-                    className="rounded-xl shadow-lg w-full h-auto"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="left">
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-2">
-                  Locally Owned &amp; Operated
-                </h2>
-                <h3 className="text-lg font-semibold text-[#2563eb] mb-4">Meet Brandon, Owner</h3>
-                <p className="text-[#64748b] text-lg mb-6">
-                  Brandon founded Perfect Finish Painters to bring quality craftsmanship
-                  to every home in South Jersey — at a price that&apos;s fair and honest.
-                  He personally oversees every project because your home deserves a perfect finish.
-                </p>
-                <div className="flex flex-wrap gap-4 mb-6">
-                  <div className="bg-white rounded-xl px-4 py-2 shadow-md text-center">
-                    <div className="text-xl font-bold text-[#2563eb]">100+</div>
-                    <div className="text-[#64748b] text-xs">Happy Customers</div>
-                  </div>
-                  <div className="bg-white rounded-xl px-4 py-2 shadow-md text-center">
-                    <div className="text-xl font-bold text-[#2563eb]">5★</div>
-                    <div className="text-[#64748b] text-xs">Rating</div>
-                  </div>
-                </div>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-[#2563eb] hover:text-[#1d4ed8] font-semibold transition-colors"
-                >
-                  Learn more about us
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* Portfolio */}
       <ScrollReveal>
         <PortfolioSection />
