@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AboutOwner from "@/components/AboutOwner";
 import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import FAQSection from "@/components/FAQSection";
@@ -93,51 +92,54 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="right">
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
-                  About Perfect Finish Painters
-                </h2>
-                <p className="text-[#64748b] text-lg mb-6">
-                  We&apos;re a family-owned painting company serving Mays Landing and the greater South Jersey area.
-                  With years of experience and a passion for transforming spaces, we take pride in every brush stroke.
-                </p>
-                <p className="text-[#64748b] text-lg mb-6">
-                  We believe everyone deserves a space meant solely for them, at an affordable price.
-                  Whether it&apos;s a single room refresh or a complete home makeover, we treat every project
-                  with the same attention to detail and commitment to quality.
-                </p>
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                  <div className="text-center p-4 bg-white rounded-xl shadow-md">
-                    <div className="text-3xl font-bold text-[#2563eb]">100+</div>
-                    <div className="text-[#64748b] text-sm">Projects Completed</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-xl shadow-md">
-                    <div className="text-3xl font-bold text-[#2563eb]">5★</div>
-                    <div className="text-[#64748b] text-sm">Customer Rating</div>
-                  </div>
+              <div className="relative">
+                <div className="bg-[#2563eb]/10 rounded-2xl p-8">
+                  <Image
+                    src="/owner.jpg"
+                    alt="Brandon - Owner of Perfect Finish Painters in Mays Landing NJ"
+                    width={600}
+                    height={450}
+                    className="rounded-xl shadow-lg w-full h-auto"
+                  />
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal direction="left">
-              <div className="relative">
-                <div className="bg-[#2563eb]/10 rounded-2xl p-8">
-                  <Image
-                    src="/project-6.jpg"
-                    alt="Perfect Finish Painters at work"
-                    width={600}
-                    height={400}
-                    className="rounded-xl shadow-lg w-full h-auto"
-                  />
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-2">
+                  About Perfect Finish Painters
+                </h2>
+                <h3 className="text-xl font-semibold text-[#2563eb] mb-4">Meet Brandon, Owner</h3>
+                <p className="text-[#64748b] text-lg mb-6">
+                  With a hands-on approach and a genuine passion for transforming spaces,
+                  Brandon founded Perfect Finish Painters to bring quality craftsmanship
+                  to every home in South Jersey — at a price that&apos;s fair and honest.
+                </p>
+                <p className="text-[#64748b] text-lg mb-6">
+                  What started as helping out friends and family quickly grew into a
+                  full-service painting business built on reliability, clean work, and
+                  real results. Brandon personally oversees every project to make sure
+                  it meets his standard — because your home deserves a perfect finish.
+                </p>
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
+                    <div className="text-2xl font-bold text-[#2563eb]">100+</div>
+                    <div className="text-[#64748b] text-xs">Happy Customers</div>
+                  </div>
+                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
+                    <div className="text-2xl font-bold text-[#2563eb]">5★</div>
+                    <div className="text-[#64748b] text-xs">Facebook Rating</div>
+                  </div>
+                  <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
+                    <div className="text-2xl font-bold text-[#2563eb]">South Jersey</div>
+                    <div className="text-[#64748b] text-xs">Proudly Local</div>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
           </div>
         </div>
       </section>
-
-      <ScrollReveal>
-        <AboutOwner />
-      </ScrollReveal>
 
       <ScrollReveal>
         <PortfolioSection />
