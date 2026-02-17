@@ -8,7 +8,7 @@ export default function AboutOwner() {
           <div className="relative order-2 lg:order-1">
             <div className="bg-[#2563eb]/10 rounded-2xl p-8">
               <Image
-                src="/project-6.jpg"
+                src="/owner.jpg"
                 alt="Brandon - Owner of Perfect Finish Painters"
                 width={600}
                 height={450}
