@@ -80,16 +80,16 @@ export default function Header() {
               Our Work
             </Link>
             <Link
-              href="/#reviews"
+              href="/reviews"
               className={`${textColor} ${textHover} transition-colors`}
             >
               Reviews
             </Link>
             <Link
-              href="/#contact"
+              href="/blog"
               className={`${textColor} ${textHover} transition-colors`}
             >
-              Contact
+              Blog
             </Link>
           </nav>
 
@@ -185,18 +185,18 @@ export default function Header() {
                 Our Work
               </Link>
               <Link
-                href="/#reviews"
+                href="/reviews"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Reviews
               </Link>
               <Link
-                href="/#contact"
+                href="/blog"
                 className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                Blog
               </Link>
               <a
                 href="tel:+16093774226"

@@ -132,6 +132,12 @@ export default function Footer() {
                 >
                   (609) 377-4226
                 </a>
+                <a
+                  href="mailto:Perfectfinishpainterr@gmail.com"
+                  className="hover:text-white transition-colors"
+                >
+                  Perfectfinishpainterr@gmail.com
+                </a>
                 <div className="mt-2">
                   <p className="text-white font-medium">Hours</p>
                   <p>Mon - Fri: 9am - 6pm</p>
