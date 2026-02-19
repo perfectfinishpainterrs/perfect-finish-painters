@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Painting Services in South Jersey | Perfect Finish Painters — Mays Landing NJ",
   description: "Interior & exterior painting, drywall repair, flooring, and deck staining in Mays Landing NJ and South Jersey. Free estimates — call (609) 377-4226.",
   alternates: {
-    canonical: "https://perfectfinishpainters.com/services",
+    canonical: "https://perfectfinishpainter.com/services",
   },
 };
 
@@ -25,13 +25,13 @@ export default function ServicesPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://perfectfinishpainters.com",
+        item: "https://perfectfinishpainter.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: "https://perfectfinishpainters.com/services",
+        item: "https://perfectfinishpainter.com/services",
       },
     ],
   };

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "See the transformations Perfect Finish Painters has created across South Jersey. Interior painting, exterior painting, drywall repair, flooring, and more. View our project gallery.",
   alternates: {
-    canonical: "https://perfectfinishpainters.com/our-work",
+    canonical: "https://perfectfinishpainter.com/our-work",
   },
 };
 
@@ -25,13 +25,13 @@ export default function OurWorkPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://perfectfinishpainters.com",
+        item: "https://perfectfinishpainter.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Work",
-        item: "https://perfectfinishpainters.com/our-work",
+        item: "https://perfectfinishpainter.com/our-work",
       },
     ],
   };

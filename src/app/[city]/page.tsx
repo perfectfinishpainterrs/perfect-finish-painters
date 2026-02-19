@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       description: area.metaDescription,
       type: "website",
       locale: "en_US",
-      url: `https://perfectfinishpainters.com/${area.slug}`,
+      url: `https://perfectfinishpainter.com/${area.slug}`,
       images: [
         {
-          url: "https://perfectfinishpainters.com/logo.png",
+          url: "https://perfectfinishpainter.com/logo.png",
           width: 800,
           height: 200,
           alt: "Perfect Finish Painters logo",
@@ -44,10 +44,10 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       card: "summary_large_image",
       title: area.metaTitle,
       description: area.metaDescription,
-      images: ["https://perfectfinishpainters.com/logo.png"],
+      images: ["https://perfectfinishpainter.com/logo.png"],
     },
     alternates: {
-      canonical: `https://perfectfinishpainters.com/${area.slug}`,
+      canonical: `https://perfectfinishpainter.com/${area.slug}`,
     },
   };
 }
@@ -62,7 +62,7 @@ export default async function CityPage({ params }: CityPageProps) {
     "@type": "PaintingContractor",
     name: "Perfect Finish Painters",
     description: area.description,
-    url: `https://perfectfinishpainters.com/${area.slug}`,
+    url: `https://perfectfinishpainter.com/${area.slug}`,
     telephone: "+1-609-377-4226",
     address: {
       "@type": "PostalAddress",
@@ -80,7 +80,7 @@ export default async function CityPage({ params }: CityPageProps) {
       name: `${area.name}, ${area.state}`,
     },
     priceRange: "$$",
-    image: "https://perfectfinishpainters.com/logo.png",
+    image: "https://perfectfinishpainter.com/logo.png",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
@@ -103,7 +103,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {
         "@type": "ReserveAction",
         name: "Get Free Estimate",
-        target: "https://perfectfinishpainters.com/quiz",
+        target: "https://perfectfinishpainter.com/quiz",
       },
       {
         "@type": "CommunicateAction",
@@ -121,13 +121,13 @@ export default async function CityPage({ params }: CityPageProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://perfectfinishpainters.com",
+        item: "https://perfectfinishpainter.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: `Painters in ${area.name} NJ`,
-        item: `https://perfectfinishpainters.com/${area.slug}`,
+        item: `https://perfectfinishpainter.com/${area.slug}`,
       },
     ],
   };

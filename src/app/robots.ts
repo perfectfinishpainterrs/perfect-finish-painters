@@ -44,6 +44,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://perfectfinishpainters.com/sitemap.xml',
+    sitemap: 'https://perfectfinishpainter.com/sitemap.xml',
   }
 }

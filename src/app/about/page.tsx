@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "About Perfect Finish Painters | Meet Brandon — South Jersey Painting Company",
   description: "Learn about Perfect Finish Painters and owner Brandon. Family-owned painting company in Mays Landing NJ serving South Jersey with interior & exterior painting, drywall repair, and flooring.",
   alternates: {
-    canonical: "https://perfectfinishpainters.com/about",
+    canonical: "https://perfectfinishpainter.com/about",
   },
 };
 
@@ -23,13 +23,13 @@ export default function AboutPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://perfectfinishpainters.com",
+        item: "https://perfectfinishpainter.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "About",
-        item: "https://perfectfinishpainters.com/about",
+        item: "https://perfectfinishpainter.com/about",
       },
     ],
   };

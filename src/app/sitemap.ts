@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { serviceAreas } from '@/data/service-areas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://perfectfinishpainters.com'
+  const baseUrl = 'https://perfectfinishpainter.com'
 
   const cityPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/${area.slug}`,

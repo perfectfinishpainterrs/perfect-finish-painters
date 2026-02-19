@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://perfectfinishpainters.com"),
+  metadataBase: new URL("https://perfectfinishpainter.com"),
   title: "Painters in Mays Landing NJ | Perfect Finish Painters — South Jersey Painting Company",
   description: "Looking for painters in Mays Landing NJ? Perfect Finish Painters is a trusted South Jersey painting company offering interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds — call (609) 377-4226.",
   keywords: "painters in Mays Landing NJ, South Jersey painting company, Mays Landing painters, interior painting South Jersey, exterior painting NJ, drywall repair Mays Landing, house painters near me, painting contractors Atlantic County",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
     type: "website",
     locale: "en_US",
-    url: "https://perfectfinishpainters.com",
+    url: "https://perfectfinishpainter.com",
     images: [
       {
         url: "/logo.png",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://perfectfinishpainters.com",
+    canonical: "https://perfectfinishpainter.com",
   },
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({
     "@type": "PaintingContractor",
     name: "Perfect Finish Painters",
     description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
-    url: "https://perfectfinishpainters.com",
+    url: "https://perfectfinishpainter.com",
     telephone: "+1-609-377-4226",
     address: {
       "@type": "PostalAddress",
@@ -88,7 +88,7 @@ export default function RootLayout({
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
     ],
     priceRange: "$$",
-    image: "https://perfectfinishpainters.com/logo.png",
+    image: "https://perfectfinishpainter.com/logo.png",
     sameAs: [
       "https://www.facebook.com/PerfectFinishPainters",
       "https://www.instagram.com/perfectfinishpainter/",
@@ -157,7 +157,7 @@ export default function RootLayout({
       {
         "@type": "ReserveAction",
         name: "Get Free Estimate",
-        target: "https://perfectfinishpainters.com/quiz",
+        target: "https://perfectfinishpainter.com/quiz",
       },
       {
         "@type": "CommunicateAction",
@@ -262,7 +262,7 @@ export default function RootLayout({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://perfectfinishpainters.com",
+        item: "https://perfectfinishpainter.com",
       },
     ],
   };
@@ -271,10 +271,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Perfect Finish Painters",
-    url: "https://perfectfinishpainters.com",
+    url: "https://perfectfinishpainter.com",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://perfectfinishpainters.com/?q={search_term_string}",
+      target: "https://perfectfinishpainter.com/?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -283,8 +283,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Perfect Finish Painters",
-    url: "https://perfectfinishpainters.com",
-    logo: "https://perfectfinishpainters.com/logo.png",
+    url: "https://perfectfinishpainter.com",
+    logo: "https://perfectfinishpainter.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-609-377-4226",
