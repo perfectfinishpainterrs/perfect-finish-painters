@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -7,6 +8,28 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import { serviceAreas } from "@/data/service-areas";
+
+export const metadata: Metadata = {
+  title: "Painters in Mays Landing NJ | Perfect Finish Painters — South Jersey Painting Company",
+  description: "Looking for painters in Mays Landing NJ? Perfect Finish Painters is a trusted South Jersey painting company offering interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds — call (609) 377-4226.",
+  openGraph: {
+    title: "Painters in Mays Landing NJ | Perfect Finish Painters",
+    description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
+    type: "website",
+    locale: "en_US",
+    url: "https://perfectfinishpainter.com",
+    images: [{ url: "/logo.png", width: 800, height: 200, alt: "Perfect Finish Painters logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Painters in Mays Landing NJ | Perfect Finish Painters",
+    description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://perfectfinishpainter.com",
+  },
+};
 
 const services = [
   {

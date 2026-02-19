@@ -9,6 +9,20 @@ import ScrollReveal from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "About Perfect Finish Painters | Meet Brandon — South Jersey Painting Company",
   description: "Learn about Perfect Finish Painters and owner Brandon. Family-owned painting company in Mays Landing NJ serving South Jersey with interior & exterior painting, drywall repair, and flooring.",
+  openGraph: {
+    title: "About Perfect Finish Painters | Meet Brandon",
+    description: "Family-owned painting company in Mays Landing NJ. Meet Brandon, the owner of Perfect Finish Painters.",
+    type: "website",
+    locale: "en_US",
+    url: "https://perfectfinishpainter.com/about",
+    images: [{ url: "/logo.png", width: 800, height: 200, alt: "Perfect Finish Painters logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Perfect Finish Painters | Meet Brandon",
+    description: "Family-owned painting company in Mays Landing NJ. Meet Brandon, the owner of Perfect Finish Painters.",
+    images: ["/logo.png"],
+  },
   alternates: {
     canonical: "https://perfectfinishpainter.com/about",
   },

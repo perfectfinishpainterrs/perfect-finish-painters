@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: "Our Work | Perfect Finish Painters — Project Gallery & Transformations",
   description:
     "See the transformations Perfect Finish Painters has created across South Jersey. Interior painting, exterior painting, drywall repair, flooring, and more. View our project gallery.",
+  openGraph: {
+    title: "Our Work | Perfect Finish Painters — Project Gallery",
+    description: "See the transformations Perfect Finish Painters has created across South Jersey. Browse our project gallery.",
+    type: "website",
+    locale: "en_US",
+    url: "https://perfectfinishpainter.com/our-work",
+    images: [{ url: "/logo.png", width: 800, height: 200, alt: "Perfect Finish Painters logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Work | Perfect Finish Painters — Project Gallery",
+    description: "See the transformations Perfect Finish Painters has created across South Jersey. Browse our project gallery.",
+    images: ["/logo.png"],
+  },
   alternates: {
     canonical: "https://perfectfinishpainter.com/our-work",
   },
