@@ -42,20 +42,14 @@ export default function InteriorPaintingPage() {
     ],
   };
 
-  const productJsonLd = {
+  const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Interior Painting",
     description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day.",
-    brand: { "@type": "Organization", name: "Perfect Finish Painters" },
-    offers: {
-      "@type": "Offer",
-      price: "500",
-      priceCurrency: "USD",
-      priceValidUntil: "2026-12-31",
-      availability: "https://schema.org/InStock",
-      url: "https://perfectfinishpainter.com/interior-painting",
-    },
+    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    areaServed: { "@type": "State", name: "New Jersey" },
+    url: "https://perfectfinishpainter.com/interior-painting",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
@@ -69,7 +63,7 @@ export default function InteriorPaintingPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
