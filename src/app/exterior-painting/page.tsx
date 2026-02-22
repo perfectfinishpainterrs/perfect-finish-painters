@@ -44,7 +44,7 @@ export default function ExteriorPaintingPage() {
     name: "Exterior Painting",
     description: "Full exterior painting for siding, stucco, brick, shutters, doors, trim, and fascia. Includes power washing, scraping, priming, and weather-resistant acrylic latex paint application.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "State", name: "New Jersey" },
+    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/exterior-painting",
     aggregateRating: {
       "@type": "AggregateRating",

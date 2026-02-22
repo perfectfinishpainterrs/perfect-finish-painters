@@ -48,7 +48,7 @@ export default function InteriorPaintingPage() {
     name: "Interior Painting",
     description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "State", name: "New Jersey" },
+    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/interior-painting",
     aggregateRating: {
       "@type": "AggregateRating",

@@ -40,9 +40,11 @@ export default function BestExteriorPaintPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Exterior Paint for South Jersey Homes",
+    image: "https://perfectfinishpainter.com/logo.png",
     author: { "@type": "Organization", name: "Perfect Finish Painters" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.png" } },
     datePublished: "2025-02-01",
+    dateModified: "2025-02-01",
     description: "What's the best exterior paint for homes in South Jersey? Learn which paints hold up to coastal humidity, salt air, and seasonal weather.",
   };
 
