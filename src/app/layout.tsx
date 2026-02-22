@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "PaintingContractor",
+    "@type": "HousePainter",
     name: "Perfect Finish Painters",
     description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
     url: "https://perfectfinishpainter.com",
@@ -146,11 +146,11 @@ export default function RootLayout({
       "@type": "OfferCatalog",
       name: "Painting Services",
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } },
+        { "@type": "ListItem", position: 1, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } } },
+        { "@type": "ListItem", position: 2, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } } },
+        { "@type": "ListItem", position: 3, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } } },
+        { "@type": "ListItem", position: 4, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } } },
+        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } } },
       ],
     },
     potentialAction: [
