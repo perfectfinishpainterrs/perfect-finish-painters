@@ -38,20 +38,32 @@ export default function ExteriorPaintingPage() {
     ],
   };
 
-  const serviceJsonLd = {
+  const productJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product",
     name: "Exterior Painting",
     description: "Full exterior painting for siding, stucco, brick, shutters, doors, trim, and fascia. Includes power washing, scraping, priming, and weather-resistant acrylic latex paint application.",
-    provider: { "@type": "PaintingContractor", name: "Perfect Finish Painters", telephone: "+1-609-377-4226", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "State", name: "New Jersey" },
+    brand: { "@type": "Organization", name: "Perfect Finish Painters" },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: "https://perfectfinishpainter.com/exterior-painting",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: "5",
+      reviewCount: "5",
+    },
   };
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
 
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

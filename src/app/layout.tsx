@@ -272,11 +272,6 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "Perfect Finish Painters",
     url: "https://perfectfinishpainter.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://perfectfinishpainter.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const organizationJsonLd = {

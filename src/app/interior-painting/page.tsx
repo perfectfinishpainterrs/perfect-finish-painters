@@ -42,26 +42,26 @@ export default function InteriorPaintingPage() {
     ],
   };
 
-  const serviceJsonLd = {
+  const productJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product",
     name: "Interior Painting",
-    description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day, starting at $500.",
-    provider: {
-      "@type": "PaintingContractor",
-      name: "Perfect Finish Painters",
-      telephone: "+1-609-377-4226",
-      url: "https://perfectfinishpainter.com",
-    },
-    areaServed: { "@type": "State", name: "New Jersey" },
+    description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day.",
+    brand: { "@type": "Organization", name: "Perfect Finish Painters" },
     offers: {
       "@type": "Offer",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        price: "500",
-        priceCurrency: "USD",
-        description: "Starting price per room",
-      },
+      price: "500",
+      priceCurrency: "USD",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      url: "https://perfectfinishpainter.com/interior-painting",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: "5",
+      reviewCount: "5",
     },
   };
 
@@ -69,7 +69,7 @@ export default function InteriorPaintingPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
