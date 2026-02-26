@@ -10,6 +10,9 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    }
     const subject = encodeURIComponent(
       `New Inquiry from ${name || "Website Visitor"}`
     );
