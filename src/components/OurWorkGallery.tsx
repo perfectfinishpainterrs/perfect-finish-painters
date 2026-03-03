@@ -123,6 +123,34 @@ const projects = [
     title: "Basement Stairwell remodel",
     desc: "Transformed a dingy basement stairwell by painting the walls white and refinishing the wooden steps for a bright, clean appearance.",
   },
+  {
+    src: "/project-18.jpg",
+    alt: "Before-and-after view of a basement room with left side showing unfinished, sanded drywall and tools, and right side displaying smooth, primed white walls with a work light.",
+    category: "Drywall",
+    title: "Basement Drywall Finishing",
+    desc: "We sanded and primed the basement drywall to achieve a smooth, flawless finish ready for final painting.",
+  },
+  {
+    src: "/project-19.jpg",
+    alt: "Before-and-after photo of a bathroom showing patched and spackled walls with a ladder and tools on the left, and a cleanly painted white room with tiled floor and shower on the right.",
+    category: "Drywall",
+    title: "Bathroom Drywall Repair",
+    desc: "Transformed a bathroom by repairing drywall holes and patches, then painting the walls and ceiling white for a fresh, finished look.",
+  },
+  {
+    src: "/project-20.jpg",
+    alt: "Before-and-after image of a house's exterior siding and sliding door, showing a transition from dull orange with dark trim to fresh orange with white door frame.",
+    category: "Exterior",
+    title: "Exterior Siding Refresh",
+    desc: "We repainted the home's exterior siding in a vibrant orange and updated the sliding door frame to crisp white for a revitalized appearance.",
+  },
+  {
+    src: "/project-21.jpg",
+    alt: "Before-and-after view of a room where the left side shows a ceiling covered in brown textured material with protective plastic sheeting on walls and floor, and the right side displays a smooth white painted ceiling in an empty room with green carpet and window blinds.",
+    category: "Interior",
+    title: "Ceiling Texture Removal",
+    desc: "We removed the old popcorn texture from the ceiling, repaired the surface, and applied a fresh coat of white paint for a clean, modern appearance.",
+  },
 ];
 
 const categories = ["All", "Interior", "Exterior", "Drywall", "Flooring", "Commercial", "Specialty"];

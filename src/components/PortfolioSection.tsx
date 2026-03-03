@@ -106,6 +106,30 @@ const projects = [
     category: "Exterior",
     title: "Basement Stairwell remodel",
   },
+  {
+    src: "/project-18.jpg",
+    alt: "Before-and-after view of a basement room with left side showing unfinished, sanded drywall and tools, and right side displaying smooth, primed white walls with a work light.",
+    category: "Drywall",
+    title: "Basement Drywall Finishing",
+  },
+  {
+    src: "/project-19.jpg",
+    alt: "Before-and-after photo of a bathroom showing patched and spackled walls with a ladder and tools on the left, and a cleanly painted white room with tiled floor and shower on the right.",
+    category: "Drywall",
+    title: "Bathroom Drywall Repair",
+  },
+  {
+    src: "/project-20.jpg",
+    alt: "Before-and-after image of a house's exterior siding and sliding door, showing a transition from dull orange with dark trim to fresh orange with white door frame.",
+    category: "Exterior",
+    title: "Exterior Siding Refresh",
+  },
+  {
+    src: "/project-21.jpg",
+    alt: "Before-and-after view of a room where the left side shows a ceiling covered in brown textured material with protective plastic sheeting on walls and floor, and the right side displays a smooth white painted ceiling in an empty room with green carpet and window blinds.",
+    category: "Interior",
+    title: "Ceiling Texture Removal",
+  },
 ];
 
 export default function PortfolioSection() {
