@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 import OurWorkGallery from "@/components/OurWorkGallery";
-import BeforeAfterSection from "@/components/BeforeAfterSection";
+
 
 
 export const metadata: Metadata = {
@@ -103,9 +103,6 @@ export default function OurWorkPage() {
       <ScrollReveal>
         <OurWorkGallery />
       </ScrollReveal>
-
-      {/* Before & After Slider */}
-      <BeforeAfterSection />
 
       {/* Before & After Callout */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">

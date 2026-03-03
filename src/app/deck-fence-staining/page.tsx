@@ -37,10 +37,28 @@ export default function DeckFenceStainingPage() {
     ],
   };
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Deck & Fence Staining",
+    description: "Professional deck and fence staining and sealing. Includes power washing, sanding, and weather-resistant stain application to protect outdoor wood from South Jersey's coastal climate.",
+    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    url: "https://perfectfinishpainter.com/deck-fence-staining",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: "12",
+      reviewCount: "12",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
 
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

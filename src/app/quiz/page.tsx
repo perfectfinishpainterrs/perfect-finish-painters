@@ -1,15 +1,12 @@
-"use client";
+import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
-import { useEffect } from "react";
+export const metadata: Metadata = {
+  title: "Get Your Free Estimate | Perfect Finish Painters",
+  description: "Take our 60-second quiz to get a free painting estimate. No obligation — Perfect Finish Painters serves Mays Landing and all of South Jersey.",
+  alternates: { canonical: "https://perfectfinishpainter.com/quiz" },
+};
 
 export default function QuizPage() {
-  useEffect(() => {
-    if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead");
-    }
-    window.location.href =
-      "https://estimate-app-liart.vercel.app/quiz/perfect-finish-painters";
-  }, []);
-
-  return null;
+  redirect("https://estimate-app-liart.vercel.app/quiz/perfect-finish-painters");
 }

@@ -46,6 +46,66 @@ const projects = [
     category: "Drywall Repair",
     title: "Ceiling Restoration",
   },
+  {
+    src: "/project-8.jpg",
+    alt: "A black six-panel exterior door with white trim set against beige horizontal siding, decorated with string lights above.",
+    category: "Exterior",
+    title: "Exterior Door Repaint",
+  },
+  {
+    src: "/project-9.jpg",
+    alt: "A black painted wooden fence with pointed pickets and lattice base enclosing a small outdoor area beside a house.",
+    category: "Exterior",
+    title: "Exterior Fence Painting",
+  },
+  {
+    src: "/project-10.jpg",
+    alt: "Before-and-after view of a vaulted ceiling with visible seams on the left repaired to a smooth finish with recessed lights and a ceiling fan on the right.",
+    category: "Drywall",
+    title: "Vaulted Ceiling Repair",
+  },
+  {
+    src: "/project-11.jpg",
+    alt: "Before-and-after view of a room with paneled walls, showing unfinished beige panels on the left and freshly painted deep maroon panels on the right, with protective coverings on the floor and counter.",
+    category: "Interior",
+    title: "Paneled Wall Transformation",
+  },
+  {
+    src: "/project-12.jpg",
+    alt: "Before-and-after split image of a small bathroom with walls painted from white to light blue, showing cluttered before and clean after with visible wood flooring.",
+    category: "Interior",
+    title: "Bathroom Wall Refresh",
+  },
+  {
+    src: "/project-13.jpg",
+    alt: "Before-and-after view of a bathroom showing the change from floral wallpaper and beige ceiling to white walls and black ceiling with black tile accents.",
+    category: "Interior",
+    title: "Bathroom Paint Transformation",
+  },
+  {
+    src: "/project-14.jpg",
+    alt: "Before-and-after image of a bathroom with walls repainted from white to light blue, showing a cluttered state on the left and a clean, updated space on the right with an octagonal window and white vanity.",
+    category: "Interior",
+    title: "Bathroom Wall Refresh",
+  },
+  {
+    src: "/project-15.jpg",
+    alt: "Split image showing white painted kitchen cabinets, light gray walls, and marble-patterned countertops with electrical outlets and a built-in microwave.",
+    category: "Interior",
+    title: "Kitchen Cabinet Update",
+  },
+  {
+    src: "/project-16.jpg",
+    alt: "Before and after images of a room's ceiling with a vent pipe, showing the left side with a hole and plastic sheeting, and the right side with the hole patched, painted white, and light fixture installed.",
+    category: "Drywall",
+    title: "Ceiling Vent Repair",
+  },
+  {
+    src: "/project-17.jpg",
+    alt: "Before-and-after image of a basement staircase showing old green walls and worn wooden steps transformed to white walls and refinished steps.",
+    category: "Exterior",
+    title: "Basement Stairwell remodel",
+  },
 ];
 
 export default function PortfolioSection() {

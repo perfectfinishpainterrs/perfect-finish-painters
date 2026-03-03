@@ -7,7 +7,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
-import BeforeAfterSection from "@/components/BeforeAfterSection";
+
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
@@ -248,9 +248,6 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Before & After */}
-      <BeforeAfterSection />
 
       {/* Reviews */}
       <ScrollReveal>
