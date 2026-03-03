@@ -28,6 +28,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "difference-between-flat-and-satin-paint-finish",
+    title: "Understanding the Difference Between Flat and Satin Paint Finishes",
+    excerpt: "Choosing the right paint finish can make a big difference in your home&apos;s appearance and durability. Flat and satin finishes are popular options, each with unique characteristics suited to different rooms and needs. In this post, we&apos;ll break down the key differences to help you decide what&apos;s best for your South Jersey home.",
+    date: "March 2026",
+  },
+  {
     slug: "best-exterior-paint-south-jersey",
     title: "Best Exterior Paint for South Jersey Homes",
     excerpt: "Coastal humidity, salt air, and seasonal temperature swings make choosing the right exterior paint critical in South Jersey. Here's what we recommend.",

@@ -10,7 +10,8 @@
       "WebFetch(domain:estimate-app-liart.vercel.app)",
       "WebSearch",
       "Bash(ls:*)",
-      "Bash(magick:*)"
+      "Bash(magick:*)",
+      "Bash(node:*)"
     ]
   }
 }
