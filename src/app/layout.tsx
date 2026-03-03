@@ -94,13 +94,14 @@ export default function RootLayout({
       "https://www.facebook.com/PerfectFinishPainters",
       "https://www.instagram.com/perfectfinishpainter/",
       "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
+      "https://g.page/r/CYlKM00sLEMiEAI",
     ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
       bestRating: "5",
-      ratingCount: "5",
-      reviewCount: "5",
+      ratingCount: "12",
+      reviewCount: "12",
     },
     review: [
       {
@@ -140,6 +141,7 @@ export default function RootLayout({
       },
     ],
     award: [
+      "5-Star Rated on Google",
       "5-Star Rated on Facebook",
       "Top Rated Painter on Yelp — Mays Landing",
     ],
@@ -292,6 +294,7 @@ export default function RootLayout({
       "https://www.facebook.com/PerfectFinishPainters",
       "https://www.instagram.com/perfectfinishpainter/",
       "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
+      "https://g.page/r/CYlKM00sLEMiEAI",
     ],
   };
 

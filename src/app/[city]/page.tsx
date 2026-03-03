@@ -85,8 +85,8 @@ export default async function CityPage({ params }: CityPageProps) {
       "@type": "AggregateRating",
       ratingValue: "5",
       bestRating: "5",
-      ratingCount: "5",
-      reviewCount: "5",
+      ratingCount: "12",
+      reviewCount: "12",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
