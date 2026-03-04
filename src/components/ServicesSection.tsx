@@ -7,6 +7,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Interior Painting",
+    href: "/interior-painting",
     image: "/project-2.jpg",
     shortDesc: "Transform any room with fresh, vibrant colors. Walls, ceilings, trim, and more.",
     details: [
@@ -25,6 +26,7 @@ const services = [
   },
   {
     title: "Exterior Painting",
+    href: "/exterior-painting",
     image: "/project-1.jpg",
     shortDesc: "Boost curb appeal and protect your home from the elements with quality exterior paint.",
     details: [
@@ -43,6 +45,7 @@ const services = [
   },
   {
     title: "Drywall Repairs",
+    href: "/drywall-repair",
     image: "/project-7.jpg",
     shortDesc: "Fix holes, cracks, and damage. We restore your walls to a smooth, paint-ready finish.",
     details: [
@@ -61,6 +64,7 @@ const services = [
   },
   {
     title: "Flooring",
+    href: "/flooring",
     image: "/project-4.jpg",
     shortDesc: "Complete your renovation with professional flooring installation and refinishing.",
     details: [
@@ -74,6 +78,25 @@ const services = [
     icon: (
       <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Deck & Fence Staining",
+    href: "/deck-fence-staining",
+    image: "/project-1.jpg",
+    shortDesc: "Protect and beautify your outdoor wood surfaces with professional staining and sealing.",
+    details: [
+      "Deck staining & sealing",
+      "Fence staining & refinishing",
+      "Pergola & gazebo finishing",
+      "Wood restoration & repair",
+      "Power washing prep",
+      "UV & weather protection",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
       </svg>
     ),
   },
@@ -95,7 +118,7 @@ export default function ServicesSection() {
         <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
           From interior walls to exterior siding, Perfect Finish Painters handles all your painting and home improvement needs in Mays Landing and throughout Atlantic County.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
             const isExpanded = expandedIndex === i;
             return (
@@ -161,15 +184,23 @@ export default function ServicesSection() {
                           </li>
                         ))}
                       </ul>
-                      <Link
-                        href="/quiz"
-                        className="mt-3 inline-flex items-center gap-1.5 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-full text-xs font-semibold transition-colors"
-                      >
-                        Get Free Estimate
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
+                      <div className="mt-3 flex flex-col gap-2">
+                        <Link
+                          href="/quiz"
+                          className="inline-flex items-center gap-1.5 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-full text-xs font-semibold transition-colors"
+                        >
+                          Get Free Estimate
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </Link>
+                        <Link
+                          href={service.href}
+                          className="text-[#2563eb] underline text-sm inline-block"
+                        >
+                          Learn More &rarr;
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

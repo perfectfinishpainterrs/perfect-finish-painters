@@ -129,6 +129,9 @@ export default function BestExteriorPaintPost() {
             <p className="text-lg leading-relaxed">
               With quality paint and proper prep, most South Jersey exteriors last 5 to 7 years. Homes closer to the ocean may need attention sooner due to salt air. Watch for fading, chalking (a powdery residue when you rub the surface), peeling, or bare wood — those are signs it&apos;s time.
             </p>
+            <p className="text-lg leading-relaxed">
+              If you&apos;re unsure which sheen to choose, check out our guide on <Link href="/blog/difference-between-flat-and-satin-paint-finish" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">the difference between flat and satin finishes</Link>.
+            </p>
           </div>
 
           {/* CTA */}

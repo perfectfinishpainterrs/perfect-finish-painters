@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://perfectfinishpainter.com",
   },
+  verification: {
+    google: "q8waW2HZ8B6WKuz42YYlJb6WWh9y7kP3mELR_6FX_qM",
+  },
 };
 
 export default function RootLayout({
@@ -301,6 +304,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-822VB2RDNH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-822VB2RDNH');
+          `}
+        </Script>
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)

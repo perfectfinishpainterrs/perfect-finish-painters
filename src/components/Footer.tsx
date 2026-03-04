@@ -95,19 +95,19 @@ export default function Footer() {
                   Services
                 </Link>
                 <Link
-                  href="/#how-it-works"
+                  href="/about"
                   className="text-[#94a3b8] hover:text-white transition-colors text-sm"
                 >
                   How It Works
                 </Link>
                 <Link
-                  href="/#why-us"
+                  href="/about"
                   className="text-[#94a3b8] hover:text-white transition-colors text-sm"
                 >
                   Why Choose Us
                 </Link>
                 <Link
-                  href="/#faq"
+                  href="/services#faq"
                   className="text-[#94a3b8] hover:text-white transition-colors text-sm"
                 >
                   FAQ

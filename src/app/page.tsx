@@ -37,21 +37,25 @@ const services = [
     title: "Interior Painting",
     desc: "Walls, ceilings, trim, and accent walls.",
     image: "/project-2.jpg",
+    href: "/interior-painting",
   },
   {
     title: "Exterior Painting",
     desc: "Siding, shutters, doors, and trim.",
     image: "/project-1.jpg",
+    href: "/exterior-painting",
   },
   {
     title: "Drywall Repairs",
     desc: "Holes, cracks, and surface restoration.",
     image: "/project-7.jpg",
+    href: "/drywall-repair",
   },
   {
     title: "Flooring",
     desc: "Hardwood, laminate, vinyl, and tile.",
     image: "/project-4.jpg",
+    href: "/flooring",
   },
 ];
 
@@ -74,9 +78,9 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Get your perfect paint estimate
+            Painters in Mays Landing, NJ
             <br />
-            <span className="text-[#60a5fa]">in 60 seconds</span>
+            <span className="text-[#60a5fa]">Get Your Free Estimate in 60 Seconds</span>
           </h1>
           <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
             Answer a few quick questions and receive a personalized estimate for your painting project.
@@ -139,7 +143,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((s) => (
               <ScrollReveal key={s.title}>
-                <Link href="/services" className="group block">
+                <Link href={s.href} className="group block">
                   <div className="relative h-40 sm:h-48 rounded-xl overflow-hidden">
                     <Image
                       src={s.image}
