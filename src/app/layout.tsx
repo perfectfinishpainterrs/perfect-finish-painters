@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo.png",
-        width: 800,
-        height: 200,
+        width: 1970,
+        height: 748,
         alt: "Perfect Finish Painters logo",
       },
     ],
@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "q8waW2HZ8B6WKuz42YYlJb6WWh9y7kP3mELR_6FX_qM",
+  },
+  other: {
+    "fb:app_id": "2982905135253221",
   },
 };
 

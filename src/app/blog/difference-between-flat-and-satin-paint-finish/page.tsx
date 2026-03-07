@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/difference-between-flat-and-satin-paint-finish",
-    images: [{ url: "/logo.png", width: 800, height: 200, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",

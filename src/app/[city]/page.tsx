@@ -34,8 +34,8 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       images: [
         {
           url: "https://perfectfinishpainter.com/logo.png",
-          width: 800,
-          height: 200,
+          width: 1970,
+          height: 748,
           alt: "Perfect Finish Painters logo",
         },
       ],
