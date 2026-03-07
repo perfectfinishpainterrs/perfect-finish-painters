@@ -32,12 +32,16 @@ const posts = [
     title: "Understanding the Difference Between Flat and Satin Paint Finishes",
     excerpt: "Choosing the right paint finish can make a big difference in your home&apos;s appearance and durability. Flat and satin finishes are popular options, each with unique characteristics suited to different rooms and needs. In this post, we&apos;ll break down the key differences to help you decide what&apos;s best for your South Jersey home.",
     date: "March 2026",
+    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg",
+    alt: "Interior room painting before and after in Egg Harbor Township NJ",
   },
   {
     slug: "best-exterior-paint-south-jersey",
     title: "Best Exterior Paint for South Jersey Homes",
     excerpt: "Coastal humidity, salt air, and seasonal temperature swings make choosing the right exterior paint critical in South Jersey. Here's what we recommend.",
     date: "February 2025",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
+    alt: "Exterior painting before and after in Mays Landing NJ",
   },
 ];
 
@@ -73,7 +77,9 @@ export default function BlogPage() {
             {posts.map((post) => (
               <ScrollReveal key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="block group">
-                  <article className="bg-white rounded-2xl p-8 shadow-lg border border-[#e2e8f0] hover:shadow-xl transition-shadow">
+                  <article className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e2e8f0] hover:shadow-xl transition-shadow">
+                    <img src={post.image} alt={post.alt} className="w-full h-64 object-cover" loading="lazy" />
+                    <div className="p-8">
                     <span className="text-[#94a3b8] text-sm">{post.date}</span>
                     <h2 className="text-2xl font-bold text-[#1e3a5f] mt-2 mb-3 group-hover:text-[#2563eb] transition-colors">
                       {post.title}
@@ -83,6 +89,7 @@ export default function BlogPage() {
                       Read more
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                     </span>
+                    </div>
                   </article>
                 </Link>
               </ScrollReveal>
