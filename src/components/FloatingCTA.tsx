@@ -28,7 +28,7 @@ export default function FloatingCTA() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-white/95 backdrop-blur-sm border-t border-[#e2e8f0] px-4 py-3 flex gap-3">
+      <div className="bg-white/95 backdrop-blur-sm border-t border-[#e2e8f0] px-3 py-3 flex gap-2">
         <a
           href="tel:+16093774226"
           className="flex-1 bg-[#1e3a5f] text-white py-3 rounded-full text-sm font-semibold text-center transition-colors hover:bg-[#162d4a] inline-flex items-center justify-center gap-2"

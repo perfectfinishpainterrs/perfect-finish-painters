@@ -240,7 +240,7 @@ export default function PortfolioSection() {
           {/* Prev button */}
           <button
             onClick={goPrev}
-            className="absolute left-2 sm:left-6 z-10 text-white/80 hover:text-white p-2 cursor-pointer"
+            className="absolute left-3 sm:left-6 z-10 text-white/80 hover:text-white p-3 cursor-pointer"
             aria-label="Previous image"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -251,7 +251,7 @@ export default function PortfolioSection() {
           {/* Next button */}
           <button
             onClick={goNext}
-            className="absolute right-2 sm:right-6 z-10 text-white/80 hover:text-white p-2 cursor-pointer"
+            className="absolute right-3 sm:right-6 z-10 text-white/80 hover:text-white p-3 cursor-pointer"
             aria-label="Next image"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

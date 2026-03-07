@@ -79,7 +79,7 @@ export default function ContactForm() {
           </div>
 
           {/* Right: Contact form */}
-          <div className="bg-[#f1f5f9] rounded-2xl p-8">
+          <div className="bg-[#f1f5f9] rounded-2xl p-5 sm:p-8">
             <h3 className="text-xl font-semibold text-[#1e3a5f] mb-6">
               Send Us a Message
             </h3>
