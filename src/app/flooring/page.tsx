@@ -98,7 +98,7 @@ export default function FlooringPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/project-4.jpg" alt="Flooring installation project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/radiator-painting-before-after-somers-point-nj.jpg" alt="Flooring installation project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

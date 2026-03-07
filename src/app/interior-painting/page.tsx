@@ -106,7 +106,7 @@ export default function InteriorPaintingPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/project-2.jpg" alt="Interior painting project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg" alt="Interior painting project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

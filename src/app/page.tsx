@@ -36,25 +36,25 @@ const services = [
   {
     title: "Interior Painting",
     desc: "Walls, ceilings, trim, and accent walls.",
-    image: "/project-2.jpg",
+    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg",
     href: "/interior-painting",
   },
   {
     title: "Exterior Painting",
     desc: "Siding, shutters, doors, and trim.",
-    image: "/project-1.jpg",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
     href: "/exterior-painting",
   },
   {
     title: "Drywall Repairs",
     desc: "Holes, cracks, and surface restoration.",
-    image: "/project-7.jpg",
+    image: "/drywall-ceiling-repair-before-after-mays-landing-nj.jpg",
     href: "/drywall-repair",
   },
   {
     title: "Flooring",
     desc: "Hardwood, laminate, vinyl, and tile.",
-    image: "/project-4.jpg",
+    image: "/radiator-painting-before-after-somers-point-nj.jpg",
     href: "/flooring",
   },
 ];
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/project-1.jpg"
+            src="/shed-exterior-painting-before-after-mays-landing-nj.jpg"
             alt="Professional interior and exterior painting by Perfect Finish Painters in Mays Landing NJ"
             fill
             className="object-cover"

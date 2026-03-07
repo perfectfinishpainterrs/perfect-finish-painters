@@ -98,7 +98,7 @@ export default function DrywallRepairPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/project-7.jpg" alt="Drywall repair project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/drywall-ceiling-repair-before-after-mays-landing-nj.jpg" alt="Drywall repair project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

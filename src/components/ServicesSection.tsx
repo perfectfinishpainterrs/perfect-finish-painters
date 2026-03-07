@@ -8,7 +8,7 @@ const services = [
   {
     title: "Interior Painting",
     href: "/interior-painting",
-    image: "/project-2.jpg",
+    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg",
     shortDesc: "Transform any room with fresh, vibrant colors. Walls, ceilings, trim, and more.",
     details: [
       "Living rooms, bedrooms, kitchens, bathrooms & hallways",
@@ -27,7 +27,7 @@ const services = [
   {
     title: "Exterior Painting",
     href: "/exterior-painting",
-    image: "/project-1.jpg",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
     shortDesc: "Boost curb appeal and protect your home from the elements with quality exterior paint.",
     details: [
       "Siding, stucco, brick & vinyl surfaces",
@@ -46,7 +46,7 @@ const services = [
   {
     title: "Drywall Repairs",
     href: "/drywall-repair",
-    image: "/project-7.jpg",
+    image: "/drywall-ceiling-repair-before-after-mays-landing-nj.jpg",
     shortDesc: "Fix holes, cracks, and damage. We restore your walls to a smooth, paint-ready finish.",
     details: [
       "Small nail holes to large patch repairs",
@@ -65,7 +65,7 @@ const services = [
   {
     title: "Flooring",
     href: "/flooring",
-    image: "/project-4.jpg",
+    image: "/radiator-painting-before-after-somers-point-nj.jpg",
     shortDesc: "Complete your renovation with professional flooring installation and refinishing.",
     details: [
       "Hardwood, laminate & vinyl plank installation",
@@ -84,7 +84,7 @@ const services = [
   {
     title: "Deck & Fence Staining",
     href: "/deck-fence-staining",
-    image: "/project-1.jpg",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
     shortDesc: "Protect and beautify your outdoor wood surfaces with professional staining and sealing.",
     details: [
       "Deck staining & sealing",
