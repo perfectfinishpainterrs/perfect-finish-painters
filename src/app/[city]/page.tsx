@@ -214,17 +214,17 @@ export default async function CityPage({ params }: CityPageProps) {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { title: "Interior Painting", desc: "Walls, ceilings, trim, and accent walls in any room." },
-              { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal." },
-              { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces." },
-              { title: "Flooring Installation", desc: "Professional flooring to complete your renovation." },
-              { title: "Deck & Fence Staining", desc: "Protect and beautify your outdoor wood surfaces." },
-              { title: "Commercial Painting", desc: "Office, retail, and commercial property painting." },
+              { title: "Interior Painting", desc: "Walls, ceilings, trim, and accent walls in any room.", href: "/interior-painting" },
+              { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
+              { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
+              { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
+              { title: "Deck & Fence Staining", desc: "Protect and beautify your outdoor wood surfaces.", href: "/deck-fence-staining" },
+              { title: "Commercial Painting", desc: "Office, retail, and commercial property painting.", href: "/services" },
             ].map((service) => (
-              <div key={service.title} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0]">
+              <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
                 <h3 className="text-[#1e3a5f] font-semibold mb-1">{service.title}</h3>
                 <p className="text-[#64748b] text-sm">{service.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

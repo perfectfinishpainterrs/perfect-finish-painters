@@ -3,10 +3,11 @@ import { serviceAreas } from '@/data/service-areas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://perfectfinishpainter.com'
+  const lastUpdated = '2026-03-10'
 
   const cityPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/${area.slug}`,
-    lastModified: new Date(),
+    lastModified: lastUpdated,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
@@ -14,79 +15,85 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/our-work`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/reviews`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/interior-painting`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/exterior-painting`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/drywall-repair`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/flooring`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/deck-fence-staining`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/quiz`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/best-exterior-paint-south-jersey`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/difference-between-flat-and-satin-paint-finish`,
-      lastModified: new Date(),
+      lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },

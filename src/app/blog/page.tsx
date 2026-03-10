@@ -28,6 +28,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "exterior-painting-south-jersey",
+    title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey",
+    excerpt: "Discover how professional exterior painting can transform your home&apos;s appearance and protect it from the elements. At Perfect Finish Painters in Mays Landing, NJ, we specialize in high-quality exterior painting services tailored for South Jersey homes. Learn tips, benefits, and why choosing local experts makes all the difference.",
+    date: "March 2026",
+  },
+  {
     slug: "difference-between-flat-and-satin-paint-finish",
     title: "Understanding the Difference Between Flat and Satin Paint Finishes",
     excerpt: "Choosing the right paint finish can make a big difference in your home&apos;s appearance and durability. Flat and satin finishes are popular options, each with unique characteristics suited to different rooms and needs. In this post, we&apos;ll break down the key differences to help you decide what&apos;s best for your South Jersey home.",
