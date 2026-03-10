@@ -190,6 +190,7 @@ export default function PortfolioSection() {
               <button
                 key={i}
                 onClick={() => setLightboxIndex(i)}
+                aria-label={`View ${project.title}`}
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg aspect-[4/3] cursor-pointer text-left"
               >
                 <Image
@@ -200,7 +201,7 @@ export default function PortfolioSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/90 via-[#1e3a5f]/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="text-[#60a5fa] text-sm font-medium">
+                  <span className="text-[#93c5fd] text-sm font-medium">
                     {project.category}
                   </span>
                   <h3 className="text-white font-semibold text-lg">
@@ -271,13 +272,13 @@ export default function PortfolioSection() {
               />
             </div>
             <div className="text-center mt-4">
-              <span className="text-[#60a5fa] text-sm font-medium">
+              <span className="text-[#93c5fd] text-sm font-medium">
                 {projects[lightboxIndex].category}
               </span>
               <h3 className="text-white font-semibold text-xl">
                 {projects[lightboxIndex].title}
               </h3>
-              <p className="text-white/50 text-sm mt-1">
+              <p className="text-white/70 text-sm mt-1">
                 {lightboxIndex + 1} / {projects.length}
               </p>
             </div>

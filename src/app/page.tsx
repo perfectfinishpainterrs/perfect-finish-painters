@@ -73,6 +73,8 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-[#1e3a5f]/70" />
         </div>

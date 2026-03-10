@@ -66,8 +66,10 @@ export default async function CityPage({ params }: CityPageProps) {
     telephone: "+1-609-377-4226",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Mays Landing",
       addressLocality: "Mays Landing",
       addressRegion: "NJ",
+      postalCode: "08330",
       addressCountry: "US",
     },
     geo: {

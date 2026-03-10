@@ -126,6 +126,7 @@ export default function Header() {
           <button
             className={`md:hidden p-2 ${brandColor} transition-colors`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             <svg
               className="w-6 h-6"

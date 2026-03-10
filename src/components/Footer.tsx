@@ -42,6 +42,7 @@ export default function Footer() {
                   href="https://www.facebook.com/PerfectFinishPainters"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                   className="text-[#94a3b8] hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -52,6 +53,7 @@ export default function Footer() {
                   href="https://www.instagram.com/perfectfinishpainter/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                   className="text-[#94a3b8] hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -62,6 +64,7 @@ export default function Footer() {
                   href="https://www.yelp.com/biz/perfect-finish-painters-mays-landing"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Yelp"
                   className="text-[#94a3b8] hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -72,6 +75,7 @@ export default function Footer() {
                   href="https://g.page/r/CYlKM00sLEMiEAI/review"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Google Reviews"
                   className="text-[#94a3b8] hover:text-white transition-colors"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">

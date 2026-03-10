@@ -84,15 +84,15 @@ export default function OurWorkPage() {
             <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto mt-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                 <div className="text-3xl sm:text-4xl font-bold text-white">100+</div>
-                <div className="text-white/60 text-xs sm:text-sm mt-1">Projects Done</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Projects Done</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                 <div className="text-3xl sm:text-4xl font-bold text-[#60a5fa]">5.0</div>
-                <div className="text-white/60 text-xs sm:text-sm mt-1">Star Rating</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Star Rating</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                 <div className="text-3xl sm:text-4xl font-bold text-white">0</div>
-                <div className="text-white/60 text-xs sm:text-sm mt-1">Complaints</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Complaints</div>
               </div>
             </div>
           </ScrollReveal>

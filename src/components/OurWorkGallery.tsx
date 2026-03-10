@@ -230,6 +230,7 @@ export default function OurWorkGallery() {
               <button
                 key={project.src + filter}
                 onClick={() => setLightboxIndex(i)}
+                aria-label={`View ${project.title}`}
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg aspect-[4/3] cursor-pointer text-left transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
                 style={{
                   animation: `fadeSlideUp 0.5s ease ${i * 0.08}s both`,
@@ -340,7 +341,7 @@ export default function OurWorkGallery() {
               <h3 className="text-white font-bold text-xl">
                 {filtered[lightboxIndex].title}
               </h3>
-              <p className="text-white/50 text-sm mt-1">
+              <p className="text-white/70 text-sm mt-1">
                 {filtered[lightboxIndex].desc}
               </p>
               <p className="text-white/30 text-xs mt-3">

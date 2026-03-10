@@ -65,8 +65,10 @@ export default function RootLayout({
     telephone: "+1-609-377-4226",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Mays Landing",
       addressLocality: "Mays Landing",
       addressRegion: "NJ",
+      postalCode: "08330",
       addressCountry: "US",
     },
     geo: {
@@ -366,7 +368,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main>{children}</main>
         <Analytics />
       </body>
     </html>
