@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -63,7 +64,13 @@ export default function OurWorkPage() {
       {/* Hero */}
       <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#1e3a5f]">
-          <div className="absolute inset-0 bg-[url('/shed-exterior-painting-before-after-mays-landing-nj.jpg')] bg-cover bg-center opacity-20" />
+          <Image
+            src="/shed-exterior-painting-before-after-mays-landing-nj.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/80 via-[#1e3a5f]/60 to-[#1e3a5f]" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
