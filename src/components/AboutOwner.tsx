@@ -45,6 +45,10 @@ export default function AboutOwner() {
                 <div className="text-2xl font-bold text-[#2563eb]">South Jersey</div>
                 <div className="text-[#64748b] text-xs">Proudly Local</div>
               </div>
+              <div className="bg-white rounded-xl px-5 py-3 shadow-md text-center">
+                <div className="text-2xl font-bold text-[#2563eb]">Bilingual</div>
+                <div className="text-[#64748b] text-xs">English & Spanish</div>
+              </div>
             </div>
           </div>
         </div>

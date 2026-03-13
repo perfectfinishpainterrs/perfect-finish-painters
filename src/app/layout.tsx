@@ -368,6 +368,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div id="google_translate_element" style={{ display: "none" }} />
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
         <main>{children}</main>
         <Analytics />
       </body>
