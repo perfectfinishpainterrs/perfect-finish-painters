@@ -177,6 +177,14 @@ export default async function CityPage({ params }: CityPageProps) {
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.intro}
           </p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Interior Painting in {area.name}, NJ</h2>
+          <p className="text-[#64748b] mb-4">
+            Whether you need a single room refreshed or a full interior repaint, our team handles <a href="/interior-painting" className="text-[#2563eb] hover:underline">interior painting</a> projects of all sizes in {area.name}. We also offer <a href="/drywall-repair" className="text-[#2563eb] hover:underline">drywall repair</a> to fix any wall damage before painting begins.
+          </p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Exterior Painting in {area.name}, NJ</h2>
+          <p className="text-[#64748b] mb-4">
+            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/deck-fence-staining" className="text-[#2563eb] hover:underline">deck &amp; fence staining</a>.
+          </p>
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.body}
           </p>

@@ -9,11 +9,11 @@ import FAQSection from "@/components/FAQSection";
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
-  title: "Painting Services in South Jersey | Perfect Finish Painters — Mays Landing NJ",
-  description: "Interior & exterior painting, drywall repair, flooring, and deck staining in Mays Landing NJ and South Jersey. Free estimates — call (609) 377-4226.",
+  title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
+  description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
   openGraph: {
-    title: "Painting Services in South Jersey | Perfect Finish Painters",
-    description: "Interior & exterior painting, drywall repair, flooring, and deck staining in Mays Landing NJ and South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
+    description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/services",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painting Services in South Jersey | Perfect Finish Painters",
-    description: "Interior & exterior painting, drywall repair, flooring, and deck staining in Mays Landing NJ and South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
+    description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: {

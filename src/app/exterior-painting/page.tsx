@@ -7,12 +7,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Exterior Painting in Mays Landing NJ | Perfect Finish Painters",
+  title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
   description:
-    "Professional exterior painting in Mays Landing and South Jersey. Siding, shutters, doors, trim, and fascia. Weather-resistant paints for the Jersey Shore climate. Free estimates — call (609) 377-4226.",
+    "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
   openGraph: {
-    title: "Exterior Painting in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional exterior painting in Mays Landing and South Jersey. Weather-resistant paints for the Shore climate.",
+    title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/exterior-painting",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Exterior Painting in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional exterior painting in Mays Landing and South Jersey. Weather-resistant paints for the Shore climate.",
+    title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/exterior-painting" },
@@ -79,7 +79,7 @@ export default function ExteriorPaintingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Exterior Painting in South Jersey</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Exterior Painting in Mays Landing &amp; Atlantic County, NJ</h1>
               <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
                 Boost your curb appeal and protect your home from the elements. Perfect Finish Painters provides full exterior painting for homes and businesses throughout Mays Landing and Atlantic County — from siding and shutters to doors, trim, and fascia.
               </p>
@@ -102,6 +102,21 @@ export default function ExteriorPaintingPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Detailed Service Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Exterior Painting Services in Atlantic County, NJ</h2>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">House Painting for South Jersey Shore Properties</h3>
+          <p className="text-[#64748b] mb-4">For homes in Margate, Ventnor, and Brigantine, salt air is the enemy. We use mildew-resistant primers and top-coat paints rated for coastal environments. Our exterior jobs in shore towns are built to last through nor&apos;easters, salt spray, and intense summer sun.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Siding, Shutters, Doors &amp; Trim Painting</h3>
+          <p className="text-[#64748b] mb-4">We paint all exterior surfaces — vinyl and wood siding, shutters, front doors, garage doors, fascia, and trim. Every surface gets proper prep including power washing, scraping, and priming before paint goes on.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Surface Prep — Power Washing, Scraping &amp; Priming</h3>
+          <p className="text-[#64748b] mb-4">Proper prep is what separates a paint job that lasts from one that peels in two years. We power wash all surfaces, scrape loose paint, sand rough spots, caulk gaps, and apply primer before the finish coat. This is non-negotiable on every job.</p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">How Often Should You Repaint Your Home in NJ?</h2>
+          <p className="text-[#64748b] mb-4">Exterior paint in New Jersey typically lasts 5–7 years. Shore homes in Atlantic County may need repainting sooner due to salt air exposure. We&apos;ll assess your home&apos;s condition and recommend the right schedule during your free estimate.</p>
         </div>
       </section>
 

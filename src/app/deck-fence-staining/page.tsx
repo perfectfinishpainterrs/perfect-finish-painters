@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Deck & Fence Staining in Mays Landing NJ | Perfect Finish Painters",
+  title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
   description:
-    "Professional deck and fence staining in Mays Landing and South Jersey. Protect outdoor wood from coastal weather. Starting at $2/sq ft. Free estimates — call (609) 377-4226.",
+    "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
   openGraph: {
-    title: "Deck & Fence Staining in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional deck and fence staining in Mays Landing and South Jersey. Protect outdoor wood from coastal weather.",
+    title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
+    description: "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/deck-fence-staining",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deck & Fence Staining in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional deck and fence staining in Mays Landing and South Jersey. Protect outdoor wood from coastal weather.",
+    title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
+    description: "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/deck-fence-staining" },

@@ -7,12 +7,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Drywall Repair in Mays Landing NJ | Perfect Finish Painters",
+  title: "Drywall Repair in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
   description:
-    "Professional drywall repair in Mays Landing and South Jersey. Holes, cracks, water damage, and texture matching. Same-day repairs available. Free estimates — call (609) 377-4226.",
+    "Professional drywall repair in Atlantic County NJ. Holes, cracks, water damage, texture matching, and skim coating. Same-day service available. Serving Mays Landing, EHT, Galloway & all of South Jersey.",
   openGraph: {
-    title: "Drywall Repair in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional drywall repair in Mays Landing and South Jersey. Holes, cracks, water damage, and texture matching.",
+    title: "Drywall Repair in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Professional drywall repair in Atlantic County NJ. Holes, cracks, water damage, texture matching, and skim coating. Same-day service available. Serving Mays Landing, EHT, Galloway & all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/drywall-repair",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall Repair in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional drywall repair in Mays Landing and South Jersey. Holes, cracks, water damage, and texture matching.",
+    title: "Drywall Repair in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Professional drywall repair in Atlantic County NJ. Holes, cracks, water damage, texture matching, and skim coating. Same-day service available. Serving Mays Landing, EHT, Galloway & all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/drywall-repair" },
@@ -79,9 +79,9 @@ export default function DrywallRepairPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Drywall Repair in South Jersey</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Drywall Repair in Mays Landing &amp; Atlantic County, NJ</h1>
               <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-                From small nail holes to large patches, Perfect Finish Painters restores your walls to a smooth, paint-ready finish. We handle cracks, water damage, texture matching, and everything in between — often combined with interior painting for a seamless result.
+                From small nail holes to large patches, Perfect Finish Painters restores your walls to a smooth, paint-ready finish. We handle cracks, water damage, texture matching, and everything in between — often combined with interior painting for a seamless result. We serve drywall repair customers throughout Atlantic County — Mays Landing, Egg Harbor Township, Galloway, Northfield, Linwood, Somers Point, and all surrounding areas.
               </p>
               <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
                 Small repairs start at <strong className="text-[#1e3a5f]">$150</strong> and same-day service is available for minor jobs. Larger repairs involving water damage or multiple rooms are quoted after a free assessment.
@@ -102,6 +102,25 @@ export default function DrywallRepairPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Detailed Service Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Types of Drywall Repair We Handle</h2>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Small Holes &amp; Nail Pops</h3>
+          <p className="text-[#64748b] mb-4">Nail pops and small holes are the most common drywall issues in Atlantic County homes, especially in older construction. We fill, sand, and blend them so they disappear completely — no visible patches.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Large Hole &amp; Panel Replacement</h3>
+          <p className="text-[#64748b] mb-4">Door handle holes, plumbing access cuts, and accidental damage all leave gaps that need proper patching. We cut clean, install new drywall, tape the seams, and finish to a smooth surface that&apos;s ready for paint.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Water Damage Drywall Restoration</h3>
+          <p className="text-[#64748b] mb-4">Leaky roofs, burst pipes, and bathroom moisture cause staining, bubbling, and soft spots in drywall. We remove the damaged sections, treat for mold if needed, install new drywall, and finish with paint. This is common in South Jersey coastal homes where humidity runs high.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Texture Matching — Orange Peel, Knockdown &amp; Smooth</h3>
+          <p className="text-[#64748b] mb-4">The hardest part of drywall repair is making the fix invisible. We match your existing texture — whether it&apos;s orange peel, knockdown, skip trowel, or smooth — so repaired areas blend seamlessly with the surrounding wall.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Ceiling Skim Coating &amp; Crack Repair</h3>
+          <p className="text-[#64748b] mb-4">Ceiling cracks and uneven surfaces are common in aging South Jersey homes. We skim coat ceilings to a smooth finish and repair hairline cracks caused by settling. We also handle popcorn ceiling removal — see our <a href="/popcorn-ceiling-removal" className="text-[#2563eb] hover:underline">popcorn ceiling removal page</a> for details.</p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Drywall Repair Pricing in Atlantic County, NJ</h2>
+          <p className="text-[#64748b] mb-4">Small repairs like nail pops and minor holes start around $150. Larger patches, water damage, and texture matching are quoted on-site based on the scope of work. We offer same-day service for small repairs in most of Atlantic County. Take our free estimate quiz or call 609-377-4226.</p>
         </div>
       </section>
 

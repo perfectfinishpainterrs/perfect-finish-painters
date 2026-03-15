@@ -7,12 +7,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Flooring Installation in Mays Landing NJ | Perfect Finish Painters",
+  title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
   description:
-    "Professional flooring installation in Mays Landing and South Jersey. Hardwood, laminate, vinyl plank, and tile. Starting at $3/sq ft. Free estimates — call (609) 377-4226.",
+    "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
   openGraph: {
-    title: "Flooring Installation in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional flooring installation in Mays Landing and South Jersey. Hardwood, laminate, vinyl plank, and tile.",
+    title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/flooring",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flooring Installation in Mays Landing NJ | Perfect Finish Painters",
-    description: "Professional flooring installation in Mays Landing and South Jersey. Hardwood, laminate, vinyl plank, and tile.",
+    title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    description: "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/flooring" },

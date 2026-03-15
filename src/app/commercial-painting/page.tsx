@@ -1,0 +1,213 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
+import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
+  description:
+    "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround. Serving Mays Landing & all of South Jersey.",
+  openGraph: {
+    title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
+    description: "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround.",
+    type: "website",
+    locale: "en_US",
+    url: "https://perfectfinishpainter.com/commercial-painting",
+    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
+    description: "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround.",
+    images: ["/logo.png"],
+  },
+  alternates: { canonical: "https://perfectfinishpainter.com/commercial-painting" },
+};
+
+export default function CommercialPaintingPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://perfectfinishpainter.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://perfectfinishpainter.com/services" },
+      { "@type": "ListItem", position: 3, name: "Commercial Painting", item: "https://perfectfinishpainter.com/commercial-painting" },
+    ],
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Commercial Painting",
+    description: "Professional commercial painting for offices, retail spaces, restaurants, and commercial buildings in Atlantic County NJ. Flexible scheduling with evenings and weekends available for minimal business disruption.",
+    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    url: "https://perfectfinishpainter.com/commercial-painting",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      ratingCount: "12",
+      reviewCount: "12",
+    },
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+
+      {/* Breadcrumb */}
+      <div className="pt-28 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <nav aria-label="Breadcrumb" className="text-sm text-[#64748b]">
+            <ol className="flex items-center gap-2">
+              <li><Link href="/" className="hover:text-[#2563eb] transition-colors">Home</Link></li>
+              <li>/</li>
+              <li><Link href="/services" className="hover:text-[#2563eb] transition-colors">Services</Link></li>
+              <li>/</li>
+              <li className="text-[#1e3a5f] font-medium">Commercial Painting</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <section className="pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">
+            Commercial Painting in Atlantic County, NJ
+          </h1>
+          <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+            First impressions matter for your business. Whether you&apos;re refreshing an office, updating a retail storefront, or repainting an entire commercial building, Perfect Finish Painters delivers professional results with minimal disruption to your operations. We serve Mays Landing and all of Atlantic County with flexible scheduling that works around your business hours.
+          </p>
+          <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
+            We bring the same quality and attention to detail from our <Link href="/interior-painting" className="text-[#2563eb] hover:underline">interior painting</Link> and <Link href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</Link> residential services to every commercial project — clean prep, premium products, and a finished result you&apos;ll be proud to show your customers.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+              Get Free Estimate
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </Link>
+            <a href="tel:+16093774226" className="border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">
+              Call (609) 377-4226
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services We Offer */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Commercial Painting Services We Offer</h2>
+          </ScrollReveal>
+          <div className="space-y-8">
+            <ScrollReveal>
+              <div>
+                <h3 className="text-xl font-semibold text-[#1e3a5f] mb-3">Office &amp; Retail Space Painting</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  A clean, professional paint job sets the tone for your workspace. We paint offices, lobbies, conference rooms, hallways, and retail interiors using durable, low-VOC paints that dry quickly and hold up to heavy foot traffic. Whether you&apos;re refreshing existing colors or rebranding with a new palette, we deliver crisp, consistent results.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <div>
+                <h3 className="text-xl font-semibold text-[#1e3a5f] mb-3">Restaurant &amp; Hospitality Painting</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  Restaurants, bars, and hospitality spaces take a beating from moisture, cooking grease, and constant traffic. We use scrubbable, moisture-resistant paints in kitchens and dining areas that stand up to daily cleaning. We understand that downtime costs you money, so we work fast and schedule around your service hours.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <div>
+                <h3 className="text-xl font-semibold text-[#1e3a5f] mb-3">Commercial Exterior Painting</h3>
+                <p className="text-[#64748b] leading-relaxed">
+                  Your building&apos;s exterior is the first thing customers see. We paint commercial exteriors including storefronts, siding, trim, doors, and signage areas using weather-resistant coatings designed for South Jersey&apos;s climate. We handle power washing, surface prep, and full paint application with minimal disruption to your daily operations.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Businesses in Atlantic County Choose Us</h2>
+          </ScrollReveal>
+          <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+            We know that for businesses, timing and disruption matter as much as the final result. That&apos;s why we offer <strong className="text-[#1e3a5f]">flexible scheduling including evenings and weekends</strong> so your painting project doesn&apos;t interfere with your customers or employees. We work fast without cutting corners, delivering a quality finish on a timeline that respects your business operations.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            {[
+              "Evenings and weekend scheduling available",
+              "Fast turnaround without sacrificing quality",
+              "Minimal disruption to your business",
+              "Low-VOC paints for occupied spaces",
+              "Durable, high-traffic-rated finishes",
+              "Free on-site estimates for commercial properties",
+              "Consistent results across large spaces",
+              "Clean, professional crew on every job",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3 bg-[#f1f5f9] rounded-xl p-4 border border-[#e2e8f0]">
+                <svg className="w-5 h-5 text-[#2563eb] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-[#374151]">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Services */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { title: "Interior Painting", desc: "Walls, ceilings, trim, and accent walls in any room.", href: "/interior-painting" },
+              { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
+              { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
+              { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
+              { title: "Deck & Fence Staining", desc: "Protect and beautify your outdoor wood surfaces.", href: "/deck-fence-staining" },
+              { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
+            ].map((service) => (
+              <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
+                <h3 className="text-[#1e3a5f] font-semibold mb-1">{service.title}</h3>
+                <p className="text-[#64748b] text-sm">{service.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Need Your Business Painted?</h2>
+          <p className="text-white/70 text-lg mb-8">Get a free estimate — we work around your schedule.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+              Start 60-Second Quiz
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </Link>
+            <a href="tel:+16093774226" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">
+              Call (609) 377-4226
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <FloatingCTA />
+    </div>
+  );
+}

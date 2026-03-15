@@ -7,13 +7,13 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Interior Painting in Mays Landing NJ | Perfect Finish Painters",
+  title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
   description:
-    "Professional interior painting in Mays Landing and South Jersey. Walls, ceilings, trim, accent walls, and more. Most rooms done in 1 day, starting at $500. Free estimates — call (609) 377-4226.",
+    "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
   openGraph: {
-    title: "Interior Painting in Mays Landing NJ | Perfect Finish Painters",
+    title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
     description:
-      "Professional interior painting in Mays Landing and South Jersey. Walls, ceilings, trim, and more. Starting at $500.",
+      "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/interior-painting",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Interior Painting in Mays Landing NJ | Perfect Finish Painters",
+    title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
     description:
-      "Professional interior painting in Mays Landing and South Jersey. Walls, ceilings, trim, and more. Starting at $500.",
+      "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -86,10 +86,10 @@ export default function InteriorPaintingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">
-                Interior Painting in South Jersey
+                Interior Painting in Mays Landing &amp; Atlantic County, NJ
               </h1>
               <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-                Whether it&apos;s a single room refresh or a whole-home makeover, Perfect Finish Painters delivers clean, professional interior painting throughout Mays Landing and South Jersey. We handle walls, ceilings, trim, baseboards, doors, and accent walls — all with proper prep and premium paint.
+                Whether it&apos;s a single room refresh or a whole-home makeover, Perfect Finish Painters delivers clean, professional interior painting throughout Mays Landing and South Jersey. We handle walls, ceilings, trim, baseboards, doors, and accent walls — all with proper prep and premium paint. We handle interior painting jobs across Atlantic County — from older craftsman homes in Northfield and Linwood to new construction in Egg Harbor Township and Galloway.
               </p>
               <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
                 Most rooms in the Mays Landing area cost between <strong className="text-[#1e3a5f]">$500 and $1,000</strong> depending on room size, wall condition, and paint quality. A single room typically takes one day to complete, while a full interior takes 3 to 5 days.
@@ -110,6 +110,21 @@ export default function InteriorPaintingPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Detailed Service Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Interior Painting Services in Atlantic County, NJ</h2>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Room-by-Room Interior Painting — Living Rooms, Bedrooms, Kitchens &amp; Bathrooms</h3>
+          <p className="text-[#64748b] mb-4">Every room has different demands. Kitchens and bathrooms need moisture-resistant paint that can handle humidity and splashes. Living rooms and bedrooms need durable finishes that look great and clean up easily. We choose the right product for each space.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Accent Walls &amp; Custom Color Matching</h3>
+          <p className="text-[#64748b] mb-4">Want to make a statement? We create clean accent walls and can match any color you bring us. We work with Benjamin Moore, Sherwin-Williams, and other premium brands to get the exact shade you&apos;re looking for.</p>
+          <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Ceiling &amp; Trim Painting</h3>
+          <p className="text-[#64748b] mb-4">Fresh ceilings brighten a room instantly, and clean trim ties the whole look together. We tape every edge, cut clean lines, and deliver a finished result that makes the entire room feel new.</p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">How Much Does Interior Painting Cost in South Jersey?</h2>
+          <p className="text-[#64748b] mb-4">Most interior rooms in Atlantic County cost between $500–$1,000 depending on size, ceiling height, and prep work needed. We provide free, detailed estimates before starting any work — no surprises. Take our 60-second quiz or call 609-377-4226.</p>
         </div>
       </section>
 

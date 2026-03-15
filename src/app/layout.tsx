@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://perfectfinishpainter.com"),
-  title: "Painters in Mays Landing NJ | Perfect Finish Painters — South Jersey Painting Company",
-  description: "Looking for painters in Mays Landing NJ? Perfect Finish Painters is a trusted South Jersey painting company offering interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds — call (609) 377-4226.",
+  title: "Painters in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  description: "Licensed painting contractor serving Atlantic County NJ. Interior painting, exterior painting, drywall repair, and flooring. Based in Mays Landing. Free estimates — 609-377-4226.",
   keywords: "painters in Mays Landing NJ, South Jersey painting company, Mays Landing painters, interior painting South Jersey, exterior painting NJ, drywall repair Mays Landing, house painters near me, painting contractors Atlantic County",
   openGraph: {
     title: "Painters in Mays Landing NJ | Perfect Finish Painters",
