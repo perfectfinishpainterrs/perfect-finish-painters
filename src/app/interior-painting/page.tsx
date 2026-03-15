@@ -59,11 +59,24 @@ export default function InteriorPaintingPage() {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does interior painting cost in Mays Landing NJ?", acceptedAnswer: { "@type": "Answer", text: "Most interior rooms in Atlantic County cost between $500 and $1,000 depending on room size, wall condition, and paint quality. We offer free estimates — call 609-377-4226." } },
+      { "@type": "Question", name: "How long does it take to paint a room?", acceptedAnswer: { "@type": "Answer", text: "A single room typically takes one day. A full interior takes 3 to 5 days depending on size and prep work needed." } },
+      { "@type": "Question", name: "Do you move furniture before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. We shift furniture to the center of the room and cover it with drop cloths. For larger or fragile items we may ask you to move them before we arrive." } },
+      { "@type": "Question", name: "What paint brands do you use for interior painting?", acceptedAnswer: { "@type": "Answer", text: "We use premium paints from Benjamin Moore and Sherwin-Williams. We can also apply paint you supply. We always use low-VOC formulas for better indoor air quality." } },
+      { "@type": "Question", name: "Do you serve Northfield, Linwood, and Egg Harbor Township for interior painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. We handle interior painting throughout Atlantic County including Mays Landing, Northfield, Linwood, EHT, Galloway, Somers Point, and all surrounding towns." } },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">

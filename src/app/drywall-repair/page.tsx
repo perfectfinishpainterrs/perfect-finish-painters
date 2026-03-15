@@ -55,11 +55,24 @@ export default function DrywallRepairPage() {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does drywall repair cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Small repairs start at $150. Larger repairs involving water damage or multiple rooms are quoted after a free assessment. Call 609-377-4226 for a free estimate." } },
+      { "@type": "Question", name: "Can you repair water-damaged drywall in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "Yes. We handle water damage restoration including removing damaged sections, treating for mold, installing new drywall, and matching existing texture." } },
+      { "@type": "Question", name: "Do you match existing drywall texture?", acceptedAnswer: { "@type": "Answer", text: "Yes. We match orange peel, knockdown, smooth, and other textures so repairs are invisible once painted." } },
+      { "@type": "Question", name: "How long does drywall repair take?", acceptedAnswer: { "@type": "Answer", text: "Small repairs are often completed same day. Larger water damage repairs typically take 2-3 days including drying time between coats." } },
+      { "@type": "Question", name: "Do you serve Egg Harbor Township and Galloway for drywall repair?", acceptedAnswer: { "@type": "Answer", text: "Yes. We handle drywall repair throughout Atlantic County including Mays Landing, EHT, Galloway, Northfield, Linwood, Somers Point, and all surrounding areas." } },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

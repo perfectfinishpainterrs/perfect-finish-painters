@@ -55,11 +55,24 @@ export default function ExteriorPaintingPage() {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How often should I repaint my house exterior in New Jersey?", acceptedAnswer: { "@type": "Answer", text: "Exterior paint in NJ typically lasts 5-7 years. Homes near the shore in Margate, Ventnor, and Brigantine may need repainting sooner due to salt air and humidity." } },
+      { "@type": "Question", name: "What is the best exterior paint for South Jersey homes?", acceptedAnswer: { "@type": "Answer", text: "We recommend 100% acrylic latex paint with UV and mildew resistance. Benjamin Moore Aura Exterior and Sherwin-Williams Duration hold up well against coastal humidity and temperature swings." } },
+      { "@type": "Question", name: "Do you power wash before exterior painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every exterior job includes power washing, scraping loose paint, sanding rough areas, priming bare wood, and caulking gaps before we apply any paint." } },
+      { "@type": "Question", name: "How much does exterior painting cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Exterior pricing depends on the size of your home, number of stories, surface condition, and materials. We provide free on-site estimates — call 609-377-4226." } },
+      { "@type": "Question", name: "Do you paint vinyl siding?", acceptedAnswer: { "@type": "Answer", text: "Yes. We paint vinyl, aluminum, wood, stucco, and brick exteriors. Each surface requires different prep and paint selection — we assess before quoting." } },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
