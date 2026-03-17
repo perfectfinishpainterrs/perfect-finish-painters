@@ -50,8 +50,8 @@ export default function ExteriorPaintingPage() {
       "@type": "AggregateRating",
       ratingValue: "5",
       bestRating: "5",
-      ratingCount: "12",
-      reviewCount: "12",
+      ratingCount: "19",
+      reviewCount: "19",
     },
   };
 

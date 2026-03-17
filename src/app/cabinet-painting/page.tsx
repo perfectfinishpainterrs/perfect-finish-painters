@@ -49,9 +49,20 @@ export default function CabinetPaintingPage() {
       "@type": "AggregateRating",
       ratingValue: "5",
       bestRating: "5",
-      ratingCount: "12",
-      reviewCount: "12",
+      ratingCount: "19",
+      reviewCount: "19",
     },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does cabinet painting cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most kitchen cabinet painting jobs in Atlantic County cost between $2,500 and $5,500 depending on the number of cabinets, door style, and condition. We provide free on-site estimates — call 609-377-4226." } },
+      { "@type": "Question", name: "Is it better to paint or replace kitchen cabinets?", acceptedAnswer: { "@type": "Answer", text: "If your cabinets are structurally sound, painting saves 60-70% compared to full replacement and can be completed in 3-5 days. New cabinets typically cost $15,000-$30,000+ and take weeks to install." } },
+      { "@type": "Question", name: "What kind of paint do you use on cabinets?", acceptedAnswer: { "@type": "Answer", text: "We use alkyd enamel paint that cures to a hard, durable factory-like finish. It resists chips, scratches, and moisture — critical for kitchen cabinets that see daily use." } },
+      { "@type": "Question", name: "How long does cabinet painting take?", acceptedAnswer: { "@type": "Answer", text: "Most kitchen cabinet painting jobs take 3-5 days including cleaning, sanding, priming, and two coats of finish paint. We work room by room so you can still use your kitchen during the process." } },
+    ],
   };
 
   return (
@@ -59,6 +70,7 @@ export default function CabinetPaintingPage() {
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">

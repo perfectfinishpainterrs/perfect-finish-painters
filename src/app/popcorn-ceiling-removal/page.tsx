@@ -49,9 +49,20 @@ export default function PopcornCeilingRemovalPage() {
       "@type": "AggregateRating",
       ratingValue: "5",
       bestRating: "5",
-      ratingCount: "12",
-      reviewCount: "12",
+      ratingCount: "19",
+      reviewCount: "19",
     },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does popcorn ceiling removal cost in NJ?", acceptedAnswer: { "@type": "Answer", text: "Popcorn ceiling removal in Atlantic County typically costs $2-$4 per square foot depending on ceiling height, room size, and whether asbestos testing is needed. Most single rooms run $400-$800. Free estimates — call 609-377-4226." } },
+      { "@type": "Question", name: "Does popcorn ceiling contain asbestos?", acceptedAnswer: { "@type": "Answer", text: "Popcorn ceilings installed before 1980 may contain asbestos. We recommend testing before removal. If asbestos is present, a licensed abatement contractor handles removal before we do the finish work." } },
+      { "@type": "Question", name: "How long does popcorn ceiling removal take?", acceptedAnswer: { "@type": "Answer", text: "A single room typically takes one day including scraping, skim coating, and priming. Larger projects or homes with multiple rooms take 2-4 days. Painting the finished ceiling adds one more day." } },
+      { "@type": "Question", name: "Can you paint over popcorn ceilings instead of removing them?", acceptedAnswer: { "@type": "Answer", text: "Yes. If the popcorn texture is in good condition and you like the look, we can paint over it. However, most homeowners prefer removal for a clean, modern smooth finish that increases home value." } },
+    ],
   };
 
   return (
@@ -59,6 +70,7 @@ export default function PopcornCeilingRemovalPage() {
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
