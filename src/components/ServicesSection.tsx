@@ -8,7 +8,7 @@ const services = [
   {
     title: "Interior Painting",
     href: "/interior-painting",
-    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg",
+    image: "/bedroom-repaint-blue-to-white-before-after-pleasantville-nj.jpg",
     shortDesc: "Transform any room with fresh, vibrant colors. Walls, ceilings, trim, and more.",
     details: [
       "Living rooms, bedrooms, kitchens, bathrooms & hallways",
@@ -27,7 +27,7 @@ const services = [
   {
     title: "Exterior Painting",
     href: "/exterior-painting",
-    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
+    image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.jpg",
     shortDesc: "Boost curb appeal and protect your home from the elements with quality exterior paint.",
     details: [
       "Siding, stucco, brick & vinyl surfaces",
@@ -46,7 +46,7 @@ const services = [
   {
     title: "Drywall Repairs",
     href: "/drywall-repair",
-    image: "/drywall-ceiling-repair-before-after-mays-landing-nj.jpg",
+    image: "/living-room-ceiling-drywall-repair-before-after-absecon-nj.jpg",
     shortDesc: "Fix holes, cracks, and damage. We restore your walls to a smooth, paint-ready finish.",
     details: [
       "Small nail holes to large patch repairs",
@@ -97,6 +97,63 @@ const services = [
     icon: (
       <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Ceiling Painting",
+    href: "/ceiling-painting",
+    image: "/kitchen-ceiling-water-damage-drywall-repair-before-after-galloway-nj.jpg",
+    shortDesc: "Brighten any room with a freshly painted ceiling — flat, vaulted, or textured.",
+    details: [
+      "Flat & smooth ceiling painting",
+      "Vaulted & cathedral ceilings",
+      "Ceiling trim & crown molding",
+      "Ceiling repair & painting combined",
+      "Stain-blocking primers for water marks",
+      "Most ceilings done in 1 day",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Cabinet Painting",
+    href: "/cabinet-painting",
+    image: "/dining-room-wainscoting-painting-before-after-egg-harbor-township-nj.jpg",
+    shortDesc: "Transform your kitchen for a fraction of replacement cost with professional cabinet painting.",
+    details: [
+      "Full kitchen cabinet painting",
+      "Cleaning, sanding & deglossing",
+      "Alkyd enamel for a factory-smooth finish",
+      "Doors, drawers, frames & hardware",
+      "Saves 60-70% vs full replacement",
+      "Most kitchens done in 3-5 days",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+      </svg>
+    ),
+  },
+  {
+    title: "Garage Door Painting",
+    href: "/deck-fence-staining",
+    image: "/garage-door-painting-wood-stain-before-after-brigantine-nj.jpg",
+    shortDesc: "Upgrade your curb appeal with a custom painted or stained garage door finish.",
+    details: [
+      "Wood-grain stain finishes",
+      "Solid color exterior painting",
+      "Surface prep & priming",
+      "Weather-resistant coatings",
+      "Matching trim & frame painting",
+      "Free on-site estimate",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
       </svg>
     ),
   },
