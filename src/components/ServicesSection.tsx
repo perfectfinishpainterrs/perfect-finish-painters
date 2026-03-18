@@ -82,17 +82,17 @@ const services = [
     ),
   },
   {
-    title: "Deck & Fence Staining",
+    title: "Shed Restoration",
     href: "/deck-fence-staining",
     image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
-    shortDesc: "Protect and beautify your outdoor wood surfaces with professional staining and sealing.",
+    shortDesc: "Bring your shed back to life with professional restoration, repair, and weather-resistant painting.",
     details: [
-      "Deck staining & sealing",
-      "Fence staining & refinishing",
-      "Pergola & gazebo finishing",
-      "Wood restoration & repair",
-      "Power washing prep",
-      "UV & weather protection",
+      "Full shed inspection & assessment",
+      "Wood rot repair & board replacement",
+      "Scraping, sanding & priming",
+      "Weather-resistant exterior painting",
+      "Trim, door & window frame painting",
+      "Caulking & joint sealing",
     ],
     icon: (
       <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

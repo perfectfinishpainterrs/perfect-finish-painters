@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "What painting services do you offer?",
     answer:
-      "We offer interior painting, exterior painting, drywall repair, flooring installation, and deck & fence staining. We handle both residential and commercial projects throughout South Jersey.",
+      "We offer interior painting, exterior painting, drywall repair, flooring installation, and shed restoration & painting. We handle both residential and commercial projects throughout South Jersey.",
   },
   {
     question: "How long does it take to paint a house?",

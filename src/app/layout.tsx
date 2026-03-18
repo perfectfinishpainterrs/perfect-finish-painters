@@ -161,7 +161,7 @@ export default function RootLayout({
         { "@type": "ListItem", position: 2, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } } },
         { "@type": "ListItem", position: 3, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } } },
         { "@type": "ListItem", position: 4, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } } },
-        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } } },
+        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } } },
       ],
     },
     potentialAction: [
@@ -211,7 +211,7 @@ export default function RootLayout({
         name: "What painting services do you offer?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer interior painting, exterior painting, drywall repair, flooring installation, and deck & fence staining. We handle both residential and commercial projects throughout South Jersey.",
+          text: "We offer interior painting, exterior painting, drywall repair, flooring installation, and shed restoration & painting. We handle both residential and commercial projects throughout South Jersey.",
         },
       },
       {

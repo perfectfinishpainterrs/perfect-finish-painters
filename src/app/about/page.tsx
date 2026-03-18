@@ -118,7 +118,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Our Story</h2>
             <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-              Perfect Finish Painters is a locally owned and operated painting company based in Mays Landing, New Jersey. We provide professional interior painting, exterior painting, drywall repair, flooring installation, and deck &amp; fence staining to homeowners and businesses throughout Atlantic County and South Jersey.
+              Perfect Finish Painters is a locally owned and operated painting company based in Mays Landing, New Jersey. We provide professional interior painting, exterior painting, drywall repair, flooring installation, and shed restoration &amp; painting to homeowners and businesses throughout Atlantic County and South Jersey.
             </p>
             <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
               We believe everyone deserves a space meant solely for them, at an affordable price. Whether it&apos;s a single room refresh or a complete home makeover, we treat every project with the same attention to detail and commitment to quality.

@@ -111,7 +111,7 @@ export default function ExteriorPaintingPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/shed-exterior-painting-before-after-mays-landing-nj.jpg" alt="Exterior painting project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/exterior-siding-staining-before-after-egg-harbor-township-nj.jpg" alt="Cedar siding repair and staining before and after in Egg Harbor Township NJ" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

@@ -1,47 +1,48 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
+  title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
   description:
-    "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
+    "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting. Serving Mays Landing, EHT, Galloway & all of South Jersey. Free estimates.",
   openGraph: {
-    title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
+    title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
+    description: "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting. Serving Mays Landing, EHT, Galloway & all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/deck-fence-staining",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/shed-exterior-painting-before-after-mays-landing-nj.jpg", width: 1200, height: 900, alt: "Shed restoration before and after in Mays Landing NJ" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deck & Fence Staining in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional deck staining, fence staining, and wood restoration in Atlantic County NJ. UV and weather protection for South Jersey's coastal climate. Free estimates.",
-    images: ["/logo.png"],
+    title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
+    description: "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting.",
+    images: ["/shed-exterior-painting-before-after-mays-landing-nj.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/deck-fence-staining" },
 };
 
-export default function DeckFenceStainingPage() {
+export default function ShedRestorationPage() {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://perfectfinishpainter.com" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://perfectfinishpainter.com/services" },
-      { "@type": "ListItem", position: 3, name: "Deck & Fence Staining", item: "https://perfectfinishpainter.com/deck-fence-staining" },
+      { "@type": "ListItem", position: 3, name: "Shed Restoration", item: "https://perfectfinishpainter.com/deck-fence-staining" },
     ],
   };
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Deck & Fence Staining",
-    description: "Professional deck and fence staining and sealing. Includes power washing, sanding, and weather-resistant stain application to protect outdoor wood from South Jersey's coastal climate.",
+    name: "Shed Restoration & Painting",
+    description: "Professional shed restoration including wood rot repair, scraping, sanding, priming, and weather-resistant exterior painting for sheds, outbuildings, and storage structures throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/deck-fence-staining",
@@ -54,11 +55,23 @@ export default function DeckFenceStainingPage() {
     },
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does shed restoration cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most shed restoration projects in Atlantic County cost between $500 and $2,000 depending on size, condition, and how much repair work is needed. We provide free on-site estimates — call 609-377-4226." } },
+      { "@type": "Question", name: "Can you fix rotted wood on my shed before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. We repair or replace rotted boards, patch damaged areas, and ensure the structure is solid before any paint goes on. Painting over rot just hides the problem — we fix it first." } },
+      { "@type": "Question", name: "How long does a shed paint job last in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "With proper prep and quality exterior paint, a shed paint job in South Jersey typically lasts 5-7 years. Salt air and humidity near the coast can shorten that, which is why we use weather-resistant products designed for the Atlantic County climate." } },
+      { "@type": "Question", name: "Do you paint all types of sheds?", acceptedAnswer: { "@type": "Answer", text: "Yes. We paint and restore wood sheds, vinyl-sided sheds, metal sheds, and outbuildings of all sizes. Each material requires different prep and paint selection — we assess before quoting." } },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -68,7 +81,7 @@ export default function DeckFenceStainingPage() {
               <li>/</li>
               <li><Link href="/services" className="hover:text-[#2563eb] transition-colors">Services</Link></li>
               <li>/</li>
-              <li className="text-[#1e3a5f] font-medium">Deck & Fence Staining</li>
+              <li className="text-[#1e3a5f] font-medium">Shed Restoration</li>
             </ol>
           </nav>
         </div>
@@ -76,21 +89,30 @@ export default function DeckFenceStainingPage() {
 
       <section className="pt-8 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Deck & Fence Staining in South Jersey</h1>
-          <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
-            South Jersey&apos;s coastal climate is tough on outdoor wood. Humidity, salt air, UV exposure, and seasonal rain break down unprotected decks and fences fast. Perfect Finish Painters provides professional staining and sealing to protect and beautify your outdoor wood surfaces.
-          </p>
-          <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
-            Deck staining starts at <strong className="text-[#1e3a5f]">$2 per square foot</strong> and fence staining starts at <strong className="text-[#1e3a5f]">$3 per linear foot</strong>, depending on size, condition, and product choice. We use weather-resistant stains designed to hold up in the Atlantic County climate.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
-              Get Free Estimate
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-            </Link>
-            <a href="tel:+16093774226" className="border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">
-              Call (609) 377-4226
-            </a>
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-6">Shed Restoration &amp; Painting in Atlantic County, NJ</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
+                Your shed takes a beating from South Jersey weather — sun, rain, humidity, and salt air break down paint and rot out wood faster than most people realize. By the time it looks bad, the damage is already deep. We don&apos;t just slap paint on a rotting shed. We fix it first, then paint it right so it lasts.
+              </p>
+              <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
+                Whether your shed needs a fresh coat of paint or a full restoration with wood repair, scraping, sanding, and priming — we handle the whole job. We use weather-resistant exterior paint built to hold up in the Atlantic County climate so you&apos;re not doing this again in two years.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+                  Get Free Estimate
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                </Link>
+                <a href="tel:+16093774226" className="border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">
+                  Call (609) 377-4226
+                </a>
+              </div>
+            </div>
+            <ScrollReveal direction="left">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image src="/shed-exterior-painting-before-after-mays-landing-nj.jpg" alt="Shed restoration before and after in Mays Landing NJ by Perfect Finish Painters" width={600} height={450} className="w-full h-auto" />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -100,14 +122,14 @@ export default function DeckFenceStainingPage() {
           <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "Deck staining and sealing",
-              "Fence staining and sealing",
-              "Power washing and surface cleaning",
-              "Sanding rough or splintered boards",
-              "Weather-resistant stain products",
-              "UV and mildew protection",
-              "Transparent, semi-transparent, and solid stain options",
-              "Free on-site assessment",
+              "Full shed inspection and assessment",
+              "Wood rot repair and board replacement",
+              "Scraping and sanding loose or peeling paint",
+              "Priming bare wood and repaired areas",
+              "Weather-resistant exterior paint application",
+              "Trim, door, and window frame painting",
+              "Caulking gaps and sealing joints",
+              "Free on-site estimate",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm border border-[#e2e8f0]">
                 <svg className="w-5 h-5 text-[#2563eb] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -122,17 +144,20 @@ export default function DeckFenceStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">How Often Should You Restain?</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Restore Instead of Replace?</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed mb-4">
+            A new shed costs thousands. A full restoration — wood repair, new paint, sealed joints — costs a fraction of that and gives you years more life out of the structure you already have. Most sheds we restore look brand new when we&apos;re done and hold up for 5-7 years before needing another coat.
+          </p>
           <p className="text-[#64748b] text-lg leading-relaxed">
-            In South Jersey, deck stain typically lasts 2 to 3 years depending on sun exposure and foot traffic. Fences usually go 3 to 5 years between applications. Signs it&apos;s time to restain include fading color, water no longer beading on the surface, and graying or splintering wood. Regular staining extends the life of your deck or fence and keeps it looking great.
+            We serve homeowners across <Link href="/mays-landing" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/egg-harbor-township" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/galloway" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/northfield" className="text-[#2563eb] hover:underline">Northfield</Link>, and all of Atlantic County. If your shed is looking rough, give us a call — we&apos;ll come take a look and tell you honestly whether it makes sense to restore or if you&apos;re better off replacing it.
           </p>
         </div>
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Protect Your Deck & Fence</h2>
-          <p className="text-white/70 text-lg mb-8">Get a free estimate before the weather takes its toll.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Bring Your Shed Back to Life</h2>
+          <p className="text-white/70 text-lg mb-8">Free estimates. No pressure. Just honest work.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
               Start 60-Second Quiz

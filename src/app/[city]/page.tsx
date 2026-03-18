@@ -98,7 +98,7 @@ export default async function CityPage({ params }: CityPageProps) {
         { "@type": "ListItem", position: 2, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } } },
         { "@type": "ListItem", position: 3, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } } },
         { "@type": "ListItem", position: 4, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } } },
-        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Deck & Fence Staining" } } },
+        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } } },
       ],
     },
     potentialAction: [
@@ -183,7 +183,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </p>
           <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Exterior Painting in {area.name}, NJ</h2>
           <p className="text-[#64748b] mb-4">
-            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/deck-fence-staining" className="text-[#2563eb] hover:underline">deck &amp; fence staining</a>.
+            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/deck-fence-staining" className="text-[#2563eb] hover:underline">shed restoration &amp; painting</a>.
           </p>
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.body}
@@ -228,7 +228,7 @@ export default async function CityPage({ params }: CityPageProps) {
               { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
-              { title: "Deck & Fence Staining", desc: "Protect and beautify your outdoor wood surfaces.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
               { title: "Commercial Painting", desc: "Office, retail, and commercial property painting.", href: "/services" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">

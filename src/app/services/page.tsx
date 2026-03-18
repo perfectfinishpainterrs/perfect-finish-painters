@@ -10,10 +10,10 @@ import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-  description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
+  description: "Interior painting, exterior painting, drywall repair, flooring, and shed restoration in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
   openGraph: {
     title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-    description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
+    description: "Interior painting, exterior painting, drywall repair, flooring, and shed restoration in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/services",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-    description: "Interior painting, exterior painting, drywall repair, flooring, and deck staining in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
+    description: "Interior painting, exterior painting, drywall repair, flooring, and shed restoration in Atlantic County NJ. Serving Mays Landing, EHT, Galloway, Northfield, and all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -59,7 +59,7 @@ export default function ServicesPage() {
       { "@type": "ListItem", position: 2, name: "Exterior Painting", url: "https://perfectfinishpainter.com/exterior-painting" },
       { "@type": "ListItem", position: 3, name: "Drywall Repair", url: "https://perfectfinishpainter.com/drywall-repair" },
       { "@type": "ListItem", position: 4, name: "Flooring Installation", url: "https://perfectfinishpainter.com/flooring" },
-      { "@type": "ListItem", position: 5, name: "Deck & Fence Staining", url: "https://perfectfinishpainter.com/deck-fence-staining" },
+      { "@type": "ListItem", position: 5, name: "Shed Restoration & Painting", url: "https://perfectfinishpainter.com/deck-fence-staining" },
     ],
   };
 

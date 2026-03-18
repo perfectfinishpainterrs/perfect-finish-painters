@@ -239,7 +239,7 @@ export default function WallpaperRemovalPage() {
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Popcorn Ceiling Removal", desc: "Remove outdated texture for a smooth, modern ceiling.", href: "/popcorn-ceiling-removal" },
               { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
-              { title: "Deck & Fence Staining", desc: "Protect and beautify your outdoor wood surfaces.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
                 <h3 className="text-[#1e3a5f] font-semibold mb-1">{service.title}</h3>
