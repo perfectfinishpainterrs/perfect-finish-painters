@@ -65,7 +65,7 @@ const services = [
   {
     title: "Flooring",
     href: "/flooring",
-    image: "/radiator-painting-before-after-somers-point-nj.jpg",
+    image: "/bedroom-flooring-installation-painting-before-after-egg-harbor-township-nj.jpg",
     shortDesc: "Complete your renovation with professional flooring installation and refinishing.",
     details: [
       "Hardwood, laminate & vinyl plank installation",
