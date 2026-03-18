@@ -3,7 +3,7 @@ import { serviceAreas } from '@/data/service-areas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://perfectfinishpainter.com'
-  const lastUpdated = '2026-03-10'
+  const lastUpdated = '2026-03-18'
 
   const cityPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/${area.slug}`,
@@ -96,6 +96,72 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/cedar-siding-repair-south-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/exterior-painting-south-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/popcorn-ceiling-removal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cabinet-painting`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/commercial-painting`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ceiling-painting`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/wallpaper-removal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pintores-cerca-de-mi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pintores-pleasantville-nj`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pintores-atlantic-city-nj-es`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pintores-vineland-nj`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     ...cityPages,
   ]

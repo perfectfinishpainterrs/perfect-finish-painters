@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com",
+    languages: {
+      en: "/",
+      es: "/pintores-cerca-de-mi",
+    },
   },
 };
 
