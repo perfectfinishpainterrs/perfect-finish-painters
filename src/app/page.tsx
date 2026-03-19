@@ -7,15 +7,16 @@ import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
+import SherwinWilliamsBanner from "@/components/SherwinWilliamsBanner";
 
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
-  title: "Painters in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-  description: "Licensed painting contractor serving Atlantic County NJ. Interior painting, exterior painting, drywall repair, and flooring. Based in Mays Landing. Free estimates — 609-377-4226.",
+  title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
+  description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing. Free estimates — 609-377-4226.",
   openGraph: {
-    title: "Painters in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Licensed painting contractor serving Atlantic County NJ. Interior painting, exterior painting, drywall repair, and flooring. Based in Mays Landing.",
+    title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
+    description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com",
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painters in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Licensed painting contractor serving Atlantic County NJ. Interior painting, exterior painting, drywall repair, and flooring. Based in Mays Landing.",
+    title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
+    description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -134,6 +135,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sherwin-Williams Designer Paint Banner */}
+      <div className="pt-12">
+        <ScrollReveal>
+          <SherwinWilliamsBanner />
+        </ScrollReveal>
+      </div>
 
       {/* Services Preview */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">

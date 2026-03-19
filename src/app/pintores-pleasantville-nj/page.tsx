@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
 
 export const metadata: Metadata = {
   title: "Pintores en Pleasantville NJ | Perfect Finish Painters — Hablamos Español",
@@ -116,6 +117,11 @@ export default function PintoresPleasantvilleNJPage() {
           </div>
         </div>
       </section>
+
+      {/* Sherwin-Williams Banner */}
+      <ScrollReveal>
+        <SherwinWilliamsBannerES />
+      </ScrollReveal>
 
       {/* Servicios de Pintura */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

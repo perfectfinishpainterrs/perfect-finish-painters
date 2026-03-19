@@ -5,15 +5,16 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 import ServicesSection from "@/components/ServicesSection";
+import SherwinWilliamsBanner from "@/components/SherwinWilliamsBanner";
 import FAQSection from "@/components/FAQSection";
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
-  title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-  description: "Interior painting, exterior painting, drywall repair, flooring, ceiling painting, cabinet painting, shed restoration & garage door painting in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+  title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
+  description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
   openGraph: {
-    title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-    description: "Interior painting, exterior painting, drywall repair, flooring, ceiling painting, cabinet painting, shed restoration & garage door painting in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
+    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/services",
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painting Services in Atlantic County NJ | Perfect Finish Painters",
-    description: "Interior painting, exterior painting, drywall repair, flooring, ceiling painting, cabinet painting, shed restoration & garage door painting in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
+    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -68,6 +69,37 @@ export default function ServicesPage() {
     ],
   };
 
+  const paintFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What paint brands does Perfect Finish Painters use?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We exclusively use Sherwin-Williams designer paint lines including Duration for long-lasting exterior protection and Emerald for flawless interior finishes. These premium paints offer superior coverage, richer colors, and exceptional durability.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is Sherwin-Williams Duration paint?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sherwin-Williams Duration is a premium exterior paint known for its outstanding durability, excellent hide, and resistance to peeling, blistering, and fading. It's ideal for South Jersey's coastal climate with its UV and moisture protection.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is Sherwin-Williams Emerald paint?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sherwin-Williams Emerald is a premium interior paint that delivers exceptional coverage in fewer coats, a smooth finish, and low-VOC formula for healthier indoor air quality. It's our go-to choice for interior projects.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -79,6 +111,10 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(paintFaqJsonLd) }}
       />
 
       {/* Hero */}
@@ -94,6 +130,11 @@ export default function ServicesPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Sherwin-Williams Designer Paint Banner */}
+      <ScrollReveal>
+        <SherwinWilliamsBanner />
+      </ScrollReveal>
 
       {/* Full Services Section */}
       <ServicesSection />

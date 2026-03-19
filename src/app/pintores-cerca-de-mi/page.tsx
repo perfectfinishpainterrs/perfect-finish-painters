@@ -4,15 +4,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
 
 export const metadata: Metadata = {
-  title: "Pintores en Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
   description:
-    "Pintores profesionales en Atlantic County NJ. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — llama al 609-377-4226.",
+    "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
   openGraph: {
-    title: "Pintores en Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
     description:
-      "Pintores profesionales en Atlantic County NJ. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — llama al 609-377-4226.",
+      "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-cerca-de-mi",
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pintores en Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
     description:
-      "Pintores profesionales en Atlantic County NJ. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — llama al 609-377-4226.",
+      "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -130,6 +131,11 @@ export default function PintoresCercaDeMiPage() {
           </div>
         </div>
       </section>
+
+      {/* Sherwin-Williams Banner */}
+      <ScrollReveal>
+        <SherwinWilliamsBannerES />
+      </ScrollReveal>
 
       {/* Servicios */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
