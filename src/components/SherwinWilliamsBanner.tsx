@@ -46,7 +46,7 @@ export default function SherwinWilliamsBanner() {
             {/* CTA */}
             <div className="shrink-0 flex flex-col gap-3 items-center">
               <a
-                href="https://www.sherwin-williams.com/en-us/color/color-wall"
+                href="https://www.sherwin-williams.com/en-us/color"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#1e3a5f] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-lg"
