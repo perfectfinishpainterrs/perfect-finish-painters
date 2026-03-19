@@ -78,7 +78,7 @@ export default function ServicesPage() {
         name: "What paint brands does Perfect Finish Painters use?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We exclusively use Sherwin-Williams designer paint lines including Duration for long-lasting exterior protection and Emerald for flawless interior finishes. These premium paints offer superior coverage, richer colors, and exceptional durability.",
+          text: "We exclusively use Sherwin-Williams premium paint lines including Duration Exterior with PermaLast® technology, Emerald Interior paint & primer in one, Duration Home for high-traffic areas, and Emerald Urethane Trim Enamel for doors, windows, and trim. All are under 50 g/L VOC.",
         },
       },
       {
@@ -86,7 +86,7 @@ export default function ServicesPage() {
         name: "What is Sherwin-Williams Duration paint?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sherwin-Williams Duration is a premium exterior paint known for its outstanding durability, excellent hide, and resistance to peeling, blistering, and fading. It's ideal for South Jersey's coastal climate with its UV and moisture protection.",
+          text: "Sherwin-Williams Duration Exterior is formulated with PermaLast® acrylic co-polymer technology that delivers 70% higher film build than other top-line exterior paints. It won't peel or blister, offers true one-coat coverage on repaints, has less than 50 g/L VOC, and is available in matte, satin, and semi-gloss finishes. Ideal for South Jersey's coastal climate.",
         },
       },
       {
@@ -94,7 +94,7 @@ export default function ServicesPage() {
         name: "What is Sherwin-Williams Emerald paint?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sherwin-Williams Emerald is a premium interior paint that delivers exceptional coverage in fewer coats, a smooth finish, and low-VOC formula for healthier indoor air quality. It's our go-to choice for interior projects.",
+          text: "Sherwin-Williams Emerald Interior is a paint and primer in one with advanced stain-blocking technology, anti-microbial agents that inhibit mold and mildew growth, and exceptional washability in all finishes. It delivers one-coat coverage with less than 50 g/L VOC and is available in flat, matte, eg-shel, satin, and semi-gloss finishes. It resists yellowing over time and water streaking.",
         },
       },
     ],

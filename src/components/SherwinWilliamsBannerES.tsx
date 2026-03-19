@@ -37,9 +37,9 @@ export default function SherwinWilliamsBannerES() {
               </h3>
               <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
                 Cada proyecto recibe lo mejor — usamos exclusivamente las l&iacute;neas premium de Sherwin-Williams incluyendo{" "}
-                <span className="text-[#60a5fa] font-semibold">Duration</span> para protecci&oacute;n exterior duradera y{" "}
-                <span className="text-[#60a5fa] font-semibold">Emerald</span> para un acabado interior impecable.
-                Pintura de nivel profesional significa colores m&aacute;s ricos, mejor cobertura y un acabado que dura por a&ntilde;os.
+                <span className="text-[#60a5fa] font-semibold">Duration</span> exterior con tecnolog&iacute;a PermaLast&#174; que ofrece 70% m&aacute;s grosor de pel&iacute;cula sin descascararse ni ampollarse, y{" "}
+                <span className="text-[#60a5fa] font-semibold">Emerald</span> interior — pintura y primer en uno con bloqueo avanzado de manchas, protecci&oacute;n antimicrobiana y lavabilidad excepcional.
+                Ambas tienen menos de 50 g/L de VOC y ofrecen cobertura real en una sola capa.
               </p>
             </div>
 
@@ -72,19 +72,19 @@ export default function SherwinWilliamsBannerES() {
           <div className="relative z-10 flex flex-wrap justify-center lg:justify-start gap-3 mt-6 lg:ml-[6.5rem]">
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-[#60a5fa]"></span>
-              SW Duration
+              Duration&#174; Exterior — Tecnolog&iacute;a PermaLast&#174;
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              SW Emerald
+              Emerald&#174; Interior — Pintura y Primer en Uno
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-              F&oacute;rmulas Bajo VOC
+              Menos de 50 g/L VOC
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-rose-400"></span>
-              Colores de Dise&ntilde;ador
+              Emerald&#174; Urethane Trim Enamel
             </span>
           </div>
         </div>

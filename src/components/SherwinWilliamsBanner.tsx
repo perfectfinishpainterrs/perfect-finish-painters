@@ -37,9 +37,9 @@ export default function SherwinWilliamsBanner() {
               </h3>
               <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
                 Every project gets the best — we exclusively use Sherwin-Williams premium lines including{" "}
-                <span className="text-[#60a5fa] font-semibold">Duration</span> for long-lasting exterior protection and{" "}
-                <span className="text-[#60a5fa] font-semibold">Emerald</span> for a flawless interior finish.
-                Designer-grade paint means richer color, better coverage, and a finish that lasts for years.
+                <span className="text-[#60a5fa] font-semibold">Duration</span> exterior with PermaLast&#174; technology for 70% higher film build that won&apos;t peel or blister, and{" "}
+                <span className="text-[#60a5fa] font-semibold">Emerald</span> interior — a paint &amp; primer in one with advanced stain-blocking, anti-microbial protection, and exceptional washability in every finish.
+                Both are under 50 g/L VOC and deliver true one-coat coverage.
               </p>
             </div>
 
@@ -72,19 +72,19 @@ export default function SherwinWilliamsBanner() {
           <div className="relative z-10 flex flex-wrap justify-center lg:justify-start gap-3 mt-6 lg:ml-[6.5rem]">
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-[#60a5fa]"></span>
-              SW Duration
+              Duration&#174; Exterior — PermaLast&#174; Technology
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              SW Emerald
+              Emerald&#174; Interior — Paint &amp; Primer in One
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-              Low-VOC Formulas
+              Under 50 g/L VOC
             </span>
             <span className="inline-flex items-center gap-1.5 bg-white/10 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full border border-white/10">
               <span className="w-2 h-2 rounded-full bg-rose-400"></span>
-              Designer Color Matching
+              Emerald&#174; Urethane Trim Enamel
             </span>
           </div>
         </div>
