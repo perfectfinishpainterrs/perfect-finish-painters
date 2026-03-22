@@ -28,6 +28,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "sherwin-williams-snowbound-paint-south-jersey",
+    title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",
+    excerpt: "Sherwin-Williams Snowbound is a versatile, crisp white paint color that&apos;s perfect for creating bright, inviting spaces in your South Jersey home. As professional painters in Mays Landing, NJ, we&apos;ve seen how this neutral shade enhances everything from modern kitchens to cozy living rooms. Learn why Snowbound could be the ideal choice for your next painting project with Perfect Finish Painters.",
+    date: "March 2026",
+  },
+  {
     slug: "cedar-siding-repair-south-jersey",
     title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm",
     excerpt: "Cedar siding is a popular choice for homes in South Jersey due to its natural beauty and durability, but it can suffer from wear over time. At Perfect Finish Painters, we specialize in professional cedar siding repair to protect and enhance your property. Learn about common issues, repair techniques, and why our Mays Landing-based team is your go-to for South Jersey painting services.",
