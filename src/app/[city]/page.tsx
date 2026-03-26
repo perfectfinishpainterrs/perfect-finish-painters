@@ -16,10 +16,18 @@ export async function generateStaticParams() {
   }));
 }
 
+const spanishAlternates: Record<string, string> = {
+  "painters-pleasantville-nj": "/pintores-pleasantville-nj",
+  "painters-atlantic-city-nj": "/pintores-atlantic-city-nj-es",
+  "painters-vineland-nj": "/pintores-vineland-nj",
+};
+
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
   const { city } = await params;
   const area = serviceAreas.find((a) => a.slug === city);
   if (!area) return {};
+
+  const spanishPage = spanishAlternates[area.slug];
 
   return {
     title: area.metaTitle,
@@ -48,6 +56,12 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     },
     alternates: {
       canonical: `https://perfectfinishpainter.com/${area.slug}`,
+      ...(spanishPage && {
+        languages: {
+          en: `/${area.slug}`,
+          es: spanishPage,
+        },
+      }),
     },
   };
 }
