@@ -7,12 +7,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Flooring Installation in Atlantic County NJ | Perfect Finish",
   description:
-    "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
+    "Hardwood, laminate, vinyl plank & tile flooring installation in Atlantic County NJ. Pairs with a fresh paint job. Free estimate — 609-377-4226.",
   openGraph: {
-    title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
+    title: "Flooring Installation in Atlantic County NJ | Perfect Finish",
+    description: "Hardwood, laminate, vinyl plank & tile flooring installation in Atlantic County NJ. Pairs with a fresh paint job. Free estimate — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/flooring",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flooring Installation in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Hardwood, laminate, vinyl plank, and tile flooring installation in Atlantic County NJ. Pairs perfectly with a fresh paint job. Serving Mays Landing and all of South Jersey.",
+    title: "Flooring Installation in Atlantic County NJ | Perfect Finish",
+    description: "Hardwood, laminate, vinyl plank & tile flooring installation in Atlantic County NJ. Pairs with a fresh paint job. Free estimate — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/flooring" },
@@ -46,13 +46,6 @@ export default function FlooringPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/flooring",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   return (
@@ -127,6 +120,15 @@ export default function FlooringPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Flooring Installation Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            We install flooring across Atlantic County — hardwood and luxury vinyl plank in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, and <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link> residential builds, plus tile work in <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link> historic renovations. Paired with our painting service, we can flip a room top-to-bottom in a single week.
+          </p>
         </div>
       </section>
 

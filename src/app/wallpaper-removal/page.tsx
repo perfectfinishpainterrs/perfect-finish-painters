@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish",
   description:
-    "Professional wallpaper removal and wall prep in Atlantic County NJ. Clean removal, drywall repair, and paint-ready finish. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey. Free estimates.",
+    "Wallpaper removal & wall prep across Atlantic County NJ — clean removal, drywall repair, paint-ready finish. Free estimate — 609-377-4226.",
   openGraph: {
-    title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Professional wallpaper removal and wall prep in Atlantic County NJ. Clean removal, drywall repair, and paint-ready finish. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey. Free estimates.",
+    title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish",
+    description: "Wallpaper removal & wall prep across Atlantic County NJ — clean removal, drywall repair, paint-ready finish. Free estimate — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/wallpaper-removal",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Professional wallpaper removal and wall prep in Atlantic County NJ. Clean removal, drywall repair, and paint-ready finish. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey. Free estimates.",
+    title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish",
+    description: "Wallpaper removal & wall prep across Atlantic County NJ — clean removal, drywall repair, paint-ready finish. Free estimate — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/wallpaper-removal" },
@@ -239,7 +239,7 @@ export default function WallpaperRemovalPage() {
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Popcorn Ceiling Removal", desc: "Remove outdated texture for a smooth, modern ceiling.", href: "/popcorn-ceiling-removal" },
               { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
                 <h3 className="text-[#1e3a5f] font-semibold mb-1">{service.title}</h3>
@@ -251,6 +251,15 @@ export default function WallpaperRemovalPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Wallpaper Removal Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            Wallpaper from the 80s and 90s is all over Atlantic County. We strip it cleanly in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>, and <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link> — then repair whatever the glue ruined and leave walls paint-ready. Old glue on plaster walls vs drywall needs different approaches. We handle both.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Rid of Outdated Wallpaper?</h2>

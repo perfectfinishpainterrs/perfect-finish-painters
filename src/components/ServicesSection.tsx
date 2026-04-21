@@ -82,8 +82,27 @@ const services = [
     ),
   },
   {
+    title: "Deck Staining",
+    href: "/deck-staining",
+    image: "/deck-exterior-painting-before-after-south-jersey-nj.jpg",
+    shortDesc: "Protect your deck from South Jersey weather with professional staining, sealing, and wood repair.",
+    details: [
+      "Pressure washing & stripping old finish",
+      "Sanding rough grain & splinter repair",
+      "Premium penetrating stain in 1–2 coats",
+      "UV & water-resistant sealer on walking boards",
+      "Railings, risers & trim included",
+      "Most decks done in 2–3 days — starting at $400",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+      </svg>
+    ),
+  },
+  {
     title: "Shed Restoration",
-    href: "/deck-fence-staining",
+    href: "/shed-restoration",
     image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
     shortDesc: "Bring your shed back to life with professional restoration, repair, and weather-resistant painting.",
     details: [
@@ -139,8 +158,46 @@ const services = [
     ),
   },
   {
+    title: "Fence Staining",
+    href: "/fence-staining",
+    image: "/fence-gate-painting-black-northfield-nj.jpg",
+    shortDesc: "Protect and restore wood fences with premium penetrating stain built for South Jersey weather.",
+    details: [
+      "Pressure washing & mildew treatment",
+      "Stripping failing finish when needed",
+      "Semi-transparent, semi-solid, or solid stain",
+      "Replace popped nails & loose pickets",
+      "Privacy, picket, split-rail & gates",
+      "Starting at $3–$8 per linear foot",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4v16M10 4v16M15 4v16M20 4v16M3 9h18M3 15h18" />
+      </svg>
+    ),
+  },
+  {
+    title: "Epoxy Floor Coating",
+    href: "/epoxy-floor-coating",
+    image: "/basement-floor-epoxy-coating-before-after-galloway-nj.jpg",
+    shortDesc: "Transform garage, basement, and workshop floors with diamond-ground, 100%-solids epoxy systems.",
+    details: [
+      "Diamond grinding for proper adhesion",
+      "Crack & spall repair included",
+      "100%-solids epoxy or polyaspartic",
+      "Flake, metallic, or solid color",
+      "UV-resistant topcoat",
+      "Most 2-car garages: $2,000–$4,500",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18" />
+      </svg>
+    ),
+  },
+  {
     title: "Garage Door Painting",
-    href: "/deck-fence-staining",
+    href: "/garage-door-painting",
     image: "/garage-door-painting-wood-stain-before-after-brigantine-nj.jpg",
     shortDesc: "Upgrade your curb appeal with a custom painted or stained garage door finish.",
     details: [

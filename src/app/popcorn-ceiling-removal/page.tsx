@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Popcorn Ceiling Removal in Atlantic County NJ | Perfect Finish Painters",
+  title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
   description:
-    "Professional popcorn ceiling removal in Atlantic County NJ. Clean, dust-contained process. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey. Free estimates.",
+    "Pro popcorn ceiling removal in Atlantic County NJ — clean, dust-contained process. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
   openGraph: {
-    title: "Popcorn Ceiling Removal in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional popcorn ceiling removal in Atlantic County NJ. Clean, dust-contained process. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
+    title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
+    description: "Pro popcorn ceiling removal in Atlantic County NJ — clean, dust-contained process. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Popcorn Ceiling Removal in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional popcorn ceiling removal in Atlantic County NJ. Clean, dust-contained process. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
+    title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
+    description: "Pro popcorn ceiling removal in Atlantic County NJ — clean, dust-contained process. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/popcorn-ceiling-removal" },
@@ -45,13 +45,6 @@ export default function PopcornCeilingRemovalPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   const faqJsonLd = {
@@ -182,7 +175,7 @@ export default function PopcornCeilingRemovalPage() {
               { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
               { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
@@ -195,6 +188,15 @@ export default function PopcornCeilingRemovalPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Popcorn Ceiling Removal Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            Popcorn ceilings went out of style for a reason. We remove them cleanly throughout Atlantic County — with dust containment, sanded-smooth finish, and ready-to-paint drywall. Houses from the 70s and 80s in <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link> and <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> often have them through the whole first floor. Other common work areas: <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, and <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready for Smooth, Modern Ceilings?</h2>

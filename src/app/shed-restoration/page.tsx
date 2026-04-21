@@ -7,24 +7,24 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
+  title: "Shed Restoration in Atlantic County NJ | Perfect Finish",
   description:
-    "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting. Serving Mays Landing, EHT, Galloway & all of South Jersey. Free estimates.",
+    "Shed restoration & painting in Atlantic County NJ — wood rot repair, scraping, priming, weather-resistant finish. Free estimate — 609-377-4226.",
   openGraph: {
-    title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting. Serving Mays Landing, EHT, Galloway & all of South Jersey.",
+    title: "Shed Restoration in Atlantic County NJ | Perfect Finish",
+    description: "Shed restoration & painting in Atlantic County NJ — wood rot repair, scraping, priming, weather-resistant finish. Free estimate — 609-377-4226.",
     type: "website",
     locale: "en_US",
-    url: "https://perfectfinishpainter.com/deck-fence-staining",
+    url: "https://perfectfinishpainter.com/shed-restoration",
     images: [{ url: "/shed-exterior-painting-before-after-mays-landing-nj.jpg", width: 1200, height: 900, alt: "Shed restoration before and after in Mays Landing NJ" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shed Restoration & Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional shed restoration, painting, and repair in Atlantic County NJ. Wood rot repair, scraping, priming, and weather-resistant painting.",
+    title: "Shed Restoration in Atlantic County NJ | Perfect Finish",
+    description: "Shed restoration & painting in Atlantic County NJ — wood rot repair, scraping, priming, weather-resistant finish. Free estimate — 609-377-4226.",
     images: ["/shed-exterior-painting-before-after-mays-landing-nj.jpg"],
   },
-  alternates: { canonical: "https://perfectfinishpainter.com/deck-fence-staining" },
+  alternates: { canonical: "https://perfectfinishpainter.com/shed-restoration" },
 };
 
 export default function ShedRestorationPage() {
@@ -34,7 +34,7 @@ export default function ShedRestorationPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://perfectfinishpainter.com" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://perfectfinishpainter.com/services" },
-      { "@type": "ListItem", position: 3, name: "Shed Restoration", item: "https://perfectfinishpainter.com/deck-fence-staining" },
+      { "@type": "ListItem", position: 3, name: "Shed Restoration", item: "https://perfectfinishpainter.com/shed-restoration" },
     ],
   };
 
@@ -45,14 +45,7 @@ export default function ShedRestorationPage() {
     description: "Professional shed restoration including wood rot repair, scraping, sanding, priming, and weather-resistant exterior painting for sheds, outbuildings, and storage structures throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
-    url: "https://perfectfinishpainter.com/deck-fence-staining",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
+    url: "https://perfectfinishpainter.com/shed-restoration",
   };
 
   const faqJsonLd = {
@@ -149,7 +142,7 @@ export default function ShedRestorationPage() {
             A new shed costs thousands. A full restoration — wood repair, new paint, sealed joints — costs a fraction of that and gives you years more life out of the structure you already have. Most sheds we restore look brand new when we&apos;re done and hold up for 5-7 years before needing another coat.
           </p>
           <p className="text-[#64748b] text-lg leading-relaxed">
-            We serve homeowners across <Link href="/mays-landing" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/egg-harbor-township" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/galloway" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/northfield" className="text-[#2563eb] hover:underline">Northfield</Link>, and all of Atlantic County. If your shed is looking rough, give us a call — we&apos;ll come take a look and tell you honestly whether it makes sense to restore or if you&apos;re better off replacing it.
+            We serve homeowners across <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, and all of Atlantic County. If your shed is looking rough, give us a call — we&apos;ll come take a look and tell you honestly whether it makes sense to restore or if you&apos;re better off replacing it.
           </p>
         </div>
       </section>

@@ -7,12 +7,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Exterior Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
+    "Exterior house painting across Atlantic County NJ — siding, shutters, doors, trim. UV/mildew-resistant for shore climate. Free quote — 609-377-4226.",
   openGraph: {
-    title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
+    title: "Exterior Painting in Atlantic County NJ | Perfect Finish",
+    description: "Exterior house painting across Atlantic County NJ — siding, shutters, doors, trim. UV/mildew-resistant for shore climate. Free quote — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/exterior-painting",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Exterior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Exterior house painting in Atlantic County NJ. Siding, shutters, doors, and trim. UV and mildew-resistant paint for South Jersey's coastal climate. Free estimates — 609-377-4226.",
+    title: "Exterior Painting in Atlantic County NJ | Perfect Finish",
+    description: "Exterior house painting across Atlantic County NJ — siding, shutters, doors, trim. UV/mildew-resistant for shore climate. Free quote — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/exterior-painting" },
@@ -46,13 +46,6 @@ export default function ExteriorPaintingPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/exterior-painting",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   const faqJsonLd = {
@@ -163,6 +156,15 @@ export default function ExteriorPaintingPage() {
           <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">How Often Should You Repaint Your Exterior?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             In New Jersey, exterior paint typically lasts 5 to 7 years depending on sun exposure, weather conditions, and paint quality. Homes closer to the shore may need repainting sooner due to salt air. Signs it&apos;s time include fading, chalking, peeling, or visible bare wood. Regular maintenance and quality paint extend the life of any paint job. If you&apos;re not sure, we offer free assessments — just give us a call or take our quiz.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Exterior Painting Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            South Jersey exteriors take a beating from sun, salt, and humidity. Shore and bayside homes in <Link href="/painters-brigantine-nj" className="text-[#2563eb] hover:underline">Brigantine</Link>, <Link href="/painters-margate-nj" className="text-[#2563eb] hover:underline">Margate</Link>, <Link href="/painters-ventnor-nj" className="text-[#2563eb] hover:underline">Ventnor</Link>, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link> need salt-tolerant coatings; inland homes in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> and <Link href="/painters-absecon-nj" className="text-[#2563eb] hover:underline">Absecon</Link> fight mostly UV and seasonal temperature swings. We spec the paint system to match where you live.
           </p>
         </div>
       </section>

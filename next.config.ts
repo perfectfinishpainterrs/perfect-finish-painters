@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
         destination: "https://estimate-app-liart.vercel.app/quiz/perfect-finish-painters",
         permanent: false,
       },
+      {
+        source: "/deck-fence-staining",
+        destination: "/shed-restoration",
+        permanent: true,
+      },
     ];
   },
   async headers() {

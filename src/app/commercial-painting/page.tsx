@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
+  title: "Commercial Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround. Serving Mays Landing & all of South Jersey.",
+    "Commercial painting contractor in Atlantic County NJ — offices, retail, restaurants. Flexible scheduling. Serving Mays Landing & South Jersey.",
   openGraph: {
-    title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround.",
+    title: "Commercial Painting in Atlantic County NJ | Perfect Finish",
+    description: "Commercial painting contractor in Atlantic County NJ — offices, retail, restaurants. Flexible scheduling. Serving Mays Landing & South Jersey.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/commercial-painting",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Commercial painting contractor in Atlantic County NJ. Offices, retail spaces, restaurants, and commercial buildings. Flexible scheduling, fast turnaround.",
+    title: "Commercial Painting in Atlantic County NJ | Perfect Finish",
+    description: "Commercial painting contractor in Atlantic County NJ — offices, retail, restaurants. Flexible scheduling. Serving Mays Landing & South Jersey.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/commercial-painting" },
@@ -45,13 +45,6 @@ export default function CommercialPaintingPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/commercial-painting",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   const faqJsonLd = {
@@ -189,7 +182,7 @@ export default function CommercialPaintingPage() {
               { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
               { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
@@ -202,6 +195,15 @@ export default function CommercialPaintingPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Commercial Painting Across South Jersey</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            We paint commercial spaces throughout South Jersey — retail storefronts in <Link href="/painters-atlantic-city-nj" className="text-[#2563eb] hover:underline">Atlantic City</Link> and <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link>, office buildings in <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> and <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, and restaurants across <Link href="/painters-vineland-nj" className="text-[#2563eb] hover:underline">Vineland</Link>. We schedule around your hours — evenings, weekends, or overnight — so your business keeps running.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Need Your Business Painted?</h2>

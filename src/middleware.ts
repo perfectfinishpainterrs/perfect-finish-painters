@@ -9,6 +9,10 @@ export function middleware(request: NextRequest) {
     const cleanUrl = new URL(pathname, request.url);
     return NextResponse.redirect(cleanUrl, 301);
   }
+
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-pathname", pathname);
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {

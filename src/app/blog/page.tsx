@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -32,18 +33,24 @@ const posts = [
     title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",
     excerpt: "Sherwin-Williams Snowbound is a versatile, crisp white paint color that&apos;s perfect for creating bright, inviting spaces in your South Jersey home. As professional painters in Mays Landing, NJ, we&apos;ve seen how this neutral shade enhances everything from modern kitchens to cozy living rooms. Learn why Snowbound could be the ideal choice for your next painting project with Perfect Finish Painters.",
     date: "March 2026",
+    image: "/images/blog/sherwin-williams-snowbound-paint-south-jersey.jpg",
+    alt: "Sherwin-Williams Snowbound white paint on interior walls in a South Jersey home",
   },
   {
     slug: "cedar-siding-repair-south-jersey",
     title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm",
     excerpt: "Cedar siding is a popular choice for homes in South Jersey due to its natural beauty and durability, but it can suffer from wear over time. At Perfect Finish Painters, we specialize in professional cedar siding repair to protect and enhance your property. Learn about common issues, repair techniques, and why our Mays Landing-based team is your go-to for South Jersey painting services.",
     date: "March 2026",
+    image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.jpg",
+    alt: "Cedar siding staining and repair before and after in Egg Harbor Township NJ",
   },
   {
     slug: "exterior-painting-south-jersey",
     title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey",
     excerpt: "Discover how professional exterior painting can transform your home&apos;s appearance and protect it from the elements. At Perfect Finish Painters in Mays Landing, NJ, we specialize in high-quality exterior painting services tailored for South Jersey homes. Learn tips, benefits, and why choosing local experts makes all the difference.",
     date: "March 2026",
+    image: "/deck-exterior-painting-before-after-south-jersey-nj.jpg",
+    alt: "Exterior deck painting before and after in South Jersey NJ",
   },
   {
     slug: "difference-between-flat-and-satin-paint-finish",
@@ -96,7 +103,7 @@ export default function BlogPage() {
               <ScrollReveal key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="block group">
                   <article className="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#e2e8f0] hover:shadow-xl transition-shadow">
-                    <img src={post.image} alt={post.alt} className="w-full h-64 object-cover" loading="lazy" />
+                    <Image src={post.image} alt={post.alt} width={1200} height={630} className="w-full h-64 object-cover" />
                     <div className="p-8">
                     <span className="text-[#94a3b8] text-sm">{post.date}</span>
                     <h2 className="text-2xl font-bold text-[#1e3a5f] mt-2 mb-3 group-hover:text-[#2563eb] transition-colors">

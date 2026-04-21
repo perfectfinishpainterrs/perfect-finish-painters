@@ -68,7 +68,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/deck-fence-staining`,
+      url: `${baseUrl}/shed-restoration`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/deck-staining`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fence-staining`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/garage-door-painting`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/epoxy-floor-coating`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -99,6 +123,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/exterior-painting-south-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/sherwin-williams-snowbound-paint-south-jersey`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,

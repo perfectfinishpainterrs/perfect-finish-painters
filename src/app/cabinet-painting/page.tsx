@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Cabinet Painting in Atlantic County NJ | Perfect Finish Painters",
+  title: "Cabinet Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Professional kitchen cabinet painting in Atlantic County NJ. Transform your cabinets without replacing them. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey. Free estimates.",
+    "Kitchen cabinet painting across Atlantic County NJ. Transform cabinets without replacing them. Serving Mays Landing & South Jersey. Free estimates.",
   openGraph: {
-    title: "Cabinet Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional kitchen cabinet painting in Atlantic County NJ. Transform your cabinets without replacing them. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey.",
+    title: "Cabinet Painting in Atlantic County NJ | Perfect Finish",
+    description: "Kitchen cabinet painting across Atlantic County NJ. Transform cabinets without replacing them. Serving Mays Landing & South Jersey. Free estimates.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/cabinet-painting",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cabinet Painting in Atlantic County NJ | Perfect Finish Painters",
-    description: "Professional kitchen cabinet painting in Atlantic County NJ. Transform your cabinets without replacing them. Serving Mays Landing, EHT, Northfield, Galloway & all of South Jersey.",
+    title: "Cabinet Painting in Atlantic County NJ | Perfect Finish",
+    description: "Kitchen cabinet painting across Atlantic County NJ. Transform cabinets without replacing them. Serving Mays Landing & South Jersey. Free estimates.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/cabinet-painting" },
@@ -45,13 +45,6 @@ export default function CabinetPaintingPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/cabinet-painting",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   const faqJsonLd = {
@@ -165,7 +158,7 @@ export default function CabinetPaintingPage() {
             <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Cabinet Painting Cost in Atlantic County, NJ</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
-            Most kitchen cabinet painting projects in Atlantic County cost between <strong className="text-[#1e3a5f]">$1,200 and $3,500</strong> depending on the number of cabinets, their condition, and the finish you choose. The typical project takes 2 to 4 days. We provide free, detailed estimates before any work begins — take our 60-second quiz or call (609) 377-4226 to get started.
+            Most kitchen cabinet painting projects in Atlantic County cost between <strong className="text-[#1e3a5f]">$1,200 and $3,500</strong> depending on the number of cabinets, their condition, and the finish you choose. The typical project takes 2 to 4 days. We provide free, detailed estimates before any work begins — take our 60-second quiz or call <a href="tel:+16093774226" className="text-[#2563eb] hover:underline">(609) 377-4226</a> to get started.
           </p>
         </div>
       </section>
@@ -182,7 +175,7 @@ export default function CabinetPaintingPage() {
               { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Popcorn Ceiling Removal", desc: "Remove dated texture for a smooth, modern ceiling.", href: "/popcorn-ceiling-removal" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
               { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
@@ -195,6 +188,15 @@ export default function CabinetPaintingPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Cabinet Painting Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            We paint kitchen cabinets throughout Atlantic County. Whether you&apos;re updating a 90s oak kitchen in <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> or <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, refreshing a builder-grade kitchen in <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link> or <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, or reviving an older kitchen in <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link> or <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, the process is the same — clean, sand, prime, spray. What changes is the cabinet material and how much prep each one needs.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Kitchen?</h2>

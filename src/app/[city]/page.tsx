@@ -97,13 +97,6 @@ export default async function CityPage({ params }: CityPageProps) {
     },
     priceRange: "$$",
     image: "https://perfectfinishpainter.com/logo.png",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Painting Services",
@@ -197,7 +190,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </p>
           <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Exterior Painting in {area.name}, NJ</h2>
           <p className="text-[#64748b] mb-4">
-            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/deck-fence-staining" className="text-[#2563eb] hover:underline">shed restoration &amp; painting</a>.
+            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/shed-restoration" className="text-[#2563eb] hover:underline">shed restoration &amp; painting</a>.
           </p>
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.body}
@@ -242,7 +235,11 @@ export default async function CityPage({ params }: CityPageProps) {
               { title: "Exterior Painting", desc: "Siding, shutters, doors, and trim to boost curb appeal.", href: "/exterior-painting" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Flooring Installation", desc: "Professional flooring to complete your renovation.", href: "/flooring" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Deck Staining", desc: "Clean, sand, stain, and seal your deck for South Jersey weather.", href: "/deck-staining" },
+              { title: "Fence Staining", desc: "Stain and seal wood fences to hold up against coastal weather.", href: "/fence-staining" },
+              { title: "Garage Door Painting", desc: "Solid color or wood-grain stain finishes for instant curb appeal.", href: "/garage-door-painting" },
+              { title: "Epoxy Floor Coating", desc: "Diamond-ground, 100%-solids epoxy for garages and basements.", href: "/epoxy-floor-coating" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
               { title: "Commercial Painting", desc: "Office, retail, and commercial property painting.", href: "/services" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">

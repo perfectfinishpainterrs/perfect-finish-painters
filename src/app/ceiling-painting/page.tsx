@@ -6,12 +6,12 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Ceiling Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Ceiling Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Professional ceiling painting in Atlantic County NJ. Flat ceilings, vaulted ceilings, popcorn texture, and crown molding. Serving Mays Landing, EHT, Galloway, Northfield & all of South Jersey. Free estimates.",
+    "Pro ceiling painting across Atlantic County NJ — flat, vaulted, popcorn & crown molding. Serving Mays Landing & South Jersey. Free estimates.",
   openGraph: {
-    title: "Ceiling Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Professional ceiling painting in Atlantic County NJ. Flat ceilings, vaulted ceilings, popcorn texture, and crown molding. Serving Mays Landing, EHT, Galloway, Northfield & all of South Jersey. Free estimates.",
+    title: "Ceiling Painting in Atlantic County NJ | Perfect Finish",
+    description: "Pro ceiling painting across Atlantic County NJ — flat, vaulted, popcorn & crown molding. Serving Mays Landing & South Jersey. Free estimates.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/ceiling-painting",
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ceiling Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-    description: "Professional ceiling painting in Atlantic County NJ. Flat ceilings, vaulted ceilings, popcorn texture, and crown molding. Serving Mays Landing, EHT, Galloway, Northfield & all of South Jersey. Free estimates.",
+    title: "Ceiling Painting in Atlantic County NJ | Perfect Finish",
+    description: "Pro ceiling painting across Atlantic County NJ — flat, vaulted, popcorn & crown molding. Serving Mays Landing & South Jersey. Free estimates.",
     images: ["/logo.png"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/ceiling-painting" },
@@ -197,7 +197,7 @@ export default function CeilingPaintingPage() {
             <ScrollReveal>
               <div className="bg-white rounded-xl p-6 shadow-sm border border-[#e2e8f0]">
                 <h3 className="text-lg font-semibold text-[#1e3a5f] mb-2">How much does it cost to paint a ceiling in NJ?</h3>
-                <p className="text-[#64748b] leading-relaxed">$200–$600 depending on size, height, and condition. Free estimates — call (609) 377-4226.</p>
+                <p className="text-[#64748b] leading-relaxed">$200–$600 depending on size, height, and condition. Free estimates — call <a href="tel:+16093774226" className="text-[#2563eb] hover:underline">(609) 377-4226</a>.</p>
               </div>
             </ScrollReveal>
             <ScrollReveal>
@@ -235,7 +235,7 @@ export default function CeilingPaintingPage() {
               { title: "Popcorn Ceiling Removal", desc: "Remove outdated texture for a smooth, modern ceiling.", href: "/popcorn-ceiling-removal" },
               { title: "Drywall Repair", desc: "Patch holes, fix cracks, and restore smooth surfaces.", href: "/drywall-repair" },
               { title: "Cabinet Painting", desc: "Transform your kitchen cabinets without replacing them.", href: "/cabinet-painting" },
-              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/deck-fence-staining" },
+              { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="bg-white rounded-xl p-5 shadow-sm border border-[#e2e8f0] hover:border-[#2563eb] transition-colors block">
                 <h3 className="text-[#1e3a5f] font-semibold mb-1">{service.title}</h3>
@@ -247,6 +247,15 @@ export default function CeilingPaintingPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Ceiling Painting Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            We handle ceiling painting across Atlantic County — vaulted and cathedral ceilings in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> and <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> craftsman homes, popcorn-texture ceilings throughout <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link> and <Link href="/painters-vineland-nj" className="text-[#2563eb] hover:underline">Vineland</Link> 80s ranches, and fresh flat ceilings in <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link> and <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link> new builds. Stain-blocking primer for water marks is included on every ceiling job.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready for Fresh, Bright Ceilings?</h2>

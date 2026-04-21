@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://perfectfinishpainter.com"),
-  title: "Painters in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
-  description: "Licensed painting contractor serving Atlantic County NJ. Interior painting, exterior painting, drywall repair, and flooring. Based in Mays Landing. Free estimates — 609-377-4226.",
+  title: "Painters in Atlantic County NJ | Perfect Finish",
+  description: "Licensed painters in Atlantic County NJ. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free estimates — 609-377-4226.",
   keywords: "painters in Mays Landing NJ, South Jersey painting company, Mays Landing painters, interior painting South Jersey, exterior painting NJ, drywall repair Mays Landing, house painters near me, painting contractors Atlantic County",
   openGraph: {
     title: "Painters in Mays Landing NJ | Perfect Finish Painters",
@@ -51,11 +52,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = (await headers()).get("x-pathname") ?? "";
+  const lang = pathname.startsWith("/pintores-") ? "es" : "en";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HousePainter",
@@ -65,7 +68,6 @@ export default function RootLayout({
     telephone: "+1-609-377-4226",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Mays Landing",
       addressLocality: "Mays Landing",
       addressRegion: "NJ",
       postalCode: "08330",
@@ -220,7 +222,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         <meta name="google" content="nositelinkssearchbox" />
         <Script

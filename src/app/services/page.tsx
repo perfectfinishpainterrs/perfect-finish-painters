@@ -60,12 +60,16 @@ export default function ServicesPage() {
       { "@type": "ListItem", position: 2, name: "Exterior Painting", url: "https://perfectfinishpainter.com/exterior-painting" },
       { "@type": "ListItem", position: 3, name: "Drywall Repair", url: "https://perfectfinishpainter.com/drywall-repair" },
       { "@type": "ListItem", position: 4, name: "Flooring Installation", url: "https://perfectfinishpainter.com/flooring" },
-      { "@type": "ListItem", position: 5, name: "Shed Restoration & Painting", url: "https://perfectfinishpainter.com/deck-fence-staining" },
+      { "@type": "ListItem", position: 5, name: "Shed Restoration & Painting", url: "https://perfectfinishpainter.com/shed-restoration" },
       { "@type": "ListItem", position: 6, name: "Ceiling Painting", url: "https://perfectfinishpainter.com/ceiling-painting" },
       { "@type": "ListItem", position: 7, name: "Cabinet Painting", url: "https://perfectfinishpainter.com/cabinet-painting" },
       { "@type": "ListItem", position: 8, name: "Popcorn Ceiling Removal", url: "https://perfectfinishpainter.com/popcorn-ceiling-removal" },
       { "@type": "ListItem", position: 9, name: "Wallpaper Removal", url: "https://perfectfinishpainter.com/wallpaper-removal" },
       { "@type": "ListItem", position: 10, name: "Commercial Painting", url: "https://perfectfinishpainter.com/commercial-painting" },
+      { "@type": "ListItem", position: 11, name: "Deck Staining", url: "https://perfectfinishpainter.com/deck-staining" },
+      { "@type": "ListItem", position: 12, name: "Fence Staining", url: "https://perfectfinishpainter.com/fence-staining" },
+      { "@type": "ListItem", position: 13, name: "Garage Door Painting", url: "https://perfectfinishpainter.com/garage-door-painting" },
+      { "@type": "ListItem", position: 14, name: "Epoxy Floor Coating", url: "https://perfectfinishpainter.com/epoxy-floor-coating" },
     ],
   };
 

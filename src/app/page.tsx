@@ -12,11 +12,11 @@ import SherwinWilliamsBanner from "@/components/SherwinWilliamsBanner";
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
-  title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
-  description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing. Free estimates — 609-377-4226.",
+  title: "Painters in Atlantic County NJ | Perfect Finish Painters",
+  description: "Licensed Atlantic County NJ painters. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free quote — 609-377-4226.",
   openGraph: {
-    title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
-    description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing.",
+    title: "Painters in Atlantic County NJ | Perfect Finish Painters",
+    description: "Licensed Atlantic County NJ painters. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free quote — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painters in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters — Mays Landing",
-    description: "Licensed painting contractor serving Atlantic County NJ using Sherwin-Williams Duration & Emerald designer paint. Interior & exterior painting, drywall repair, and flooring. Based in Mays Landing.",
+    title: "Painters in Atlantic County NJ | Perfect Finish Painters",
+    description: "Licensed Atlantic County NJ painters. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free quote — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: {

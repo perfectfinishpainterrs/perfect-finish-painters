@@ -7,13 +7,13 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+  title: "Interior Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
+    "Pro interior painting across Atlantic County NJ — walls, ceilings, trim & accents. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
   openGraph: {
-    title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    title: "Interior Painting in Atlantic County NJ | Perfect Finish",
     description:
-      "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
+      "Pro interior painting across Atlantic County NJ — walls, ceilings, trim & accents. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/interior-painting",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Interior Painting in Atlantic County NJ | Perfect Finish Painters — Mays Landing",
+    title: "Interior Painting in Atlantic County NJ | Perfect Finish",
     description:
-      "Professional interior painting in Atlantic County NJ. Walls, ceilings, trim, and accent walls. Serving Mays Landing, EHT, Galloway, Northfield, Linwood & all of South Jersey.",
+      "Pro interior painting across Atlantic County NJ — walls, ceilings, trim & accents. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -50,13 +50,6 @@ export default function InteriorPaintingPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
     url: "https://perfectfinishpainter.com/interior-painting",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
   };
 
   const faqJsonLd = {
@@ -197,6 +190,15 @@ export default function InteriorPaintingPage() {
       </section>
 
       {/* CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Interior Painting Across Atlantic County</h2></ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed">
+            We paint interiors throughout Atlantic County — single rooms, whole homes, and everything in between. Common areas we serve include <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link>. Older homes with plaster walls and new construction with fresh drywall need different prep — we know the difference.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Space?</h2>
