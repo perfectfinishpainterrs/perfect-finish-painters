@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Painters in Atlantic County NJ | Perfect Finish Painters",
     description: "Licensed Atlantic County NJ painters. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free quote — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com",
@@ -41,28 +41,82 @@ const services = [
   {
     title: "Interior Painting",
     desc: "Walls, ceilings, trim, and accent walls.",
-    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg",
+    image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.webp",
     href: "/interior-painting",
   },
   {
     title: "Exterior Painting",
     desc: "Siding, shutters, doors, and trim.",
-    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.webp",
     href: "/exterior-painting",
   },
   {
     title: "Drywall Repairs",
     desc: "Holes, cracks, and surface restoration.",
-    image: "/drywall-ceiling-repair-before-after-mays-landing-nj.jpg",
+    image: "/drywall-ceiling-repair-before-after-mays-landing-nj.webp",
     href: "/drywall-repair",
   },
   {
     title: "Flooring",
     desc: "Hardwood, laminate, vinyl, and tile.",
-    image: "/radiator-painting-before-after-somers-point-nj.jpg",
+    image: "/radiator-painting-before-after-somers-point-nj.webp",
     href: "/flooring",
   },
 ];
+
+// aggregateRating + review live here (not in the root layout) because ReviewsSection
+// renders the review cards on this page. Same @id as the HousePainter in layout.tsx so
+// the rating merges into that entity instead of creating a duplicate.
+const reviewJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "@id": "https://perfectfinishpainter.com/#business",
+  name: "Perfect Finish Painters",
+  url: "https://perfectfinishpainter.com",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    bestRating: "5",
+    reviewCount: "19",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Ryan J." },
+      datePublished: "2024-11-15",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Has helped me numerous times with painting. Truly a professional!",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sean P." },
+      datePublished: "2024-10-22",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "They show up on time, do what they promise, at a fair price.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Audie M." },
+      datePublished: "2024-11-01",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "They came out quickly and touched up my house.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Mandy D." },
+      datePublished: "2024-12-03",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "I recommend Perfect Finish Painters! Quality work at an affordable price.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sean D." },
+      datePublished: "2024-12-10",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Brandon came out and touched up painting my house after other painters stopped contacting me.",
+    },
+  ],
+};
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -156,6 +210,10 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Header />
@@ -164,7 +222,7 @@ export default function Home() {
       <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/shed-exterior-painting-before-after-mays-landing-nj.jpg"
+            src="/shed-exterior-painting-before-after-mays-landing-nj.webp"
             alt="Professional interior and exterior painting by Perfect Finish Painters in Mays Landing NJ"
             fill
             className="object-cover"

@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/our-work",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Our Work | Perfect Finish Painters — Project Gallery",
     description: "See the transformations Perfect Finish Painters has created across South Jersey. Browse our project gallery.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/our-work",
@@ -65,7 +65,7 @@ export default function OurWorkPage() {
       <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#1e3a5f]">
           <Image
-            src="/shed-exterior-painting-before-after-mays-landing-nj.jpg"
+            src="/shed-exterior-painting-before-after-mays-landing-nj.webp"
             alt=""
             fill
             className="object-cover opacity-20"
@@ -106,10 +106,10 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      {/* Project Gallery */}
-      <ScrollReveal>
-        <OurWorkGallery />
-      </ScrollReveal>
+      {/* Project Gallery — not wrapped in ScrollReveal because the gallery is too tall
+          to ever hit a 15% intersection threshold, which left it stuck at opacity:0.
+          Each card already has its own fadeSlideUp animation in OurWorkGallery.tsx. */}
+      <OurWorkGallery />
 
       {/* Before & After Callout */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">

@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/fence-staining",
-    images: [{ url: "/fence-gate-painting-black-northfield-nj.jpg", width: 1200, height: 900, alt: "Fence and gate staining before and after in Northfield NJ" }],
+    images: [{ url: "/fence-gate-painting-black-northfield-nj.webp", width: 1200, height: 900, alt: "Fence and gate staining before and after in Northfield NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fence Staining in Atlantic County NJ | Perfect Finish",
     description:
       "Professional fence staining & sealing across Atlantic County NJ — wood prep, premium stain, weather-resistant finish. Free quote — 609-377-4226.",
-    images: ["/fence-gate-painting-black-northfield-nj.jpg"],
+    images: ["/fence-gate-painting-black-northfield-nj.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/fence-staining" },
 };
@@ -109,7 +109,7 @@ export default function FenceStainingPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/fence-gate-painting-black-northfield-nj.jpg" alt="Fence and gate staining before and after in Northfield NJ by Perfect Finish Painters" width={600} height={450} className="w-full h-auto" />
+                <Image src="/fence-gate-painting-black-northfield-nj.webp" alt="Fence and gate staining before and after in Northfield NJ by Perfect Finish Painters" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/exterior-painting",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Exterior Painting in Atlantic County NJ | Perfect Finish",
     description: "Exterior house painting across Atlantic County NJ — siding, shutters, doors, trim. UV/mildew-resistant for shore climate. Free quote — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/exterior-painting" },
 };
@@ -104,7 +104,7 @@ export default function ExteriorPaintingPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/exterior-siding-staining-before-after-egg-harbor-township-nj.jpg" alt="Cedar siding repair and staining before and after in Egg Harbor Township NJ" width={600} height={450} className="w-full h-auto" />
+                <Image src="/exterior-siding-staining-before-after-egg-harbor-township-nj.webp" alt="Cedar siding repair and staining before and after in Egg Harbor Township NJ" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

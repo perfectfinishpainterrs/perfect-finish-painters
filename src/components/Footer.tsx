@@ -20,12 +20,12 @@ export default function Footer() {
     <>
       <footer className="bg-[#1e3a5f] border-t border-[#2d4a6f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">
               <div className="mb-4">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Perfect Finish Painters"
                   width={320}
                   height={80}
@@ -92,35 +92,45 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-semibold mb-4">Quick Links</h3>
               <nav className="flex flex-col gap-2">
-                <Link
-                  href="/#services"
-                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-                >
+                <Link href="/services" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
                   Services
                 </Link>
-                <Link
-                  href="/about"
-                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-                >
-                  How It Works
+                <Link href="/about" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  About
                 </Link>
-                <Link
-                  href="/about"
-                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-                >
-                  Why Choose Us
+                <Link href="/our-work" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Our Work
                 </Link>
-                <Link
-                  href="/services#faq"
-                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-                >
+                <Link href="/reviews" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Reviews
+                </Link>
+                <Link href="/blog" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Blog
+                </Link>
+                <Link href="/faq" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
                   FAQ
                 </Link>
-                <Link
-                  href="/quiz"
-                  className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-                >
+                <Link href="/contact" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Contact
+                </Link>
+                <Link href="/quiz" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
                   Get Estimate
+                </Link>
+              </nav>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Legal</h3>
+              <nav className="flex flex-col gap-2">
+                <Link href="/privacy" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Terms of Service
+                </Link>
+                <Link href="/accessibility" className="text-[#94a3b8] hover:text-white transition-colors text-sm">
+                  Accessibility
                 </Link>
               </nav>
             </div>

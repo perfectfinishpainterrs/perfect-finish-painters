@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/reviews",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Reviews | Perfect Finish Painters — 5-Star Rated",
     description: "Read reviews from real customers. 5-star rated painting company in Mays Landing NJ.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/reviews" },
 };
@@ -54,10 +54,35 @@ export default function ReviewsPage() {
     ],
   };
 
+  // Merge by @id into the HousePainter defined in layout.tsx. Emitting aggregateRating
+  // here (not in the layout) avoids flagging rating data on pages that don't render
+  // the review cards.
+  const reviewJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "@id": "https://perfectfinishpainter.com/#business",
+    name: "Perfect Finish Painters",
+    url: "https://perfectfinishpainter.com",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      reviewCount: String(reviews.length),
+    },
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
+      reviewBody: r.text,
+      publisher: { "@type": "Organization", name: r.source },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }} />
 
       {/* Hero */}
       <section className="pt-36 pb-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">

@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-vineland-nj",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pintores en Vineland NJ | Perfect Finish Painters — Hablamos Español",
     description:
       "Pintores en Vineland NJ. Pintura interior, exterior y drywall. Hablamos español. Licenciados en NJ. Estimados gratis — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/pintores-vineland-nj",

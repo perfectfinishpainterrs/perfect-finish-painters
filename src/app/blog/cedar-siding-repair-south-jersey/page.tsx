@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey",
-    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm" }],
+    images: [{ url: "/logo.webp", width: 1200, height: 630, alt: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm",
     description: "Get expert cedar siding repair in South Jersey from Perfect Finish Painters. Restore your home&apos;s exterior with our professional services in Mays Landing, NJ.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey" },
 };
@@ -31,20 +31,20 @@ export default function BlogPost() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://perfectfinishpainter.com" },
       { "@type": "ListItem", position: 2, name: "Blog", item: "https://perfectfinishpainter.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm", item: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey" },
+      { "@type": "ListItem", position: 3, name: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm", item: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey" },
     ],
   };
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm",
-    image: "https://perfectfinishpainter.com/logo.png",
+    headline: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm",
+    image: "https://perfectfinishpainter.com/logo.webp",
     author: { "@type": "Organization", name: "Perfect Finish Painters" },
-    publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.png" } },
+    publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
-    description: "Get expert cedar siding repair in South Jersey from Perfect Finish Painters. Restore your home&apos;s exterior with our professional services in Mays Landing, NJ.",
+    description: "Get expert cedar siding repair in South Jersey from Perfect Finish Painters. Restore your home's exterior with our professional services in Mays Landing, NJ.",
   };
 
   return (

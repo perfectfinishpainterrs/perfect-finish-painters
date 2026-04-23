@@ -19,7 +19,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `Name: ${name}\nPhone: ${phone}\n\nMessage:\n${message}`
     );
-    window.location.href = `mailto:perfectfinishpainterr@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@perfectfinishpainter.com?subject=${subject}&body=${body}`;
   };
 
   return (

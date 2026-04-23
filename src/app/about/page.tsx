@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/about",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Perfect Finish Painters | Meet Brandon",
     description: "Family-owned painting company in Mays Landing NJ. Meet Brandon, the owner of Perfect Finish Painters.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/about",
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="bg-[#2563eb]/10 rounded-2xl p-8">
                   <Image
-                    src="/owner.jpg"
+                    src="/owner.webp"
                     alt="Brandon - Owner of Perfect Finish Painters in Mays Landing NJ"
                     width={600}
                     height={450}

@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/commercial-painting",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Commercial Painting in Atlantic County NJ | Perfect Finish",
     description: "Commercial painting contractor in Atlantic County NJ — offices, retail, restaurants. Flexible scheduling. Serving Mays Landing & South Jersey.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/commercial-painting" },
 };

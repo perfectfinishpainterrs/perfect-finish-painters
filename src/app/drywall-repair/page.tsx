@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/drywall-repair",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Drywall Repair in Atlantic County NJ | Perfect Finish",
     description: "Drywall repair in Atlantic County NJ — holes, cracks, water damage, texture matching, skim coating. Same-day service. Free estimate — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/drywall-repair" },
 };
@@ -104,7 +104,7 @@ export default function DrywallRepairPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/drywall-ceiling-repair-before-after-mays-landing-nj.jpg" alt="Drywall repair project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/drywall-ceiling-repair-before-after-mays-landing-nj.webp" alt="Drywall repair project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

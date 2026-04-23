@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/cabinet-painting",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cabinet Painting in Atlantic County NJ | Perfect Finish",
     description: "Kitchen cabinet painting across Atlantic County NJ. Transform cabinets without replacing them. Serving Mays Landing & South Jersey. Free estimates.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/cabinet-painting" },
 };

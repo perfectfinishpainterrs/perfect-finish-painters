@@ -80,7 +80,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Perfect Finish Painters"
               width={320}
               height={80}
@@ -128,6 +128,18 @@ export default function Header() {
               className={`${textColor} ${textHover} transition-colors`}
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              className={`${textColor} ${textHover} transition-colors`}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/contact"
+              className={`${textColor} ${textHover} transition-colors`}
+            >
+              Contact
             </Link>
           </nav>
 
@@ -259,6 +271,20 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
+              </Link>
+              <Link
+                href="/faq"
+                className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/contact"
+                className="text-[#64748b] hover:text-[#1e3a5f] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
               <a
                 href="tel:+16093774226"

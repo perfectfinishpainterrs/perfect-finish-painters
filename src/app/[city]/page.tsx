@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       url: `https://perfectfinishpainter.com/${area.slug}`,
       images: [
         {
-          url: "https://perfectfinishpainter.com/logo.png",
+          url: "https://perfectfinishpainter.com/logo.webp",
           width: 1970,
           height: 748,
           alt: "Perfect Finish Painters logo",
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       card: "summary_large_image",
       title: area.metaTitle,
       description: area.metaDescription,
-      images: ["https://perfectfinishpainter.com/logo.png"],
+      images: ["https://perfectfinishpainter.com/logo.webp"],
     },
     alternates: {
       canonical: `https://perfectfinishpainter.com/${area.slug}`,
@@ -71,55 +71,29 @@ export default async function CityPage({ params }: CityPageProps) {
   const area = serviceAreas.find((a) => a.slug === city);
   if (!area) notFound();
 
-  const jsonLd = {
+  // City-specific Service with geo-aware areaServed. Merges by @id with the HousePainter
+  // in the root layout — avoids duplicate LocalBusiness entities on the same page.
+  const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "HousePainter",
-    name: "Perfect Finish Painters",
+    "@type": "Service",
+    name: `Painting Services in ${area.name}, NJ`,
     description: area.description,
     url: `https://perfectfinishpainter.com/${area.slug}`,
-    telephone: "+1-609-377-4226",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Mays Landing",
-      addressLocality: "Mays Landing",
-      addressRegion: "NJ",
-      postalCode: "08330",
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: area.latitude,
-      longitude: area.longitude,
-    },
+    serviceType: "House Painting",
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: {
       "@type": "City",
-      name: `${area.name}, ${area.state}`,
-    },
-    priceRange: "$$",
-    image: "https://perfectfinishpainter.com/logo.png",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Painting Services",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } } },
-        { "@type": "ListItem", position: 2, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } } },
-        { "@type": "ListItem", position: 3, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } } },
-        { "@type": "ListItem", position: 4, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } } },
-        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } } },
-      ],
-    },
-    potentialAction: [
-      {
-        "@type": "ReserveAction",
-        name: "Get Free Estimate",
-        target: "https://perfectfinishpainter.com/quiz",
+      name: area.name,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: area.latitude,
+        longitude: area.longitude,
       },
-      {
-        "@type": "CommunicateAction",
-        name: "Call for Estimate",
-        target: "tel:+16093774226",
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: `${area.state}, USA`,
       },
-    ],
+    },
   };
 
   const breadcrumbJsonLd = {
@@ -149,7 +123,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"

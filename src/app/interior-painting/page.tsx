@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/interior-painting",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Interior Painting in Atlantic County NJ | Perfect Finish",
     description:
       "Pro interior painting across Atlantic County NJ — walls, ceilings, trim & accents. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/interior-painting",
@@ -112,7 +112,7 @@ export default function InteriorPaintingPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/basement-room-painting-flooring-before-after-egg-harbor-township-nj.jpg" alt="Interior painting project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
+                <Image src="/basement-room-painting-flooring-before-after-egg-harbor-township-nj.webp" alt="Interior painting project by Perfect Finish Painters in South Jersey" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

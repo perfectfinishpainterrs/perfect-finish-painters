@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/ceiling-painting",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ceiling Painting in Atlantic County NJ | Perfect Finish",
     description: "Pro ceiling painting across Atlantic County NJ — flat, vaulted, popcorn & crown molding. Serving Mays Landing & South Jersey. Free estimates.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/ceiling-painting" },
 };

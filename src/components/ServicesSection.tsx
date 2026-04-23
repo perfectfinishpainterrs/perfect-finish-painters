@@ -8,7 +8,7 @@ const services = [
   {
     title: "Interior Painting",
     href: "/interior-painting",
-    image: "/bedroom-repaint-blue-to-white-before-after-pleasantville-nj.jpg",
+    image: "/bedroom-repaint-blue-to-white-before-after-pleasantville-nj.webp",
     shortDesc: "Transform any room with fresh, vibrant colors. Walls, ceilings, trim, and more.",
     details: [
       "Living rooms, bedrooms, kitchens, bathrooms & hallways",
@@ -27,7 +27,7 @@ const services = [
   {
     title: "Exterior Painting",
     href: "/exterior-painting",
-    image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.jpg",
+    image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.webp",
     shortDesc: "Boost curb appeal and protect your home from the elements with quality exterior paint.",
     details: [
       "Siding, stucco, brick & vinyl surfaces",
@@ -46,7 +46,7 @@ const services = [
   {
     title: "Drywall Repairs",
     href: "/drywall-repair",
-    image: "/living-room-ceiling-drywall-repair-before-after-absecon-nj.jpg",
+    image: "/living-room-ceiling-drywall-repair-before-after-absecon-nj.webp",
     shortDesc: "Fix holes, cracks, and damage. We restore your walls to a smooth, paint-ready finish.",
     details: [
       "Small nail holes to large patch repairs",
@@ -65,7 +65,7 @@ const services = [
   {
     title: "Flooring",
     href: "/flooring",
-    image: "/bedroom-flooring-installation-painting-before-after-egg-harbor-township-nj.jpg",
+    image: "/bedroom-flooring-installation-painting-before-after-egg-harbor-township-nj.webp",
     shortDesc: "Complete your renovation with professional flooring installation and refinishing.",
     details: [
       "Hardwood, laminate & vinyl plank installation",
@@ -84,7 +84,7 @@ const services = [
   {
     title: "Deck Staining",
     href: "/deck-staining",
-    image: "/deck-exterior-painting-before-after-south-jersey-nj.jpg",
+    image: "/deck-exterior-painting-before-after-south-jersey-nj.webp",
     shortDesc: "Protect your deck from South Jersey weather with professional staining, sealing, and wood repair.",
     details: [
       "Pressure washing & stripping old finish",
@@ -103,7 +103,7 @@ const services = [
   {
     title: "Shed Restoration",
     href: "/shed-restoration",
-    image: "/shed-exterior-painting-before-after-mays-landing-nj.jpg",
+    image: "/shed-exterior-painting-before-after-mays-landing-nj.webp",
     shortDesc: "Bring your shed back to life with professional restoration, repair, and weather-resistant painting.",
     details: [
       "Full shed inspection & assessment",
@@ -122,7 +122,7 @@ const services = [
   {
     title: "Ceiling Painting",
     href: "/ceiling-painting",
-    image: "/kitchen-ceiling-water-damage-drywall-repair-before-after-galloway-nj.jpg",
+    image: "/kitchen-ceiling-water-damage-drywall-repair-before-after-galloway-nj.webp",
     shortDesc: "Brighten any room with a freshly painted ceiling — flat, vaulted, or textured.",
     details: [
       "Flat & smooth ceiling painting",
@@ -141,7 +141,7 @@ const services = [
   {
     title: "Cabinet Painting",
     href: "/cabinet-painting",
-    image: "/dining-room-wainscoting-painting-before-after-egg-harbor-township-nj.jpg",
+    image: "/dining-room-wainscoting-painting-before-after-egg-harbor-township-nj.webp",
     shortDesc: "Transform your kitchen for a fraction of replacement cost with professional cabinet painting.",
     details: [
       "Full kitchen cabinet painting",
@@ -160,7 +160,7 @@ const services = [
   {
     title: "Fence Staining",
     href: "/fence-staining",
-    image: "/fence-gate-painting-black-northfield-nj.jpg",
+    image: "/fence-gate-painting-black-northfield-nj.webp",
     shortDesc: "Protect and restore wood fences with premium penetrating stain built for South Jersey weather.",
     details: [
       "Pressure washing & mildew treatment",
@@ -179,7 +179,7 @@ const services = [
   {
     title: "Epoxy Floor Coating",
     href: "/epoxy-floor-coating",
-    image: "/basement-floor-epoxy-coating-before-after-galloway-nj.jpg",
+    image: "/basement-floor-epoxy-coating-before-after-galloway-nj.webp",
     shortDesc: "Transform garage, basement, and workshop floors with diamond-ground, 100%-solids epoxy systems.",
     details: [
       "Diamond grinding for proper adhesion",
@@ -198,7 +198,7 @@ const services = [
   {
     title: "Garage Door Painting",
     href: "/garage-door-painting",
-    image: "/garage-door-painting-wood-stain-before-after-brigantine-nj.jpg",
+    image: "/garage-door-painting-wood-stain-before-after-brigantine-nj.webp",
     shortDesc: "Upgrade your curb appeal with a custom painted or stained garage door finish.",
     details: [
       "Wood-grain stain finishes",

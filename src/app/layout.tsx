@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://perfectfinishpainter.com",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 1970,
         height: 748,
         alt: "Perfect Finish Painters logo",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Painters in Mays Landing NJ | Perfect Finish Painters",
     description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com",
@@ -59,96 +59,51 @@ export default async function RootLayout({
 }>) {
   const pathname = (await headers()).get("x-pathname") ?? "";
   const lang = pathname.startsWith("/pintores-") ? "es" : "en";
+  // Service-area business — no storefront, so `address` is intentionally omitted and
+  // `areaServed` carries the coverage area. Reviews/aggregateRating are emitted only on
+  // pages that actually render review content (home, /reviews) to avoid Google manual
+  // action risk. `@id` lets those pages merge into this same entity.
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HousePainter",
+    "@id": "https://perfectfinishpainter.com/#business",
     name: "Perfect Finish Painters",
     description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
     url: "https://perfectfinishpainter.com",
     telephone: "+1-609-377-4226",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Mays Landing",
-      addressRegion: "NJ",
-      postalCode: "08330",
-      addressCountry: "US",
-    },
     geo: {
       "@type": "GeoCoordinates",
       latitude: 39.45,
       longitude: -74.73,
     },
     areaServed: [
-      { "@type": "City", name: "Mays Landing, NJ" },
-      { "@type": "City", name: "Egg Harbor Township, NJ" },
-      { "@type": "City", name: "Hammonton, NJ" },
-      { "@type": "City", name: "Vineland, NJ" },
-      { "@type": "City", name: "Galloway, NJ" },
-      { "@type": "City", name: "Somers Point, NJ" },
-      { "@type": "City", name: "Northfield, NJ" },
-      { "@type": "City", name: "Linwood, NJ" },
-      { "@type": "City", name: "Absecon, NJ" },
-      { "@type": "City", name: "Pleasantville, NJ" },
-      { "@type": "City", name: "Atlantic City, NJ" },
-      { "@type": "City", name: "Margate, NJ" },
-      { "@type": "City", name: "Ventnor, NJ" },
-      { "@type": "City", name: "Brigantine, NJ" },
+      { "@type": "City", name: "Mays Landing" },
+      { "@type": "City", name: "Egg Harbor Township" },
+      { "@type": "City", name: "Hammonton" },
+      { "@type": "City", name: "Vineland" },
+      { "@type": "City", name: "Galloway" },
+      { "@type": "City", name: "Somers Point" },
+      { "@type": "City", name: "Northfield" },
+      { "@type": "City", name: "Linwood" },
+      { "@type": "City", name: "Absecon" },
+      { "@type": "City", name: "Pleasantville" },
+      { "@type": "City", name: "Atlantic City" },
+      { "@type": "City", name: "Margate" },
+      { "@type": "City", name: "Ventnor" },
+      { "@type": "City", name: "Brigantine" },
     ],
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "17:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "17:00" },
     ],
     priceRange: "$$",
-    image: "https://perfectfinishpainter.com/logo.png",
+    image: "https://perfectfinishpainter.com/logo.webp",
+    logo: "https://perfectfinishpainter.com/logo.webp",
     sameAs: [
       "https://www.facebook.com/PerfectFinishPainters",
       "https://www.instagram.com/perfectfinishpainter/",
       "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
       "https://g.page/r/CYlKM00sLEMiEAI",
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: "19",
-      reviewCount: "19",
-    },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Ryan J." },
-        datePublished: "2024-11-15",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Has helped me numerous times with painting. Truly a professional!",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Sean P." },
-        datePublished: "2024-10-22",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "They show up on time, do what they promise, at a fair price.",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Audie M." },
-        datePublished: "2024-11-01",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "They came out quickly and touched up my house.",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Mandy D." },
-        datePublished: "2024-12-03",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "I recommend Perfect Finish Painters! Quality work at an affordable price.",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Sean D." },
-        datePublished: "2024-12-10",
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        reviewBody: "Brandon came out and touched up painting my house after other painters stopped contacting me.",
-      },
     ],
     award: [
       "5-Star Rated on Google",
@@ -159,66 +114,30 @@ export default async function RootLayout({
       "@type": "OfferCatalog",
       name: "Painting Services",
       itemListElement: [
-        { "@type": "ListItem", position: 1, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } } },
-        { "@type": "ListItem", position: 2, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } } },
-        { "@type": "ListItem", position: 3, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } } },
-        { "@type": "ListItem", position: 4, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } } },
-        { "@type": "ListItem", position: 5, item: { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } },
       ],
     },
-    potentialAction: [
-      {
-        "@type": "ReserveAction",
-        name: "Get Free Estimate",
-        target: "https://perfectfinishpainter.com/quiz",
-      },
-      {
-        "@type": "CommunicateAction",
-        name: "Call for Estimate",
-        target: "tel:+16093774226",
-      },
-    ],
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://perfectfinishpainter.com",
-      },
-    ],
-  };
-
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Perfect Finish Painters",
-    url: "https://perfectfinishpainter.com",
-  };
-
-  const organizationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Perfect Finish Painters",
-    url: "https://perfectfinishpainter.com",
-    logo: "https://perfectfinishpainter.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-609-377-4226",
       contactType: "customer service",
       areaServed: "US",
-      availableLanguage: "English",
+      availableLanguage: ["English", "Spanish"],
     },
-    sameAs: [
-      "https://www.facebook.com/PerfectFinishPainters",
-      "https://www.instagram.com/perfectfinishpainter/",
-      "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
-      "https://g.page/r/CYlKM00sLEMiEAI",
-    ],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://perfectfinishpainter.com/#website",
+    name: "Perfect Finish Painters",
+    url: "https://perfectfinishpainter.com",
+    publisher: { "@id": "https://perfectfinishpainter.com/#business" },
+    inLanguage: "en-US",
   };
 
   return (
@@ -266,15 +185,7 @@ export default async function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body

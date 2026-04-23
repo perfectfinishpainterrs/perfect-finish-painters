@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/shed-restoration",
-    images: [{ url: "/shed-exterior-painting-before-after-mays-landing-nj.jpg", width: 1200, height: 900, alt: "Shed restoration before and after in Mays Landing NJ" }],
+    images: [{ url: "/shed-exterior-painting-before-after-mays-landing-nj.webp", width: 1200, height: 900, alt: "Shed restoration before and after in Mays Landing NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shed Restoration in Atlantic County NJ | Perfect Finish",
     description: "Shed restoration & painting in Atlantic County NJ — wood rot repair, scraping, priming, weather-resistant finish. Free estimate — 609-377-4226.",
-    images: ["/shed-exterior-painting-before-after-mays-landing-nj.jpg"],
+    images: ["/shed-exterior-painting-before-after-mays-landing-nj.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/shed-restoration" },
 };
@@ -103,7 +103,7 @@ export default function ShedRestorationPage() {
             </div>
             <ScrollReveal direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/shed-exterior-painting-before-after-mays-landing-nj.jpg" alt="Shed restoration before and after in Mays Landing NJ by Perfect Finish Painters" width={600} height={450} className="w-full h-auto" />
+                <Image src="/shed-exterior-painting-before-after-mays-landing-nj.webp" alt="Shed restoration before and after in Mays Landing NJ by Perfect Finish Painters" width={600} height={450} className="w-full h-auto" />
               </div>
             </ScrollReveal>
           </div>

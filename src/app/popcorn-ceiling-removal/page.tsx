@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
     description: "Pro popcorn ceiling removal in Atlantic County NJ — clean, dust-contained process. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/popcorn-ceiling-removal" },
 };

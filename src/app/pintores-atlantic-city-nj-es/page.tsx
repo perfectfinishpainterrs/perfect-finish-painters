@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-atlantic-city-nj-es",
-    images: [{ url: "/logo.png", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pintores en Atlantic City NJ | Perfect Finish Painters — Hablamos Español",
     description:
       "Pintores profesionales en Atlantic City NJ. Pintura interior y exterior, reparación de drywall. Hablamos español. Estimados gratis — 609-377-4226.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/pintores-atlantic-city-nj-es",
