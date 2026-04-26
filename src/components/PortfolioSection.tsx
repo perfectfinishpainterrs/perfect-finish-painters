@@ -130,6 +130,12 @@ const projects = [
     category: "Interior",
     title: "Ceiling Texture Removal",
   },
+  {
+    src: "/basement-wall-painting-egg-harbor-township-nj.webp",
+    alt: "A basement corner with freshly painted white walls, exposed wooden ceiling beams, plastic insulation sheeting on some walls, a small wooden shelf holding household items, hanging coats, and a white staircase railing.",
+    category: "Interior",
+    title: "Basement Wall Painting",
+  },
 ];
 
 export default function PortfolioSection() {

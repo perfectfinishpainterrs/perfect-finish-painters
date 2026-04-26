@@ -214,6 +214,13 @@ const projects = [
     title: "Bedroom Color Transformation",
     desc: "Full bedroom repaint from blue to warm white with new flooring — completely transformed the space.",
   },
+  {
+    src: "/basement-wall-painting-egg-harbor-township-nj.webp",
+    alt: "A basement corner with freshly painted white walls, exposed wooden ceiling beams, plastic insulation sheeting on some walls, a small wooden shelf holding household items, hanging coats, and a white staircase railing.",
+    category: "Interior",
+    title: "Basement Wall Painting",
+    desc: "We applied a fresh coat of white paint to the basement walls and staircase, enhancing the space despite the exposed insulation and storage items.",
+  },
 ];
 
 const categories = ["All", "Interior", "Exterior", "Drywall", "Flooring", "Commercial", "Specialty"];
