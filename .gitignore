@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 public/website pictures/
+
+# local photo staging (not site content)
+work photos/
