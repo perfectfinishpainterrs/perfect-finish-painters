@@ -301,3 +301,8 @@ export const serviceAreas: ServiceArea[] = [
     },
   },
 ];
+
+export const areaServedCities = serviceAreas.map((a) => ({
+  "@type": "City" as const,
+  name: a.name,
+}));

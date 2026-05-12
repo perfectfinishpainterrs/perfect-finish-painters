@@ -65,16 +65,42 @@ html {
   }
 }
 
-/* Hide Google Translate top banner */
-.goog-te-banner-frame {
-  display: none !important;
+/* Skip-nav link — hidden offscreen until keyboard-focused */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  background: var(--foreground);
+  color: #ffffff;
+  padding: 12px 20px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 6px 0;
+  transition: top 0.15s ease-out;
 }
-body {
-  top: 0 !important;
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--accent);
+  outline-offset: 0;
 }
-.goog-te-gadget {
-  font-size: 0 !important;
+
+/* Visible focus ring — keyboard users only (mouse clicks don't trigger :focus-visible) */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
-.skiptranslate {
-  display: none !important;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+

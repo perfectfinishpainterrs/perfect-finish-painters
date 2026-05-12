@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import { headers } from "next/headers";
+import { areaServedCities } from "@/data/service-areas";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -76,22 +77,7 @@ export default async function RootLayout({
       latitude: 39.45,
       longitude: -74.73,
     },
-    areaServed: [
-      { "@type": "City", name: "Mays Landing" },
-      { "@type": "City", name: "Egg Harbor Township" },
-      { "@type": "City", name: "Hammonton" },
-      { "@type": "City", name: "Vineland" },
-      { "@type": "City", name: "Galloway" },
-      { "@type": "City", name: "Somers Point" },
-      { "@type": "City", name: "Northfield" },
-      { "@type": "City", name: "Linwood" },
-      { "@type": "City", name: "Absecon" },
-      { "@type": "City", name: "Pleasantville" },
-      { "@type": "City", name: "Atlantic City" },
-      { "@type": "City", name: "Margate" },
-      { "@type": "City", name: "Ventnor" },
-      { "@type": "City", name: "Brigantine" },
-    ],
+    areaServed: areaServedCities,
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "17:00" },
@@ -144,6 +130,10 @@ export default async function RootLayout({
     <html lang={lang}>
       <head>
         <meta name="google" content="nositelinkssearchbox" />
+        {/* Quiz lives at estimate-app-liart.vercel.app via 307 from /quiz —
+            warm DNS+TCP+TLS so the redirect doesn't pay a cold handshake. */}
+        <link rel="preconnect" href="https://estimate-app-liart.vercel.app" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://estimate-app-liart.vercel.app" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-822VB2RDNH"
           strategy="afterInteractive"
@@ -191,23 +181,8 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div id="google_translate_element" style={{ display: "none" }} />
-        <Script
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          strategy="afterInteractive"
-        />
-        <Script id="google-translate-init" strategy="afterInteractive">
-          {`
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,es',
-                autoDisplay: false
-              }, 'google_translate_element');
-            }
-          `}
-        </Script>
-        <main>{children}</main>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
+        <main id="main-content">{children}</main>
         <Analytics />
       </body>
     </html>

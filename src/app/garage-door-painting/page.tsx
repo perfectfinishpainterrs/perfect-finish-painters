@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -46,13 +48,21 @@ export default function GarageDoorPaintingPage() {
     name: "Garage Door Painting",
     description: "Professional garage door painting and wood-grain staining in Atlantic County NJ. Surface prep, priming, and weather-resistant coatings for steel, aluminum, and wood garage doors. Most single doors complete in 1 day.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/garage-door-painting",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does garage door painting cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most garage door painting in Atlantic County runs $300–$900 for a single door and $600–$1,500 for a double door, depending on material, condition, and finish type. Wood-grain stain finishes cost more than solid colors because of the added labor. Free on-site estimates — call 609-377-4226." } },
       { "@type": "Question", name: "Can you paint a steel or aluminum garage door?", acceptedAnswer: { "@type": "Answer", text: "Yes. Steel and aluminum doors need a different prep than wood — light sanding to create tooth, a bonding primer, and a direct-to-metal exterior paint. Skipping the primer is why most DIY metal door paint jobs peel within a year. We prep them right so the finish holds." } },
@@ -117,7 +127,7 @@ export default function GarageDoorPaintingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Garage Door Painting?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "On-site inspection and color consultation",
@@ -142,7 +152,7 @@ export default function GarageDoorPaintingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Solid Color vs Wood-Grain Stain</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Solid Color or Wood-Grain Stain &mdash; Which Is Right for You?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed mb-4">
             Solid colors are simple, clean, and easy to match to your trim and shutters. They&apos;re usually the right call if your house already has strong color accents or you&apos;re painting to sell.
           </p>
@@ -157,7 +167,7 @@ export default function GarageDoorPaintingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Garage Door Painting Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Garage Door Painting in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We paint and stain garage doors in <Link href="/painters-brigantine-nj" className="text-[#2563eb] hover:underline">Brigantine</Link>, <Link href="/painters-margate-nj" className="text-[#2563eb] hover:underline">Margate</Link>, <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link>, <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, and throughout Atlantic County. Shore-town doors need salt-tolerant coatings; inland doors take more UV abuse. We spec the finish to match the location.
           </p>
@@ -179,6 +189,8 @@ export default function GarageDoorPaintingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

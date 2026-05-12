@@ -211,7 +211,7 @@ export default function ServicesPage() {
 
       {/* FAQ */}
       <ScrollReveal>
-        <FAQSection />
+        <FAQSection items={paintFaqJsonLd.mainEntity} description="Got questions? We've got answers." />
       </ScrollReveal>
 
       {/* Service Areas */}

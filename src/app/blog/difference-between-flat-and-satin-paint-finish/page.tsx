@@ -40,7 +40,7 @@ export default function FlatVsSatinPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Flat vs Satin Paint Finish — Which One Do You Actually Need?",
-    image: "https://perfectfinishpainter.com/logo.webp",
+    image: "https://perfectfinishpainter.com/living-room-interior-painting-blue-wainscoting-atlantic-city-nj.webp",
     author: { "@type": "Organization", name: "Perfect Finish Painters" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",

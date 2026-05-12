@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -46,13 +48,21 @@ export default function FenceStainingPage() {
     name: "Fence Staining",
     description: "Professional fence staining, sealing, and painting in Atlantic County NJ. Pressure washing, prep, premium stain in semi-transparent or solid, and UV/water-resistant sealer. Serves cedar, pressure-treated, and picket fences.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/fence-staining",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does fence staining cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Fence staining in Atlantic County runs roughly $3–$8 per linear foot depending on fence height, condition, and whether old finish needs stripping. A typical 100-foot privacy fence runs $600–$1,500. We always provide a free measured estimate before starting — call 609-377-4226." } },
       { "@type": "Question", name: "How long does fence stain last in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "Semi-transparent stains on South Jersey fences typically last 2–4 years, solid stains 4–7 years. Fences facing south take more sun and fade faster. Shore-area fences exposed to salt air need restaining sooner than inland fences. We use penetrating stains designed for the coastal climate." } },
@@ -118,7 +128,7 @@ export default function FenceStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Fence Staining?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "On-site walk-through and linear-foot measure",
@@ -143,7 +153,7 @@ export default function FenceStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Our Fence Staining Process</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">How Do You Stain a Fence? Our Process</h2></ScrollReveal>
           <div className="space-y-6">
             {[
               { step: "1", title: "Measure & Assess", desc: "We walk the whole fence, note rot or loose pickets, measure actual linear feet (not a flat panel rate), and agree on stain opacity and color." },
@@ -168,7 +178,7 @@ export default function FenceStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Fence Staining Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Fence Staining in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We stain fences across <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>, and throughout Atlantic County. Pair with <Link href="/deck-staining" className="text-[#2563eb] hover:underline">deck staining</Link> or <Link href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior house painting</Link> to knock out the yard in one trip.
           </p>
@@ -190,6 +200,8 @@ export default function FenceStainingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

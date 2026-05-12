@@ -5,42 +5,26 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-function toggleSpanish() {
-  const frame = document.querySelector<HTMLIFrameElement>(".goog-te-menu-frame");
-  if (frame) {
-    const items = frame.contentDocument?.querySelectorAll<HTMLAnchorElement>(
-      ".goog-te-menu2-item a"
-    );
-    if (items) {
-      // Check if already translated to Spanish
-      const cookie = document.cookie;
-      if (cookie.includes("googtrans=/en/es")) {
-        // Switch back to English
-        const enItem = Array.from(items).find((a) =>
-          a.textContent?.includes("English")
-        );
-        enItem?.click();
-      } else {
-        // Switch to Spanish
-        const esItem = Array.from(items).find((a) =>
-          a.textContent?.includes("Spanish")
-        );
-        esItem?.click();
-      }
-    }
-  } else {
-    // Fallback: trigger the select element
-    const select = document.querySelector<HTMLSelectElement>(".goog-te-combo");
-    if (select) {
-      const cookie = document.cookie;
-      if (cookie.includes("googtrans=/en/es")) {
-        select.value = "en";
-      } else {
-        select.value = "es";
-      }
-      select.dispatchEvent(new Event("change"));
-    }
+const enToEs: Record<string, string> = {
+  "/painters-pleasantville-nj": "/pintores-pleasantville-nj",
+  "/painters-atlantic-city-nj": "/pintores-atlantic-city-nj-es",
+  "/painters-vineland-nj": "/pintores-vineland-nj",
+};
+
+const esToEn: Record<string, string> = {
+  "/pintores-pleasantville-nj": "/painters-pleasantville-nj",
+  "/pintores-atlantic-city-nj-es": "/painters-atlantic-city-nj",
+  "/pintores-vineland-nj": "/painters-vineland-nj",
+  "/pintores-cerca-de-mi": "/",
+};
+
+const SPANISH_LANDING = "/pintores-cerca-de-mi";
+
+function getLanguageToggle(pathname: string) {
+  if (pathname.startsWith("/pintores-")) {
+    return { href: esToEn[pathname] ?? "/", label: "EN", title: "View in English", mobileLabel: "View in English" };
   }
+  return { href: enToEs[pathname] ?? SPANISH_LANDING, label: "ES", title: "Ver en español", mobileLabel: "Traducir al Español" };
 }
 
 export default function Header() {
@@ -58,6 +42,8 @@ export default function Header() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const langToggle = getLanguageToggle(pathname);
 
   // On inner pages (not home), always use the solid white header
   const useSolidHeader = !isHome || scrolled;
@@ -145,17 +131,18 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={toggleSpanish}
+            <Link
+              href={langToggle.href}
               className={`flex items-center gap-1.5 ${phoneColor} ${textHover} transition-colors text-sm font-medium`}
-              aria-label="Translate to Spanish"
-              title="Traducir al Español"
+              aria-label={langToggle.title}
+              title={langToggle.title}
+              hrefLang={langToggle.label === "ES" ? "es" : "en"}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
               </svg>
-              ES
-            </button>
+              {langToggle.label}
+            </Link>
             <a
               href="tel:+16093774226"
               className={`hidden sm:flex items-center gap-2 ${phoneColor} ${textHover} transition-colors`}
@@ -303,15 +290,17 @@ export default function Header() {
                 </svg>
                 WhatsApp
               </a>
-              <button
-                onClick={toggleSpanish}
+              <Link
+                href={langToggle.href}
+                onClick={() => setIsMenuOpen(false)}
                 className="flex items-center gap-2 text-[#64748b] hover:text-[#1e3a5f] transition-colors"
+                hrefLang={langToggle.label === "ES" ? "es" : "en"}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                 </svg>
-                Traducir al Español
-              </button>
+                {langToggle.mobileLabel}
+              </Link>
             </nav>
           </div>
         )}

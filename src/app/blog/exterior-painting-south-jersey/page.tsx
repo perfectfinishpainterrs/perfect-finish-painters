@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey | Perfect Finish Painters",
-  description: "Boost your home&apos;s curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
+  title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey | Perfect Finish Painters",
+  description: "Boost your home's curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
   openGraph: {
-    title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey",
-    description: "Boost your home&apos;s curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
+    title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",
+    description: "Boost your home's curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/exterior-painting-south-jersey",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey",
-    description: "Boost your home&apos;s curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
+    title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",
+    description: "Boost your home's curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
     images: ["/logo.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/blog/exterior-painting-south-jersey" },
@@ -39,7 +39,7 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",
-    image: "https://perfectfinishpainter.com/logo.webp",
+    image: "https://perfectfinishpainter.com/exterior-door-painting-black-linwood-nj.webp",
     author: { "@type": "Organization", name: "Perfect Finish Painters" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",
@@ -61,7 +61,7 @@ export default function BlogPost() {
               <li>/</li>
               <li><Link href="/blog" className="hover:text-[#2563eb] transition-colors">Blog</Link></li>
               <li>/</li>
-              <li className="text-[#1e3a5f] font-medium">Enhance Your Home's Curb Appea</li>
+              <li className="text-[#1e3a5f] font-medium">Enhance Your Home&apos;s Curb Appeal</li>
             </ol>
           </nav>
         </div>

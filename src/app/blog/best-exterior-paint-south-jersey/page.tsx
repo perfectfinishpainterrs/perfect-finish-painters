@@ -40,7 +40,7 @@ export default function BestExteriorPaintPost() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Exterior Paint for South Jersey Homes",
-    image: "https://perfectfinishpainter.com/logo.webp",
+    image: "https://perfectfinishpainter.com/deck-exterior-painting-before-after-south-jersey-nj.webp",
     author: { "@type": "Organization", name: "Perfect Finish Painters" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2025-02-01",

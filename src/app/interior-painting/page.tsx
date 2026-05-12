@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -48,13 +50,21 @@ export default function InteriorPaintingPage() {
     name: "Interior Painting",
     description: "Professional interior painting for walls, ceilings, trim, baseboards, doors, and accent walls. Includes surface prep, priming, and premium paint application. Most rooms completed in 1 day.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/interior-painting",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does interior painting cost in Mays Landing NJ?", acceptedAnswer: { "@type": "Answer", text: "Most interior rooms in Atlantic County cost between $500 and $1,000 depending on room size, wall condition, and paint quality. We offer free estimates — call 609-377-4226." } },
       { "@type": "Question", name: "How long does it take to paint a room?", acceptedAnswer: { "@type": "Answer", text: "A single room typically takes one day. A full interior takes 3 to 5 days depending on size and prep work needed." } },
@@ -122,7 +132,7 @@ export default function InteriorPaintingPage() {
       {/* Detailed Service Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Interior Painting Services in Atlantic County, NJ</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">What Interior Painting Services Do We Offer in Atlantic County?</h2>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Room-by-Room Interior Painting — Living Rooms, Bedrooms, Kitchens &amp; Bathrooms</h3>
           <p className="text-[#64748b] mb-4">Every room has different demands. Kitchens and bathrooms need moisture-resistant paint that can handle humidity and splashes. Living rooms and bedrooms need durable finishes that look great and clean up easily. We choose the right product for each space.</p>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Accent Walls &amp; Custom Color Matching</h3>
@@ -138,7 +148,7 @@ export default function InteriorPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in an Interior Painting Job?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -166,7 +176,7 @@ export default function InteriorPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Our Interior Painting Process</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">How Do You Paint a Room? Our 4-Step Process</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {[
@@ -214,6 +224,8 @@ export default function InteriorPaintingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

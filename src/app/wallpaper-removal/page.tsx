@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { areaServedCities } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Wallpaper Removal in Atlantic County NJ | Perfect Finish",
@@ -43,7 +44,7 @@ export default function WallpaperRemovalPage() {
     name: "Wallpaper Removal",
     description: "Professional wallpaper removal services including single and double layer removal, wall repair, skim coating, priming, and paint-ready wall prep throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/wallpaper-removal",
   };
 
@@ -136,7 +137,7 @@ export default function WallpaperRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Wallpaper Removal Services in Atlantic County, NJ</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Wallpaper Removal Services Do We Offer in Atlantic County?</h2>
           </ScrollReveal>
           <div className="space-y-8">
             <ScrollReveal>
@@ -171,7 +172,7 @@ export default function WallpaperRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Wallpaper Removal Should Be Done by a Professional</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Should Wallpaper Removal Be Done by a Professional?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             DIY wallpaper removal is one of the most common home improvement projects that ends in frustration and costly damage. Without proper steaming equipment, the right scraping tools, and experience reading wall conditions, it&apos;s easy to gouge drywall, tear off the paper face layer, or leave behind adhesive that causes paint to bubble and peel. Professionals know how to control moisture, work systematically from top to bottom, and handle surprises like lead paint or mold behind old wallpaper. We handle the full process — removal, wall repair, priming, and painting — so you get a finished result without the headaches.
@@ -183,7 +184,7 @@ export default function WallpaperRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Wallpaper Removal Cost in Atlantic County, NJ</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">How Much Does Wallpaper Removal Cost in Atlantic County, NJ?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Most wallpaper removal projects cost between <strong className="text-[#1e3a5f]">$1 and $3 per square foot</strong> depending on the number of layers, the type of wallpaper, adhesive condition, and the state of the walls underneath. Rooms with multiple layers or extensive wall damage will be on the higher end. We provide free, detailed estimates before any work begins — no surprises and no obligation. Take our 60-second quiz or call (609) 377-4226 to get started.
@@ -230,7 +231,7 @@ export default function WallpaperRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Other Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -253,7 +254,7 @@ export default function WallpaperRemovalPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Wallpaper Removal Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Wallpaper Removal in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Wallpaper from the 80s and 90s is all over Atlantic County. We strip it cleanly in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>, and <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link> — then repair whatever the glue ruined and leave walls paint-ready. Old glue on plaster walls vs drywall needs different approaches. We handle both.
           </p>

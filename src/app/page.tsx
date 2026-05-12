@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
@@ -121,6 +122,14 @@ const reviewJsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+
+  speakable: {
+
+    "@type": "SpeakableSpecification",
+
+    cssSelector: [".speakable-q", ".speakable-a"],
+
+  },
   mainEntity: [
     {
       "@type": "Question",
@@ -482,6 +491,8 @@ export default function Home() {
       <ScrollReveal>
         <ContactForm />
       </ScrollReveal>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

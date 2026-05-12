@@ -159,6 +159,10 @@ export default function FAQPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".speakable-q", ".speakable-a"],
+    },
     mainEntity: groups.flatMap((g) =>
       g.items.map((item) => ({
         "@type": "Question",
@@ -222,7 +226,7 @@ export default function FAQPage() {
                   <ScrollReveal key={item.q}>
                     <details className="bg-white rounded-2xl border border-[#e2e8f0] overflow-hidden group">
                       <summary className="cursor-pointer px-6 py-4 font-semibold text-[#1e3a5f] hover:bg-[#f8fafc] transition-colors flex justify-between items-center">
-                        <span>{item.q}</span>
+                        <span className="speakable-q">{item.q}</span>
                         <svg
                           className="w-5 h-5 text-[#64748b] transition-transform group-open:rotate-180"
                           fill="none"
@@ -232,7 +236,7 @@ export default function FAQPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </summary>
-                      <div className="px-6 pb-5 text-[#64748b] leading-relaxed">
+                      <div className="px-6 pb-5 text-[#64748b] leading-relaxed speakable-a">
                         {item.a}
                       </div>
                     </details>

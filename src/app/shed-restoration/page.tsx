@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -44,13 +46,21 @@ export default function ShedRestorationPage() {
     name: "Shed Restoration & Painting",
     description: "Professional shed restoration including wood rot repair, scraping, sanding, priming, and weather-resistant exterior painting for sheds, outbuildings, and storage structures throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/shed-restoration",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does shed restoration cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most shed restoration projects in Atlantic County cost between $500 and $2,000 depending on size, condition, and how much repair work is needed. We provide free on-site estimates — call 609-377-4226." } },
       { "@type": "Question", name: "Can you fix rotted wood on my shed before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes. We repair or replace rotted boards, patch damaged areas, and ensure the structure is solid before any paint goes on. Painting over rot just hides the problem — we fix it first." } },
@@ -112,7 +122,7 @@ export default function ShedRestorationPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Shed Restoration?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Full shed inspection and assessment",
@@ -162,6 +172,8 @@ export default function ShedRestorationPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

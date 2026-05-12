@@ -38,7 +38,7 @@ const posts = [
   },
   {
     slug: "cedar-siding-repair-south-jersey",
-    title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm",
+    title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm",
     excerpt: "Cedar siding is a popular choice for homes in South Jersey due to its natural beauty and durability, but it can suffer from wear over time. At Perfect Finish Painters, we specialize in professional cedar siding repair to protect and enhance your property. Learn about common issues, repair techniques, and why our Mays Landing-based team is your go-to for South Jersey painting services.",
     date: "March 2026",
     image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.webp",
@@ -46,7 +46,7 @@ const posts = [
   },
   {
     slug: "exterior-painting-south-jersey",
-    title: "Enhance Your Home&apos;s Curb Appeal with Professional Exterior Painting in South Jersey",
+    title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",
     excerpt: "Discover how professional exterior painting can transform your home&apos;s appearance and protect it from the elements. At Perfect Finish Painters in Mays Landing, NJ, we specialize in high-quality exterior painting services tailored for South Jersey homes. Learn tips, benefits, and why choosing local experts makes all the difference.",
     date: "March 2026",
     image: "/deck-exterior-painting-before-after-south-jersey-nj.webp",

@@ -158,13 +158,13 @@ export default async function CityPage({ params }: CityPageProps) {
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.intro}
           </p>
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Interior Painting in {area.name}, NJ</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Do You Offer Interior Painting in {area.name}?</h2>
           <p className="text-[#64748b] mb-4">
-            Whether you need a single room refreshed or a full interior repaint, our team handles <a href="/interior-painting" className="text-[#2563eb] hover:underline">interior painting</a> projects of all sizes in {area.name}. We also offer <a href="/drywall-repair" className="text-[#2563eb] hover:underline">drywall repair</a> to fix any wall damage before painting begins.
+            Whether you need a single room refreshed or a full interior repaint, our team handles <Link href="/interior-painting" className="text-[#2563eb] hover:underline">interior painting</Link> projects of all sizes in {area.name}. We also offer <Link href="/drywall-repair" className="text-[#2563eb] hover:underline">drywall repair</Link> to fix any wall damage before painting begins.
           </p>
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Exterior Painting in {area.name}, NJ</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">How Do You Handle Exterior Painting in {area.name}?</h2>
           <p className="text-[#64748b] mb-4">
-            South Jersey weather takes a toll on exterior paint. Our <a href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</a> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <a href="/shed-restoration" className="text-[#2563eb] hover:underline">shed restoration &amp; painting</a>.
+            South Jersey weather takes a toll on exterior paint. Our <Link href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior painting</Link> service uses premium, weather-resistant products that protect your {area.name} home against humidity, UV, and coastal conditions. We also offer <Link href="/shed-restoration" className="text-[#2563eb] hover:underline">shed restoration &amp; painting</Link>.
           </p>
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
             {area.content.body}
@@ -201,7 +201,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f] mb-8">
-            Painting Services in {area.name}, NJ
+            What Painting Services Are Available in {area.name}, NJ?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -229,7 +229,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f] mb-8">
-            Why {area.name} Homeowners Choose Perfect Finish Painters
+            Why Do {area.name} Homeowners Choose Perfect Finish Painters?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6">

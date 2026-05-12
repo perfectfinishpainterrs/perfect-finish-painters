@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -46,13 +48,21 @@ export default function DeckStainingPage() {
     name: "Deck Staining",
     description: "Professional deck staining and sealing in Atlantic County NJ. Includes pressure washing, sanding, board and nail repair, premium semi-transparent or solid stain, and UV-resistant sealer. Most decks completed in 2–3 days.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/deck-staining",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does deck staining cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most deck staining projects in Atlantic County cost between $400 and $2,500 depending on square footage, condition, and whether old finish needs stripping. A typical 300 sq ft deck runs $800–$1,500. Free on-site estimates — call 609-377-4226." } },
       { "@type": "Question", name: "How long does deck stain last in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "In South Jersey's humidity and salt air, semi-transparent stains typically last 2–3 years on horizontal surfaces and 4–5 years on railings and risers. Solid stains last longer, 4–7 years, but look more like paint. We use premium penetrating stains built for shore climate to maximize longevity." } },
@@ -118,7 +128,7 @@ export default function DeckStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Deck Staining?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "On-site deck inspection and stain recommendation",
@@ -143,14 +153,14 @@ export default function DeckStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Our Deck Staining Process</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">How Do You Stain a Deck? Our Process</h2></ScrollReveal>
           <div className="space-y-6">
             {[
-              { step: "1", title: "Inspection & Prep Plan", desc: "We walk the deck with you, check for rot, loose boards, and failing finish, and agree on a stain color and opacity (semi-transparent, semi-solid, or solid). We&apos;ll tell you honestly if a board or two needs replacing before we start." },
-              { step: "2", title: "Pressure Wash & Strip", desc: "We pressure wash off dirt, mildew, and loose finish. If the old stain is peeling, we chemically strip it — staining over failing finish is the #1 reason deck jobs fail early, so we don&apos;t cut corners here." },
+              { step: "1", title: "Inspection & Prep Plan", desc: "We walk the deck with you, check for rot, loose boards, and failing finish, and agree on a stain color and opacity (semi-transparent, semi-solid, or solid). We'll tell you honestly if a board or two needs replacing before we start." },
+              { step: "2", title: "Pressure Wash & Strip", desc: "We pressure wash off dirt, mildew, and loose finish. If the old stain is peeling, we chemically strip it — staining over failing finish is the #1 reason deck jobs fail early, so we don't cut corners here." },
               { step: "3", title: "Sand & Repair", desc: "We sand down raised grain, splinters, and any glossy spots the stripper missed. Popped nails get replaced with deck screws. Rotted boards get swapped out." },
               { step: "4", title: "Stain & Seal", desc: "We apply premium penetrating stain in 1–2 coats using brushes and pads for full absorption. Horizontal surfaces get an extra UV-resistant sealer to protect against foot traffic and standing water." },
-              { step: "5", title: "Cleanup & Walkthrough", desc: "Plants and grass get rinsed, railings get wiped down, and we do a final walkthrough with you. We&apos;ll tell you exactly how long to stay off the deck before using it again." },
+              { step: "5", title: "Cleanup & Walkthrough", desc: "Plants and grass get rinsed, railings get wiped down, and we do a final walkthrough with you. We'll tell you exactly how long to stay off the deck before using it again." },
             ].map((item) => (
               <ScrollReveal key={item.step}>
                 <div className="flex gap-4 items-start">
@@ -168,7 +178,7 @@ export default function DeckStainingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Deck Staining Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Deck Staining in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed mb-4">
             We stain decks throughout the Atlantic County area — from shore homes that take the brunt of salt air to inland decks shaded by pines. Shore and bayside decks in <Link href="/painters-brigantine-nj" className="text-[#2563eb] hover:underline">Brigantine</Link>, <Link href="/painters-margate-nj" className="text-[#2563eb] hover:underline">Margate</Link>, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link> need stain every 2–3 years because salt eats horizontal finishes fast. Inland decks in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link>, and <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link> can stretch to 3–4 years between coats.
           </p>
@@ -193,6 +203,8 @@ export default function DeckStainingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

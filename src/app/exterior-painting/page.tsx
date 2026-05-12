@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -44,13 +46,21 @@ export default function ExteriorPaintingPage() {
     name: "Exterior Painting",
     description: "Full exterior painting for siding, stucco, brick, shutters, doors, trim, and fascia. Includes power washing, scraping, priming, and weather-resistant acrylic latex paint application.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/exterior-painting",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How often should I repaint my house exterior in New Jersey?", acceptedAnswer: { "@type": "Answer", text: "Exterior paint in NJ typically lasts 5-7 years. Homes near the shore in Margate, Ventnor, and Brigantine may need repainting sooner due to salt air and humidity." } },
       { "@type": "Question", name: "What is the best exterior paint for South Jersey homes?", acceptedAnswer: { "@type": "Answer", text: "We recommend 100% acrylic latex paint with UV and mildew resistance. Benjamin Moore Aura Exterior and Sherwin-Williams Duration hold up well against coastal humidity and temperature swings." } },
@@ -114,7 +124,7 @@ export default function ExteriorPaintingPage() {
       {/* Detailed Service Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Exterior Painting Services in Atlantic County, NJ</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">What Exterior Painting Services Do We Offer in Atlantic County?</h2>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">House Painting for South Jersey Shore Properties</h3>
           <p className="text-[#64748b] mb-4">For homes in Margate, Ventnor, and Brigantine, salt air is the enemy. We use mildew-resistant primers and top-coat paints rated for coastal environments. Our exterior jobs in shore towns are built to last through nor&apos;easters, salt spray, and intense summer sun.</p>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Siding, Shutters, Doors &amp; Trim Painting</h3>
@@ -128,7 +138,7 @@ export default function ExteriorPaintingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Exterior Painting?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Siding, stucco, brick & vinyl surfaces",
@@ -162,7 +172,7 @@ export default function ExteriorPaintingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Exterior Painting Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Exterior Painting in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             South Jersey exteriors take a beating from sun, salt, and humidity. Shore and bayside homes in <Link href="/painters-brigantine-nj" className="text-[#2563eb] hover:underline">Brigantine</Link>, <Link href="/painters-margate-nj" className="text-[#2563eb] hover:underline">Margate</Link>, <Link href="/painters-ventnor-nj" className="text-[#2563eb] hover:underline">Ventnor</Link>, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link> need salt-tolerant coatings; inland homes in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> and <Link href="/painters-absecon-nj" className="text-[#2563eb] hover:underline">Absecon</Link> fight mostly UV and seasonal temperature swings. We spec the paint system to match where you live.
           </p>
@@ -184,6 +194,8 @@ export default function ExteriorPaintingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

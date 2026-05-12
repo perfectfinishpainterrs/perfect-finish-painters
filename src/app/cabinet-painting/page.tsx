@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { areaServedCities } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Cabinet Painting in Atlantic County NJ | Perfect Finish",
@@ -43,13 +45,21 @@ export default function CabinetPaintingPage() {
     name: "Cabinet Painting",
     description: "Professional kitchen cabinet painting including cleaning, sanding, priming, and alkyd enamel paint application for a durable, factory-smooth finish throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/cabinet-painting",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does cabinet painting cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most kitchen cabinet painting jobs in Atlantic County cost between $2,500 and $5,500 depending on the number of cabinets, door style, and condition. We provide free on-site estimates — call 609-377-4226." } },
       { "@type": "Question", name: "Is it better to paint or replace kitchen cabinets?", acceptedAnswer: { "@type": "Answer", text: "If your cabinets are structurally sound, painting saves 60-70% compared to full replacement and can be completed in 3-5 days. New cabinets typically cost $15,000-$30,000+ and take weeks to install." } },
@@ -120,7 +130,7 @@ export default function CabinetPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Our Cabinet Painting Process</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">How Do You Paint Cabinets? Our Process</h2>
           </ScrollReveal>
           <div className="space-y-8">
             <ScrollReveal>
@@ -155,7 +165,7 @@ export default function CabinetPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Cabinet Painting Cost in Atlantic County, NJ</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">How Much Does Cabinet Painting Cost in Atlantic County, NJ?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Most kitchen cabinet painting projects in Atlantic County cost between <strong className="text-[#1e3a5f]">$1,200 and $3,500</strong> depending on the number of cabinets, their condition, and the finish you choose. The typical project takes 2 to 4 days. We provide free, detailed estimates before any work begins — take our 60-second quiz or call <a href="tel:+16093774226" className="text-[#2563eb] hover:underline">(609) 377-4226</a> to get started.
@@ -167,7 +177,7 @@ export default function CabinetPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Other Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -190,7 +200,7 @@ export default function CabinetPaintingPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Cabinet Painting Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Cabinet Painting in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We paint kitchen cabinets throughout Atlantic County. Whether you&apos;re updating a 90s oak kitchen in <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> or <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, refreshing a builder-grade kitchen in <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link> or <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, or reviving an older kitchen in <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link> or <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, the process is the same — clean, sand, prime, spray. What changes is the cabinet material and how much prep each one needs.
           </p>
@@ -212,6 +222,8 @@ export default function CabinetPaintingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

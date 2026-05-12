@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { areaServedCities } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Ceiling Painting in Atlantic County NJ | Perfect Finish",
@@ -43,7 +44,7 @@ export default function CeilingPaintingPage() {
     name: "Ceiling Painting",
     description: "Professional ceiling painting services including flat ceilings, vaulted and cathedral ceilings, popcorn texture, crown molding, and ceiling repair throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/ceiling-painting",
   };
 
@@ -136,7 +137,7 @@ export default function CeilingPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Ceiling Painting Services in Atlantic County, NJ</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Ceiling Painting Services Do We Offer in Atlantic County?</h2>
           </ScrollReveal>
           <div className="space-y-8">
             <ScrollReveal>
@@ -226,7 +227,7 @@ export default function CeilingPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Other Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -249,7 +250,7 @@ export default function CeilingPaintingPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Ceiling Painting Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Ceiling Painting in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We handle ceiling painting across Atlantic County — vaulted and cathedral ceilings in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> and <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> craftsman homes, popcorn-texture ceilings throughout <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link> and <Link href="/painters-vineland-nj" className="text-[#2563eb] hover:underline">Vineland</Link> 80s ranches, and fresh flat ceilings in <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link> and <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link> new builds. Stain-blocking primer for water marks is included on every ceiling job.
           </p>

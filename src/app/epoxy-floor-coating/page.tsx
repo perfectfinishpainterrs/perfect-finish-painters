@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -46,13 +48,21 @@ export default function EpoxyFloorCoatingPage() {
     name: "Epoxy Floor Coating",
     description: "Professional epoxy and polyaspartic floor coating in Atlantic County NJ. Surface grinding, crack repair, primer, base color coat, decorative flake or metallic options, and UV-resistant topcoat. Installed in garages, basements, workshops, and commercial spaces.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/epoxy-floor-coating",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does epoxy floor coating cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Most epoxy floor coatings in Atlantic County run $5–$12 per square foot installed, depending on surface prep, system type, and decorative options. A typical 2-car garage (400–500 sq ft) runs $2,000–$4,500. Concrete crack or spall repair adds to the cost. Free on-site estimates — call 609-377-4226." } },
       { "@type": "Question", name: "How long does an epoxy floor last?", acceptedAnswer: { "@type": "Answer", text: "A properly prepped and installed epoxy system holds up 10–20 years in residential garages and basements. The #1 reason epoxy fails early is poor surface prep — skipping grinding or applying over sealed concrete. We diamond-grind every floor before coating, which is what separates a 20-year job from a 2-year job." } },
@@ -118,7 +128,7 @@ export default function EpoxyFloorCoatingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in Epoxy Floor Coating?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "On-site inspection & moisture test",
@@ -143,7 +153,7 @@ export default function EpoxyFloorCoatingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Where Epoxy Floors Make Sense</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Where Do Epoxy Floors Make Sense?</h2></ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#f1f5f9] rounded-xl p-6">
               <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Garage Floors</h3>
@@ -167,7 +177,7 @@ export default function EpoxyFloorCoatingPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Epoxy Floor Coating Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Epoxy Floor Coating in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We install epoxy floors in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-hammonton-nj" className="text-[#2563eb] hover:underline">Hammonton</Link>, and across Atlantic County. Shore-area basements get moisture-tested first — salt air and high water tables mean prep matters even more than the coating itself.
           </p>
@@ -189,6 +199,8 @@ export default function EpoxyFloorCoatingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

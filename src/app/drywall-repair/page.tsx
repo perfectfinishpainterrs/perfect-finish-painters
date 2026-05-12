@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { areaServedCities } from "@/data/service-areas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -44,13 +46,21 @@ export default function DrywallRepairPage() {
     name: "Drywall Repair",
     description: "Professional drywall repair including hole patching, crack repair, water damage restoration, and texture matching. Smooth, seamless finish ready for paint throughout South Jersey.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/drywall-repair",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does drywall repair cost in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Small repairs start at $150. Larger repairs involving water damage or multiple rooms are quoted after a free assessment. Call 609-377-4226 for a free estimate." } },
       { "@type": "Question", name: "Can you repair water-damaged drywall in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "Yes. We handle water damage restoration including removing damaged sections, treating for mold, installing new drywall, and matching existing texture." } },
@@ -114,7 +124,7 @@ export default function DrywallRepairPage() {
       {/* Detailed Service Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Types of Drywall Repair We Handle</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">What Types of Drywall Repair Do You Handle?</h2>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Small Holes &amp; Nail Pops</h3>
           <p className="text-[#64748b] mb-4">Nail pops and small holes are the most common drywall issues in Atlantic County homes, especially in older construction. We fill, sand, and blend them so they disappear completely — no visible patches.</p>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Large Hole &amp; Panel Replacement</h3>
@@ -124,15 +134,15 @@ export default function DrywallRepairPage() {
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Texture Matching — Orange Peel, Knockdown &amp; Smooth</h3>
           <p className="text-[#64748b] mb-4">The hardest part of drywall repair is making the fix invisible. We match your existing texture — whether it&apos;s orange peel, knockdown, skip trowel, or smooth — so repaired areas blend seamlessly with the surrounding wall.</p>
           <h3 className="text-xl font-semibold text-[#1e3a5f] mt-8 mb-3">Ceiling Skim Coating &amp; Crack Repair</h3>
-          <p className="text-[#64748b] mb-4">Ceiling cracks and uneven surfaces are common in aging South Jersey homes. We skim coat ceilings to a smooth finish and repair hairline cracks caused by settling. We also handle popcorn ceiling removal — see our <a href="/popcorn-ceiling-removal" className="text-[#2563eb] hover:underline">popcorn ceiling removal page</a> for details.</p>
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">Drywall Repair Pricing in Atlantic County, NJ</h2>
+          <p className="text-[#64748b] mb-4">Ceiling cracks and uneven surfaces are common in aging South Jersey homes. We skim coat ceilings to a smooth finish and repair hairline cracks caused by settling. We also handle popcorn ceiling removal — see our <Link href="/popcorn-ceiling-removal" className="text-[#2563eb] hover:underline">popcorn ceiling removal page</Link> for details.</p>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">How Much Does Drywall Repair Cost in Atlantic County, NJ?</h2>
           <p className="text-[#64748b] mb-4">Small repairs like nail pops and minor holes start around $150. Larger patches, water damage, and texture matching are quoted on-site based on the scope of work. We offer same-day service for small repairs in most of Atlantic County. Take our free estimate quiz or call <a href="tel:+16093774226" className="text-[#2563eb] hover:underline">609-377-4226</a>.</p>
         </div>
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What We Repair</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Do We Repair?</h2></ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Small nail holes and screw pops",
@@ -157,7 +167,7 @@ export default function DrywallRepairPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Drywall Repair Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Drywall Repair in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Water damage, impact holes, hairline cracks — we fix it across Atlantic County. Common calls come from <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, and <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link> older homes with settling cracks, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link>, <Link href="/painters-absecon-nj" className="text-[#2563eb] hover:underline">Absecon</Link>, and <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link> shore homes dealing with humidity-related tape failures. Texture matching included — the repair blends in, it doesn&apos;t patch out.
           </p>
@@ -179,6 +189,8 @@ export default function DrywallRepairPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { areaServedCities } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Commercial Painting in Atlantic County NJ | Perfect Finish",
@@ -43,13 +45,21 @@ export default function CommercialPaintingPage() {
     name: "Commercial Painting",
     description: "Professional commercial painting for offices, retail spaces, restaurants, and commercial buildings in Atlantic County NJ. Flexible scheduling with evenings and weekends available for minimal business disruption.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/commercial-painting",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "Do you paint commercial buildings in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Yes. We paint offices, retail stores, restaurants, warehouses, and multi-unit buildings throughout Atlantic County and South Jersey. We offer flexible scheduling including evenings and weekends to minimize business disruption." } },
       { "@type": "Question", name: "How much does commercial painting cost in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "Commercial painting is quoted per square foot based on the scope of work, surface condition, and building access. We provide free on-site estimates for all commercial projects — call 609-377-4226." } },
@@ -108,7 +118,7 @@ export default function CommercialPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Commercial Painting Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Commercial Painting Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="space-y-8">
             <ScrollReveal>
@@ -143,7 +153,7 @@ export default function CommercialPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Businesses in Atlantic County Choose Us</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Do Atlantic County Businesses Choose Us?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg mb-6 leading-relaxed">
             We know that for businesses, timing and disruption matter as much as the final result. That&apos;s why we offer <strong className="text-[#1e3a5f]">flexible scheduling including evenings and weekends</strong> so your painting project doesn&apos;t interfere with your customers or employees. We work fast without cutting corners, delivering a quality finish on a timeline that respects your business operations.
@@ -174,7 +184,7 @@ export default function CommercialPaintingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Other Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -197,7 +207,7 @@ export default function CommercialPaintingPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Commercial Painting Across South Jersey</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Commercial Painting in South Jersey?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We paint commercial spaces throughout South Jersey — retail storefronts in <Link href="/painters-atlantic-city-nj" className="text-[#2563eb] hover:underline">Atlantic City</Link> and <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link>, office buildings in <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link> and <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, and restaurants across <Link href="/painters-vineland-nj" className="text-[#2563eb] hover:underline">Vineland</Link>. We schedule around your hours — evenings, weekends, or overnight — so your business keeps running.
           </p>
@@ -219,6 +229,8 @@ export default function CommercialPaintingPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />

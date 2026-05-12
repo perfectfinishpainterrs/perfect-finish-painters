@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import { areaServedCities } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
@@ -43,13 +45,21 @@ export default function PopcornCeilingRemovalPage() {
     name: "Popcorn Ceiling Removal",
     description: "Professional popcorn ceiling removal including dust containment, texture scraping, skim coating, priming, and painting for a smooth, modern ceiling finish throughout Atlantic County NJ.",
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
-    areaServed: { "@type": "AdministrativeArea", name: "South Jersey, NJ" },
+    areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+
+    speakable: {
+
+      "@type": "SpeakableSpecification",
+
+      cssSelector: [".speakable-q", ".speakable-a"],
+
+    },
     mainEntity: [
       { "@type": "Question", name: "How much does popcorn ceiling removal cost in NJ?", acceptedAnswer: { "@type": "Answer", text: "Popcorn ceiling removal in Atlantic County typically costs $2-$4 per square foot depending on ceiling height, room size, and whether asbestos testing is needed. Most single rooms run $400-$800. Free estimates — call 609-377-4226." } },
       { "@type": "Question", name: "Does popcorn ceiling contain asbestos?", acceptedAnswer: { "@type": "Answer", text: "Popcorn ceilings installed before 1980 may contain asbestos. We recommend testing before removal. If asbestos is present, a licensed abatement contractor handles removal before we do the finish work." } },
@@ -108,7 +118,7 @@ export default function PopcornCeilingRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Homeowners Remove Popcorn Ceilings</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Why Do Homeowners Remove Popcorn Ceilings?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Popcorn texture was originally applied to hide imperfections and dampen sound, but it comes with major downsides. The bumpy surface traps dust, cobwebs, and allergens that are difficult to clean. It gives rooms a dated, unappealing look that can hurt your home&apos;s value. Painting over popcorn texture is messy and rarely looks good — the bumps show through and rollers pull off chunks of texture. Removing the texture entirely and finishing with a smooth ceiling is the only way to get a truly modern, clean result.
@@ -120,7 +130,7 @@ export default function PopcornCeilingRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Our Popcorn Ceiling Removal Process</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">How Do You Remove a Popcorn Ceiling? Our Process</h2>
           </ScrollReveal>
           <div className="space-y-8">
             <ScrollReveal>
@@ -155,7 +165,7 @@ export default function PopcornCeilingRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Popcorn Ceiling Removal Cost in Atlantic County, NJ</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">How Much Does Popcorn Ceiling Removal Cost in Atlantic County, NJ?</h2>
           </ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Most rooms cost between <strong className="text-[#1e3a5f]">$300 and $800</strong> depending on room size, ceiling height, and the condition of the surface underneath. Multi-room projects often qualify for volume pricing. We provide free, detailed estimates before any work begins — no surprises and no obligation. Take our 60-second quiz or call (609) 377-4226 to get started.
@@ -167,7 +177,7 @@ export default function PopcornCeilingRemovalPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Other Services We Offer</h2>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What Other Services Do We Offer?</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -190,7 +200,7 @@ export default function PopcornCeilingRemovalPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Popcorn Ceiling Removal Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Popcorn Ceiling Removal in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             Popcorn ceilings went out of style for a reason. We remove them cleanly throughout Atlantic County — with dust containment, sanded-smooth finish, and ready-to-paint drywall. Houses from the 70s and 80s in <Link href="/painters-pleasantville-nj" className="text-[#2563eb] hover:underline">Pleasantville</Link> and <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link> often have them through the whole first floor. Other common work areas: <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, and <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>.
           </p>
@@ -212,6 +222,8 @@ export default function PopcornCeilingRemovalPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection items={faqJsonLd.mainEntity} />
 
       <Footer />
       <FloatingCTA />
