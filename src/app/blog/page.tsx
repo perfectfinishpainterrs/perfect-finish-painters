@@ -7,9 +7,9 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Painting Tips & Blog | Perfect Finish Painters — South Jersey",
+  title: "Painting Tips & Blog | Perfect Finish Painters",
   description:
-    "Painting tips, home improvement advice, and project guides from Perfect Finish Painters in Mays Landing NJ. Learn about interior painting, exterior painting, and more.",
+    "Painting tips, home improvement advice, and project guides from Perfect Finish Painters in Mays Landing, NJ — interior painting, exterior painting, and more.",
   openGraph: {
     title: "Painting Tips & Blog | Perfect Finish Painters",
     description: "Painting tips, home improvement advice, and project guides from Perfect Finish Painters.",

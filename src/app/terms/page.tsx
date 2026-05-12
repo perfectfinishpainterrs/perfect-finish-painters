@@ -7,7 +7,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 export const metadata: Metadata = {
   title: "Terms of Service | Perfect Finish Painters",
   description:
-    "Terms of service for the Perfect Finish Painters website and estimate requests. Project contracts are signed separately.",
+    "Terms of service for the Perfect Finish Painters website and online estimate requests. Project contracts are signed separately before any work begins.",
   alternates: { canonical: "https://perfectfinishpainter.com/terms" },
   robots: { index: true, follow: true },
 };

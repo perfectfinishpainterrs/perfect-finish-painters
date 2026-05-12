@@ -7,7 +7,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 export const metadata: Metadata = {
   title: "Accessibility Statement | Perfect Finish Painters",
   description:
-    "Perfect Finish Painters is committed to making our website usable by everyone. Learn about the accessibility features of perfectfinishpainter.com and how to report issues.",
+    "Perfect Finish Painters is committed to a website everyone can use. Learn about the accessibility features of perfectfinishpainter.com and how to report issues.",
   alternates: { canonical: "https://perfectfinishpainter.com/accessibility" },
   robots: { index: true, follow: true },
 };

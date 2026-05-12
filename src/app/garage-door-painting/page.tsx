@@ -11,11 +11,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Garage Door Painting in Atlantic County NJ | Perfect Finish",
   description:
-    "Pro garage door painting in Atlantic County NJ — wood stain or solid color finishes, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote — 609-377-4226.",
+    "Pro garage door painting in Atlantic County NJ — wood stain or solid color, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote: 609-377-4226.",
   openGraph: {
     title: "Garage Door Painting in Atlantic County NJ | Perfect Finish",
     description:
-      "Pro garage door painting in Atlantic County NJ — wood stain or solid color finishes, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote — 609-377-4226.",
+      "Pro garage door painting in Atlantic County NJ — wood stain or solid color, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote: 609-377-4226.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/garage-door-painting",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Garage Door Painting in Atlantic County NJ | Perfect Finish",
     description:
-      "Pro garage door painting in Atlantic County NJ — wood stain or solid color finishes, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote — 609-377-4226.",
+      "Pro garage door painting in Atlantic County NJ — wood stain or solid color, UV & salt-tolerant. Serving Mays Landing & South Jersey. Free quote: 609-377-4226.",
     images: ["/garage-door-painting-wood-stain-before-after-brigantine-nj.webp"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/garage-door-painting" },

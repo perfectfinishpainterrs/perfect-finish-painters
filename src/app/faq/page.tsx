@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "FAQ | Perfect Finish Painters — Painting Questions Answered for South Jersey Homeowners",
+  title: "Painting FAQ | Perfect Finish Painters, South Jersey",
   description:
-    "Answers to common questions about painting in South Jersey: pricing, scheduling, prep work, paint brands, warranty, payment, and service areas. From Perfect Finish Painters in Mays Landing, NJ.",
+    "Common painting questions for South Jersey homeowners: pricing, scheduling, prep, paint brands, warranty, and service areas. From Perfect Finish Painters.",
   openGraph: {
     title: "FAQ | Perfect Finish Painters",
     description:

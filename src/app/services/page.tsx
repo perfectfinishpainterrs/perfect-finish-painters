@@ -10,11 +10,11 @@ import FAQSection from "@/components/FAQSection";
 import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
-  title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
-  description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+  title: "Painting Services in Atlantic County NJ | Perfect Finish",
+  description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald paint. Drywall repair, flooring, cabinet painting & more across Atlantic County NJ.",
   openGraph: {
-    title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
-    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Perfect Finish",
+    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald paint. Drywall repair, flooring, cabinet painting & more across Atlantic County NJ.",
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/services",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painting Services in Atlantic County NJ | Sherwin-Williams Paint | Perfect Finish Painters",
-    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald designer paint. Drywall repair, flooring, cabinet painting & more in Atlantic County NJ. Serving Mays Landing & all of South Jersey.",
+    title: "Painting Services in Atlantic County NJ | Perfect Finish",
+    description: "Interior & exterior painting with Sherwin-Williams Duration & Emerald paint. Drywall repair, flooring, cabinet painting & more across Atlantic County NJ.",
     images: ["/logo.webp"],
   },
   alternates: {

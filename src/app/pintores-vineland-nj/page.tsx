@@ -7,11 +7,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
 
 export const metadata: Metadata = {
-  title: "Pintores en Vineland NJ | Perfect Finish Painters — Hablamos Español",
+  title: "Pintores en Vineland NJ | Perfect Finish Painters",
   description:
     "Pintores en Vineland NJ. Pintura interior, exterior y drywall. Hablamos español. Licenciados en NJ. Estimados gratis — 609-377-4226.",
   openGraph: {
-    title: "Pintores en Vineland NJ | Perfect Finish Painters — Hablamos Español",
+    title: "Pintores en Vineland NJ | Perfect Finish Painters",
     description:
       "Pintores en Vineland NJ. Pintura interior, exterior y drywall. Hablamos español. Licenciados en NJ. Estimados gratis — 609-377-4226.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pintores en Vineland NJ | Perfect Finish Painters — Hablamos Español",
+    title: "Pintores en Vineland NJ | Perfect Finish Painters",
     description:
       "Pintores en Vineland NJ. Pintura interior, exterior y drywall. Hablamos español. Licenciados en NJ. Estimados gratis — 609-377-4226.",
     images: ["/logo.webp"],

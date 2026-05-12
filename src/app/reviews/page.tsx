@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { reviews } from "@/data/reviews";
 
 export const metadata: Metadata = {
-  title: "Reviews | Perfect Finish Painters — 5-Star Rated South Jersey Painters",
+  title: "Reviews | Perfect Finish Painters, South Jersey",
   description:
     "Read reviews from real customers of Perfect Finish Painters. 5-star rated painting company in Mays Landing NJ serving South Jersey. See why homeowners trust us.",
   openGraph: {

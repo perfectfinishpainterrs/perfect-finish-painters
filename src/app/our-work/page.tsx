@@ -10,9 +10,9 @@ import OurWorkGallery from "@/components/OurWorkGallery";
 
 
 export const metadata: Metadata = {
-  title: "Our Work | Perfect Finish Painters — Project Gallery & Transformations",
+  title: "Our Work | Perfect Finish Painters Project Gallery",
   description:
-    "See the transformations Perfect Finish Painters has created across South Jersey. Interior painting, exterior painting, drywall repair, flooring, and more. View our project gallery.",
+    "See the transformations Perfect Finish Painters has created across South Jersey — interior, exterior, drywall repair, flooring, and more. View our gallery.",
   openGraph: {
     title: "Our Work | Perfect Finish Painters — Project Gallery",
     description: "See the transformations Perfect Finish Painters has created across South Jersey. Browse our project gallery.",

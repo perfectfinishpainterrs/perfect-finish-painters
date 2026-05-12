@@ -7,11 +7,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
 
 export const metadata: Metadata = {
-  title: "Pintores en Pleasantville NJ | Perfect Finish Painters — Hablamos Español",
+  title: "Pintores en Pleasantville NJ | Perfect Finish Painters",
   description:
     "Pintores en Pleasantville NJ. Pintura interior, exterior y reparación de drywall. Hablamos español. Licenciados y asegurados. Estimados gratis — 609-377-4226.",
   openGraph: {
-    title: "Pintores en Pleasantville NJ | Perfect Finish Painters — Hablamos Español",
+    title: "Pintores en Pleasantville NJ | Perfect Finish Painters",
     description:
       "Pintores en Pleasantville NJ. Pintura interior, exterior y reparación de drywall. Hablamos español. Licenciados y asegurados. Estimados gratis — 609-377-4226.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pintores en Pleasantville NJ | Perfect Finish Painters — Hablamos Español",
+    title: "Pintores en Pleasantville NJ | Perfect Finish Painters",
     description:
       "Pintores en Pleasantville NJ. Pintura interior, exterior y reparación de drywall. Hablamos español. Licenciados y asegurados. Estimados gratis — 609-377-4226.",
     images: ["/logo.webp"],

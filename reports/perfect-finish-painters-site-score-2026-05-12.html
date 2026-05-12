@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Perfect Finish Painters — Site Score</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  @page report { margin: 0.55in 0.65in; }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: #1A1A2E;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ----- Cover ----- */
+  .cover {
+    page: cover;
+    width: 8.5in; height: 11in;
+    background: #0D0D0D;
+    color: #ffffff;
+    padding: 0.9in 0.9in;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    page-break-after: always; break-after: page;
+  }
+  .cover::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0;
+    height: 0.4in; background: #FF4500;
+  }
+  .cover .brand {
+    font-weight: 800; font-size: 24pt; letter-spacing: 0.05em; line-height: 1;
+  }
+  .cover .brand span { color: #FF4500; font-weight: 600; }
+  .cover .meta-top {
+    margin-top: 0.5in;
+    font-size: 10pt; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #FF4500;
+  }
+  .cover .client {
+    font-size: 36pt; font-weight: 700; line-height: 1.05;
+    margin: 0.1in 0 0.25in;
+  }
+  .cover .meta-sub { color: #cccccc; font-size: 12pt; margin: 0; }
+
+  .gauge {
+    text-align: center;
+    margin: 0.5in 0 0.3in;
+  }
+  .gauge .ring {
+    width: 3.5in; height: 3.5in;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 18px solid #1f1f23;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .gauge.green .ring { border-color: #10b981; }
+  .gauge.amber .ring { border-color: #f59e0b; }
+  .gauge.red .ring   { border-color: #ef4444; }
+  .gauge .num {
+    font-size: 84pt; font-weight: 800; line-height: 1; color: #ffffff;
+  }
+  .gauge .of { font-size: 14pt; color: #888; margin-top: 0.05in; letter-spacing: 0.1em; }
+  .gauge .label {
+    margin-top: 0.2in;
+    font-size: 16pt; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.15em;
+  }
+  .gauge.green .label { color: #10b981; }
+  .gauge.amber .label { color: #f59e0b; }
+  .gauge.red .label   { color: #ef4444; }
+
+  .cover-foot {
+    font-size: 9pt; color: #777; letter-spacing: 0.06em;
+  }
+  .cover-foot strong { color: #fff; }
+
+  /* ----- Report pages ----- */
+  .report { page: report; padding: 0; }
+  .report-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.12in; margin-bottom: 0.25in;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .report-header .brand { font-weight: 700; font-size: 11pt; letter-spacing: 0.04em; }
+  .report-header .brand span { color: #FF4500; }
+  .report-header .meta { font-size: 9pt; color: #64748b; }
+
+  h1.section-title {
+    font-size: 20pt; font-weight: 700; margin: 0 0 0.12in;
+  }
+  h1.section-title::after {
+    content: ""; display: block; width: 0.55in; height: 3px;
+    background: #FF4500; margin-top: 0.07in;
+  }
+  .lead { font-size: 11pt; color: #334155; line-height: 1.5; margin-bottom: 0.3in; }
+
+  /* Dimension grid */
+  .dimensions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.18in;
+  }
+  .dim {
+    border: 1px solid #e2e8f0;
+    border-left-width: 4px;
+    border-left-color: #94a3b8;
+    background: #fff;
+    padding: 0.18in 0.2in;
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  .dim.green { border-left-color: #10b981; }
+  .dim.amber { border-left-color: #f59e0b; }
+  .dim.red   { border-left-color: #ef4444; }
+
+  .dim-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 0.08in;
+  }
+  .dim-name {
+    font-size: 11pt; font-weight: 700; color: #1A1A2E;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .dim-score {
+    font-size: 22pt; font-weight: 800; line-height: 1;
+  }
+  .dim.green .dim-score { color: #10b981; }
+  .dim.amber .dim-score { color: #f59e0b; }
+  .dim.red   .dim-score { color: #ef4444; }
+
+  .bar {
+    height: 6px; background: #f1f5f9; border-radius: 3px;
+    overflow: hidden; margin-bottom: 0.12in;
+  }
+  .bar > i {
+    display: block; height: 100%;
+    background: #94a3b8;
+  }
+  .dim.green .bar > i { background: #10b981; }
+  .dim.amber .bar > i { background: #f59e0b; }
+  .dim.red   .bar > i { background: #ef4444; }
+
+  .drags {
+    list-style: none; margin: 0; padding: 0;
+    font-size: 9.5pt; line-height: 1.4; color: #334155;
+  }
+  .drags li {
+    padding: 0.04in 0 0.04in 0.18in;
+    position: relative;
+    border-top: 1px dotted #e2e8f0;
+  }
+  .drags li:first-child { border-top: none; }
+  .drags li::before {
+    content: "−"; position: absolute; left: 0; top: 0.04in;
+    color: #ef4444; font-weight: 800;
+  }
+  .drags li.ok::before { content: "✓"; color: #10b981; }
+  .drags li.ok { color: #10b981; }
+
+  /* Trend strip */
+  .trend {
+    margin-top: 0.35in;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.2in;
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  .trend h2 {
+    font-size: 13pt; font-weight: 700; margin: 0 0 0.15in;
+    color: #1A1A2E;
+  }
+  .trend-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.18in;
+  }
+  .trend-cell {
+    background: #f8fafc; border-left: 3px solid #FF4500;
+    padding: 0.14in 0.16in;
+  }
+  .trend-cell .num { font-size: 22pt; font-weight: 700; color: #1A1A2E; line-height: 1; }
+  .trend-cell .label {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 0.08em;
+    color: #64748b; margin-top: 0.05in;
+  }
+
+  .na-callout {
+    margin-top: 0.25in;
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 0.12in 0.16in;
+    font-size: 9pt; color: #78350f;
+  }
+
+  .closing {
+    margin-top: 0.35in;
+    font-size: 9pt; color: #64748b; line-height: 1.5;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.18in;
+  }
+  .closing strong { color: #1A1A2E; }
+  .closing a { color: #FF4500; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div>
+    <div class="brand">SJ TECH <span>SOLUTIONS</span></div>
+    <p class="meta-top">Site Health Scorecard</p>
+    <p class="client">Perfect Finish Painters</p>
+    <p class="meta-sub">Next.js &nbsp;·&nbsp; May 12, 2026</p>
+  </div>
+
+  <div class="gauge green">
+    <div class="ring">
+      <div class="num">98</div>
+      <div class="of">/ 100</div>
+    </div>
+    <div class="label">Excellent</div>
+  </div>
+
+  <div class="cover-foot">
+    Generated by <strong>SJ Tech Solutions LLC</strong> &nbsp;·&nbsp; sjtechllc.com
+  </div>
+</div>
+
+<!-- ============ REPORT ============ -->
+<div class="report">
+  <div class="report-header">
+    <div class="brand">SJ TECH <span>SOLUTIONS</span></div>
+    <div class="meta">Perfect Finish Painters &nbsp;·&nbsp; Site Score &nbsp;·&nbsp; May 12, 2026</div>
+  </div>
+
+  <h1 class="section-title">Score by dimension</h1>
+  <p class="lead">Each dimension scored 0–100 against a fixed rubric. Items dragging the score down are listed in each card. Aggregate score is the average of the six.</p>
+
+  <div class="dimensions">
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">SEO Foundation</span>
+        <span class="dim-score">99</span>
+      </div>
+      <div class="bar"><i style="width: 99%"></i></div>
+      <ul class="drags"><li class="ok">No issues detected. Canonical + sitemap + robots + JSON-LD + og:image near-100%; all 36 page titles now 30–60 chars and all 35 metas 130–160 (the "Session 6" length cleanup, done 5/12).</li></ul>
+    </div>
+
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">GEO Readiness</span>
+        <span class="dim-score">95</span>
+      </div>
+      <div class="bar"><i style="width: 95%"></i></div>
+      <ul class="drags"><li>H2 question-form ratio ~45% — just shy of the 50%+ ideal; remaining statement H2s are legal/blog section labels (diminishing returns).</li>
+        <li class="ok">No violations — HousePainter schema, shared @id, FAQ schema matches visible content on all 13 pages, areaServed single-source-of-truth, Speakable shipped, aggregateRating scoped to home + /reviews only.</li></ul>
+    </div>
+
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">Performance</span>
+        <span class="dim-score">100</span>
+      </div>
+      <div class="bar"><i style="width: 100%"></i></div>
+      <ul class="drags"><li class="ok">No issues detected. All images via next/image (only raw img is the FB Pixel noscript beacon, which must be raw), next/font, hero LCP priority+fetchPriority. Note: public/ still ~34 MB of intentionally-kept .jpg fallbacks — doesn't affect page load, bloats deploys.</li></ul>
+    </div>
+
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">Accessibility</span>
+        <span class="dim-score">97</span>
+      </div>
+      <div class="bar"><i style="width: 97%"></i></div>
+      <ul class="drags"><li>Per-page heading-hierarchy audit still pending (the lone remaining -3) — skip-nav + :focus-visible + ContactForm labels all shipped 4/26.</li></ul>
+    </div>
+
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">Trust &amp; Compliance</span>
+        <span class="dim-score">100</span>
+      </div>
+      <div class="bar"><i style="width: 100%"></i></div>
+      <ul class="drags"><li class="ok">No issues detected. /privacy /terms /contact /accessibility all live, no exposed secrets, phone format consistent, analytics disclosed.</li></ul>
+    </div>
+
+    <div class="dim green">
+      <div class="dim-head">
+        <span class="dim-name">Content Depth</span>
+        <span class="dim-score">95</span>
+      </div>
+      <div class="bar"><i style="width: 95%"></i></div>
+      <ul class="drags"><li>15 service + 19 city + 5 blog pages, About page with founder bio + photo. The old "thin content on 30 pages" flag was a stale audit false positive — word-count audit (5/12) shows every real page at 500-3000 words; only /quiz is "thin" and it's a redirect (correctly so).</li></ul>
+    </div>
+  </div>
+
+  <div class="trend">
+    <h2>Activity trend (from PROGRESS.md)</h2>
+    <div class="trend-grid">
+      <div class="trend-cell">
+        <div class="num">20</div>
+        <div class="label">Total Shipped</div>
+      </div>
+      <div class="trend-cell">
+        <div class="num">20</div>
+        <div class="label">Shipped Last 90 Days</div>
+      </div>
+      <div class="trend-cell">
+        <div class="num">11</div>
+        <div class="label">Open Next-Up Items</div>
+      </div>
+      <div class="trend-cell">
+        <div class="num">6</div>
+        <div class="label">Locked Decisions</div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="closing">
+    Re-run <strong>/site-score</strong> after each significant work session to track the aggregate trend over time. The score line gets appended to PROGRESS.md so historical movement is auditable.
+    <br/><br/>
+    <strong>SJ Tech Solutions LLC</strong> &mdash; sjtechllc.com
+  </div>
+</div>
+
+</body>
+</html>
+<!--
+DRAGS PATTERN (one <li> per item dragging the score; max 3 per dimension):
+  <li>Canonical missing on 6 of 14 city pages (–9 pts)</li>
+  <li>Statement H2 on 4 of 7 service pages (–8 pts)</li>
+  <li>aggregateRating present on 12 pages but only 2 render reviews (manual-action risk, –10 pts)</li>
+
+When a dimension is at 100:
+  <li class="ok">No issues detected.</li>
+
+NA_CALLOUT pattern (only when N/A redistribution applied):
+  <div class="na-callout">
+    <strong>Notes:</strong> hreflang scoring (10 pts) marked N/A — no multilingual content detected. Points redistributed across remaining SEO items.
+  </div>
+-->

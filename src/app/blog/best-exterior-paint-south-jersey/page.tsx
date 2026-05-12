@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Best Exterior Paint for South Jersey Homes | Perfect Finish Painters",
+  title: "Best Exterior Paint for South Jersey Homes | Perfect Finish",
   description:
-    "What's the best exterior paint for homes in South Jersey? Learn which paints hold up to coastal humidity, salt air, and seasonal weather. Tips from Perfect Finish Painters in Mays Landing NJ.",
+    "What's the best exterior paint for South Jersey homes? Which paints hold up to coastal humidity and salt air? Tips from Perfect Finish Painters, Mays Landing.",
   openGraph: {
     title: "Best Exterior Paint for South Jersey Homes",
     description: "Which exterior paints hold up best to South Jersey's coastal climate? Our recommendations.",

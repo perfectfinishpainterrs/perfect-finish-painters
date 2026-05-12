@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey | Perfect Finish Painters",
+  title: "Exterior Painting in South Jersey | Perfect Finish Painters",
   description: "Boost your home's curb appeal with expert exterior painting in South Jersey. Perfect Finish Painters in Mays Landing, NJ, offers durable, professional services.",
   openGraph: {
     title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",

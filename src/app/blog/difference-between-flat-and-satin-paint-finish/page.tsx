@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Flat vs Satin Paint Finish — Which One Do You Actually Need? | Perfect Finish Painters",
+  title: "Flat vs Satin Paint Finish: Which to Use | Perfect Finish",
   description:
-    "Flat or satin? A South Jersey painter breaks down when to use each finish, room by room. Real advice on durability, touch-ups, and what works with kids and pets.",
+    "Flat or satin? A South Jersey painter breaks down when to use each finish, room by room — durability, touch-ups, and what works with kids and pets.",
   openGraph: {
     title: "Flat vs Satin Paint Finish — Which One Do You Actually Need?",
     description: "A South Jersey painter breaks down flat vs satin finishes room by room. Real advice on durability, touch-ups, and what works with kids and pets.",

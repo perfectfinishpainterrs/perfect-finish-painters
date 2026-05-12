@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm | Perfect Finish Painters",
+  title: "Cedar Siding Repair in South Jersey | Perfect Finish",
   description: "Get expert cedar siding repair in South Jersey from Perfect Finish Painters. Restore your home's exterior with our professional services in Mays Landing, NJ.",
   openGraph: {
     title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm",

@@ -7,8 +7,8 @@ import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "About Perfect Finish Painters | Meet Brandon — South Jersey Painting Company",
-  description: "Learn about Perfect Finish Painters and owner Brandon. Family-owned painting company in Mays Landing NJ serving South Jersey with interior & exterior painting, drywall repair, and flooring.",
+  title: "About Perfect Finish Painters | Mays Landing NJ Painters",
+  description: "Family-owned painting company in Mays Landing, NJ. Perfect Finish Painters does interior & exterior painting, drywall repair, and flooring in South Jersey.",
   openGraph: {
     title: "About Perfect Finish Painters | Meet Brandon",
     description: "Family-owned painting company in Mays Landing NJ. Meet Brandon, the owner of Perfect Finish Painters.",

@@ -7,9 +7,9 @@ import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Contact Perfect Finish Painters | Painters in Mays Landing NJ",
+  title: "Contact Perfect Finish Painters | Mays Landing NJ",
   description:
-    "Contact Perfect Finish Painters in Mays Landing, NJ for a free estimate on interior or exterior painting, drywall, or flooring. Call 609-377-4226 or send a message.",
+    "Contact Perfect Finish Painters in Mays Landing, NJ for a free estimate on interior or exterior painting, drywall, or flooring. Call 609-377-4226 today.",
   openGraph: {
     title: "Contact Perfect Finish Painters | Mays Landing NJ",
     description:

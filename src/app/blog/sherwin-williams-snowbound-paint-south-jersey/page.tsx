@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes | Perfect Finish Painters",
+  title: "Sherwin-Williams Snowbound Paint Guide | Perfect Finish",
   description: "Explore Sherwin-Williams Snowbound paint for your South Jersey home. Perfect Finish Painters in Mays Landing, NJ, shares tips on this versatile white shade.",
   openGraph: {
     title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",

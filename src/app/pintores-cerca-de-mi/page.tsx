@@ -7,13 +7,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
 
 export const metadata: Metadata = {
-  title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
+  title: "Pintores en Atlantic County NJ | Perfect Finish Painters",
   description:
-    "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
+    "Pintores en Atlantic County NJ. Pintura Sherwin-Williams Duration y Emerald. Interior, exterior y reparación de drywall. Hablamos español. Estimados gratis.",
   openGraph: {
-    title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
+    title: "Pintores en Atlantic County NJ | Perfect Finish Painters",
     description:
-      "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
+      "Pintores en Atlantic County NJ. Pintura Sherwin-Williams Duration y Emerald. Interior, exterior y reparación de drywall. Hablamos español. Estimados gratis.",
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-cerca-de-mi",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pintores en Atlantic County NJ | Pintura Sherwin-Williams | Perfect Finish Painters",
+    title: "Pintores en Atlantic County NJ | Perfect Finish Painters",
     description:
-      "Pintores profesionales en Atlantic County NJ. Usamos pintura Sherwin-Williams Duration y Emerald. Pintura interior y exterior, reparación de drywall y pisos. Hablamos español. Estimados gratis — 609-377-4226.",
+      "Pintores en Atlantic County NJ. Pintura Sherwin-Williams Duration y Emerald. Interior, exterior y reparación de drywall. Hablamos español. Estimados gratis.",
     images: ["/logo.webp"],
   },
   alternates: {
