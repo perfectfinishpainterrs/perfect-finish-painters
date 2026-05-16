@@ -165,7 +165,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-[#1e3a5f] text-center mb-4">
-              How It Works
+              How Does It Work?
             </h2>
             <p className="text-[#64748b] text-center mb-12 max-w-2xl mx-auto">
               Getting your project started is simple. Just three easy steps.
@@ -217,7 +217,7 @@ export default function ServicesPage() {
       {/* Service Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Areas We Serve</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Which Areas Do We Serve?</h2>
           <div className="flex flex-wrap gap-3">
             {serviceAreas.map((area) => (
               <Link

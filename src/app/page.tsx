@@ -306,7 +306,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] text-center mb-4">
-              Interior &amp; Exterior Painting Services
+              What Painting Services Do We Offer?
             </h2>
             <p className="text-[#64748b] text-center mb-10 max-w-2xl mx-auto">
               Professional painting and home improvement in Mays Landing and throughout South Jersey.
@@ -435,7 +435,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-[#1e3a5f] text-center mb-10">
-              How It Works
+              How Does It Work?
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -473,7 +473,7 @@ export default function Home() {
       {/* Service Areas */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Areas We Serve</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">Which Areas Do We Serve?</h2>
           <div className="flex flex-wrap justify-center gap-3">
             {serviceAreas.map((area) => (
               <Link

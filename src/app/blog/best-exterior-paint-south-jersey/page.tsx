@@ -80,7 +80,7 @@ export default function BestExteriorPaintPost() {
               Living near the Jersey Shore means your home&apos;s exterior takes a beating. Between the coastal humidity, salt air, UV exposure, and seasonal temperature swings, the wrong paint will fade, peel, or chalk within a couple of years. Choosing the right product makes the difference between a paint job that lasts 3 years and one that lasts 7+.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What to Look For</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Should You Look For?</h2>
             <p className="text-lg leading-relaxed">
               For South Jersey exteriors, you want a paint that checks these boxes:
             </p>
@@ -103,7 +103,7 @@ export default function BestExteriorPaintPost() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Our Top Recommendations</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Do We Recommend?</h2>
 
             <h3 className="text-xl font-semibold text-[#1e3a5f] mt-6 mb-2">Benjamin Moore Aura Exterior</h3>
             <p className="text-lg leading-relaxed">

@@ -135,7 +135,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-[#1e3a5f] text-center mb-12">
-              Why Choose Perfect Finish Painters
+              Why Choose Perfect Finish Painters?
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

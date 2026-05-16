@@ -69,7 +69,7 @@ export default function AccessibilityPage() {
             build them and fix issues as we find them.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We&apos;ve Done</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Have We Done?</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Semantic HTML</strong> — header, nav, main, article, and footer landmarks on every page so screen reader users can skip to what they need.</li>
             <li><strong>Heading hierarchy</strong> — one H1 per page, H2s and H3s follow in logical order.</li>
@@ -108,7 +108,7 @@ export default function AccessibilityPage() {
           </ul>
           <p>These are on our list to improve or replace with fully accessible alternatives.</p>
 
-          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">How We Test</h2>
+          <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">How Do We Test?</h2>
           <p>
             We test new pages with keyboard-only navigation and with common screen readers
             (VoiceOver on macOS, NVDA on Windows). We also use automated tools including
