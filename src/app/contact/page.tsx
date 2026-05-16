@@ -210,7 +210,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                 <div className="bg-[#f1f5f9] rounded-xl p-4">
                   <div className="text-xs text-[#64748b] uppercase tracking-wide">NJ HIC</div>
-                  <div className="font-bold text-[#1e3a5f] mt-1">#13VH13371500</div>
+                  <div className="font-bold text-[#1e3a5f] mt-1">#13VH14120900</div>
                 </div>
                 <div className="bg-[#f1f5f9] rounded-xl p-4">
                   <div className="text-xs text-[#64748b] uppercase tracking-wide">Entity</div>

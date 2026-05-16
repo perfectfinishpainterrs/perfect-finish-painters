@@ -218,7 +218,7 @@ export default function Footer() {
           <div className="border-t border-[#2d4a6f] mt-8 pt-8 text-center">
             <p className="text-[#94a3b8] text-sm">
               &copy; {new Date().getFullYear()} Perfect Finish Painters. All
-              rights reserved. | NJ HIC #13VH13371500 | Licensed &amp; Insured LLC
+              rights reserved. | NJ HIC #13VH14120900 | Licensed &amp; Insured LLC
             </p>
           </div>
         </div>

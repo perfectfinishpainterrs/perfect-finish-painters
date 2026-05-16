@@ -115,7 +115,7 @@ const groups: FaqGroup[] = [
       },
       {
         q: "Are you licensed and insured?",
-        a: "Yes. Perfect Finish Painters LLC is registered in New Jersey (NJ HIC #13VH13371500) and carries general liability and workers' compensation insurance. A certificate of insurance naming your project, HOA, or property management company as additional insured is available on request at no cost.",
+        a: "Yes. Perfect Finish Painters LLC is registered in New Jersey (NJ HIC #13VH14120900) and carries general liability and workers' compensation insurance. A certificate of insurance naming your project, HOA, or property management company as additional insured is available on request at no cost.",
       },
       {
         q: "What happens if my paint fails during the warranty period?",

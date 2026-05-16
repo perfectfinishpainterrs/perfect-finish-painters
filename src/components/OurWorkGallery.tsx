@@ -221,6 +221,34 @@ const projects = [
     title: "Basement Wall Painting",
     desc: "We applied a fresh coat of white paint to the basement walls and staircase, enhancing the space despite the exposed insulation and storage items.",
   },
+  {
+    src: "/drywall-installation-studs-to-hung-galloway-nj.webp",
+    alt: "Drywall installation in Galloway NJ — before and after view from open wall framing to fully hung drywall panels on walls and ceiling.",
+    category: "Drywall",
+    title: "Drywall Installation — Studs to Hung",
+    desc: "Open framing transformed into fully hung drywall on walls and ceiling — ready for taping, finishing, and paint.",
+  },
+  {
+    src: "/drywall-finishing-taping-to-painted-galloway-nj.webp",
+    alt: "Drywall taping, finishing, and priming in Galloway NJ — before and after view of taped and mudded seams transformed into smooth, primed paint-ready walls and ceiling.",
+    category: "Drywall",
+    title: "Drywall Finishing — Taped to Paint-Ready",
+    desc: "Taped seams skim-coated smooth, sanded, and primed — paint-ready walls and ceiling delivered in one trip.",
+  },
+  {
+    src: "/studs-to-finish-room-renovation-galloway-nj.webp",
+    alt: "Full room renovation in Galloway NJ — before and after view from exposed wall studs and framing to a finished, freshly painted interior room with windows and clean trim.",
+    category: "Interior",
+    title: "Studs to Finished Room",
+    desc: "Full transformation from open framing to a finished, painted interior — drywall, prep, prime, and paint in one job.",
+  },
+  {
+    src: "/framing-to-finished-drywall-paint-galloway-nj.webp",
+    alt: "Framing to finished interior in Galloway NJ — before and after view from exposed studs and open framing to fully drywalled, primed, and paint-ready walls.",
+    category: "Interior",
+    title: "Framing to Paint-Ready",
+    desc: "Open studs to fully primed walls — drywall hung, taped, finished, and primed without juggling multiple contractors.",
+  },
 ];
 
 const categories = ["All", "Interior", "Exterior", "Drywall", "Flooring", "Commercial", "Specialty"];

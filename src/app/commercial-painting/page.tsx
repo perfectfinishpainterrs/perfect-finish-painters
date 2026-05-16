@@ -64,7 +64,7 @@ export default function CommercialPaintingPage() {
       { "@type": "Question", name: "Do you paint commercial buildings in Atlantic County NJ?", acceptedAnswer: { "@type": "Answer", text: "Yes. We paint offices, retail stores, restaurants, warehouses, and multi-unit buildings throughout Atlantic County and South Jersey. We offer flexible scheduling including evenings and weekends to minimize business disruption." } },
       { "@type": "Question", name: "How much does commercial painting cost in South Jersey?", acceptedAnswer: { "@type": "Answer", text: "Commercial painting is quoted per square foot based on the scope of work, surface condition, and building access. We provide free on-site estimates for all commercial projects — call 609-377-4226." } },
       { "@type": "Question", name: "Can you paint my business after hours?", acceptedAnswer: { "@type": "Answer", text: "Yes. We offer evening and weekend scheduling for commercial clients who need to stay open during the work. We coordinate with your schedule to minimize impact on your operations." } },
-      { "@type": "Question", name: "Are you licensed and insured for commercial painting in NJ?", acceptedAnswer: { "@type": "Answer", text: "Yes. We are a licensed NJ Home Improvement Contractor (HIC #13VH13371500) and carry full liability insurance and workers compensation coverage for all commercial and residential projects." } },
+      { "@type": "Question", name: "Are you licensed and insured for commercial painting in NJ?", acceptedAnswer: { "@type": "Answer", text: "Yes. We are a licensed NJ Home Improvement Contractor (HIC #13VH14120900) and carry full liability insurance and workers compensation coverage for all commercial and residential projects." } },
     ],
   };
 
