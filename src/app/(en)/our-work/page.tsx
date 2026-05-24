@@ -106,6 +106,33 @@ export default function OurWorkPage() {
         </div>
       </section>
 
+      {/* Our approach — intro section before the gallery. Adds substance + context to a
+          page that was otherwise mostly images, and gives crawlers real text to index. */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-6">
+              How Every Perfect Finish Project Comes Together
+            </h2>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              Every project in the gallery below started the same way — a free in-home walkthrough, an itemized written estimate, and a clear start date. From there the work follows our four-step rhythm: <strong>prep, prime, paint, protect.</strong> No shortcuts on the part you don&apos;t see.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              <strong>Prep</strong> is the longest stage and the one that decides how long the finish lasts. We scrape, sand, fill cracks and nail pops, patch drywall, caulk seams, and mask every surface that isn&apos;t getting painted — floors, fixtures, hardware, plants on exterior jobs. On older South Jersey homes we often address peeling paint, plaster repair, or moisture issues before any new coat goes on.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              <strong>Prime</strong> matters more than most homeowners realize. The right primer locks the surface, evens absorption, and stops bleed-through. We use high-adhesion primers on glossy surfaces, stain-blocking primers over water marks, and rust-inhibiting primers on metal. On coastal exteriors we back-prime new wood and seal end-grain — small details that decide whether the paint film survives salt air.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              <strong>Paint</strong> is the visible part. We use premium Sherwin-Williams and Benjamin Moore products on interiors and marine-grade exterior coatings on shore homes — never the cheapest gallon to pad margin. Two coats minimum on every project, cut lines clean, and brush and roller marks knocked down so the finish reads smooth.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed">
+              <strong>Protect</strong> is the cleanup. Dropcloths and plastic come up daily so you can use the rest of the home, fixtures and outlet covers go back on, hardware reinstalls clean, and the room is walk-through ready when we leave. You shouldn&apos;t be able to tell painters were in your home outside of the room that got the work.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Project Gallery — not wrapped in ScrollReveal because the gallery is too tall
           to ever hit a 15% intersection threshold, which left it stuck at opacity:0.
           Each card already has its own fadeSlideUp animation in OurWorkGallery.tsx. */}

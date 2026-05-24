@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
-import { headers } from "next/headers";
 import { areaServedCities } from "@/data/service-areas";
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,81 +52,85 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+// Service-area business — `address` is required by Google's Rich Results validator
+// even when locality-only. `areaServed` carries the full coverage list.
+// Reviews/aggregateRating are emitted on /reviews (where review content renders) and
+// merge into this same entity via shared `@id`.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "@id": "https://perfectfinishpainter.com/#business",
+  name: "Perfect Finish Painters",
+  description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
+  url: "https://perfectfinishpainter.com",
+  telephone: "+1-609-377-4226",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Mays Landing",
+    addressRegion: "NJ",
+    postalCode: "08330",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 39.45,
+    longitude: -74.73,
+  },
+  areaServed: areaServedCities,
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "17:00" },
+  ],
+  priceRange: "$$",
+  logo: "https://perfectfinishpainter.com/logo.webp",
+  sameAs: [
+    "https://www.facebook.com/PerfectFinishPainters",
+    "https://www.instagram.com/perfectfinishpainter/",
+    "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
+    "https://g.page/r/CYlKM00sLEMiEAI",
+  ],
+  award: [
+    "5-Star Rated on Google",
+    "5-Star Rated on Facebook",
+    "Top Rated Painter on Yelp — Mays Landing",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Painting Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting", provider: { "@id": "https://perfectfinishpainter.com/#business" } } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting", provider: { "@id": "https://perfectfinishpainter.com/#business" } } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair", provider: { "@id": "https://perfectfinishpainter.com/#business" } } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation", provider: { "@id": "https://perfectfinishpainter.com/#business" } } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting", provider: { "@id": "https://perfectfinishpainter.com/#business" } } },
+    ],
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-609-377-4226",
+    contactType: "customer service",
+    areaServed: "US",
+    availableLanguage: ["English", "Spanish"],
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://perfectfinishpainter.com/#website",
+  name: "Perfect Finish Painters",
+  url: "https://perfectfinishpainter.com",
+  publisher: { "@id": "https://perfectfinishpainter.com/#business" },
+  inLanguage: "en-US",
+};
+
+export default function EnRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = (await headers()).get("x-pathname") ?? "";
-  const lang = pathname.startsWith("/pintores-") ? "es" : "en";
-  // Service-area business — no storefront, so `address` is intentionally omitted and
-  // `areaServed` carries the coverage area. Reviews/aggregateRating are emitted only on
-  // pages that actually render review content (home, /reviews) to avoid Google manual
-  // action risk. `@id` lets those pages merge into this same entity.
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "HousePainter",
-    "@id": "https://perfectfinishpainter.com/#business",
-    name: "Perfect Finish Painters",
-    description: "Professional interior & exterior painting, drywall repair, and flooring services in Mays Landing and South Jersey.",
-    url: "https://perfectfinishpainter.com",
-    telephone: "+1-609-377-4226",
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 39.45,
-      longitude: -74.73,
-    },
-    areaServed: areaServedCities,
-    openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "17:00" },
-    ],
-    priceRange: "$$",
-    image: "https://perfectfinishpainter.com/logo.webp",
-    logo: "https://perfectfinishpainter.com/logo.webp",
-    sameAs: [
-      "https://www.facebook.com/PerfectFinishPainters",
-      "https://www.instagram.com/perfectfinishpainter/",
-      "https://www.yelp.com/biz/perfect-finish-painters-mays-landing",
-      "https://g.page/r/CYlKM00sLEMiEAI",
-    ],
-    award: [
-      "5-Star Rated on Google",
-      "5-Star Rated on Facebook",
-      "Top Rated Painter on Yelp — Mays Landing",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Painting Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drywall Repair" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flooring Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Shed Restoration & Painting" } },
-      ],
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-609-377-4226",
-      contactType: "customer service",
-      areaServed: "US",
-      availableLanguage: ["English", "Spanish"],
-    },
-  };
-
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://perfectfinishpainter.com/#website",
-    name: "Perfect Finish Painters",
-    url: "https://perfectfinishpainter.com",
-    publisher: { "@id": "https://perfectfinishpainter.com/#business" },
-    inLanguage: "en-US",
-  };
-
   return (
-    <html lang={lang}>
+    <html lang="en">
       <head>
         <meta name="google" content="nositelinkssearchbox" />
         {/* Quiz lives at estimate-app-liart.vercel.app via 307 from /quiz —

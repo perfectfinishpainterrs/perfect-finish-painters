@@ -96,6 +96,24 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Intro section — adds substance to what was otherwise just a card grid, and
+          gives the index page indexable copy beyond the post excerpts. */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              We publish here when we run into something worth sharing with South Jersey homeowners — a paint color we keep getting asked about, a coastal-home prep technique that actually holds, a question a homeowner asked us mid-project that turned out to be more useful as a post than a one-off answer.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed mb-5">
+              Most posts come out of real Perfect Finish projects in Mays Landing, Hammonton, and the shore towns. Expect plain-English explanations of what works (and what doesn&apos;t) for interior repaints, exterior maintenance, drywall and ceiling repair, cabinet refinishing, and the weather-resistant products we lean on for homes near the bay or the ocean.
+            </p>
+            <p className="text-[#64748b] text-lg leading-relaxed">
+              If you have a question we haven&apos;t answered yet, send it our way — chances are someone else is asking the same thing. <Link href="/contact" className="text-[#2563eb] hover:underline">Contact us</Link> or <Link href="/quiz" className="text-[#2563eb] hover:underline">grab a free estimate</Link> if you&apos;re ready to talk about a project.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 gap-8">

@@ -115,6 +115,20 @@ export default async function CityPage({ params }: CityPageProps) {
     ],
   };
 
+  // FAQPage schema — every Q&A in here must match what visibly renders below.
+  const faqJsonLd = area.localFaqs && area.localFaqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: area.localFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   const otherAreas = serviceAreas.filter((a) => a.slug !== area.slug);
 
   return (
@@ -129,6 +143,12 @@ export default async function CityPage({ params }: CityPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* Breadcrumb */}
       <div className="pt-28 px-4 sm:px-6 lg:px-8">
@@ -247,6 +267,25 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Local FAQs */}
+      {area.localFaqs && area.localFaqs.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f] mb-8">
+              {area.name} Painting Questions, Answered
+            </h2>
+            <div className="space-y-6">
+              {area.localFaqs.map((faq, i) => (
+                <div key={i} className="border-l-4 border-[#2563eb] pl-5">
+                  <h3 className="text-lg font-semibold text-[#1e3a5f] mb-2">{faq.question}</h3>
+                  <p className="text-[#64748b] leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Other Service Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">

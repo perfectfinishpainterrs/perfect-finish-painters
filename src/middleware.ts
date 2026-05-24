@@ -18,9 +18,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(cleanUrl, 301);
   }
 
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-pathname", pathname);
-  return NextResponse.next({ request: { headers: requestHeaders } });
+  // The old x-pathname header is no longer set — layouts now live under
+  // route groups (en)/(es) so language is determined at the layout level
+  // rather than via headers() (which forced dynamic rendering on every page).
+  return NextResponse.next();
 }
 
 export const config = {

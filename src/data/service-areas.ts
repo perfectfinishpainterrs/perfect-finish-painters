@@ -12,6 +12,7 @@ export interface ServiceArea {
     body: string;
     closing: string;
   };
+  localFaqs: { question: string; answer: string }[];
 }
 
 export const serviceAreas: ServiceArea[] = [
@@ -21,7 +22,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Trusted painters serving Egg Harbor Township, NJ with interior and exterior painting, drywall repair, and flooring.",
     metaTitle: "Painters in Egg Harbor Township NJ | Perfect Finish Painters",
-    metaDescription: "Looking for painters in Egg Harbor Township NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Egg Harbor Township NJ — interior & exterior painting, drywall repair, flooring. Licensed, free estimates — call (609) 377-4226 today.",
     latitude: 39.3837,
     longitude: -74.6488,
     content: {
@@ -29,6 +30,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Whether you live near the Fire Road corridor, the Shore Mall area, or any of the family-friendly neighborhoods throughout the township, our team delivers quality interior and exterior painting at affordable prices. We handle everything from single-room refreshes to full exterior repaints, plus drywall repair and flooring installation. Most interior rooms in Egg Harbor Township cost between $500–$1,000, and we always provide a detailed estimate before starting any work.",
       closing: "As a locally owned company based in nearby Mays Landing, we understand the South Jersey climate and recommend paints that hold up against coastal humidity and seasonal weather changes. Our team typically completes a single room in one day and a full interior in 3–5 days.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Egg Harbor Township?", answer: "Most interior rooms in Egg Harbor Township run $500–$1,000 each, depending on room size, ceiling height, and how much prep the walls need. After walking the project we give you a fixed written estimate — no surprise add-ons during the job." },
+      { question: "How long does a typical Egg Harbor Township painting project take?", answer: "A single room usually wraps in a day. A full interior repaint of an EHT home takes 3–5 days for most floor plans, and exterior projects run 3–7 days depending on size and weather. You'll have a firm schedule before we start." },
+      { question: "Do you serve every neighborhood in Egg Harbor Township?", answer: "Yes — from the Fire Road and Black Horse Pike corridors to the West Atlantic and English Creek areas, we cover the whole township. We're 15 minutes up the road in Mays Landing, so response times are quick." },
+    ],
   },
   {
     name: "Hammonton",
@@ -36,7 +42,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Professional painting services in Hammonton, NJ — interior painting, exterior painting, drywall repair, and more.",
     metaTitle: "Painters in Hammonton NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Hammonton NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Hammonton NJ — interior & exterior painting, drywall, and flooring. Careful work on historic and modern homes. Free estimates — (609) 377-4226.",
     latitude: 39.6365,
     longitude: -74.8024,
     content: {
@@ -44,6 +50,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "From the Victorian-era homes along Bellevue Avenue to newer developments throughout town, our painters handle projects of all sizes. We specialize in interior painting, exterior painting, drywall repair, and flooring installation. Historic homes in Hammonton often require careful prep work and the right paint choices — something our experienced team handles with attention to detail. Typical interior room costs range from $500–$1,000 depending on size and condition.",
       closing: "Located just minutes away in Mays Landing, Perfect Finish Painters offers fast response times and free estimates for Hammonton residents. We use high-quality paints that protect against New Jersey's seasonal weather, and our team completes most rooms in a single day.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Hammonton?", answer: "Hammonton interior rooms typically run $500–$1,000 each. Older homes in the Bellevue Avenue area sometimes need extra prep — plaster repair, lead-safe work on pre-1978 trim — which we walk through and price separately so you see exactly what's included." },
+      { question: "Do you work on older or historic Hammonton homes?", answer: "Yes — a lot of our Hammonton work is on the town's older housing stock. Older plaster walls, wood trim, and exterior detail work all need a different approach than newer drywall builds. We come prepared with the right materials and prep tools." },
+      { question: "How quickly can you get to Hammonton for an estimate?", answer: "Hammonton is about 20 minutes from our Mays Landing shop. We usually have an estimate booked within 24 hours of your call, and most quotes come back the same day we walk the project." },
+    ],
   },
   {
     name: "Vineland",
@@ -51,7 +62,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Quality painting services in Vineland, NJ — residential and commercial painting, drywall repair, and flooring.",
     metaTitle: "Painting Contractor in Vineland NJ | Perfect Finish Painters",
-    metaDescription: "Searching for painters in Vineland NJ? Perfect Finish Painters offers residential & commercial painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painting contractor in Vineland NJ — residential & commercial painting, drywall repair, flooring. Free estimates within 24 hours — call (609) 377-4226.",
     latitude: 39.4863,
     longitude: -75.0258,
     content: {
@@ -59,14 +70,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "Whether you own a home near Landis Avenue, a commercial building in the business district, or a property anywhere in the Vineland area, we bring the same commitment to quality and affordability. Our services include interior painting, exterior painting, drywall repair, and flooring installation. For Vineland homeowners, most interior rooms cost between $500–$1,000. We also handle larger commercial projects with competitive pricing and minimal disruption to your business.",
       closing: "Perfect Finish Painters is based in Mays Landing, giving us easy access to the entire Vineland area. We provide free, no-obligation estimates and typically respond within 24 hours. Our team uses premium paints designed to withstand South Jersey weather conditions.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Vineland?", answer: "Vineland interior rooms run $500–$1,000 each. Larger primary bedrooms, two-story foyers, and rooms with significant prep work fall higher in that range. We walk the project before quoting so the number you see is the number you pay." },
+      { question: "Do you handle commercial painting in Vineland?", answer: "Yes — we handle offices, retail spaces, and commercial buildings throughout Vineland, often scheduling evenings or weekends to minimize business disruption. Larger projects get a custom quote with milestone billing." },
+      { question: "How fast can you get to Vineland for an estimate?", answer: "Vineland is about 30 minutes from our Mays Landing base. Estimates are usually scheduled within 24 hours, and we work around your availability for the walkthrough." },
+    ],
   },
   {
     name: "Galloway",
     slug: "painters-galloway-nj",
     state: "NJ",
     description: "Expert painting services in Galloway, NJ — interior and exterior painting, drywall repair, and flooring.",
-    metaTitle: "Interior & Exterior Painters in Galloway NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Galloway NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaTitle: "Interior & Exterior Painters in Galloway NJ | Perfect Finish",
+    metaDescription: "Painters in Galloway NJ — interior, exterior, drywall, and flooring. Stockton & Smithville area, salt-air-ready exteriors. Free estimates — (609) 377-4226.",
     latitude: 39.4929,
     longitude: -74.4710,
     content: {
@@ -74,14 +90,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "From homes near Jimmie Leeds Road to properties around the Smithville area, our team serves all of Galloway Township with professional interior and exterior painting, drywall repair, and flooring installation. Galloway's proximity to the coast means exterior paint needs to withstand salt air and humidity — we select products specifically suited to these conditions. Interior room painting typically ranges from $500–$1,000, and full exterior projects are quoted after a free assessment.",
       closing: "As a local South Jersey painting company based in Mays Landing, we're just a short drive from anywhere in Galloway. We offer free estimates through our 60-second online quiz or by phone at (609) 377-4226, with responses within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Galloway?", answer: "Galloway interior rooms run $500–$1,000 each. We see a lot of work in the Smithville and Pomona areas — older homes sometimes need extra prep, and we'll walk you through exactly what each room needs before quoting." },
+      { question: "What kind of exterior paint holds up in Galloway?", answer: "Galloway sits close enough to the bay that humidity and salt air affect exterior paint life. We use high-adhesion primers and premium exterior coatings rated for coastal conditions — not just the standard contractor-grade product." },
+      { question: "Do you work near Stockton University and Smithville?", answer: "Yes — both areas are core to our Galloway coverage. Rental turnovers near Stockton and historic homes around Smithville are projects we handle regularly, including quick scheduling when needed." },
+    ],
   },
   {
     name: "Somers Point",
     slug: "painters-somers-point-nj",
     state: "NJ",
     description: "Professional painters in Somers Point, NJ — interior painting, exterior painting, drywall repair, and more.",
-    metaTitle: "Painting Contractor in Somers Point NJ | Perfect Finish Painters",
-    metaDescription: "Looking for painters in Somers Point NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaTitle: "Painting Contractor in Somers Point NJ | Perfect Finish",
+    metaDescription: "Painters in Somers Point NJ — coastal-ready interior & exterior painting, drywall, and flooring. Free estimates — call (609) 377-4226 today.",
     latitude: 39.3176,
     longitude: -74.5946,
     content: {
@@ -89,6 +110,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Living near the shore means your home's exterior faces salt air, humidity, and coastal weather year-round. Our team uses marine-grade and weather-resistant paints that protect Somers Point homes while looking great. We offer interior painting, exterior painting, drywall repair, and flooring installation. Whether you're refreshing a beach cottage or repainting a larger home near Bay Avenue, we deliver quality results at fair prices. Most interior rooms cost between $500–$1,000.",
       closing: "Perfect Finish Painters is locally based in Mays Landing, just minutes from Somers Point. Get a free estimate by taking our 60-second online quiz or calling (609) 377-4226. We respond within 24 hours and can usually begin work within the week.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Somers Point?", answer: "Interior rooms in Somers Point run $500–$1,000 each. Bay-front homes sometimes need moisture-rated paint inside as well as outside, which we'll flag and price up front during the walkthrough." },
+      { question: "What's the best exterior paint for a Somers Point home?", answer: "For Somers Point we use marine-grade exterior coatings paired with high-adhesion primers. Salt-spray exposure and humidity break down standard exterior paint faster than inland — the premium products cost a little more but easily double the time before the next repaint." },
+      { question: "Do you work on bay-front and waterfront properties?", answer: "Yes — bay-front, Bay Avenue, and waterfront properties are a regular part of our Somers Point work. We're set up for the prep, scaffolding, and material choices these homes need." },
+    ],
   },
   {
     name: "Northfield",
@@ -96,7 +122,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Trusted painting services in Northfield, NJ — residential painting, drywall repair, and flooring.",
     metaTitle: "House Painters in Northfield NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Northfield NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Northfield NJ — interior, exterior, drywall, flooring. Honest pricing, clean work in established neighborhoods. Free estimates — (609) 377-4226.",
     latitude: 39.3704,
     longitude: -74.5502,
     content: {
@@ -104,6 +130,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Whether you live along Tilton Road, Shore Road, or any of Northfield's established neighborhoods, our team provides expert interior and exterior painting, drywall repair, and flooring installation. We take the time to properly prep surfaces, protect your furniture and floors, and deliver a clean, professional finish every time. Interior rooms in Northfield typically cost between $500–$1,000, and we provide detailed estimates before starting any project.",
       closing: "Based in nearby Mays Landing, Perfect Finish Painters offers quick turnaround times for Northfield residents. We're available Monday through Friday 9am–6pm and Saturdays 9am–5pm. Call (609) 377-4226 or take our free 60-second online quiz for an estimate.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Northfield?", answer: "Northfield interior rooms run $500–$1,000 each. Many of the older capes and ranches along Tilton Road and Shore Road need a little extra trim and ceiling work — we'll walk every room with you and itemize the estimate." },
+      { question: "Do you handle exterior repaints in Northfield?", answer: "Yes — Northfield exteriors are one of our most common project types. We typically schedule exterior work May through October when humidity is lower, and most full repaints take 3–6 days depending on home size and prep." },
+      { question: "How quickly can you start a Northfield project?", answer: "Mays Landing is 15 minutes away, so we can usually be on-site for an estimate within 24–48 hours and have a start date booked within a week of accepting the quote." },
+    ],
   },
   {
     name: "Linwood",
@@ -111,7 +142,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Quality painters in Linwood, NJ — interior and exterior painting, drywall repair, and flooring services.",
     metaTitle: "Painters in Linwood NJ | Perfect Finish Painters",
-    metaDescription: "Searching for painters in Linwood NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Linwood NJ — interior, exterior, drywall, and flooring with clean, careful work. Free estimates within 24 hours — (609) 377-4226.",
     latitude: 39.3393,
     longitude: -74.5752,
     content: {
@@ -119,6 +150,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "From the stately homes along Central Avenue to residential streets throughout the city, our team delivers interior painting, exterior painting, drywall repair, and flooring installation with consistent quality. Linwood homeowners appreciate our attention to detail, clean work habits, and honest pricing. Most interior rooms cost between $500–$1,000 depending on size and prep work needed. For exterior projects, we assess the condition of siding, trim, and surfaces to provide an accurate quote.",
       closing: "As a local Mays Landing company, we're just a short drive from Linwood and can typically start projects within a week of your estimate. Get started with our free 60-second quiz or call us at (609) 377-4226.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Linwood?", answer: "Interior rooms in Linwood typically run $500–$1,000 each. Larger Central Avenue homes with two-story foyers and detailed trim run higher — we walk every room and itemize trim, doors, ceilings, and closets in the estimate." },
+      { question: "Are you careful with furniture and floors in Linwood homes?", answer: "Yes — we use drop cloths and plastic on every surface, move furniture to the center of the room, and mask off floors, hardware, and trim. Daily cleanup is part of the job; you shouldn't be able to tell painters were in your home outside of the room being worked on." },
+      { question: "Do you offer free in-home estimates in Linwood?", answer: "Yes — every estimate is free, no obligation, and includes a written breakdown of materials and labor. Linwood is 15 minutes from our shop, so we can usually be on-site within 24 hours of your call." },
+    ],
   },
   {
     name: "Absecon",
@@ -126,7 +162,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Affordable painting services in Absecon, NJ — interior painting, exterior painting, drywall repair, and more.",
     metaTitle: "Painters in Absecon NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Absecon NJ? Perfect Finish Painters offers affordable interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Absecon NJ — affordable interior, exterior, drywall, and flooring work for coastal-area homes. Free estimates — call (609) 377-4226.",
     latitude: 39.4285,
     longitude: -74.4957,
     content: {
@@ -134,14 +170,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "Whether your home is near the historic Absecon Lighthouse area or in any of the residential neighborhoods throughout the city, our experienced painters deliver outstanding results. We specialize in interior painting, exterior painting, drywall repair, and flooring installation. Absecon's coastal proximity means exterior surfaces face unique weather challenges — we select paints and primers specifically designed for salt air and humidity. Interior room painting typically costs between $500–$1,000.",
       closing: "Perfect Finish Painters is based in Mays Landing, just a quick drive from Absecon. We offer free estimates with no obligation — take our 60-second online quiz or call (609) 377-4226. Our team responds within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Absecon?", answer: "Absecon interior rooms run $500–$1,000 each. Older homes in the Lighthouse area sometimes need plaster repair or trim restoration that runs higher — we walk the project before quoting so the price is locked in." },
+      { question: "What kind of exterior paint do you use in Absecon?", answer: "Absecon's coastal exposure means we use marine-grade or premium exterior coatings with high-adhesion primers. The cheaper paint options peel within a few years on shore homes — the upgraded product costs about 20% more and lasts roughly twice as long." },
+      { question: "Do you work on rental properties or short-term rentals in Absecon?", answer: "Yes — we do quick turnover repaints for rentals and Airbnb-style properties in Absecon. We can usually fit small turnovers between bookings and offer recurring scheduling for property managers." },
+    ],
   },
   {
     name: "Pleasantville",
     slug: "painters-pleasantville-nj",
     state: "NJ",
     description: "Professional painting services in Pleasantville, NJ — residential and commercial painting, drywall repair, and flooring.",
-    metaTitle: "House Painters in Pleasantville NJ | Perfect Finish Painters",
-    metaDescription: "Looking for painters in Pleasantville NJ? Perfect Finish Painters provides residential & commercial painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaTitle: "House Painters in Pleasantville NJ | Perfect Finish",
+    metaDescription: "Painters in Pleasantville NJ — residential & commercial painting, drywall, and flooring at honest prices. Free estimates — call (609) 377-4226.",
     latitude: 39.3899,
     longitude: -74.5241,
     content: {
@@ -149,14 +190,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "Our team handles projects throughout Pleasantville, from residential homes along Main Street to commercial properties in the business district. Services include interior painting, exterior painting, drywall repair, and flooring installation. We're committed to making professional painting accessible and affordable for the Pleasantville community. Most interior rooms cost between $500–$1,000, and we offer competitive rates for larger residential and commercial projects.",
       closing: "Located in nearby Mays Landing, Perfect Finish Painters can reach Pleasantville quickly for estimates and project work. We're available Monday through Friday 9am–6pm and Saturdays 9am–5pm. Call (609) 377-4226 or use our free 60-second quiz to get started.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Pleasantville?", answer: "Pleasantville interior rooms run $500–$1,000 each. We work hard to keep pricing accessible — the estimate is itemized so you can decide which rooms to do now and which to push to the next phase if budget is a factor." },
+      { question: "Do you handle small commercial work in Pleasantville?", answer: "Yes — small offices, retail spaces, and storefronts along Main Street are a regular part of our Pleasantville work. We schedule evenings or weekends when needed to keep your business open during the project." },
+      { question: "¿Hablan español?", answer: "Sí — atendemos a clientes en inglés y español. Para más información en español, llame al (609) 377-4226 o visite nuestra página en español." },
+    ],
   },
   {
     name: "Atlantic City",
     slug: "painters-atlantic-city-nj",
     state: "NJ",
     description: "Painters in Atlantic City, NJ — residential and commercial painting, drywall repair, and flooring services.",
-    metaTitle: "Painting Contractor in Atlantic City NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Atlantic City NJ? Perfect Finish Painters offers residential & commercial painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaTitle: "Painting Contractor in Atlantic City NJ | Perfect Finish",
+    metaDescription: "Painters in Atlantic City NJ — residential & commercial painting, drywall, flooring. Coastal-grade products for shore properties. (609) 377-4226.",
     latitude: 39.3643,
     longitude: -74.4229,
     content: {
@@ -164,14 +210,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "Atlantic City properties face some of the toughest weather conditions in South Jersey — ocean salt air, high humidity, and strong coastal winds. Our painters use premium, weather-resistant products that protect your investment and look great for years. We handle interior painting, exterior painting, drywall repair, and flooring installation for both residential and commercial properties. Interior room painting typically costs between $500–$1,000, and we offer competitive rates for condos, rental properties, and commercial spaces.",
       closing: "Based in Mays Landing, Perfect Finish Painters serves all of Atlantic City and responds to estimate requests within 24 hours. Take our free 60-second online quiz or call (609) 377-4226 to get started.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Atlantic City?", answer: "Atlantic City interior rooms run $500–$1,000 each. Boardwalk-area condos with smaller, simpler layouts often fall on the lower end; larger Chelsea Heights and Bungalow Park homes can be higher depending on prep work needed." },
+      { question: "What exterior paint holds up in Atlantic City's salt-air environment?", answer: "Atlantic City is one of the harshest exterior environments we paint. We use marine-grade coatings, high-adhesion primers, and back-prime any new wood — every step matters when salt spray and humidity hit the siding year-round." },
+      { question: "Do you do condo and rental-property painting in Atlantic City?", answer: "Yes — Boardwalk-area condos, short-term rentals, and rental properties make up a meaningful share of our Atlantic City work. We coordinate with property managers and can turn over a unit between guests when scheduling allows." },
+    ],
   },
   {
     name: "Margate",
     slug: "painters-margate-nj",
     state: "NJ",
     description: "Professional painters in Margate, NJ — interior and exterior painting, drywall repair, and flooring for coastal homes.",
-    metaTitle: "Exterior & Interior Painters in Margate NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Margate NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring for shore homes. Free estimates — call (609) 377-4226.",
+    metaTitle: "Exterior & Interior Painters in Margate NJ | Perfect Finish",
+    metaDescription: "Painters in Margate NJ — interior & exterior painting, drywall, and flooring for shore homes. Marine-grade exteriors. (609) 377-4226 for a free estimate.",
     latitude: 39.3279,
     longitude: -74.5035,
     content: {
@@ -179,6 +230,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Margate homes, from the beachfront properties along Atlantic Avenue to the bay-side neighborhoods near Amherst and Granville Avenues, face constant exposure to ocean wind, salt spray, and intense summer sun. That combination breaks down exterior paint faster than it would a few miles inland. We use high-adhesion primers and marine-grade exterior coatings that resist peeling, chalking, and fading in these conditions. Interior work gets the same level of care — proper prep, clean lines, and paints that hold up to the humidity levels shore homes deal with year-round. Most interior rooms in Margate cost between $500–$1,000, and exterior projects are quoted after a free on-site assessment.",
       closing: "Perfect Finish Painters is based in Mays Landing and serves Margate regularly. We offer free estimates through our 60-second online quiz or by phone at (609) 377-4226. We respond within 24 hours and schedule work around your availability — including for seasonal residents getting their shore homes ready for summer.",
     },
+    localFaqs: [
+      { question: "How much does exterior painting cost in Margate?", answer: "Margate exteriors are typically quoted after an in-person walkthrough — the size of the home, condition of siding and trim, and amount of scraping/prep all swing the price. Most full island repaints fall in a wide band, and we'll give you a fixed written quote, not a square-foot estimate guessed from photos." },
+      { question: "Do you schedule around the summer season for shore homes?", answer: "Yes — most Margate exterior work happens spring and fall when humidity is lower and the island is quieter. We book seasonal-resident projects months out so the home is ready for Memorial Day or buttoned up after Labor Day." },
+      { question: "What kind of paint do you use on shore homes?", answer: "Marine-grade exterior coatings and high-adhesion primers — the difference between paint that lasts 8–10 years on the island vs. paint that's peeling in 3. We also back-prime any new wood and seal end-grain on trim, which is where shore failures usually start." },
+    ],
   },
   {
     name: "Ventnor",
@@ -186,7 +242,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Trusted painters in Ventnor City, NJ — interior painting, exterior painting, drywall repair, and flooring services.",
     metaTitle: "House Painters in Ventnor NJ | Perfect Finish Painters",
-    metaDescription: "Looking for painters in Ventnor NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring for beach town homes. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Ventnor NJ — interior & exterior painting, drywall, and flooring for year-round beach-town homes. Free estimates — (609) 377-4226.",
     latitude: 39.3404,
     longitude: -74.4773,
     content: {
@@ -194,6 +250,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "The boardwalk, the beach blocks, the residential streets between Ventnor and Atlantic Avenues — every part of this town sits within reach of salt-laden air and coastal moisture. Exterior paint jobs here need to account for that. We use weather-resistant coatings and thorough surface prep to make sure your paint holds up through nor'easters, humid summers, and everything in between. On the interior side, we handle everything from single-room updates to full repaints of older Ventnor homes that need fresh walls and updated trim work. Interior rooms typically run $500–$1,000 depending on size and condition. We also provide drywall repair and flooring installation.",
       closing: "Based in Mays Landing, Perfect Finish Painters reaches Ventnor in about 25 minutes and serves the area regularly. Get a free estimate by taking our 60-second quiz online or calling (609) 377-4226. We respond within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Ventnor?", answer: "Ventnor interior rooms run $500–$1,000 each. Older beach-block homes sometimes need extra prep — wallpaper removal, plaster patching, or trim restoration — which we'll walk through and itemize separately so nothing is a surprise." },
+      { question: "Do you handle the prep work on older Ventnor homes?", answer: "Yes — proper prep is most of the job on older Ventnor homes. We scrape, sand, prime, and caulk before any topcoat goes on, which is the difference between a paint job that lasts 8 years and one that fails in 2." },
+      { question: "Can you work on the second story without scaffolding the whole house?", answer: "Often, yes — most Ventnor two-stories can be done with ladders and a small lift for the gables. If the home really does need a wrap-around scaffold we'll quote that in the estimate, not after the job starts." },
+    ],
   },
   {
     name: "Brigantine",
@@ -201,7 +262,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Quality painting services in Brigantine, NJ — residential painting, drywall repair, and flooring for island homes.",
     metaTitle: "Painters in Brigantine NJ | Perfect Finish Painters",
-    metaDescription: "Searching for painters in Brigantine NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring for island properties. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Brigantine NJ — interior & exterior painting, drywall, and flooring for island properties. Corrosion-resistant prep. (609) 377-4226.",
     latitude: 39.4101,
     longitude: -74.3645,
     content: {
@@ -209,14 +270,19 @@ export const serviceAreas: ServiceArea[] = [
       body: "Brigantine sits surrounded by water on nearly all sides, which means homes deal with salt air, wind-driven sand, and higher moisture levels than mainland properties just a few miles away. Exterior paint breaks down faster under these conditions, so we rely on corrosion-resistant primers and premium exterior finishes that are built for coastal exposure. Interior painting on the island often involves addressing moisture-related issues like bubbling or peeling before applying fresh coats — we handle that prep work as part of every job. We also offer drywall repair and flooring installation. Most interior rooms in Brigantine cost between $500–$1,000, with exterior projects quoted after an in-person walkthrough.",
       closing: "Perfect Finish Painters is based in Mays Landing, just a short drive over the Brigantine Bridge. We work on the island regularly and understand the scheduling needs of seasonal homeowners who want work done before summer. Take our free 60-second online quiz or call (609) 377-4226 for an estimate. We respond within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Brigantine?", answer: "Brigantine interior rooms run $500–$1,000 each. Island humidity sometimes causes bubbling or peeling that has to be addressed before repainting; we include that prep in the quote so the finish actually lasts." },
+      { question: "What's the lifespan of an exterior paint job on Brigantine?", answer: "Done right with marine-grade products and full prep, a Brigantine exterior repaint should hold 7–10 years on the sides protected from prevailing wind and 5–7 years on the ocean-facing sides. Cheap product on poor prep can fail in 2–3." },
+      { question: "Do you work around the seasonal-rental schedule?", answer: "Yes — we book seasonal-resident projects spring and fall when the island is quieter, and we keep tight schedules so homes are ready before summer rentals start. Tell us your turnover dates and we work backward from there." },
+    ],
   },
   {
     name: "Mays Landing",
     slug: "painters-mays-landing-nj",
     state: "NJ",
     description: "Professional painting services in Mays Landing, NJ — interior painting, exterior painting, drywall repair, and flooring.",
-    metaTitle: "Painters in Mays Landing NJ | Perfect Finish Painters — Local & Licensed",
-    metaDescription: "Looking for painters in Mays Landing NJ? Perfect Finish Painters is based right here. Interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaTitle: "Painters in Mays Landing NJ | Perfect Finish — Local & Licensed",
+    metaDescription: "Painters in Mays Landing NJ — locally based. Interior, exterior, drywall, and flooring with the fastest response in the area. (609) 377-4226.",
     latitude: 39.4526,
     longitude: -74.7279,
     content: {
@@ -224,6 +290,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "From homes along the Great Egg Harbor River to the residential communities throughout Hamilton Township, we know this area better than anyone. Our services include interior painting, exterior painting, drywall repair, and flooring installation. Whether you live near the lake, along Route 40, or in one of the newer developments off the Black Horse Pike, we deliver professional results at honest prices. Most interior rooms cost between $500–$1,000 depending on size and prep work needed.",
       closing: "As your local neighborhood painters, we can often start Mays Landing projects within days of your estimate. Take our free 60-second online quiz or call (609) 377-4226. We respond within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Mays Landing?", answer: "Mays Landing interior rooms run $500–$1,000 each. Because we're local, we have no drive-time surcharge and can often quote and start the same week." },
+      { question: "How fast can you start a Mays Landing project?", answer: "Mays Landing is home — we can usually be on-site for an estimate within 24 hours, and most accepted quotes start within a few days. For urgent jobs (selling a home, moving in) we'll flex the schedule to fit." },
+      { question: "Are you licensed and insured for Hamilton Township work?", answer: "Yes — fully licensed and insured. We carry general liability and workers' comp, and we're happy to share a current certificate of insurance before any project starts." },
+    ],
   },
   {
     name: "Egg Harbor City",
@@ -231,7 +302,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Quality painting services in Egg Harbor City, NJ — residential painting, drywall repair, and flooring.",
     metaTitle: "Painters in Egg Harbor City NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Egg Harbor City NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Egg Harbor City NJ — interior & exterior painting, drywall, flooring. Careful work on historic and modern homes. (609) 377-4226.",
     latitude: 39.5288,
     longitude: -74.6471,
     content: {
@@ -239,6 +310,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Egg Harbor City's mix of older historic homes and newer residential properties each require different approaches to painting. Our team handles proper surface prep for aged wood siding, plaster walls, and modern drywall alike. Services include interior painting, exterior painting, drywall repair, and flooring installation. Most interior rooms cost between $500–$1,000 depending on size and condition.",
       closing: "Located just minutes away in Mays Landing, Perfect Finish Painters offers fast turnaround for Egg Harbor City residents. Call (609) 377-4226 or take our free 60-second online quiz for an estimate.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Egg Harbor City?", answer: "Egg Harbor City interior rooms run $500–$1,000 each. Many homes here have plaster walls that need different prep than drywall — we'll flag any plaster repair needed during the walkthrough." },
+      { question: "Do you handle exterior repaints on older Egg Harbor City homes?", answer: "Yes — older wood-sided homes in Egg Harbor City need proper scraping, sanding, and priming before a topcoat. We handle the prep work as part of the quote, not as a surprise add-on." },
+      { question: "How quickly can you get to Egg Harbor City?", answer: "Egg Harbor City is about 20 minutes from our Mays Landing shop. Estimates are usually scheduled within 24 hours of your call." },
+    ],
   },
   {
     name: "Estell Manor",
@@ -246,7 +322,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Professional painting services in Estell Manor, NJ — interior and exterior painting, drywall repair, and flooring.",
     metaTitle: "Painters in Estell Manor NJ | Perfect Finish Painters",
-    metaDescription: "Searching for painters in Estell Manor NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Estell Manor NJ — interior & exterior painting, drywall, and flooring. Mildew-resistant products for wooded properties. (609) 377-4226.",
     latitude: 39.4100,
     longitude: -74.7437,
     content: {
@@ -254,6 +330,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Properties in Estell Manor deal with shade, moisture, and wooded surroundings that can affect exterior paint longevity. We select primers and paints that resist mildew and moisture buildup common in shaded, wooded areas. Our services include interior painting, exterior painting, drywall repair, and flooring installation. Most interior rooms cost between $500–$1,000.",
       closing: "Perfect Finish Painters is based in nearby Mays Landing, just minutes from Estell Manor. We provide free, no-obligation estimates — take our 60-second online quiz or call (609) 377-4226.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Estell Manor?", answer: "Estell Manor interior rooms run $500–$1,000 each. Wooded-area homes sometimes have higher humidity that benefits from moisture-resistant interior paint — we'll recommend the right product based on what we see during the walkthrough." },
+      { question: "What's the best exterior paint for a shaded, wooded property?", answer: "Shade and moisture are mildew breeding grounds, so we use mildew-resistant exterior paints with proper surface prep — scraping, priming, and washing the siding before any topcoat. The right product holds up where a standard exterior paint mildews within a year." },
+      { question: "Do you handle larger lots and detached structures in Estell Manor?", answer: "Yes — outbuildings, sheds, and detached garages are common Estell Manor add-ons. We can bundle them with the main house quote or price them as standalone projects." },
+    ],
   },
   {
     name: "Port Republic",
@@ -261,7 +342,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Trusted painters in Port Republic, NJ — interior painting, exterior painting, drywall repair, and flooring services.",
     metaTitle: "Painters in Port Republic NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Port Republic NJ? Perfect Finish Painters offers interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Port Republic NJ — interior, exterior, drywall, and flooring. Moisture-resistant products for riverside homes. (609) 377-4226.",
     latitude: 39.5217,
     longitude: -74.4857,
     content: {
@@ -269,6 +350,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Port Republic's riverside location means some homes face higher humidity levels, which we account for with moisture-resistant primers and quality exterior finishes. Our services include interior painting, exterior painting, drywall repair, and flooring installation. Most interior rooms cost between $500–$1,000 depending on size and prep work needed.",
       closing: "Based in Mays Landing, Perfect Finish Painters reaches Port Republic quickly for estimates and project work. Call (609) 377-4226 or use our free 60-second quiz to get started.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Port Republic?", answer: "Port Republic interior rooms run $500–$1,000 each. Riverside homes sometimes need moisture-rated interior paint, especially in basements and lower levels — we'll flag that during the walkthrough so the finish actually lasts." },
+      { question: "Do you handle exterior repaints near the Mullica River?", answer: "Yes — riverside homes get extra moisture from fog and humidity. We use moisture-tolerant exterior coatings with full prep so the paint film doesn't blister or peel after the first humid summer." },
+      { question: "How quickly can you get to Port Republic for an estimate?", answer: "Port Republic is about 25 minutes from our Mays Landing base. Estimates are usually booked within 24 hours of your call." },
+    ],
   },
   {
     name: "Folsom",
@@ -276,7 +362,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Affordable painting services in Folsom, NJ — interior and exterior painting, drywall repair, and flooring.",
     metaTitle: "Painters in Folsom NJ | Perfect Finish Painters",
-    metaDescription: "Looking for painters in Folsom NJ? Perfect Finish Painters offers affordable interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Folsom NJ — affordable interior, exterior, drywall, and flooring work. Mildew-resistant products for pineland homes. (609) 377-4226.",
     latitude: 39.5951,
     longitude: -74.8435,
     content: {
@@ -284,6 +370,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Folsom properties surrounded by pinelands face unique conditions including shade and moisture that can accelerate exterior paint wear. We use products specifically suited to these conditions and take the time to properly prep every surface. Services include interior painting, exterior painting, drywall repair, and flooring installation. Most interior rooms cost between $500–$1,000.",
       closing: "Perfect Finish Painters is based in nearby Mays Landing, just a short drive from Folsom. We offer free estimates with 24-hour response times. Call (609) 377-4226 or take our free 60-second quiz.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Folsom?", answer: "Folsom interior rooms run $500–$1,000 each. The estimate is itemized so you can decide which rooms to tackle now and which to defer if budget is tight." },
+      { question: "What kind of exterior paint works best in the pinelands?", answer: "Pineland shade and moisture push us toward mildew-resistant exterior paint with full surface prep. Pine sap, sticky bud drop, and persistent humidity all matter — the right primer and finish make the paint job last." },
+      { question: "How far is Folsom from your Mays Landing shop?", answer: "Folsom is about 25 minutes from us. No drive-time surcharge — estimates are free and we can usually be on-site within 24–48 hours." },
+    ],
   },
   {
     name: "Buena",
@@ -291,7 +382,7 @@ export const serviceAreas: ServiceArea[] = [
     state: "NJ",
     description: "Quality painters in Buena, NJ — interior and exterior painting, drywall repair, and flooring services.",
     metaTitle: "Painters in Buena NJ | Perfect Finish Painters",
-    metaDescription: "Need painters in Buena NJ? Perfect Finish Painters provides interior & exterior painting, drywall repair, and flooring. Free estimates — call (609) 377-4226.",
+    metaDescription: "Painters in Buena NJ — interior, exterior, drywall, and flooring services for Buena and Buena Vista Township. Free estimates — (609) 377-4226.",
     latitude: 39.5182,
     longitude: -74.9268,
     content: {
@@ -299,6 +390,11 @@ export const serviceAreas: ServiceArea[] = [
       body: "Whether you live along Route 40, near Weymouth Road, or in any of the residential neighborhoods throughout Buena Vista Township, our team delivers quality interior and exterior painting, drywall repair, and flooring installation. Most interior rooms cost between $500–$1,000, and we always provide a detailed estimate before any work begins.",
       closing: "Based in Mays Landing, Perfect Finish Painters is just minutes from the Buena area. Get a free estimate by taking our 60-second online quiz or calling (609) 377-4226. We respond within 24 hours.",
     },
+    localFaqs: [
+      { question: "How much does interior painting cost in Buena?", answer: "Buena interior rooms run $500–$1,000 each. The walkthrough estimate itemizes each room so you see exactly what's included — paint grade, prep work, and labor — with no surprise add-ons." },
+      { question: "Do you serve all of Buena Vista Township?", answer: "Yes — Buena borough plus the surrounding Buena Vista Township areas along Route 40 and Weymouth Road are all part of our service area." },
+      { question: "What's your response time for a Buena estimate?", answer: "About 24 hours from your call to a booked walkthrough. Buena is roughly 30 minutes from our Mays Landing shop, and we don't add a drive-time surcharge." },
+    ],
   },
 ];
 
