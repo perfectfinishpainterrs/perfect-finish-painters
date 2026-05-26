@@ -83,6 +83,21 @@ const jsonLd = {
   ],
   priceRange: "$$",
   logo: "https://perfectfinishpainter.com/logo.webp",
+  // NJ Home Improvement Contractor license — surfaced for AI knowledge graphs
+  // and rich-result extraction. Real license, verifiable via NJ Division of
+  // Consumer Affairs. Required by NJ HICPA on all consumer-facing materials.
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    "@id": "https://perfectfinishpainter.com/#nj-hic",
+    name: "New Jersey Home Improvement Contractor",
+    credentialCategory: "license",
+    identifier: "13VH14120900",
+    recognizedBy: {
+      "@type": "GovernmentOrganization",
+      name: "New Jersey Division of Consumer Affairs",
+      url: "https://www.njconsumeraffairs.gov/hic/",
+    },
+  },
   sameAs: [
     "https://www.facebook.com/PerfectFinishPainters",
     "https://www.instagram.com/perfectfinishpainter/",

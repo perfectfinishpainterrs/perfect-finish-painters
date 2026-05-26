@@ -271,7 +271,7 @@ export default function Home() {
               Or call us directly
             </a>
           </div>
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-8 text-sm text-white/80">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 text-sm text-white/80">
             <span className="flex items-center gap-2">
               <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -290,6 +290,21 @@ export default function Home() {
               </svg>
               Free estimate
             </span>
+          </div>
+
+          {/* Licensed & Insured credential badge — prominent below the
+              trust-row, with the NJ HIC license number front and center. */}
+          <div className="mt-6 flex justify-center">
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2.5 text-white">
+              <svg className="w-5 h-5 text-[#60a5fa] shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm sm:text-base font-semibold tracking-wide">Licensed &amp; Insured</span>
+              <span className="text-white/40">·</span>
+              <span className="text-xs sm:text-sm font-mono tracking-wider">
+                <span className="text-white/70">NJ HIC</span> <strong>#13VH14120900</strong>
+              </span>
+            </div>
           </div>
         </div>
       </section>

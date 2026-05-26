@@ -61,6 +61,26 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}
     >
+      {/* Trust strip — Licensed & Insured + NJ HIC license. Visible site-wide,
+          always slate so it contrasts on both transparent and white header. */}
+      <div className="bg-[#1e3a5f] text-white text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex items-center justify-center sm:justify-between gap-2 sm:gap-4">
+          <span className="flex items-center gap-1.5 font-medium">
+            <svg className="w-3.5 h-3.5 text-[#60a5fa] shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="hidden sm:inline">Licensed &amp; Insured</span>
+            <span className="sm:hidden">Licensed</span>
+          </span>
+          <span className="hidden sm:inline text-white/40">|</span>
+          <span className="font-mono tracking-wider text-white/90">
+            <span className="text-white/60 mr-1">NJ HIC</span>
+            <strong className="text-white">#13VH14120900</strong>
+          </span>
+          <span className="hidden md:inline text-white/40">|</span>
+          <span className="hidden md:inline text-white/80">Full liability &amp; workers comp insurance</span>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Logo */}
