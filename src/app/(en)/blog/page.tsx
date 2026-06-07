@@ -29,6 +29,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "garage-drywall-finishing-south-jersey",
+    title: "Garage Drywall Finishing & Painting in South Jersey",
+    excerpt: "We took a big garage from bare, taped drywall to a clean, fully finished and painted room. See the before &amp; after and exactly what goes into finishing a space the right way — finishing seams, priming, and painting walls and ceiling.",
+    date: "June 2026",
+    image: "/projects/garage-finishing-1.webp",
+    alt: "Garage drywall finishing before and after in South Jersey",
+  },
+  {
     slug: "sherwin-williams-snowbound-paint-south-jersey",
     title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",
     excerpt: "Sherwin-Williams Snowbound is a versatile, crisp white paint color that&apos;s perfect for creating bright, inviting spaces in your South Jersey home. As professional painters in Mays Landing, NJ, we&apos;ve seen how this neutral shade enhances everything from modern kitchens to cozy living rooms. Learn why Snowbound could be the ideal choice for your next painting project with Perfect Finish Painters.",

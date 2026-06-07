@@ -440,6 +440,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Recent Projects / Project Highlights */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f] mb-3">Recent Projects</h2>
+              <p className="text-[#64748b] text-lg max-w-2xl mx-auto">
+                Real before &amp; afters from recent Perfect Finish jobs across South Jersey — drywall finishing, repairs, and interior painting.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {/* Featured — the garage, spans wide and links to its full write-up */}
+            <ScrollReveal className="sm:col-span-2">
+              <Link href="/blog/garage-drywall-finishing-south-jersey" className="group block rounded-2xl overflow-hidden shadow-lg bg-white border border-[#e2e8f0]">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src="/projects/garage-finishing-1.webp"
+                    alt="Garage drywall finishing before and after in South Jersey"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute top-3 left-3 bg-[#2563eb] text-white text-xs font-semibold px-3 py-1 rounded-full">Featured</span>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-[#1e3a5f]">Garage drywall finishing &amp; paint</h3>
+                  <p className="text-[#64748b] text-sm mt-1">Bare taped drywall → a clean, fully finished room. <span className="text-[#2563eb] font-semibold group-hover:underline">Read the story →</span></p>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            {[
+              { img: "/projects/kitchen-drywall-repair.webp", label: "Kitchen drywall repair & repaint" },
+              { img: "/projects/bathroom-repaint.webp", label: "Bathroom repaint" },
+              { img: "/projects/living-room-accent-wall.webp", label: "Living room accent wall" },
+              { img: "/projects/open-concept-living-dining.webp", label: "Open-concept living & dining refresh" },
+            ].map((p) => (
+              <ScrollReveal key={p.img}>
+                <Link href="/blog" className="group block rounded-2xl overflow-hidden shadow-lg bg-white border border-[#e2e8f0]">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={p.img}
+                      alt={`${p.label} before and after in South Jersey`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-base font-bold text-[#1e3a5f]">{p.label}</h3>
+                    <p className="text-[#64748b] text-xs mt-0.5">South Jersey</p>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/blog" className="text-[#2563eb] font-semibold hover:underline">See more recent work →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews */}
       <ScrollReveal>
         <ReviewsSection />
