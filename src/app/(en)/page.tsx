@@ -474,13 +474,13 @@ export default function Home() {
             </ScrollReveal>
 
             {[
-              { img: "/projects/kitchen-drywall-repair.webp", label: "Kitchen drywall repair & repaint" },
-              { img: "/projects/bathroom-repaint.webp", label: "Bathroom repaint" },
-              { img: "/projects/living-room-accent-wall.webp", label: "Living room accent wall" },
-              { img: "/projects/open-concept-living-dining.webp", label: "Open-concept living & dining refresh" },
+              { img: "/projects/kitchen-drywall-repair.webp", label: "Kitchen drywall repair & repaint", href: "/blog/kitchen-drywall-repair-south-jersey" },
+              { img: "/projects/bathroom-repaint.webp", label: "Bathroom repaint", href: "/blog/bathroom-repaint-south-jersey" },
+              { img: "/projects/living-room-accent-wall.webp", label: "Living room accent wall", href: "/blog/accent-wall-painting-south-jersey" },
+              { img: "/projects/open-concept-living-dining.webp", label: "Open-concept living & dining refresh", href: "/blog/open-concept-living-dining-repaint-south-jersey" },
             ].map((p) => (
               <ScrollReveal key={p.img}>
-                <Link href="/blog" className="group block rounded-2xl overflow-hidden shadow-lg bg-white border border-[#e2e8f0]">
+                <Link href={p.href} className="group block rounded-2xl overflow-hidden shadow-lg bg-white border border-[#e2e8f0]">
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
                       src={p.img}
