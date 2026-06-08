@@ -574,6 +574,13 @@ export default function Home() {
           <ScrollReveal>
             <div className="bg-[#f1f5f9] rounded-2xl border border-[#e2e8f0] p-8 sm:p-10 text-center">
               <span className="text-[#2563eb] text-sm font-semibold uppercase tracking-wider">Trusted Local Partner</span>
+              <Image
+                src="/partners/sean-patrick-services-logo.webp"
+                alt="Sean Patrick Services logo"
+                width={800}
+                height={457}
+                className="h-20 w-auto mx-auto mt-4 mb-2"
+              />
               <h2 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f] mt-2 mb-4">Need Landscaping or Yard Work?</h2>
               <p className="text-[#64748b] text-lg leading-relaxed max-w-2xl mx-auto">
                 We make your home look great with paint — inside and out. When your lawn, landscaping, or yard needs the same care, we send our customers to <strong className="text-[#1e3a5f]">Sean Patrick Services</strong>. They&apos;re a trusted, local South Jersey landscaping company doing clean, reliable work — the same standard we hold ourselves to.
