@@ -568,6 +568,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trusted Local Partner — cross-referral with Sean Patrick Services (landscaping) */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <div className="bg-[#f1f5f9] rounded-2xl border border-[#e2e8f0] p-8 sm:p-10 text-center">
+              <span className="text-[#2563eb] text-sm font-semibold uppercase tracking-wider">Trusted Local Partner</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#1e3a5f] mt-2 mb-4">Need Landscaping or Yard Work?</h2>
+              <p className="text-[#64748b] text-lg leading-relaxed max-w-2xl mx-auto">
+                We make your home look great with paint — inside and out. When your lawn, landscaping, or yard needs the same care, we send our customers to <strong className="text-[#1e3a5f]">Sean Patrick Services</strong>. They&apos;re a trusted, local South Jersey landscaping company doing clean, reliable work — the same standard we hold ourselves to.
+              </p>
+              <a
+                href="https://www.seanpatrickservices.com/"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 mt-6 bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-full font-semibold transition-colors"
+              >
+                Visit Sean Patrick Services
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <ScrollReveal>
         <ContactForm />
       </ScrollReveal>
