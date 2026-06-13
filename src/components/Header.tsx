@@ -90,7 +90,7 @@ export default function Header() {
               alt="Perfect Finish Painters"
               width={320}
               height={80}
-              className={`h-16 sm:h-20 w-auto transition-all duration-300 ${
+              className={`h-12 sm:h-16 w-auto transition-all duration-300 ${
                 useSolidHeader ? "" : "brightness-0 invert"
               }`}
               priority
@@ -98,7 +98,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 md:ml-8 lg:ml-12">
             <Link
               href="/"
               className={`${textColor} ${textHover} transition-colors`}

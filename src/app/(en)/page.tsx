@@ -244,8 +244,6 @@ export default function Home() {
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Painters in Mays Landing, NJ
-              <br />
-              <span className="text-[#60a5fa]">Get Your Free Estimate in 60 Seconds</span>
             </h1>
             <p className="text-white/90 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8">
               Answer a few quick questions and receive a personalized estimate for your painting project.
@@ -307,9 +305,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — toughest-jobs showcase card */}
+          {/* Right — toughest-jobs showcase card + estimate tagline below the picture */}
           <div className="w-full">
             <ToughJobsCard />
+            <p className="text-2xl sm:text-3xl font-bold text-[#60a5fa] text-center mt-6 leading-snug">
+              Get Your Free Estimate in 60 Seconds
+            </p>
           </div>
         </div>
       </section>
