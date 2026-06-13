@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/about",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Perfect Finish Painters | Meet Brandon",
     description: "Family-owned painting company in Mays Landing NJ. Meet Brandon, the owner of Perfect Finish Painters.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/about",
@@ -48,6 +48,18 @@ export default function AboutPage() {
     ],
   };
 
+  // Founder entity — the target of every blog post's author link, and an E-E-A-T signal.
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://perfectfinishpainter.com/about#brandon",
+    name: "Brandon Panameno",
+    jobTitle: "Owner",
+    image: "https://perfectfinishpainter.com/owner.webp",
+    url: "https://perfectfinishpainter.com/about",
+    worksFor: { "@id": "https://perfectfinishpainter.com/#business" },
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -55,6 +67,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
 
       {/* Hero */}
@@ -80,10 +96,10 @@ export default function AboutPage() {
                 <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mb-2">
                   About Perfect Finish Painters
                 </h1>
-                <h2 className="text-xl font-semibold text-[#2563eb] mb-6">Meet Brandon, Owner</h2>
+                <h2 className="text-xl font-semibold text-[#2563eb] mb-6">Meet Brandon Panameno, Owner</h2>
                 <p className="text-[#64748b] text-lg mb-6">
                   With a hands-on approach and a genuine passion for transforming spaces,
-                  Brandon founded Perfect Finish Painters to bring quality craftsmanship
+                  Brandon Panameno founded Perfect Finish Painters to bring quality craftsmanship
                   to every home in South Jersey — at a price that&apos;s fair and honest.
                 </p>
                 <p className="text-[#64748b] text-lg mb-6">

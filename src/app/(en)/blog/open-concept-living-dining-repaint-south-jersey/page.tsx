@@ -42,7 +42,7 @@ export default function OpenConceptRepaintPost() {
     "@type": "Article",
     headline: "Open-Concept Living & Dining Repaint in South Jersey",
     image: "https://perfectfinishpainter.com/projects/open-concept-living-dining.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-06-07",
     dateModified: "2026-06-07",
@@ -93,7 +93,7 @@ export default function OpenConceptRepaintPost() {
               Open-concept layouts look great, but they&apos;re harder to paint than they seem. When the living room flows into the dining area through a pass-through, every wall is visible from every angle — so a sloppy patch or an uneven color jumps right out. This South Jersey home needed drywall repair around the pass-through opening and a full repaint to tie the connected spaces together.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We Did</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Did This Open-Concept Repaint Involve?</h2>
             <ul className="space-y-3 ml-4">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#2563eb] mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -109,7 +109,7 @@ export default function OpenConceptRepaintPost() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Consistency Is Everything in an Open Layout</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Is Color Consistency Everything in an Open Layout?</h2>
             <p className="text-lg leading-relaxed">
               In a closed-off room, a small color or sheen variation hides. In an open-concept space, your eye travels across every surface at once, so any inconsistency stands out. We keep the color, the sheen, and the cut lines uniform across the whole connected area — that&apos;s what makes an open layout feel intentional and finished rather than pieced together.
             </p>

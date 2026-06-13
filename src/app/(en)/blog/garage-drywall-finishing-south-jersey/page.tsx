@@ -42,7 +42,7 @@ export default function GarageDrywallFinishingPost() {
     "@type": "Article",
     headline: "Garage Drywall Finishing & Painting in South Jersey",
     image: "https://perfectfinishpainter.com/projects/garage-finishing-1.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-06-07",
     dateModified: "2026-06-07",
@@ -93,7 +93,7 @@ export default function GarageDrywallFinishingPost() {
               A garage doesn&apos;t have to look like a garage. This South Jersey homeowner had a big garage space with the drywall hung and taped but nowhere near finished — raw seams, exposed screw heads, and that rough, gray look you get before any real finishing happens. They wanted it turned into a clean, bright, usable room. Here&apos;s how we got there.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">The Starting Point</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Was the Starting Point?</h2>
             <p className="text-lg leading-relaxed">
               The walls and ceiling were hung and the joints were taped, but that&apos;s only step one. Taped drywall has visible seams, dimples over every screw, and an uneven surface that shows every flaw once the light hits it. Paint over that as-is and you&apos;ll see every joint and fastener for the life of the room. The whole space needed to be properly finished before a drop of paint went on.
             </p>
@@ -110,7 +110,7 @@ export default function GarageDrywallFinishingPost() {
               <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">Mid-finishing on the left, the completed room on the right — clean walls, finished ceiling, ready to use.</figcaption>
             </figure>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We Did</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Did the Garage Drywall Finishing Involve?</h2>
             <ul className="space-y-3 ml-4">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#2563eb] mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -142,7 +142,7 @@ export default function GarageDrywallFinishingPost() {
               <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">The finished space — smooth, bright, and ready for whatever the homeowner wants to use it for.</figcaption>
             </figure>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Finishing Matters</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Does Finishing the Drywall Matter?</h2>
             <p className="text-lg leading-relaxed">
               Whether you&apos;re turning a garage into a gym, a workshop, a bonus room, or just want it looking finished, the difference is in the prep. A properly finished and primed surface is what makes paint look smooth and professional — and it&apos;s exactly the step a lot of homeowners (and some contractors) try to rush. We don&apos;t. The result is a room that looks built, not patched together.
             </p>

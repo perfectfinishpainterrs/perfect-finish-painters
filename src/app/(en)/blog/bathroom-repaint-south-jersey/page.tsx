@@ -42,7 +42,7 @@ export default function BathroomRepaintPost() {
     "@type": "Article",
     headline: "Bathroom Repaint in South Jersey",
     image: "https://perfectfinishpainter.com/projects/bathroom-repaint.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-06-07",
     dateModified: "2026-06-07",
@@ -93,7 +93,7 @@ export default function BathroomRepaintPost() {
               A fresh coat of paint is the fastest, most affordable way to make a dated bathroom feel new again — but bathrooms are also one of the trickiest rooms to paint well. Constant moisture, steam, and temperature swings will chew through the wrong paint fast. For this South Jersey bathroom, the goal was a clean, bright update that actually holds up to daily showers.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We Did</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Did This Bathroom Repaint Involve?</h2>
             <ul className="space-y-3 ml-4">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#2563eb] mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -109,7 +109,7 @@ export default function BathroomRepaintPost() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">The Paint Matters in a Bathroom</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Does the Paint Matter in a Bathroom?</h2>
             <p className="text-lg leading-relaxed">
               In most rooms you can get away with a standard finish. Not in a bathroom. The combination of humidity and frequent cleaning means you want a paint specifically formulated to resist mildew and stand up to wiping. Pair that with proper prep and the room stays looking fresh for years instead of peeling at the corners after a season of hot showers.
             </p>

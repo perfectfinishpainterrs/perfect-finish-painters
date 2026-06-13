@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/interior-painting",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Interior Painting in Atlantic County NJ | Perfect Finish",
     description:
       "Pro interior painting across Atlantic County NJ — walls, ceilings, trim & accents. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/interior-painting",
@@ -202,7 +202,7 @@ export default function InteriorPaintingPage() {
       {/* CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
-          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Interior Painting Across Atlantic County</h2></ScrollReveal>
+          <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">Where Do We Offer Interior Painting in Atlantic County?</h2></ScrollReveal>
           <p className="text-[#64748b] text-lg leading-relaxed">
             We paint interiors throughout Atlantic County — single rooms, whole homes, and everything in between. Common areas we serve include <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, <Link href="/painters-linwood-nj" className="text-[#2563eb] hover:underline">Linwood</Link>, and <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link>. Older homes with plaster walls and new construction with fresh drywall need different prep — we know the difference.
           </p>

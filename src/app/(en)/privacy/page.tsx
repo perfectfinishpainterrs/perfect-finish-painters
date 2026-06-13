@@ -67,7 +67,8 @@ export default function PrivacyPage() {
             <li>
               <strong>Usage data</strong> — pages visited, referring URL, approximate location
               (city-level), browser type, device type, and time spent on the site. This is
-              collected through Google Analytics and the Meta (Facebook) Pixel.
+              collected through Google Analytics, the Meta (Facebook) Pixel, and Vercel
+              Analytics (our hosting provider&apos;s privacy-friendly page-view counter).
             </li>
             <li>
               <strong>Cookies</strong> — small files stored on your device to remember settings
@@ -95,7 +96,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Who We Share With</h2>
           <p>We share limited information only with service providers that help us run the business:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Vercel</strong> — website hosting.</li>
+            <li><strong>Vercel</strong> — website hosting and aggregated page-view analytics.</li>
             <li><strong>Google</strong> — Analytics, Ads, and Google Business Profile.</li>
             <li><strong>Meta (Facebook)</strong> — Pixel for ad measurement and retargeting.</li>
             <li><strong>Email provider</strong> — to receive and respond to your messages.</li>

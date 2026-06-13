@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -14,13 +15,13 @@ export const metadata: Metadata = {
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/best-exterior-paint-south-jersey",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Exterior Paint for South Jersey Homes",
     description: "Which exterior paints hold up best to South Jersey's coastal climate? Our recommendations.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/blog/best-exterior-paint-south-jersey" },
 };
@@ -41,7 +42,7 @@ export default function BestExteriorPaintPost() {
     "@type": "Article",
     headline: "Best Exterior Paint for South Jersey Homes",
     image: "https://perfectfinishpainter.com/deck-exterior-painting-before-after-south-jersey-nj.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2025-02-01",
     dateModified: "2025-02-01",
@@ -74,6 +75,17 @@ export default function BestExteriorPaintPost() {
           <h1 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] mt-2 mb-8">
             Best Exterior Paint for South Jersey Homes
           </h1>
+
+          <figure className="mb-8 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/deck-exterior-painting-before-after-south-jersey-nj.webp"
+              alt="Exterior deck repaint before and after on a South Jersey home"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+            />
+            <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">A recent exterior repaint we did in South Jersey — same product family discussed below.</figcaption>
+          </figure>
 
           <div className="prose prose-lg max-w-none text-[#374151] space-y-6">
             <p className="text-lg leading-relaxed">
@@ -120,7 +132,19 @@ export default function BestExteriorPaintPost() {
               A solid mid-range option that still performs well in coastal conditions. Good UV and mildew resistance at a lower price point than Aura. We often recommend this for budget-conscious homeowners who still want a quality result.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Prep Matters More Than Paint</h2>
+            <figure className="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+              <Image
+                src="/exterior-siding-staining-before-after-egg-harbor-township-nj.webp"
+                alt="Cedar siding stained and protected against coastal humidity in Egg Harbor Township NJ"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">Siding stained in Egg Harbor Township — the kind of mildew-resistant finish that holds up to South Jersey humidity.</figcaption>
+            </figure>
+
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Does Prep Matter More Than the Paint?</h2>
             <p className="text-lg leading-relaxed">
               Even the best paint will fail if the surface isn&apos;t properly prepared. Before any exterior job, we power wash, scrape loose paint, sand rough spots, prime bare wood, and caulk gaps. This prep work is what makes a paint job last 7+ years instead of 3. Skipping prep is the most common reason exterior paint fails early.
             </p>

@@ -5,6 +5,13 @@ export interface Review {
   source: string
 }
 
+// Real, verifiable Google Business Profile totals — single source of truth for
+// aggregateRating across every page. Keep these in sync with the live GBP so the
+// schema is always truthful (mismatched/inflated counts are a manual-action risk).
+// The `reviews` array below is a curated on-page sample, NOT the full count.
+export const GOOGLE_RATING = "5.0"
+export const GOOGLE_REVIEW_COUNT = "29"
+
 export const reviews: Review[] = [
   {
     name: "Shannon L.",

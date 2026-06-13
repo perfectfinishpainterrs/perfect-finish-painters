@@ -42,7 +42,7 @@ export default function KitchenDrywallRepairPost() {
     "@type": "Article",
     headline: "Kitchen Drywall Repair & Repaint in South Jersey",
     image: "https://perfectfinishpainter.com/projects/kitchen-drywall-repair.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-06-07",
     dateModified: "2026-06-07",
@@ -93,7 +93,7 @@ export default function KitchenDrywallRepairPost() {
               Kitchens take a beating. Plumbing access, an old backsplash removal, a wall outlet that got chewed up — and you&apos;re left with gouged, patched drywall that catches the eye every time you walk in. This South Jersey kitchen had exactly that: a rough, cut-up section of wall behind the counter. The fix isn&apos;t just slapping mud on it — it&apos;s repairing it so the patch disappears.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We Did</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Did This Kitchen Drywall Repair Involve?</h2>
             <ul className="space-y-3 ml-4">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#2563eb] mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -109,7 +109,7 @@ export default function KitchenDrywallRepairPost() {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why the Patch Has to Disappear</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Does the Patch Have to Disappear?</h2>
             <p className="text-lg leading-relaxed">
               A bad drywall repair is almost worse than the damage — you get a raised, glossy patch that stands out under kitchen lighting. The trick is in the feathering and the priming: spreading the compound out far enough and priming so the repaired area doesn&apos;t flash a different sheen than the rest of the wall. Done right, the wall just looks like a wall again.
             </p>

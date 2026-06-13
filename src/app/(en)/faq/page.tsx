@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/faq",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "FAQ | Perfect Finish Painters",
     description:
       "Painting FAQs for South Jersey homeowners: pricing, scheduling, prep, paint brands, warranty, payment, service areas.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/faq" },
 };

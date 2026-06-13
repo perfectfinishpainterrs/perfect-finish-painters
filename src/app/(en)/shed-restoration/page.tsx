@@ -159,7 +159,7 @@ export default function ShedRestorationPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Bring Your Shed Back to Life</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Can We Bring Your Old Shed Back to Life?</h2>
           <p className="text-white/70 text-lg mb-8">Free estimates. No pressure. Just honest work.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">

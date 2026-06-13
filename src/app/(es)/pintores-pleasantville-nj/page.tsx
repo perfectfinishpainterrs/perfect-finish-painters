@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-pleasantville-nj",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pintores en Pleasantville NJ | Perfect Finish Painters",
     description:
       "Pintores en Pleasantville NJ. Pintura interior, exterior y reparación de drywall. Hablamos español. Licenciados y asegurados. Estimados gratis — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/pintores-pleasantville-nj",

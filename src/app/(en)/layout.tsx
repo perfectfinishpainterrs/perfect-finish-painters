@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Painters in Mays Landing NJ | Perfect Finish Painters",
     description: "Trusted South Jersey painting company. Interior & exterior painting, drywall repair, and flooring. Free estimates in 60 seconds.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com",

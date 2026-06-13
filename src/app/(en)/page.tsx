@@ -9,6 +9,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import SherwinWilliamsBanner from "@/components/SherwinWilliamsBanner";
+import ToughJobsCard from "@/components/ToughJobsCard";
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/data/reviews";
 
 import { serviceAreas } from "@/data/service-areas";
 
@@ -21,13 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Painters in Atlantic County NJ | Perfect Finish Painters",
     description: "Licensed Atlantic County NJ painters. Interior & exterior painting, drywall repair, and flooring from Mays Landing. Free quote — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com",
@@ -76,9 +78,9 @@ const reviewJsonLd = {
   url: "https://perfectfinishpainter.com",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5",
+    ratingValue: GOOGLE_RATING,
     bestRating: "5",
-    reviewCount: "19",
+    reviewCount: GOOGLE_REVIEW_COUNT,
   },
   review: [
     {
@@ -227,84 +229,87 @@ export default function Home() {
       />
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[600px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/shed-exterior-painting-before-after-mays-landing-nj.webp"
-            alt="Professional interior and exterior painting by Perfect Finish Painters in Mays Landing NJ"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 bg-[#1e3a5f]/70" />
-        </div>
-        <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Painters in Mays Landing, NJ
-            <br />
-            <span className="text-[#60a5fa]">Get Your Free Estimate in 60 Seconds</span>
-          </h1>
-          <p className="text-white/90 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
-            Answer a few quick questions and receive a personalized estimate for your painting project.
-            No spam, no pressure — just honest pricing.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/quiz"
-              className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center gap-2 shadow-lg shadow-black/25"
-            >
-              Start 60-Second Quiz
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-            <a
-              href="tel:+16093774226"
-              className="text-white hover:text-[#60a5fa] transition-colors inline-flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Or call us directly
-            </a>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 text-sm text-white/80">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              60-second quiz
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              24-hour response
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              Free estimate
-            </span>
-          </div>
+      {/* Preload the hero's featured tough-job image (the LCP element of the new split hero) */}
+      <link
+        rel="preload"
+        as="image"
+        href="/projects/popcorn-ceiling-removal-after-mays-landing-nj.webp"
+        fetchPriority="high"
+      />
 
-          {/* Licensed & Insured credential badge — prominent below the
-              trust-row, with the NJ HIC license number front and center. */}
-          <div className="mt-6 flex justify-center">
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2.5 text-white">
-              <svg className="w-5 h-5 text-[#60a5fa] shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm sm:text-base font-semibold tracking-wide">Licensed &amp; Insured</span>
-              <span className="text-white/40">·</span>
-              <span className="text-xs sm:text-sm font-mono tracking-wider">
-                <span className="text-white/70">NJ HIC</span> <strong>#13VH14120900</strong>
+      {/* Hero Section — split: brand + CTA on the left, "tough jobs we tackle" showcase on the right */}
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438]">
+        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          {/* Left — brand + CTA */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Painters in Mays Landing, NJ
+              <br />
+              <span className="text-[#60a5fa]">Get Your Free Estimate in 60 Seconds</span>
+            </h1>
+            <p className="text-white/90 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8">
+              Answer a few quick questions and receive a personalized estimate for your painting project.
+              No spam, no pressure — just honest pricing.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+              <Link
+                href="/quiz"
+                className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center gap-2 shadow-lg shadow-black/25"
+              >
+                Start 60-Second Quiz
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <a
+                href="tel:+16093774226"
+                className="text-white hover:text-[#60a5fa] transition-colors inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Or call us directly
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 mt-8 text-sm text-white/80">
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                60-second quiz
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                24-hour response
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                Free estimate
               </span>
             </div>
+
+            {/* Licensed & Insured credential badge with the NJ HIC license number. */}
+            <div className="mt-6 flex justify-center lg:justify-start">
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2.5 text-white">
+                <svg className="w-5 h-5 text-[#60a5fa] shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm sm:text-base font-semibold tracking-wide">Licensed &amp; Insured</span>
+                <span className="text-white/40">·</span>
+                <span className="text-xs sm:text-sm font-mono tracking-wider">
+                  <span className="text-white/70">NJ HIC</span> <strong>#13VH14120900</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right — toughest-jobs showcase card */}
+          <div className="w-full">
+            <ToughJobsCard />
           </div>
         </div>
       </section>

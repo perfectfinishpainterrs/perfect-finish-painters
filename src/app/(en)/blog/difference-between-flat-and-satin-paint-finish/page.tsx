@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -14,13 +15,13 @@ export const metadata: Metadata = {
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/difference-between-flat-and-satin-paint-finish",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Flat vs Satin Paint Finish — Which One Do You Actually Need?",
     description: "A South Jersey painter breaks down flat vs satin finishes room by room. Real advice on durability, touch-ups, and what works with kids and pets.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/blog/difference-between-flat-and-satin-paint-finish" },
 };
@@ -41,7 +42,7 @@ export default function FlatVsSatinPost() {
     "@type": "Article",
     headline: "Flat vs Satin Paint Finish — Which One Do You Actually Need?",
     image: "https://perfectfinishpainter.com/living-room-interior-painting-blue-wainscoting-atlantic-city-nj.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
@@ -75,6 +76,17 @@ export default function FlatVsSatinPost() {
             Flat vs Satin Paint Finish — Which One Do You Actually Need?
           </h1>
 
+          <figure className="mb-8 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/living-room-interior-painting-blue-wainscoting-atlantic-city-nj.webp"
+              alt="Living room with blue wainscoting and flat-finish walls painted in Atlantic City NJ"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+            />
+            <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">A recent Atlantic City living room — flat on the upper walls, satin on the wainscoting. A typical &quot;mix-not-match&quot; finish choice.</figcaption>
+          </figure>
+
           <div className="prose prose-lg max-w-none text-[#374151] space-y-6">
             <p className="text-lg leading-relaxed">
               &quot;Should I go flat or satin?&quot; I get this question on almost every <Link href="/interior-painting" className="text-[#2563eb] hover:underline">interior painting</Link> job. And honestly, the answer is almost never one or the other for the whole house. Most homes need both. It just depends on the room, who&apos;s using it, and what the walls look like underneath.
@@ -83,7 +95,7 @@ export default function FlatVsSatinPost() {
               Here&apos;s how I actually think about it after painting homes around Mays Landing and South Jersey for years.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Flat Paint: What It Actually Does Well</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Does Flat Paint Actually Do Well?</h2>
             <p className="text-lg leading-relaxed">
               Flat paint has zero sheen. It absorbs light instead of bouncing it back, which means it hides a lot of sins. Old drywall patches, slightly uneven textures, nail pops you spackled over — flat paint makes all of that disappear. That&apos;s the main reason people use it.
             </p>
@@ -94,7 +106,7 @@ export default function FlatVsSatinPost() {
               For walls, flat is great in master bedrooms, formal dining rooms, and living rooms where nobody&apos;s dragging toys along the baseboards. It gives the room a soft, quiet look that satin can&apos;t quite match. If you&apos;ve ever walked into a room and thought &quot;this feels calm,&quot; there&apos;s a decent chance the walls are flat.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">The Problem With Flat</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What's the Problem With Flat Paint?</h2>
             <p className="text-lg leading-relaxed">
               Flat paint marks up. That&apos;s the tradeoff. A kid runs a hand along the hallway wall, and you can see it. Someone bumps a chair into the dining room wall, and there&apos;s a scuff. You try to wipe it with a damp cloth, and now you&apos;ve got a shiny spot where the rest of the wall is matte.
             </p>
@@ -105,7 +117,19 @@ export default function FlatVsSatinPost() {
               That said — the newer flat formulas are way more washable than they used to be. Benjamin Moore&apos;s Regal Select in matte and Sherwin-Williams Emerald are both significantly tougher than the flat paints from 10 years ago. You can actually wipe them down gently without ruining the finish. They&apos;re not satin-level durable, but they&apos;ve closed the gap a lot.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Satin Paint: The Workhorse</h2>
+            <figure className="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+              <Image
+                src="/bathroom-painting-blue-before-after-linwood-nj.webp"
+                alt="Bathroom walls repainted in satin blue before and after in Linwood NJ"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">Bathroom in Linwood — satin finish was the call here. Wipeable, humidity-tolerant, and it stays uniform after touch-ups.</figcaption>
+            </figure>
+
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Is Satin Paint the Workhorse?</h2>
             <p className="text-lg leading-relaxed">
               Satin has a soft, low sheen — think of it like a pearl. It reflects just enough light to give the walls some depth without looking shiny. And the big thing: you can clean it. Crayon marks, fingerprints, grease splatter near the stove — a damp rag takes care of most of it.
             </p>
@@ -116,7 +140,7 @@ export default function FlatVsSatinPost() {
               Satin also handles moisture much better than flat. In South Jersey summers when the humidity sits at 80%+ for weeks, satin paint in a bathroom holds up where flat would start to struggle. For kitchens and baths specifically, some painters go semi-gloss, but I think satin looks better on walls and is plenty durable for most families.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">The Catch With Satin</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What's the Catch With Satin Paint?</h2>
             <p className="text-lg leading-relaxed">
               Because satin reflects light, it shows every imperfection in the wall. Bad drywall work, old patches, bumpy textures — satin puts them on display. That&apos;s why prep is critical. If the walls aren&apos;t smooth before we roll satin on them, the finish will look off.
             </p>
@@ -124,7 +148,7 @@ export default function FlatVsSatinPost() {
               Touch-ups are also trickier with satin. If you nick a satin wall and try to dab some paint on it six months later, it can flash — meaning the touched-up spot looks slightly different from the rest of the wall. With flat paint, touch-ups blend almost invisibly. Something to think about if you&apos;re the type who likes to keep a can in the garage for quick fixes.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Room-by-Room Breakdown</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Which Finish Works Best Room by Room?</h2>
             <p className="text-lg leading-relaxed">
               Here&apos;s what I recommend on most jobs. This isn&apos;t a hard rule — every house is different — but it&apos;s a solid starting point:
             </p>
@@ -168,7 +192,7 @@ export default function FlatVsSatinPost() {
               People ask about eggshell a lot. It sits right between flat and satin — a tiny bit of sheen, slightly more washable than flat. Honestly, for most of the homes we paint around South Jersey, I steer people toward either flat or satin and skip the middle ground. The difference between eggshell and satin is so small that you might as well go satin and get the extra durability. But if you really want that barely-there sheen without full satin, eggshell works fine in a low-traffic living room.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What We Use</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Finish Do We Use?</h2>
             <p className="text-lg leading-relaxed">
               For most of our <Link href="/interior-painting" className="text-[#2563eb] hover:underline">interior jobs</Link>, we&apos;re reaching for Benjamin Moore Regal Select or Sherwin-Williams Emerald. Both come in flat, matte, satin, and semi-gloss, and the quality is consistent across sheens. Regal Select&apos;s matte finish is probably the best &quot;flat that you can actually clean&quot; on the market right now. And Sherwin-Williams Emerald in satin rolls on smooth with great coverage.
             </p>
@@ -176,12 +200,12 @@ export default function FlatVsSatinPost() {
               For ceilings specifically, Benjamin Moore&apos;s Waterborne Ceiling Paint is hard to beat. Dead flat, great coverage, and it&apos;s formulated to minimize spatter so you&apos;re not dodging drips.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">A Note on Shore Houses</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What About Shore Houses?</h2>
             <p className="text-lg leading-relaxed">
               If you own a rental property down at the shore, go satin everywhere. Walls, trim, all of it. Renters aren&apos;t gentle, and you need to be able to wipe down every surface between turnovers. Flat paint in a shore rental is just asking to repaint every year. Planning an exterior project too? Read our guide on <Link href="/blog/best-exterior-paint-south-jersey" className="text-[#2563eb] hover:underline">choosing the best exterior paint for South Jersey homes</Link>.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">The Bottom Line</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Flat or Satin: What's the Bottom Line?</h2>
             <p className="text-lg leading-relaxed">
               There&apos;s no single right answer. Flat looks beautiful but marks up easily. Satin is tougher but shows wall flaws. Most homes end up with a mix — flat on ceilings and quiet rooms, satin on everything that gets touched, bumped, or splashed. That&apos;s been the winning combination on hundreds of jobs we&apos;ve done across South Jersey.
             </p>

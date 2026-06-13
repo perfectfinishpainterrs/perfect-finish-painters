@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/exterior-painting",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Exterior Painting in Atlantic County NJ | Perfect Finish",
     description: "Exterior house painting across Atlantic County NJ — siding, shutters, doors, trim. UV/mildew-resistant for shore climate. Free quote — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/exterior-painting" },
 };

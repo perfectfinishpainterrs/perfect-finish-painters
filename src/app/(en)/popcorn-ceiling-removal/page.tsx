@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
@@ -17,13 +18,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Popcorn Ceiling Removal in South Jersey | Perfect Finish",
     description: "Pro popcorn ceiling removal in Atlantic County NJ — clean, dust-contained process. Serving Mays Landing & South Jersey. Free estimate — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/popcorn-ceiling-removal" },
 };
@@ -47,6 +48,10 @@ export default function PopcornCeilingRemovalPage() {
     provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
+    image: [
+      "https://perfectfinishpainter.com/projects/popcorn-ceiling-removal-before-mays-landing-nj.webp",
+      "https://perfectfinishpainter.com/projects/popcorn-ceiling-removal-after-mays-landing-nj.webp",
+    ],
   };
 
   const faqJsonLd = {
@@ -158,6 +163,29 @@ export default function PopcornCeilingRemovalPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Recent Project — visual proof */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-3">Recent Project: Popcorn Ceiling Removal in Mays Landing, NJ</h2>
+          </ScrollReveal>
+          <p className="text-[#64748b] text-lg leading-relaxed mb-8">
+            A start-to-finish ceiling job on a bayfront home in Mays Landing. The original textured ceiling was scraped and torn out down to the joists, hung with new drywall, taped and skim-coated smooth, then finished with a clean knockdown texture and fresh ceiling paint — all with the room fully masked to keep dust contained, exactly the process described above.
+          </p>
+          <figure>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <Image src="/projects/popcorn-ceiling-removal-before-mays-landing-nj.webp" alt="Before: dated popcorn-textured ceiling in a Mays Landing, NJ home with the room masked for dust containment" width={1536} height={2048} className="rounded-xl w-full h-auto" sizes="(max-width:640px) 50vw, 320px" />
+              <Image src="/projects/popcorn-ceiling-removal-demo-mays-landing-nj.webp" alt="During: the textured ceiling removed down to the joists in a Mays Landing, NJ home" width={1536} height={2048} className="rounded-xl w-full h-auto" sizes="(max-width:640px) 50vw, 320px" loading="lazy" />
+              <Image src="/projects/popcorn-ceiling-removal-drywall-mays-landing-nj.webp" alt="During: new drywall hung and the first mud coat applied to the ceiling in Mays Landing, NJ" width={1536} height={2048} className="rounded-xl w-full h-auto" sizes="(max-width:640px) 50vw, 320px" loading="lazy" />
+              <Image src="/projects/popcorn-ceiling-removal-after-mays-landing-nj.webp" alt="After: smooth knockdown-textured ceiling finished and painted in a Mays Landing, NJ home" width={1536} height={2048} className="rounded-xl w-full h-auto" sizes="(max-width:640px) 50vw, 320px" loading="lazy" />
+            </div>
+            <figcaption className="text-[#64748b] text-sm mt-3 italic">
+              Before, tear-out, new drywall, and the finished result — a real Perfect Finish Painters popcorn ceiling removal in Mays Landing, NJ.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

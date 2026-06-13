@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-atlantic-city-nj-es",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pintores en Atlantic City NJ | Perfect Finish Painters",
     description:
       "Pintores profesionales en Atlantic City NJ. Pintura interior y exterior, reparación de drywall. Hablamos español. Estimados gratis — 609-377-4226.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/pintores-atlantic-city-nj-es",

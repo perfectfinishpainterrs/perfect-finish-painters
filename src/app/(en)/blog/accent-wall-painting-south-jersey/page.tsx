@@ -42,7 +42,7 @@ export default function AccentWallPost() {
     "@type": "Article",
     headline: "Accent Wall Painting in South Jersey",
     image: "https://perfectfinishpainter.com/projects/living-room-accent-wall.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-06-07",
     dateModified: "2026-06-07",
@@ -93,12 +93,12 @@ export default function AccentWallPost() {
               An accent wall is one of the highest-impact, lowest-cost upgrades you can make to a room. Paint a single wall a deep, saturated color and a flat, forgettable space suddenly has depth, a focal point, and a designer feel. For this South Jersey living room, we took the vaulted-ceiling wall and turned it into a rich navy feature that pulls the whole room together.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why It Works</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Does an Accent Wall Work?</h2>
             <p className="text-lg leading-relaxed">
               The magic of an accent wall is contrast. Against the light walls and the warm wood floor, a deep navy reads as bold but not overwhelming, and the recessed lighting makes the color glow rather than feel heavy. Choosing the right wall matters too — the wall with the vaulted angle and the window draws the eye naturally, so it&apos;s the perfect candidate.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Getting Crisp Lines on a Dark Color</h2>
+            <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">How Do You Get Crisp Lines on a Dark Color?</h2>
             <p className="text-lg leading-relaxed">
               Dark accent colors are unforgiving — every wavy line or bleed-through shows. That&apos;s where the work is:
             </p>

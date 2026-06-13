@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
-import { reviews } from "@/data/reviews";
+import { reviews, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/data/reviews";
 
 export const metadata: Metadata = {
   title: "Reviews | Perfect Finish Painters, South Jersey",
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/reviews",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Reviews | Perfect Finish Painters — 5-Star Rated",
     description: "Read reviews from real customers. 5-star rated painting company in Mays Landing NJ.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/reviews" },
 };
@@ -65,9 +65,9 @@ export default function ReviewsPage() {
     url: "https://perfectfinishpainter.com",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5",
+      ratingValue: GOOGLE_RATING,
       bestRating: "5",
-      reviewCount: String(reviews.length),
+      reviewCount: GOOGLE_REVIEW_COUNT,
     },
     review: reviews.map((r) => ({
       "@type": "Review",

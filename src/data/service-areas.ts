@@ -13,6 +13,13 @@ export interface ServiceArea {
     closing: string;
   };
   localFaqs: { question: string; answer: string }[];
+  // Optional real-project proof block, rendered on the city page when present.
+  // Captions must be UNIQUE per page (not copied from the service page) to avoid doorway-content signals.
+  project?: {
+    title: string;
+    caption: string;
+    images: { src: string; alt: string }[];
+  };
 }
 
 export const serviceAreas: ServiceArea[] = [
@@ -295,6 +302,14 @@ export const serviceAreas: ServiceArea[] = [
       { question: "How fast can you start a Mays Landing project?", answer: "Mays Landing is home — we can usually be on-site for an estimate within 24 hours, and most accepted quotes start within a few days. For urgent jobs (selling a home, moving in) we'll flex the schedule to fit." },
       { question: "Are you licensed and insured for Hamilton Township work?", answer: "Yes — fully licensed and insured. We carry general liability and workers' comp, and we're happy to share a current certificate of insurance before any project starts." },
     ],
+    project: {
+      title: "Recent Mays Landing Job: Ceiling Tear-Out & Re-Texture",
+      caption: "A ceiling we rebuilt from scratch on a bayfront home right here in Mays Landing. The old textured ceiling had to come down to the joists before we hung new drywall, finished it smooth, and re-textured it — the kind of full ceiling rebuild we can turn around fast because this is our home turf.",
+      images: [
+        { src: "/projects/popcorn-ceiling-removal-before-mays-landing-nj.webp", alt: "Before: old textured ceiling in a Mays Landing, NJ bayfront home, room masked off for the job" },
+        { src: "/projects/popcorn-ceiling-removal-after-mays-landing-nj.webp", alt: "After: smooth, freshly re-textured and painted ceiling in a Mays Landing, NJ home" },
+      ],
+    },
   },
   {
     name: "Egg Harbor City",

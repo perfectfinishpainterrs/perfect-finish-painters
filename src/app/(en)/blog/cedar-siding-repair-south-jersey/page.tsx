@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
     type: "article",
     locale: "en_US",
     url: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey",
-    images: [{ url: "/logo.webp", width: 1200, height: 630, alt: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm",
     description: "Get expert cedar siding repair in South Jersey from Perfect Finish Painters. Restore your home's exterior with our professional services in Mays Landing, NJ.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: { canonical: "https://perfectfinishpainter.com/blog/cedar-siding-repair-south-jersey" },
 };
@@ -40,7 +41,7 @@ export default function BlogPost() {
     "@type": "Article",
     headline: "Expert Cedar Siding Repair: Restoring Your South Jersey Home's Charm",
     image: "https://perfectfinishpainter.com/exterior-siding-staining-before-after-egg-harbor-township-nj.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
@@ -74,7 +75,30 @@ export default function BlogPost() {
             Expert Cedar Siding Repair: Restoring Your South Jersey Home&apos;s Charm
           </h1>
 
+          <figure className="mb-8 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/exterior-siding-staining-before-after-egg-harbor-township-nj.webp"
+              alt="Cedar siding repair and staining before and after in Egg Harbor Township NJ"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+            />
+            <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">Cedar siding restoration we completed in Egg Harbor Township — before and after the repair + finish.</figcaption>
+          </figure>
+
           <div className="prose prose-lg max-w-none text-[#374151] space-y-6" dangerouslySetInnerHTML={{ __html: `<h2>What Makes Cedar Siding So Popular in South Jersey?</h2><p>Cedar siding is renowned for its timeless elegance and natural resistance to decay, making it a favorite among homeowners in South Jersey areas like Mays Landing, NJ. This wood type offers excellent insulation and a rustic charm that complements the region's coastal and suburban landscapes. However, exposure to harsh weather, moisture, and pests can lead to damage, necessitating professional cedar siding repair to maintain its integrity and appearance.</p><h2>What Are the Common Issues with Cedar Siding?</h2><p>Over time, cedar siding can face several challenges that affect its functionality and aesthetics. Recognizing these early can prevent costly replacements.</p><ul><li><strong>Rot and Decay:</strong> Moisture infiltration can cause wood rot, especially in humid South Jersey climates.</li><li><strong>Cracking and Splitting:</strong> Temperature fluctuations and sun exposure may lead to cracks in the siding.</li><li><strong>Insect Damage:</strong> Termites and other pests are common culprits in damaging cedar structures.</li><li><strong>Fading and Discoloration:</strong> UV rays can fade the natural color, requiring repainting or staining as part of South Jersey painting services.</li></ul><h3>Signs You Need Cedar Siding Repair</h3><p>Look out for visible warping, soft spots in the wood, or peeling paint. If you notice these, it's time to call in experts like Perfect Finish Painters for a thorough inspection.</p><h2>What Does the Cedar Siding Repair Process Look Like?</h2><p>At Perfect Finish Painters, our repair process is meticulous and tailored to South Jersey homes. We start with a detailed assessment to identify all issues.</p><ol><li><strong>Inspection:</strong> Evaluating the extent of damage.</li><li><strong>Preparation:</strong> Removing damaged sections and cleaning the area.</li><li><strong>Repair:</strong> Replacing boards, sealing gaps, and applying protective treatments.</li><li><strong>Finishing:</strong> Painting or staining to match your home's exterior, leveraging our expertise in South Jersey painting services.</li></ol><h3>Benefits of Professional Repair</h3><p>Opting for professional cedar siding repair ensures longevity, energy efficiency, and increased property value. Our team uses high-quality materials suited to the local environment, preventing future issues.</p><h2>Why Choose Perfect Finish Painters for Cedar Siding Repair in South Jersey?</h2><p>Based in Mays Landing, NJ, Perfect Finish Painters brings years of experience in exterior home improvements. We combine cedar siding repair with comprehensive South Jersey painting services to deliver stunning results. Our commitment to quality and customer satisfaction sets us apart in the region.</p>` }} />
+
+          <figure className="my-8 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/shed-exterior-painting-before-after-mays-landing-nj.webp"
+              alt="Exterior wood repair and refinishing on a shed in Mays Landing NJ"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+              loading="lazy"
+            />
+            <figcaption className="text-sm text-[#64748b] px-4 py-2 bg-[#f8fafc]">The same exterior-wood repair approach applied to a Mays Landing shed — prep, replace damaged sections, refinish.</figcaption>
+          </figure>
 
           <div className="mt-12 bg-[#f1f5f9] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-[#1e3a5f] mb-3">Ready to Revive Your Cedar Siding?</h2>

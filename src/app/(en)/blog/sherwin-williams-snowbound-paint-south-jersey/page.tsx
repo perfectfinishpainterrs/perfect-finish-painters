@@ -41,7 +41,7 @@ export default function BlogPost() {
     "@type": "Article",
     headline: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",
     image: "https://perfectfinishpainter.com/images/blog/sherwin-williams-snowbound-paint-south-jersey.webp",
-    author: { "@type": "Organization", name: "Perfect Finish Painters" },
+    author: { "@type": "Person", name: "Brandon Panameno", url: "https://perfectfinishpainter.com/about" },
     publisher: { "@type": "Organization", name: "Perfect Finish Painters", logo: { "@type": "ImageObject", url: "https://perfectfinishpainter.com/logo.webp" } },
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",

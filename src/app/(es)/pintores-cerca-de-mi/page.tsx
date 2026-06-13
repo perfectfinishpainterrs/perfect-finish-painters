@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es",
     url: "https://perfectfinishpainter.com/pintores-cerca-de-mi",
-    images: [{ url: "/logo.webp", width: 1970, height: 748, alt: "Perfect Finish Painters logo" }],
+    images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pintores en Atlantic County NJ | Perfect Finish Painters",
     description:
       "Pintores en Atlantic County NJ. Pintura Sherwin-Williams Duration y Emerald. Interior, exterior y reparación de drywall. Hablamos español. Estimados gratis.",
-    images: ["/logo.webp"],
+    images: ["/og-card.jpg"],
   },
   alternates: {
     canonical: "https://perfectfinishpainter.com/pintores-cerca-de-mi",

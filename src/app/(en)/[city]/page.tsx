@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -41,10 +42,10 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       url: `https://perfectfinishpainter.com/${area.slug}`,
       images: [
         {
-          url: "https://perfectfinishpainter.com/logo.webp",
-          width: 1970,
-          height: 748,
-          alt: "Perfect Finish Painters logo",
+          url: "https://perfectfinishpainter.com/og-card.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ",
         },
       ],
     },
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       card: "summary_large_image",
       title: area.metaTitle,
       description: area.metaDescription,
-      images: ["https://perfectfinishpainter.com/logo.webp"],
+      images: ["https://perfectfinishpainter.com/og-card.jpg"],
     },
     alternates: {
       canonical: `https://perfectfinishpainter.com/${area.slug}`,
@@ -94,6 +95,10 @@ export default async function CityPage({ params }: CityPageProps) {
         name: `${area.state}, USA`,
       },
     },
+    // Image schema only when a real project block renders on the page (no unbacked image claims).
+    ...(area.project && {
+      image: area.project.images.map((im) => `https://perfectfinishpainter.com${im.src}`),
+    }),
   };
 
   const breadcrumbJsonLd = {
@@ -192,6 +197,33 @@ export default async function CityPage({ params }: CityPageProps) {
           <p className="text-[#64748b] text-lg mb-10 leading-relaxed">
             {area.content.closing}
           </p>
+
+          {/* Recent local project — real proof, unique caption per page */}
+          {area.project && (
+            <div className="mb-10">
+              <h2 className="text-2xl font-bold text-[#1e3a5f] mb-4">{area.project.title}</h2>
+              <p className="text-[#64748b] mb-6 leading-relaxed">{area.project.caption}</p>
+              <figure>
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  {area.project.images.map((im) => (
+                    <Image
+                      key={im.src}
+                      src={im.src}
+                      alt={im.alt}
+                      width={1536}
+                      height={2048}
+                      className="rounded-xl w-full h-auto"
+                      sizes="(max-width:640px) 50vw, 360px"
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+                <figcaption className="text-[#64748b] text-sm mt-3 italic">
+                  Before and after — a real Perfect Finish Painters project in {area.name}, NJ.
+                </figcaption>
+              </figure>
+            </div>
+          )}
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4">

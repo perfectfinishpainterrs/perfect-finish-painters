@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Perfect Finish Painters — Findings Ledger</title>
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  @page report { margin: 0.5in 0.55in; }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: #1A1A2E;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ----- Cover ----- */
+  .cover {
+    page: cover;
+    width: 8.5in; height: 11in;
+    background: #0D0D0D; color: #ffffff;
+    padding: 0.9in 0.9in;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    page-break-after: always; break-after: page;
+  }
+  .cover::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0;
+    height: 0.4in; background: #FF4500;
+  }
+  .cover .brand { font-weight: 800; font-size: 24pt; letter-spacing: 0.05em; line-height: 1; }
+  .cover .brand span { color: #FF4500; font-weight: 600; }
+  .cover .meta-top {
+    margin-top: 0.5in;
+    font-size: 10pt; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #FF4500;
+  }
+  .cover .client { font-size: 32pt; font-weight: 700; line-height: 1.05; margin: 0.1in 0 0.2in; }
+  .cover .meta-sub { color: #cccccc; font-size: 12pt; margin: 0; }
+
+  .headline {
+    margin-top: 0.5in;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.25in;
+  }
+  .head-cell {
+    background: #1a1a23; border-left: 4px solid #FF4500;
+    padding: 0.25in 0.22in;
+  }
+  .head-cell .num { font-size: 48pt; font-weight: 800; line-height: 1; color: #ffffff; }
+  .head-cell .num.green { color: #10b981; }
+  .head-cell .num.amber { color: #f59e0b; }
+  .head-cell .num.red   { color: #ef4444; }
+  .head-cell .label {
+    font-size: 9pt; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #aaaaaa; margin-top: 0.1in;
+  }
+
+  .badge-row {
+    margin-top: 0.4in;
+    display: flex; gap: 0.15in; flex-wrap: wrap;
+  }
+  .badge {
+    background: #1a1a23; border-left: 3px solid #aaaaaa;
+    padding: 0.08in 0.18in;
+    font-size: 9pt; color: #ffffff;
+  }
+  .badge .num { font-weight: 700; }
+  .badge.green { border-left-color: #10b981; }
+  .badge.amber { border-left-color: #f59e0b; }
+  .badge.red   { border-left-color: #ef4444; }
+
+  .cover-foot { font-size: 9pt; color: #777; letter-spacing: 0.06em; }
+  .cover-foot strong { color: #fff; }
+
+  /* ----- Report pages ----- */
+  .report { page: report; padding: 0; }
+  .report-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.12in; margin-bottom: 0.22in;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .report-header .brand { font-weight: 700; font-size: 10pt; letter-spacing: 0.04em; }
+  .report-header .brand span { color: #FF4500; }
+  .report-header .meta { font-size: 8.5pt; color: #64748b; }
+
+  h1.section-title { font-size: 17pt; font-weight: 700; margin: 0 0 0.08in; }
+  h1.section-title::after {
+    content: ""; display: block; width: 0.5in; height: 3px;
+    background: #FF4500; margin-top: 0.06in;
+  }
+  h2.sub-title {
+    font-size: 12pt; font-weight: 700; margin: 0.3in 0 0.1in;
+    color: #1A1A2E;
+  }
+  .lead { font-size: 10pt; color: #334155; line-height: 1.45; margin-bottom: 0.2in; }
+
+  table.findings {
+    width: 100%; border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+  table.findings thead th {
+    background: #1A1A2E; color: #ffffff;
+    text-align: left; padding: 0.07in 0.09in;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+    font-size: 7.5pt;
+  }
+  table.findings tbody td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.07in 0.09in;
+    vertical-align: top;
+    line-height: 1.35;
+  }
+  table.findings tbody tr:nth-child(even) td { background: #f8fafc; }
+  table.findings tbody tr:last-child td { border-bottom: none; }
+  table.findings code {
+    font-family: "Consolas", "Menlo", monospace;
+    font-size: 7.5pt; color: #1A1A2E;
+    background: transparent; padding: 0;
+  }
+  table.findings .sev {
+    display: inline-block; min-width: 0.55in; text-align: center;
+    font-weight: 700; font-size: 7.5pt;
+    padding: 0.02in 0.07in; border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+  .sev.CRITICAL { background: #fee2e2; color: #991b1b; }
+  .sev.HIGH     { background: #ffedd5; color: #9a3412; }
+  .sev.MEDIUM   { background: #fef3c7; color: #92400e; }
+  .sev.LOW      { background: #dcfce7; color: #166534; }
+  .sev.NONE     { background: #f1f5f9; color: #475569; }
+
+  .status-pill {
+    display: inline-block; padding: 0.015in 0.07in; border-radius: 2px;
+    font-size: 7pt; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .status-pill.fixed { background: #dcfce7; color: #166534; }
+  .status-pill.open { background: #fee2e2; color: #991b1b; }
+  .status-pill.regression { background: #fef3c7; color: #92400e; }
+  .status-pill.false-positive { background: #f1f5f9; color: #475569; }
+  .status-pill.wontfix { background: #f1f5f9; color: #475569; }
+
+  .empty-note {
+    border-left: 3px solid #10b981; background: #f0fdf4;
+    padding: 0.14in 0.18in; font-size: 10pt; color: #166534;
+    margin-bottom: 0.2in;
+  }
+
+  .closing {
+    margin-top: 0.4in;
+    font-size: 8.5pt; color: #64748b; line-height: 1.5;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 0.15in;
+  }
+  .closing strong { color: #1A1A2E; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div>
+    <div class="brand">SJ TECH <span>SOLUTIONS</span></div>
+    <p class="meta-top">Findings Ledger</p>
+    <p class="client">Perfect Finish Painters</p>
+    <p class="meta-sub">May 25, 2026</p>
+  </div>
+
+  <div>
+    <div class="headline">
+      <div class="head-cell">
+        <div class="num amber">2</div>
+        <div class="label">Open Findings</div>
+      </div>
+      <div class="head-cell">
+        <div class="num green">8</div>
+        <div class="label">Fixed All-Time</div>
+      </div>
+      <div class="head-cell">
+        <div class="num">1</div>
+        <div class="label">Audits Run</div>
+      </div>
+    </div>
+
+    <div class="badge-row">
+      <div class="badge red"><span class="num">0</span> Critical</div>
+      <div class="badge amber"><span class="num">0</span> High</div>
+      <div class="badge amber"><span class="num">0</span> Medium</div>
+      <div class="badge green"><span class="num">2</span> Low</div>
+      <div class="badge"><span class="num">2</span> Dismissed</div>
+    </div>
+  </div>
+
+  <div class="cover-foot">
+    Generated by <strong>SJ Tech Solutions LLC</strong> &nbsp;·&nbsp; sjtechllc.com
+  </div>
+</div>
+
+<!-- ============ REPORT ============ -->
+<div class="report">
+  <div class="report-header">
+    <div class="brand">SJ TECH <span>SOLUTIONS</span></div>
+    <div class="meta">Perfect Finish Painters &nbsp;·&nbsp; Findings Ledger &nbsp;·&nbsp; May 25, 2026</div>
+  </div>
+
+  <h1 class="section-title">Open findings</h1>
+  <p class="lead">Every audit-flagged item that has not yet been closed, dismissed as false-positive, or marked won't-fix. Sorted by severity, then by age. Older items at the top of each severity band are the ones to think about next.</p>
+
+  <table class="findings"><thead><tr><th>Sev</th><th>ID</th><th>Title</th><th>Page</th><th>First seen</th><th>Status</th></tr></thead><tbody><tr><td><span class="sev LOW">LOW</span></td><td><code>seo.meta-description-length.various</code></td><td>9 meta descriptions out of 130-160 char range</td><td><code>various</code></td><td>2026-05-25<br/><span style="color:#94a3b8">0d</span></td><td><span class="status-pill open">open</span></td></tr><tr><td><span class="sev LOW">LOW</span></td><td><code>seo.broken-external-link.unknown</code></td><td>1 broken external link (likely Yelp or Google Business short URL)</td><td><code>unknown</code></td><td>2026-05-25<br/><span style="color:#94a3b8">0d</span></td><td><span class="status-pill open">open</span></td></tr></tbody></table>
+
+  <h2 class="sub-title">Recently closed</h2>
+  <p class="lead">Findings closed since the most recent audit. Each row shows what shipped the fix.</p>
+
+  <table class="findings"><thead><tr><th>Sev</th><th>ID</th><th>Title</th><th>Closed</th><th>Commit</th><th>Note</th></tr></thead><tbody><tr><td><span class="sev CRITICAL">CRITICAL</span></td><td><code>perf.ttfb-slow.global</code></td><td>TTFB 2296ms — every page dynamic due to await headers() in root layout</td><td>2026-05-25</td><td><code>78ec959</code></td><td>Multi-root-layout refactor: moved English/Spanish routes into (en)/(es) groups, deleted headers() call. 59/59 pages now static.</td></tr><tr><td><span class="sev CRITICAL">CRITICAL</span></td><td><code>schema.localbusiness-address-missing.global</code></td><td>346 structured-data errors — missing address on LocalBusiness + missing provider on nested Services</td><td>2026-05-25</td><td><code>78ec959</code></td><td>Added PostalAddress + provider @id refs on nested Services. ~300 of 346 errors closed.</td></tr><tr><td><span class="sev CRITICAL">CRITICAL</span></td><td><code>content.thin.city-pages</code></td><td>26 of 50 pages under 500 words — city template too sparse</td><td>2026-05-25</td><td><code>78ec959</code></td><td>Added 3 localFaqs per city (19 cities) + FAQPage schema. ~450 -&gt; 700+ words each.</td></tr><tr><td><span class="sev HIGH">HIGH</span></td><td><code>content.thin.our-work</code></td><td>Our Work page is almost entirely images and links</td><td>2026-05-25</td><td><code>78ec959</code></td><td>Added 250-word prep/prime/paint/protect section.</td></tr><tr><td><span class="sev HIGH">HIGH</span></td><td><code>content.thin.blog-index</code></td><td>Blog index page lacks substantive intro copy</td><td>2026-05-25</td><td><code>78ec959</code></td><td>Added 150-word intro between hero and post grid.</td></tr><tr><td><span class="sev MEDIUM">MEDIUM</span></td><td><code>security.csp-missing.global</code></td><td>Content-Security-Policy header missing</td><td>2026-05-25</td><td><code>78ec959</code></td><td>CSP header added in next.config.ts with whitelisted third parties.</td></tr><tr><td><span class="sev LOW">LOW</span></td><td><code>trust.vercel-analytics-disclosure-missing.privacy</code></td><td>Privacy policy doesn&#39;t disclose Vercel Analytics</td><td>2026-05-25</td><td><code></code></td><td>Vercel Analytics added to Information We Collect + Who We Share With sections.</td></tr><tr><td><span class="sev LOW">LOW</span></td><td><code>content.blog-inline-images-missing.various</code></td><td>4 of 5 blog posts render only hero image with no inline body images</td><td>2026-05-25</td><td><code></code></td><td>Added 2 captioned Image figures to each of 4 blog posts (hero + mid-content).</td></tr></tbody></table>
+
+  <h2 class="sub-title">Audit history</h2>
+
+  <table class="findings"><thead><tr><th>Date</th><th>Audit ID</th><th>Type</th><th>Score</th><th>+ New</th><th>~ Refresh</th><th>R Reopen</th><th>X Auto-close</th></tr></thead><tbody><tr><td>2026-05-25</td><td><code>sjtech-full-2026-05-22</code></td><td>full</td><td>83</td><td>12</td><td>0</td><td>0</td><td>0</td></tr></tbody></table>
+
+  <h2 class="sub-title">Dismissed</h2><p class="lead">Items the audit flagged that we deliberately do not plan to fix -- either false positives in the audit tooling, or intentional design choices.</p><table class="findings"><thead><tr><th>Sev</th><th>ID</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td><span class="sev MEDIUM">MEDIUM</span></td><td><code>a11y.alt-missing.gallery</code></td><td><span class="status-pill false-positive">false-positive</span></td><td>Audit tool counted fill-mode images that don&#39;t accept width/height attrs as missing. OurWorkGallery.tsx already has alt on every Image. Re-verify on next audit run.</td></tr><tr><td><span class="sev MEDIUM">MEDIUM</span></td><td><code>a11y.dim-missing.gallery</code></td><td><span class="status-pill false-positive">false-positive</span></td><td>Same as alt-missing: fill-mode images don&#39;t take width/height attrs. Layout reserves space via parent positioning, not the Image element.</td></tr></tbody></table>
+
+  <div class="closing">
+    Ledger source: <code>audits/findings.json</code>. Managed by the <strong>audit-tracker</strong> skill — re-run <code>tracker.py report-pdf</code> after each audit or fix batch to refresh this PDF.
+    <br/><br/>
+    <strong>SJ Tech Solutions LLC</strong> &mdash; sjtechllc.com
+  </div>
+</div>
+
+</body>
+</html>
