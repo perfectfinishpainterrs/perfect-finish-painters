@@ -12,8 +12,12 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
       {
+        // Legacy combined URL — the service is now split into two dedicated
+        // pages (/deck-staining + /fence-staining). Point the old URL at deck
+        // staining (the primary term; it cross-links fence staining), not the
+        // unrelated /shed-restoration it was wrongly sent to.
         source: "/deck-fence-staining",
-        destination: "/shed-restoration",
+        destination: "/deck-staining",
         permanent: true,
       },
     ];
