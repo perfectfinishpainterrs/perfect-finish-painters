@@ -238,14 +238,14 @@ export default function Home() {
       />
 
       {/* Hero Section — split: brand + CTA on the left, "tough jobs we tackle" showcase on the right */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438]">
-        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 lg:min-h-[88vh] lg:flex lg:items-center relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438]">
+        <div className="max-w-7xl mx-auto w-full relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left — brand + CTA */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Painters in Mays Landing, NJ
             </h1>
-            <p className="text-white/90 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8">
+            <p className="text-white/90 text-lg sm:text-2xl max-w-xl mx-auto lg:mx-0 mb-8">
               Answer a few quick questions and receive a personalized estimate for your painting project.
               No spam, no pressure — just honest pricing.
             </p>

@@ -197,7 +197,7 @@ export default function EnRootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip`}
       >
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <main id="main-content">{children}</main>

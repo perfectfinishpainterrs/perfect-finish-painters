@@ -34,13 +34,14 @@ export const serviceAreas: ServiceArea[] = [
     longitude: -74.6488,
     content: {
       intro: "Perfect Finish Painters is proud to serve homeowners and businesses in Egg Harbor Township, NJ. As one of the largest communities in Atlantic County, Egg Harbor Township has a diverse mix of residential neighborhoods and commercial properties that benefit from professional painting services.",
-      body: "Whether you live near the Fire Road corridor, the Shore Mall area, or any of the family-friendly neighborhoods throughout the township, our team delivers quality interior and exterior painting at affordable prices. We handle everything from single-room refreshes to full exterior repaints, plus drywall repair and flooring installation. Most interior rooms in Egg Harbor Township cost between $500–$1,000, and we always provide a detailed estimate before starting any work.",
+      body: "From Bargaintown and Cardiff to Scullville, English Creek, McKee City, and the West Atlantic City bayfront, we paint homes in every corner of the township — along the Fire Road and Black Horse Pike corridors and the quiet family streets in between. We handle everything from single-room refreshes to full exterior repaints, plus drywall repair and flooring installation. Most interior rooms in Egg Harbor Township cost between $500–$1,000, and we always provide a detailed written estimate before starting any work.",
       closing: "As a locally owned company based in nearby Mays Landing, we understand the South Jersey climate and recommend paints that hold up against coastal humidity and seasonal weather changes. Our team typically completes a single room in one day and a full interior in 3–5 days.",
     },
     localFaqs: [
       { question: "How much does interior painting cost in Egg Harbor Township?", answer: "Most interior rooms in Egg Harbor Township run $500–$1,000 each, depending on room size, ceiling height, and how much prep the walls need. After walking the project we give you a fixed written estimate — no surprise add-ons during the job." },
       { question: "How long does a typical Egg Harbor Township painting project take?", answer: "A single room usually wraps in a day. A full interior repaint of an EHT home takes 3–5 days for most floor plans, and exterior projects run 3–7 days depending on size and weather. You'll have a firm schedule before we start." },
       { question: "Do you serve every neighborhood in Egg Harbor Township?", answer: "Yes — from the Fire Road and Black Horse Pike corridors to the West Atlantic and English Creek areas, we cover the whole township. We're 15 minutes up the road in Mays Landing, so response times are quick." },
+      { question: "Do you paint newer construction and bayfront homes in Egg Harbor Township?", answer: "Both. We paint everything from the newer developments off English Creek and Zion Road to older bayfront homes near West Atlantic City and Seaview. Coastal EHT homes take a beating from salt air and humidity, so we steer you toward exterior coatings rated for shore conditions so the finish actually lasts." },
     ],
   },
   {
