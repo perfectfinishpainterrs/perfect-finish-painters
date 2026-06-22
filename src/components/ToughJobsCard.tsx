@@ -20,10 +20,10 @@ export default function ToughJobsCard() {
   if (!job) return null;
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto lg:ml-auto">
-      <div className="flex items-center gap-2 bg-[#0f2438] text-white px-5 py-3">
-        <span className="text-[#fbbf24] text-base leading-none">★</span>
-        <span className="text-sm font-bold tracking-wide uppercase">The Tough Jobs We Tackle</span>
+    <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto lg:max-w-none lg:mx-0">
+      <div className="flex items-center gap-2 bg-[#0f2438] text-white px-5 py-3 lg:px-6 lg:py-4">
+        <span className="text-[#fbbf24] text-base lg:text-xl leading-none">★</span>
+        <span className="text-sm lg:text-base font-bold tracking-wide uppercase">The Tough Jobs We Tackle</span>
       </div>
 
       <div className="grid grid-cols-2">
@@ -32,11 +32,11 @@ export default function ToughJobsCard() {
             src={job.before}
             alt={`Before — ${job.title} in ${job.location}`}
             fill
-            sizes="(max-width: 1024px) 50vw, 230px"
+            sizes="(max-width: 1024px) 50vw, 320px"
             className="object-cover"
             priority
           />
-          <span className="absolute bottom-2 left-2 bg-black/70 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+          <span className="absolute bottom-2 left-2 bg-black/70 text-white text-[10px] lg:text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider">
             Before
           </span>
         </div>
@@ -45,24 +45,24 @@ export default function ToughJobsCard() {
             src={job.after}
             alt={`After — ${job.title} in ${job.location}`}
             fill
-            sizes="(max-width: 1024px) 50vw, 230px"
+            sizes="(max-width: 1024px) 50vw, 320px"
             className="object-cover"
             priority
           />
-          <span className="absolute bottom-2 left-2 bg-[#2563eb] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+          <span className="absolute bottom-2 left-2 bg-[#2563eb] text-white text-[10px] lg:text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider">
             After
           </span>
         </div>
       </div>
 
-      <div className="p-5">
-        <h2 className="text-lg font-bold text-[#1e3a5f]">
-          {job.title} <span className="text-[#64748b] font-normal text-sm">— {job.location}</span>
+      <div className="p-5 lg:p-6">
+        <h2 className="text-lg lg:text-2xl font-bold text-[#1e3a5f]">
+          {job.title} <span className="text-[#64748b] font-normal text-sm lg:text-base">— {job.location}</span>
         </h2>
-        <p className="text-[#64748b] text-sm mt-1 mb-3 leading-relaxed">{job.blurb}</p>
+        <p className="text-[#64748b] text-sm lg:text-base mt-1 mb-3 lg:mb-4 leading-relaxed">{job.blurb}</p>
         <Link
           href={job.href}
-          className="text-[#2563eb] font-semibold text-sm hover:underline inline-flex items-center gap-1"
+          className="text-[#2563eb] font-semibold text-sm lg:text-base hover:underline inline-flex items-center gap-1"
         >
           See how we did it
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
