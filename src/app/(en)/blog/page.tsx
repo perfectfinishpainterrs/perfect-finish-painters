@@ -29,6 +29,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "summer-interior-painting-south-jersey",
+    title: "Is Summer a Good Time to Repaint Your South Jersey Home's Interior?",
+    excerpt: "Summer is one of the best windows to repaint inside — if you account for shore humidity. Here's how coastal moisture and your AC affect paint drying, and the smart way to schedule a summer interior project in Atlantic County.",
+    date: "June 2026",
+    image: "/bedroom-repaint-blue-to-white-before-after-pleasantville-nj.webp",
+    alt: "Bedroom interior repaint before and after in Pleasantville, NJ",
+  },
+  {
     slug: "garage-drywall-finishing-south-jersey",
     title: "Garage Drywall Finishing & Painting in South Jersey",
     excerpt: "We took a big garage from bare, taped drywall to a clean, fully finished and painted room. See the before &amp; after and exactly what goes into finishing a space the right way — finishing seams, priming, and painting walls and ceiling.",

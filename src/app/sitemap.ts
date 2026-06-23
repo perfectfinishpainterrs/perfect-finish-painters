@@ -194,6 +194,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/summer-interior-painting-south-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/popcorn-ceiling-removal`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly',
