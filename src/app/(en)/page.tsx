@@ -229,16 +229,37 @@ export default function Home() {
       />
       <Header />
 
-      {/* Preload the hero's featured tough-job image (the LCP element of the new split hero) */}
+      {/* Preload the hero's background photo — now the LCP element behind the navy overlay */}
       <link
         rel="preload"
         as="image"
-        href="/projects/popcorn-ceiling-removal-after-mays-landing-nj.webp"
+        href="/projects/open-concept-living-dining.webp"
         fetchPriority="high"
       />
 
-      {/* Hero Section — split: brand + CTA on the left, "tough jobs we tackle" showcase on the right */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 lg:min-h-[88vh] lg:flex lg:items-center relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438]">
+      {/* Hero Section — split: brand + CTA on the left, "tough jobs we tackle" showcase on the right.
+          Real finished-room photo sits behind a navy gradient overlay so the background reads as
+          on-brand proof of work instead of a flat fill, while keeping the text fully legible. */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 lg:min-h-[88vh] lg:flex lg:items-center relative overflow-hidden bg-[#1e3a5f]">
+        {/* Background photo */}
+        <Image
+          src="/projects/open-concept-living-dining.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center select-none pointer-events-none"
+        />
+        {/* Navy gradient overlay — darker on the left where the headline + CTA sit, lighter on the
+            right so the finished room stays visible behind the before/after card. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-[#1e3a5f]/95 via-[#1e3a5f]/85 to-[#0f2438]/70"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-[#0f2438]/80 via-transparent to-[#1e3a5f]/40"
+        />
         <div className="max-w-7xl mx-auto w-full relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left — brand + CTA */}
           <div className="text-center lg:text-left">
