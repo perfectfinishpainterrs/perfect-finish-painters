@@ -47,7 +47,7 @@ export default function GarageDoorPaintingPage() {
     "@type": "Service",
     name: "Garage Door Painting",
     description: "Professional garage door painting and wood-grain staining in Atlantic County NJ. Surface prep, priming, and weather-resistant coatings for steel, aluminum, and wood garage doors. Most single doors complete in 1 day.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/garage-door-painting",
   };

@@ -45,7 +45,7 @@ export default function ExteriorPaintingPage() {
     "@type": "Service",
     name: "Exterior Painting",
     description: "Full exterior painting for siding, stucco, brick, shutters, doors, trim, and fascia. Includes power washing, scraping, priming, and weather-resistant acrylic latex paint application.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/exterior-painting",
   };

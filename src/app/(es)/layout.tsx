@@ -117,8 +117,8 @@ export default function EsRootLayout({
     <html lang="es">
       <head>
         <meta name="google" content="nositelinkssearchbox" />
-        <link rel="preconnect" href="https://estimate-app-liart.vercel.app" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://estimate-app-liart.vercel.app" />
+        <link rel="preconnect" href="https://app.senkulab.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://app.senkulab.com" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-822VB2RDNH"
           strategy="afterInteractive"

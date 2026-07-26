@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
       "Pintores en Vineland NJ. Pintura interior, exterior y drywall. Hablamos español. Licenciados en NJ. Estimados gratis — 609-377-4226.",
     type: "website",
-    locale: "es",
+    locale: "es_US",
     url: "https://perfectfinishpainter.com/pintores-vineland-nj",
     images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
@@ -64,7 +64,8 @@ export default function PintoresVinelandNJPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://perfectfinishpainter.com" },
-      { "@type": "ListItem", position: 2, name: "Pintores en Vineland NJ", item: "https://perfectfinishpainter.com/pintores-vineland-nj" },
+      { "@type": "ListItem", position: 2, name: "Pintores", item: "https://perfectfinishpainter.com/pintores-cerca-de-mi" },
+      { "@type": "ListItem", position: 3, name: "Pintores en Vineland NJ", item: "https://perfectfinishpainter.com/pintores-vineland-nj" },
     ],
   };
 

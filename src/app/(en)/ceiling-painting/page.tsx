@@ -43,7 +43,7 @@ export default function CeilingPaintingPage() {
     "@type": "Service",
     name: "Ceiling Painting",
     description: "Professional ceiling painting services including flat ceilings, vaulted and cathedral ceilings, popcorn texture, crown molding, and ceiling repair throughout Atlantic County NJ.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/ceiling-painting",
   };

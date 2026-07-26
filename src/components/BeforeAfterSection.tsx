@@ -119,7 +119,7 @@ const projects = [
   },
   {
     title: "Basement Stairwell Remodel",
-    category: "Exterior",
+    category: "Interior",
     alt: "Before-and-after image of a basement staircase showing old green walls and worn wooden steps transformed to white walls and refinished steps.",
     after: "/basement-stairway-renovation-before-after-hammonton-nj.webp",
     before: "/before/basement-stairway-renovation-hammonton-nj.webp",

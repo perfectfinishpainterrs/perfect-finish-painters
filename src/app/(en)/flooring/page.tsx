@@ -44,7 +44,7 @@ export default function FlooringPage() {
     "@type": "Service",
     name: "Flooring Installation",
     description: "Professional flooring installation including hardwood, laminate, vinyl plank, and tile. Includes subfloor preparation, leveling, and baseboard installation throughout South Jersey.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/flooring",
   };

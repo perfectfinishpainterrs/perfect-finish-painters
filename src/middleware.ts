@@ -12,10 +12,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(apex, 301);
   }
 
-  // Strip query params from pages (not API routes or _next assets) — kills /?q={search_term_string} stragglers from old SearchAction schema
+  // Strip junk query params from pages (not API routes or _next assets) — kills
+  // /?q={search_term_string} stragglers from old SearchAction schema. Attribution
+  // params must survive the strip or every ad/social click loses its campaign
+  // tagging (GA4 campaign, Google Ads gclid, Meta fbclid) before gtag/fbq run.
+  const KEEP_PARAM = /^(utm_|gclid$|gbraid$|wbraid$|fbclid$|msclkid$|ttclid$|li_fat_id$|ref$|_gl$)/;
   if (search && !pathname.startsWith("/api") && !pathname.startsWith("/_next")) {
-    const cleanUrl = new URL(pathname, request.url);
-    return NextResponse.redirect(cleanUrl, 301);
+    const keys = [...request.nextUrl.searchParams.keys()];
+    if (!keys.some((k) => KEEP_PARAM.test(k))) {
+      const cleanUrl = new URL(pathname, request.url);
+      return NextResponse.redirect(cleanUrl, 301);
+    }
   }
 
   // The old x-pathname header is no longer set — layouts now live under

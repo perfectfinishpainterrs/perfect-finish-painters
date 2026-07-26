@@ -45,7 +45,7 @@ export default function ShedRestorationPage() {
     "@type": "Service",
     name: "Shed Restoration & Painting",
     description: "Professional shed restoration including wood rot repair, scraping, sanding, priming, and weather-resistant exterior painting for sheds, outbuildings, and storage structures throughout Atlantic County NJ.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/shed-restoration",
   };

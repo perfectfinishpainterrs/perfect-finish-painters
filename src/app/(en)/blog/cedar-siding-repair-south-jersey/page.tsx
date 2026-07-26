@@ -62,7 +62,7 @@ export default function BlogPost() {
               <li>/</li>
               <li><Link href="/blog" className="hover:text-[#2563eb] transition-colors">Blog</Link></li>
               <li>/</li>
-              <li className="text-[#1e3a5f] font-medium">Expert Cedar Siding Repair: Re</li>
+              <li className="text-[#1e3a5f] font-medium">Cedar Siding Repair</li>
             </ol>
           </nav>
         </div>

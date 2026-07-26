@@ -44,7 +44,7 @@ export default function CommercialPaintingPage() {
     "@type": "Service",
     name: "Commercial Painting",
     description: "Professional commercial painting for offices, retail spaces, restaurants, and commercial buildings in Atlantic County NJ. Flexible scheduling with evenings and weekends available for minimal business disruption.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/commercial-painting",
   };

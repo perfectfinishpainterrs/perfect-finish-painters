@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
 import SherwinWilliamsBannerES from "@/components/SherwinWilliamsBannerES";
+import { serviceAreas } from "@/data/service-areas";
 
 export const metadata: Metadata = {
   title: "Pintores en Atlantic County NJ | Perfect Finish Painters",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Pintores en Atlantic County NJ. Pintura Sherwin-Williams Duration y Emerald. Interior, exterior y reparación de drywall. Hablamos español. Estimados gratis.",
     type: "website",
-    locale: "es",
+    locale: "es_US",
     url: "https://perfectfinishpainter.com/pintores-cerca-de-mi",
     images: [{ url: "/og-card.jpg", width: 1200, height: 630, alt: "Perfect Finish Painters — interior, exterior & drywall in Mays Landing, NJ" }],
   },
@@ -213,26 +214,9 @@ export default function PintoresCercaDeMiPage() {
             <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">Áreas que Servimos en Atlantic County</h2>
           </ScrollReveal>
           <div className="flex flex-wrap gap-3">
-            {[
-              "Mays Landing",
-              "Pleasantville",
-              "Atlantic City",
-              "Egg Harbor Township",
-              "Galloway",
-              "Northfield",
-              "Linwood",
-              "Somers Point",
-              "Ventnor City",
-              "Margate City",
-              "Hammonton",
-              "Vineland",
-              "Brigantine",
-              "Absecon",
-              "Egg Harbor City",
-              "Buena",
-              "Mullica Township",
-              "Port Republic",
-            ].map((city) => (
+            {/* Derived from service-areas.ts so this list can't drift from the
+                cities the schema and the English site actually claim. */}
+            {serviceAreas.map((a) => a.name).map((city) => (
               <span key={city} className="bg-white border border-[#e2e8f0] rounded-full px-4 py-2 text-sm text-[#374151] shadow-sm">
                 {city}, NJ
               </span>

@@ -103,7 +103,7 @@ const projects = [
   {
     src: "/basement-stairway-renovation-before-after-hammonton-nj.webp",
     alt: "Before-and-after image of a basement staircase showing old green walls and worn wooden steps transformed to white walls and refinished steps.",
-    category: "Exterior",
+    category: "Interior",
     title: "Basement Stairwell remodel",
   },
   {
@@ -203,6 +203,7 @@ export default function PortfolioSection() {
                   src={project.src}
                   alt={project.alt}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/90 via-[#1e3a5f]/20 to-transparent" />

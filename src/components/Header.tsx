@@ -223,7 +223,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[#e2e8f0] bg-white rounded-b-xl">
+          <div className="lg:hidden py-4 border-t border-[#e2e8f0] bg-white rounded-b-xl">
             <nav className="flex flex-col gap-4">
               <Link
                 href="/"

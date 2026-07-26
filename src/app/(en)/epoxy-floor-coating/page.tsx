@@ -47,7 +47,7 @@ export default function EpoxyFloorCoatingPage() {
     "@type": "Service",
     name: "Epoxy Floor Coating",
     description: "Professional epoxy and polyaspartic floor coating in Atlantic County NJ. Surface grinding, crack repair, primer, base color coat, decorative flake or metallic options, and UV-resistant topcoat. Installed in garages, basements, workshops, and commercial spaces.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/epoxy-floor-coating",
   };

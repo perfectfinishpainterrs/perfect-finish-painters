@@ -8,7 +8,15 @@ export default function FloatingCTA() {
 
   useEffect(() => {
     const hero = document.querySelector("section");
-    if (!hero) return;
+
+    // Pages without a <section> hero (privacy/terms/accessibility use plain
+    // divs) would otherwise never show the CTA — fall back to a scroll offset.
+    if (!hero) {
+      const handleScroll = () => setVisible(window.scrollY > 300);
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

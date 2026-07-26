@@ -13,6 +13,7 @@ export default function Footer() {
       setShowBackToTop(window.scrollY > 500);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -29,7 +30,7 @@ export default function Footer() {
                   alt="Perfect Finish Painters"
                   width={320}
                   height={80}
-                  className="h-24 w-auto"
+                  className="h-24 w-auto brightness-0 invert"
                 />
               </div>
               <p className="text-[#94a3b8] text-sm max-w-md mb-4">
@@ -178,12 +179,6 @@ export default function Footer() {
               Service Areas
             </h3>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
-              <Link
-                href="/"
-                className="text-[#94a3b8] hover:text-white transition-colors text-sm"
-              >
-                Mays Landing, NJ
-              </Link>
               {serviceAreas.map((area) => (
                 <Link
                   key={area.slug}
@@ -216,7 +211,9 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-[#2d4a6f] mt-8 pt-8 text-center">
-            <p className="text-[#94a3b8] text-sm">
+            {/* suppressHydrationWarning: pages are statically prerendered, so
+                the build-time year can lag the client's after Jan 1 */}
+            <p className="text-[#94a3b8] text-sm" suppressHydrationWarning>
               &copy; {new Date().getFullYear()} Perfect Finish Painters. All
               rights reserved. | NJ HIC #13VH14120900 | Licensed &amp; Insured LLC
             </p>
@@ -233,6 +230,8 @@ export default function Footer() {
             : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Back to top"
+        aria-hidden={!showBackToTop}
+        tabIndex={showBackToTop ? 0 : -1}
       >
         <svg
           className="w-5 h-5"

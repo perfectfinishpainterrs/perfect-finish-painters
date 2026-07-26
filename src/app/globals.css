@@ -104,3 +104,10 @@ select:focus-visible {
   outline-offset: 1px;
 }
 
+
+/* ReviewsSection mobile carousel uses `scrollbar-hide`; Tailwind v4 has no such
+   utility, and the inline scrollbarWidth style only covers Firefox/legacy IE —
+   this hides the WebKit/Blink scrollbar too. */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

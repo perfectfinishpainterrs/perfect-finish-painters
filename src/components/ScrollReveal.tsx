@@ -33,10 +33,11 @@ export default function ScrollReveal({
     // threshold:0 + negative rootMargin fires as soon as the element starts to enter
     // the viewport. A positive threshold like 0.15 silently breaks for any element
     // taller than ~6x the viewport height, leaving it stuck at opacity:0 forever.
+    let timer: ReturnType<typeof setTimeout> | undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
+          timer = setTimeout(() => {
             el.classList.add("scroll-reveal-visible");
           }, delay);
           observer.unobserve(el);
@@ -46,7 +47,10 @@ export default function ScrollReveal({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, [delay]);
 
   return (

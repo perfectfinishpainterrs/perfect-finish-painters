@@ -43,7 +43,7 @@ export default function WallpaperRemovalPage() {
     "@type": "Service",
     name: "Wallpaper Removal",
     description: "Professional wallpaper removal services including single and double layer removal, wall repair, skim coating, priming, and paint-ready wall prep throughout Atlantic County NJ.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/wallpaper-removal",
   };

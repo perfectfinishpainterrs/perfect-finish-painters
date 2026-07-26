@@ -47,7 +47,7 @@ export default function DeckStainingPage() {
     "@type": "Service",
     name: "Deck Staining",
     description: "Professional deck staining and sealing in Atlantic County NJ. Includes pressure washing, sanding, board and nail repair, premium semi-transparent or solid stain, and UV-resistant sealer. Most decks completed in 2–3 days.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/deck-staining",
   };

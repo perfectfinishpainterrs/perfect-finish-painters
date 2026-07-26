@@ -10,7 +10,7 @@ import ContactForm from "@/components/ContactForm";
 import FloatingCTA from "@/components/FloatingCTA";
 import SherwinWilliamsBanner from "@/components/SherwinWilliamsBanner";
 import ToughJobsCard from "@/components/ToughJobsCard";
-import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/data/reviews";
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, reviews } from "@/data/reviews";
 
 import { serviceAreas } from "@/data/service-areas";
 
@@ -62,7 +62,7 @@ const services = [
   {
     title: "Flooring",
     desc: "Hardwood, laminate, vinyl, and tile.",
-    image: "/radiator-painting-before-after-somers-point-nj.webp",
+    image: "/bedroom-flooring-installation-painting-before-after-egg-harbor-township-nj.webp",
     href: "/flooring",
   },
 ];
@@ -82,43 +82,15 @@ const reviewJsonLd = {
     bestRating: "5",
     reviewCount: GOOGLE_REVIEW_COUNT,
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Ryan J." },
-      datePublished: "2024-11-15",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "Has helped me numerous times with painting. Truly a professional!",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sean P." },
-      datePublished: "2024-10-22",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "They show up on time, do what they promise, at a fair price.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Audie M." },
-      datePublished: "2024-11-01",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "They came out quickly and touched up my house.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Mandy D." },
-      datePublished: "2024-12-03",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "I recommend Perfect Finish Painters! Quality work at an affordable price.",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sean D." },
-      datePublished: "2024-12-10",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "Brandon came out and touched up painting my house after other painters stopped contacting me.",
-    },
-  ],
+  // Built from the same data ReviewsSection renders — review markup must match
+  // the reviews actually visible on this page (manual-action risk otherwise).
+  review: reviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
+    reviewBody: r.text,
+    publisher: { "@type": "Organization", name: r.source },
+  })),
 };
 
 const faqJsonLd = {

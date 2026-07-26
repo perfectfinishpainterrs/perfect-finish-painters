@@ -39,7 +39,7 @@ const posts = [
   {
     slug: "garage-drywall-finishing-south-jersey",
     title: "Garage Drywall Finishing & Painting in South Jersey",
-    excerpt: "We took a big garage from bare, taped drywall to a clean, fully finished and painted room. See the before &amp; after and exactly what goes into finishing a space the right way — finishing seams, priming, and painting walls and ceiling.",
+    excerpt: "We took a big garage from bare, taped drywall to a clean, fully finished and painted room. See the before & after and exactly what goes into finishing a space the right way — finishing seams, priming, and painting walls and ceiling.",
     date: "June 2026",
     image: "/projects/garage-finishing-1.webp",
     alt: "Garage drywall finishing before and after in South Jersey",
@@ -79,7 +79,7 @@ const posts = [
   {
     slug: "sherwin-williams-snowbound-paint-south-jersey",
     title: "Discover the Timeless Appeal of Sherwin-Williams Snowbound Paint for South Jersey Homes",
-    excerpt: "Sherwin-Williams Snowbound is a versatile, crisp white paint color that&apos;s perfect for creating bright, inviting spaces in your South Jersey home. As professional painters in Mays Landing, NJ, we&apos;ve seen how this neutral shade enhances everything from modern kitchens to cozy living rooms. Learn why Snowbound could be the ideal choice for your next painting project with Perfect Finish Painters.",
+    excerpt: "Sherwin-Williams Snowbound is a versatile, crisp white paint color that's perfect for creating bright, inviting spaces in your South Jersey home. As professional painters in Mays Landing, NJ, we've seen how this neutral shade enhances everything from modern kitchens to cozy living rooms. Learn why Snowbound could be the ideal choice for your next painting project with Perfect Finish Painters.",
     date: "March 2026",
     image: "/images/blog/sherwin-williams-snowbound-paint-south-jersey.webp",
     alt: "Sherwin-Williams Snowbound white paint on interior walls in a South Jersey home",
@@ -95,7 +95,7 @@ const posts = [
   {
     slug: "exterior-painting-south-jersey",
     title: "Enhance Your Home's Curb Appeal with Professional Exterior Painting in South Jersey",
-    excerpt: "Discover how professional exterior painting can transform your home&apos;s appearance and protect it from the elements. At Perfect Finish Painters in Mays Landing, NJ, we specialize in high-quality exterior painting services tailored for South Jersey homes. Learn tips, benefits, and why choosing local experts makes all the difference.",
+    excerpt: "Discover how professional exterior painting can transform your home's appearance and protect it from the elements. At Perfect Finish Painters in Mays Landing, NJ, we specialize in high-quality exterior painting services tailored for South Jersey homes. Learn tips, benefits, and why choosing local experts makes all the difference.",
     date: "March 2026",
     image: "/deck-exterior-painting-before-after-south-jersey-nj.webp",
     alt: "Exterior deck painting before and after in South Jersey NJ",
@@ -103,7 +103,7 @@ const posts = [
   {
     slug: "difference-between-flat-and-satin-paint-finish",
     title: "Understanding the Difference Between Flat and Satin Paint Finishes",
-    excerpt: "Choosing the right paint finish can make a big difference in your home&apos;s appearance and durability. Flat and satin finishes are popular options, each with unique characteristics suited to different rooms and needs. In this post, we&apos;ll break down the key differences to help you decide what&apos;s best for your South Jersey home.",
+    excerpt: "Choosing the right paint finish can make a big difference in your home's appearance and durability. Flat and satin finishes are popular options, each with unique characteristics suited to different rooms and needs. In this post, we'll break down the key differences to help you decide what's best for your South Jersey home.",
     date: "March 2026",
     image: "/basement-room-painting-flooring-before-after-egg-harbor-township-nj.webp",
     alt: "Interior room painting before and after in Egg Harbor Township NJ",

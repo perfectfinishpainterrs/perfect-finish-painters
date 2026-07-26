@@ -94,8 +94,8 @@ export default function ReviewsPage() {
             </p>
             <div className="flex items-center justify-center gap-2 mb-8">
               <Stars count={5} />
-              <span className="text-[#1e3a5f] font-bold text-lg">5.0</span>
-              <span className="text-[#64748b]">({reviews.length} reviews)</span>
+              <span className="text-[#1e3a5f] font-bold text-lg">{GOOGLE_RATING}</span>
+              <span className="text-[#64748b]">({GOOGLE_REVIEW_COUNT} Google reviews)</span>
             </div>
             <a
               href="https://g.page/r/CYlKM00sLEMiEAI/review"

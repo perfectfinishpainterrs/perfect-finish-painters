@@ -148,10 +148,10 @@ export default function EnRootLayout({
     <html lang="en">
       <head>
         <meta name="google" content="nositelinkssearchbox" />
-        {/* Quiz lives at estimate-app-liart.vercel.app via 307 from /quiz —
+        {/* Quiz lives at app.senkulab.com via 307 from /quiz —
             warm DNS+TCP+TLS so the redirect doesn't pay a cold handshake. */}
-        <link rel="preconnect" href="https://estimate-app-liart.vercel.app" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://estimate-app-liart.vercel.app" />
+        <link rel="preconnect" href="https://app.senkulab.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://app.senkulab.com" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-822VB2RDNH"
           strategy="afterInteractive"

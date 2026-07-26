@@ -47,7 +47,7 @@ export default function FenceStainingPage() {
     "@type": "Service",
     name: "Fence Staining",
     description: "Professional fence staining, sealing, and painting in Atlantic County NJ. Pressure washing, prep, premium stain in semi-transparent or solid, and UV/water-resistant sealer. Serves cedar, pressure-treated, and picket fences.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/fence-staining",
   };

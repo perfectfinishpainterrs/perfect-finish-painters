@@ -5,12 +5,11 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   async redirects() {
+    // NOTE: /quiz must NOT be redirected here — config redirects run before
+    // filesystem routes, so an entry for /quiz would shadow
+    // src/app/(en)/quiz/page.tsx and its UTM-forwarding redirect to
+    // app.senkulab.com (which is exactly what happened until 2026-07-26).
     return [
-      {
-        source: "/quiz",
-        destination: "https://estimate-app-liart.vercel.app/quiz/perfect-finish-painters",
-        permanent: false,
-      },
       {
         // Legacy combined URL — the service is now split into two dedicated
         // pages (/deck-staining + /fence-staining). Point the old URL at deck
@@ -59,9 +58,14 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // public/ filenames are stable (not content-hashed) and photos DO get
+        // swapped in place — `immutable` would pin stale images in browsers/CDN
+        // for a year with no way to bust them. Next serves its own immutable
+        // header for hashed /_next/static assets, so this rule only covers
+        // public/ and must stay revalidatable.
         source: "/(.*)\\.(jpg|jpeg|png|gif|ico|svg|webp|woff|woff2)",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
         ],
       },
     ];

@@ -119,7 +119,7 @@ const projects = [
   {
     src: "/basement-stairway-renovation-before-after-hammonton-nj.webp",
     alt: "Before-and-after image of a basement staircase showing old green walls and worn wooden steps transformed to white walls and refinished steps.",
-    category: "Exterior",
+    category: "Interior",
     title: "Basement Stairwell remodel",
     desc: "Transformed a dingy basement stairwell by painting the walls white and refinishing the wooden steps for a bright, clean appearance.",
   },
@@ -288,6 +288,13 @@ export default function OurWorkGallery() {
     };
   }, [lightboxIndex, closeLightbox, goNext, goPrev]);
 
+  // Move keyboard focus into the dialog on open — aria-modal tells AT the
+  // background is inert, so focus must not be left behind on the grid.
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    document.getElementById("ourwork-lightbox")?.focus();
+  }, [lightboxIndex]);
+
   return (
     <>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -383,6 +390,7 @@ export default function OurWorkGallery() {
       {/* Lightbox */}
       {lightboxIndex !== null && filtered[lightboxIndex] && (
         <div
+          id="ourwork-lightbox"
           role="dialog"
           aria-modal="true"
           aria-label={`${filtered[lightboxIndex].title}`}

@@ -46,6 +46,7 @@ export default function FAQSection({
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between p-5 text-left cursor-pointer"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
                 >
                   <span className="font-semibold text-[#1e3a5f] pr-4 speakable-q">
                     {faq.name}
@@ -67,6 +68,8 @@ export default function FAQSection({
                   </svg>
                 </button>
                 <div
+                  id={`faq-answer-${i}`}
+                  inert={!isOpen}
                   className="grid transition-[grid-template-rows] duration-300 ease-in-out"
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >

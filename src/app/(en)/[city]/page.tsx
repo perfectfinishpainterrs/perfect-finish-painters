@@ -326,12 +326,6 @@ export default async function CityPage({ params }: CityPageProps) {
             We Also Serve These South Jersey Communities
           </h2>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href="/"
-              className="bg-white text-[#1e3a5f] px-4 py-2 rounded-full text-sm font-medium border border-[#e2e8f0] hover:border-[#2563eb] hover:text-[#2563eb] transition-colors"
-            >
-              Mays Landing, NJ
-            </Link>
             {otherAreas.map((other) => (
               <Link
                 key={other.slug}

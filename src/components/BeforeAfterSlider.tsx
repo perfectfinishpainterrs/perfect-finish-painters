@@ -67,7 +67,9 @@ export default function BeforeAfterSlider({
     <div
       ref={containerRef}
       className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3] select-none group"
-      style={{ touchAction: "none" }}
+      // pan-y keeps vertical page scrolling alive when a touch starts on the
+      // card; the slider itself only needs horizontal drags.
+      style={{ touchAction: "pan-y" }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}

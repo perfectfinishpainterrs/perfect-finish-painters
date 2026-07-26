@@ -45,7 +45,7 @@ export default function DrywallRepairPage() {
     "@type": "Service",
     name: "Drywall Repair",
     description: "Professional drywall repair including hole patching, crack repair, water damage restoration, and texture matching. Smooth, seamless finish ready for paint throughout South Jersey.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/drywall-repair",
   };

@@ -45,7 +45,7 @@ export default function PopcornCeilingRemovalPage() {
     "@type": "Service",
     name: "Popcorn Ceiling Removal",
     description: "Professional popcorn ceiling removal including dust containment, texture scraping, skim coating, priming, and painting for a smooth, modern ceiling finish throughout Atlantic County NJ.",
-    provider: { "@type": "HousePainter", name: "Perfect Finish Painters", url: "https://perfectfinishpainter.com" },
+    provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/popcorn-ceiling-removal",
     image: [
