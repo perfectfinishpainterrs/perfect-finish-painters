@@ -370,6 +370,19 @@ export default function Home() {
           <ScrollReveal>
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438] border-2 border-dashed border-[#2563eb]/50 px-6 py-8 sm:px-10 sm:py-9 flex flex-wrap items-center justify-between gap-6">
               <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[#2563eb]/20 blur-3xl" />
+              {/* Govee-style bulb string along the top edge */}
+              <div className="pointer-events-none absolute top-0 left-5 right-5 flex justify-between -translate-y-1/2" aria-hidden="true">
+                {Array.from({ length: 18 }).map((_, i) => {
+                  const c = ['#ff5252', '#ffd54f', '#69f0ae', '#40c4ff', '#e040fb'][i % 5];
+                  return (
+                    <span
+                      key={i}
+                      className="addon-bulb"
+                      style={{ background: c, boxShadow: `0 0 8px 1.5px ${c}`, animationDelay: `-${(i * 0.33).toFixed(2)}s` }}
+                    />
+                  );
+                })}
+              </div>
               <div className="relative max-w-2xl">
                 <span className="inline-block bg-[#2563eb]/20 text-[#93c5fd] text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
                   Seasonal Add-On &middot; Holiday-Ready by November
