@@ -265,6 +265,7 @@ export default async function CityPage({ params }: CityPageProps) {
               { title: "Fence Staining", desc: "Stain and seal wood fences to hold up against coastal weather.", href: "/fence-staining" },
               { title: "Garage Door Painting", desc: "Solid color or wood-grain stain finishes for instant curb appeal.", href: "/garage-door-painting" },
               { title: "Epoxy Floor Coating", desc: "Diamond-ground, 100%-solids epoxy for garages and basements.", href: "/epoxy-floor-coating" },
+              { title: "Govee Permanent Lighting", desc: "Year-round roofline lighting, installed straight and sealed by painters.", href: "/govee-permanent-lighting" },
               { title: "Shed Restoration", desc: "Bring your shed back to life with repair and painting.", href: "/shed-restoration" },
               { title: "Commercial Painting", desc: "Office, retail, and commercial property painting.", href: "/services" },
             ].map((service) => (

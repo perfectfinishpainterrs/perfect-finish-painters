@@ -4,7 +4,18 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const services = [
+interface ServiceCard {
+  title: string;
+  href: string;
+  // Omitted while a service has no real job photo yet — the card renders a
+  // branded placeholder instead of borrowing an unrelated or stock image.
+  image?: string;
+  shortDesc: string;
+  details: string[];
+  icon: React.ReactNode;
+}
+
+const services: ServiceCard[] = [
   {
     title: "Interior Painting",
     href: "/interior-painting",
@@ -196,6 +207,24 @@ const services = [
     ),
   },
   {
+    title: "Govee Permanent Lighting",
+    href: "/govee-permanent-lighting",
+    shortDesc: "Permanent roofline lighting installed by the crew that already works your fascia and trim.",
+    details: [
+      "Govee Permanent Outdoor Lights Pro",
+      "Aluminum channel mounted straight to the fascia",
+      "White-head stainless screws matched to white trim",
+      "Every fastener penetration sealed",
+      "Low-voltage cable routed & concealed",
+      "Govee Home app setup, scenes & schedules",
+    ],
+    icon: (
+      <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9h18M6 9v3m4-3v3m4-3v3m4-3v3M4 5h16a1 1 0 011 1v3H3V6a1 1 0 011-1z" />
+      </svg>
+    ),
+  },
+  {
     title: "Garage Door Painting",
     href: "/garage-door-painting",
     image: "/garage-door-painting-wood-stain-before-after-brigantine-nj.webp",
@@ -242,14 +271,20 @@ export default function ServicesSection() {
               >
                 {/* Image */}
                 <div className="relative h-36 overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={`${service.title} by Perfect Finish Painters in South Jersey`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/70 to-transparent" />
+                  {service.image ? (
+                    <>
+                      <Image
+                        src={service.image}
+                        alt={`${service.title} by Perfect Finish Painters in South Jersey`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/70 to-transparent" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] via-[#2563eb] to-[#0f2438]" />
+                  )}
                   <div className="absolute bottom-3 left-3 flex items-center gap-2">
                     <div className="w-8 h-8 bg-white/90 backdrop-blur rounded-md flex items-center justify-center">
                       {service.icon}

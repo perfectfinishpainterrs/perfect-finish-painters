@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const defaultDate = '2026-06-28'
   const homeDate = '2026-06-22'       // hero + tough jobs refresh
   const summerBlogDate = '2026-06-23' // new summer interior post
+  const goveeDate = '2026-08-19'      // new Govee permanent lighting service page
 
   const cityPages = serviceAreas.map((area) => ({
     url: `${baseUrl}/${area.slug}`,
@@ -129,6 +130,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/epoxy-floor-coating`,
       lastModified: defaultDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/govee-permanent-lighting`,
+      lastModified: goveeDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
