@@ -363,6 +363,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Seasonal add-on strip — Govee lighting upsell. Remove or swap the copy
+          when the season flips (interior work is the winter push). */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8" aria-labelledby="seasonal-addon-heading">
+        <div className="max-w-7xl mx-auto">
+          <ScrollReveal>
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f] to-[#0f2438] border-2 border-dashed border-[#2563eb]/50 px-6 py-8 sm:px-10 sm:py-9 flex flex-wrap items-center justify-between gap-6">
+              <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[#2563eb]/20 blur-3xl" />
+              <div className="relative max-w-2xl">
+                <span className="inline-block bg-[#2563eb]/20 text-[#93c5fd] text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
+                  Seasonal Add-On &middot; Holiday-Ready by November
+                </span>
+                <h2 id="seasonal-addon-heading" className="text-2xl sm:text-3xl font-bold text-white">
+                  Add permanent holiday lighting while we&rsquo;re on the ladders.
+                </h2>
+                <p className="text-white/80 mt-2">
+                  Painting your exterior this fall? Our crew is already at your roofline — add a
+                  Govee permanent lighting install in the same visit window. Color-matched track,
+                  app-controlled, up all year.
+                </p>
+              </div>
+              <Link
+                href="/govee-permanent-lighting"
+                className="relative inline-flex items-center gap-2 bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold px-6 py-3.5 rounded-xl transition-colors whitespace-nowrap"
+              >
+                See the Lighting Add-On
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Why Perfect Finish */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-7xl mx-auto">
