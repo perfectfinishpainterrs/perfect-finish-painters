@@ -212,6 +212,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/wallpaper-removal-repaint-south-jersey`,
+      lastModified: '2026-07-14',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/govee-permanent-lighting-painters-south-jersey`,
+      lastModified: '2026-08-04',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/exterior-painting-before-fall-south-jersey`,
+      lastModified: '2026-08-18',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/permanent-christmas-lights-south-jersey`,
+      lastModified: '2026-09-01',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/popcorn-ceiling-removal`,
       lastModified: defaultDate,
       changeFrequency: 'monthly',

@@ -29,6 +29,38 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "permanent-christmas-lights-south-jersey",
+    title: "What Are Permanent Christmas Lights - and Why Book in September?",
+    excerpt: "One professional Govee install and every December after turns on from your phone. How permanent roofline lighting works at the shore, why it survives salt air, and why September installs beat the November waitlist.",
+    date: "September 2026",
+    image: "/exterior-door-painting-black-linwood-nj.webp",
+    alt: "Freshly painted black front door and exterior trim in Linwood, NJ",
+  },
+  {
+    slug: "exterior-painting-before-fall-south-jersey",
+    title: "Is Fall the Last Good Window to Paint Your Home's Exterior?",
+    excerpt: "Late August through October is the friendliest exterior painting weather of the year in South Jersey - and the last chance to seal siding, trim and decks before winter storms do real damage. What fits before the season closes.",
+    date: "August 2026",
+    image: "/deck-exterior-painting-before-after-south-jersey-nj.webp",
+    alt: "Deck and exterior painting before and after in South Jersey",
+  },
+  {
+    slug: "govee-permanent-lighting-painters-south-jersey",
+    title: "Why Should a Painter Install Your Govee Permanent Lighting?",
+    excerpt: "Govee track mounts to your fascia - the exact surface painting crews work every week. Why sound-wood checks, color-matching and sealed penetrations make a painter the right installer for permanent roofline lighting.",
+    date: "August 2026",
+    image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.webp",
+    alt: "Exterior siding and trim work on an Egg Harbor Township NJ home",
+  },
+  {
+    slug: "wallpaper-removal-repaint-south-jersey",
+    title: "What Does Wallpaper Removal & Repaint Really Involve?",
+    excerpt: "Wallpaper removal is a wall-restoration job, not a peeling job. Steaming, glue washing, drywall repair and a proper repaint - what it takes to make an older South Jersey room look new again.",
+    date: "July 2026",
+    image: "/bathroom-wallpaper-removal-painting-before-after-absecon-nj.webp",
+    alt: "Bathroom wallpaper removal and repaint before and after in Absecon, NJ",
+  },
+  {
     slug: "summer-interior-painting-south-jersey",
     title: "Is Summer a Good Time to Repaint Your South Jersey Home's Interior?",
     excerpt: "Summer is one of the best windows to repaint inside — if you account for shore humidity. Here's how coastal moisture and your AC affect paint drying, and the smart way to schedule a summer interior project in Atlantic County.",
