@@ -16,7 +16,8 @@ export function middleware(request: NextRequest) {
   // /?q={search_term_string} stragglers from old SearchAction schema. Attribution
   // params must survive the strip or every ad/social click loses its campaign
   // tagging (GA4 campaign, Google Ads gclid, Meta fbclid) before gtag/fbq run.
-  const KEEP_PARAM = /^(utm_|gclid$|gbraid$|wbraid$|fbclid$|msclkid$|ttclid$|li_fat_id$|ref$|_gl$)/;
+  // `service` = quiz pre-select (BOOK NOW links) — /quiz forwards it to Senku.
+  const KEEP_PARAM = /^(utm_|gclid$|gbraid$|wbraid$|fbclid$|msclkid$|ttclid$|li_fat_id$|ref$|_gl$|service$)/;
   if (search && !pathname.startsWith("/api") && !pathname.startsWith("/_next")) {
     const keys = [...request.nextUrl.searchParams.keys()];
     if (!keys.some((k) => KEEP_PARAM.test(k))) {
