@@ -31,7 +31,7 @@ export default async function QuizPage({
   // the canonical senkulab host so the params aren't dropped by a redirect hop.
   const sp = await searchParams;
   const params = new URLSearchParams();
-  for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
+  for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "service"]) {
     const v = sp[k];
     if (typeof v === "string" && v) params.set(k, v);
   }

@@ -198,8 +198,8 @@ export default function GoveePermanentLightingPage() {
             Here&apos;s why a <strong className="text-[#1e3a5f]">painting contractor</strong> is the right crew for it: we are already on ladders at your fascia, trim, and roofline all season. The same crew that cuts a clean line where trim meets siding is the crew that keeps a light channel dead straight across the front of your house, sets screws flush without tearing paint, and seals every penetration the way exterior work is supposed to be sealed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
-              Get Free Estimate
+            <Link href="/quiz?service=govee-lighting" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+              BOOK NOW
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>
             <a href="tel:+16093774226" className="border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">
@@ -318,8 +318,8 @@ export default function GoveePermanentLightingPage() {
           <h2 className="text-3xl font-bold text-white mb-4">Done Hanging Lights Every December?</h2>
           <p className="text-white/70 text-lg mb-8">Free on-site roofline measurement and an itemized quote. Licensed and insured, NJ HIC 13VH14120900.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
-              Start 60-Second Quiz
+            <Link href="/quiz?service=govee-lighting" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+              BOOK NOW &mdash; 60-Second Quote
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>
             <a href="tel:+16093774226" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2">

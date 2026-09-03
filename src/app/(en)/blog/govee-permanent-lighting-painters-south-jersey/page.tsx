@@ -118,7 +118,7 @@ export default function GoveePaintersPost() {
             <h2 className="text-2xl font-bold text-[#1e3a5f] mb-3">Want Your Roofline Done Before the Holidays?</h2>
             <p className="text-[#64748b] mb-6">Color-matched track, sealed penetrations, full app setup — installed by the crew that works your trim every day.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quiz" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
+              <Link href="/quiz?service=govee-lighting" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
                 Get Free Estimate
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </Link>
