@@ -74,8 +74,8 @@ const hardwarePhotos: { label: string; caption: string; src?: string; alt?: stri
     caption: "A white-head stainless screw set flush in white fascia — close enough to see there's no torn paint and no proud head to catch water.",
   },
   {
-    label: "Sealed penetration",
-    caption: "A fastener hole ringed with exterior-grade sealant before the screw lands — water never gets a path into the wood.",
+    label: "Cable routing detail",
+    caption: "Low-voltage cable run tight along the trim line with UV-rated clips — nothing droops, nothing shows.",
   },
   {
     label: "Controller in its enclosure",
@@ -99,7 +99,7 @@ export default function GoveePermanentLightingPage() {
     "@type": "Service",
     name: "Govee Permanent Outdoor Lighting Installation",
     description:
-      "Professional Govee permanent outdoor lighting installation in Atlantic County NJ. Roofline measurement and run planning, aluminum mounting channel fastened to the fascia with white-head stainless exterior screws, concealed low-voltage cable routing, sealed penetrations, weatherproof controller mounting, and Govee Home app setup with scenes and schedules.",
+      "Professional Govee permanent outdoor lighting installation in Atlantic County NJ. Roofline measurement and run planning, aluminum mounting channel fastened to the fascia with white-head stainless exterior screws, concealed low-voltage cable routing, weatherproof controller mounting, and Govee Home app setup with scenes and schedules.",
     provider: { "@id": "https://perfectfinishpainter.com/#business" },
     areaServed: areaServedCities,
     url: "https://perfectfinishpainter.com/govee-permanent-lighting",
@@ -118,7 +118,7 @@ export default function GoveePermanentLightingPage() {
         name: "Will installing permanent lights damage my fascia or paint?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The channel is fastened into the fascia, so yes, there are screw penetrations — that is true of any permanent roofline lighting. What matters is how they're made and sealed. We pre-plan the screw spacing so fasteners land in solid material, drive them flush without crushing the paint film, and seal every penetration with exterior-grade sealant so water never sits in a hole. Painting is our day job; we're not going to leave torn paint or an unsealed hole in wood we may be repainting for you later.",
+          text: "The channel is fastened into the fascia, so yes, there are screw penetrations — that is true of any permanent roofline lighting. What matters is how they're made. We pre-plan the screw spacing so fasteners land in solid material and drive them flush without crushing the paint film. Painting is our day job; we're not going to leave torn paint in wood we may be repainting for you later.",
         },
       },
       {
@@ -174,8 +174,8 @@ export default function GoveePermanentLightingPage() {
       body: "Light modules snap into the channel and the low-voltage cable gets routed behind downspouts, along trim lines, and under the roof edge with UV-rated clips so nothing droops or swings in a nor'easter. Cable that has to cross open fascia gets run tight to a trim edge where it disappears.",
     },
     {
-      title: "Penetrations sealed and controller mounted",
-      body: "Every screw penetration gets exterior-grade sealant, and the controller goes into a weatherproof enclosure mounted at the outlet. Sealing exterior penetrations correctly is standard painting work for us — same materials, same discipline as caulking a window or a trim joint before a repaint.",
+      title: "Controller mounted and wired",
+      body: "The controller goes into a weatherproof enclosure mounted at the exterior outlet, with the low-voltage feed connected and dressed so nothing shows. Same discipline we bring to the finishing details on a repaint — done clean, done once.",
     },
     {
       title: "Govee Home app setup and homeowner walkthrough",
@@ -188,7 +188,6 @@ export default function GoveePermanentLightingPage() {
     { name: "Aluminum mounting channel", note: "Carries and protects the modules, and gives the run its straight line along the fascia." },
     { name: "White-head stainless exterior screws", note: "Corrosion-resistant for shore air, with heads that vanish against white fascia instead of speckling it." },
     { name: "UV-rated clips and cable ties", note: "Hold cable tight to trim lines and downspouts without going brittle after a season of sun." },
-    { name: "Exterior-grade sealant", note: "Every fastener penetration sealed so water never sits in a hole in your fascia." },
     { name: "Low-voltage extension cabling", note: "Bridges runs and reaches the controller when the outlet isn't where the roofline starts." },
     { name: "Weatherproof controller enclosure", note: "Keeps the controller and its plug dry at the exterior GFCI, year-round." },
   ];
@@ -226,7 +225,7 @@ export default function GoveePermanentLightingPage() {
             Govee permanent outdoor lights go up once. The track lives under your roofline year-round, and the colors change from your phone — warm white for ordinary evenings, orange in October, red and green in December, team colors on a Sunday. No ladder, no storage bin, no untangling.
           </p>
           <p className="text-[#64748b] text-lg mb-8 leading-relaxed">
-            Here&apos;s why a <strong className="text-[#1e3a5f]">painting contractor</strong> is the right crew for it: we are already on ladders at your fascia, trim, and roofline all season. The same crew that cuts a clean line where trim meets siding is the crew that keeps a light channel dead straight across the front of your house, sets screws flush without tearing paint, and seals every penetration the way exterior work is supposed to be sealed.
+            Here&apos;s why a <strong className="text-[#1e3a5f]">painting contractor</strong> is the right crew for it: we are already on ladders at your fascia, trim, and roofline all season. The same crew that cuts a clean line where trim meets siding is the crew that keeps a light channel dead straight across the front of your house, sets screws flush without tearing paint.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/quiz?service=govee-lighting" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
@@ -252,7 +251,7 @@ export default function GoveePermanentLightingPage() {
               "Aluminum channel mounted straight along the fascia",
               "White-head stainless screws color-matched to trim",
               "Low-voltage cable routed & concealed on trim lines",
-              "Every fastener penetration sealed against water",
+              "Screws driven flush into solid fascia — no torn paint",
               "Weatherproof controller mounted at an exterior GFCI",
               "Govee Home app setup, scenes, schedules & walkthrough",
             ].map((item) => (
@@ -368,7 +367,7 @@ export default function GoveePermanentLightingPage() {
             We install permanent roofline lighting in <Link href="/painters-mays-landing-nj" className="text-[#2563eb] hover:underline">Mays Landing</Link>, <Link href="/painters-egg-harbor-township-nj" className="text-[#2563eb] hover:underline">Egg Harbor Township</Link>, <Link href="/painters-galloway-nj" className="text-[#2563eb] hover:underline">Galloway</Link>, <Link href="/painters-somers-point-nj" className="text-[#2563eb] hover:underline">Somers Point</Link>, <Link href="/painters-brigantine-nj" className="text-[#2563eb] hover:underline">Brigantine</Link>, <Link href="/painters-northfield-nj" className="text-[#2563eb] hover:underline">Northfield</Link>, and across Atlantic County. Shore-area homes get extra attention at the fasteners — salt air chews through plated hardware, which is why the screws that go into your fascia are stainless.
           </p>
           <p className="text-[#64748b] text-lg leading-relaxed">
-            Planning an <Link href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior repaint</Link>? Do it before the lighting goes up. Fresh fascia and trim means the channel mounts to sound, sealed wood, and the screw heads match brand-new paint instead of a color that&apos;s eight years faded. The same visit pairs naturally with <Link href="/garage-door-painting" className="text-[#2563eb] hover:underline">garage door painting</Link>, <Link href="/deck-staining" className="text-[#2563eb] hover:underline">deck staining</Link>, or <Link href="/shed-restoration" className="text-[#2563eb] hover:underline">shed restoration</Link> while our ladders are already at your house.
+            Planning an <Link href="/exterior-painting" className="text-[#2563eb] hover:underline">exterior repaint</Link>? Do it before the lighting goes up. Fresh fascia and trim means the channel mounts to sound, freshly painted wood, and the screw heads match brand-new paint instead of a color that&apos;s eight years faded. The same visit pairs naturally with <Link href="/garage-door-painting" className="text-[#2563eb] hover:underline">garage door painting</Link>, <Link href="/deck-staining" className="text-[#2563eb] hover:underline">deck staining</Link>, or <Link href="/shed-restoration" className="text-[#2563eb] hover:underline">shed restoration</Link> while our ladders are already at your house.
           </p>
         </div>
       </section>
