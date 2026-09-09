@@ -105,7 +105,7 @@ export default function PermanentChristmasLightsPost() {
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Book in September Instead of November?</h2>
             <p className="text-lg leading-relaxed">
-              Three reasons. First, the calendar: install demand explodes after the first cold weekend, and late bookers get waitlisted past the holidays entirely. Second, the weather: September installs happen in shirt-sleeve conditions with dry fascia, ideal for clean fastening and sealing. Third, the trim itself: if your fascia needs repair or repainting — and after a shore summer, plenty do — there&apos;s still time to fix it before the track goes on. Fresh <Link href="/exterior-painting" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">exterior paint</Link> plus color-matched track is the best-looking version of this upgrade.
+              Three reasons. First, the calendar: install demand explodes after the first cold weekend, and late bookers get waitlisted past the holidays entirely. Second, the weather: September installs happen in shirt-sleeve conditions with dry fascia, ideal for clean, precise fastening. Third, the trim itself: if your fascia needs repair or repainting — and after a shore summer, plenty do — there&apos;s still time to fix it before the track goes on. Fresh <Link href="/exterior-painting" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">exterior paint</Link> plus color-matched track is the best-looking version of this upgrade.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Does the Process Look Like?</h2>
