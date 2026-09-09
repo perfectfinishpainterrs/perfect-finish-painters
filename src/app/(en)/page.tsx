@@ -385,10 +385,10 @@ export default function Home() {
               </div>
               <div className="relative max-w-2xl">
                 <span className="inline-block bg-[#2563eb]/20 text-[#93c5fd] text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
-                  Seasonal Add-On &middot; Holiday-Ready by November
+                  Seasonal Add-On &middot; Govee&reg; Permanent Lighting
                 </span>
                 <h2 id="seasonal-addon-heading" className="text-2xl sm:text-3xl font-bold text-white">
-                  Add permanent holiday lighting while we&rsquo;re on the ladders.
+                  Add Govee permanent holiday lighting while we&rsquo;re on the ladders.
                 </h2>
                 <p className="text-white/80 mt-2">
                   Painting your exterior this fall? Our crew is already at your roofline — add a

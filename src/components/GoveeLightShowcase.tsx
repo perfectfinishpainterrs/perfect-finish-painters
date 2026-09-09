@@ -7,7 +7,7 @@
 //   2. Day ↔ Night reveal — drag the handle across the SAME Egg Harbor
 //      Township stucco house: invisible hardware by day, full scene at night.
 // All photos are real installs. No fabricated imagery.
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
 
 const scenes = [
@@ -64,7 +64,16 @@ const scenes = [
 export default function GoveeLightShowcase() {
   const [active, setActive] = useState(0);
   const [split, setSplit] = useState(50);
+  const [auto, setAuto] = useState(true);
   const trackRef = useRef<HTMLDivElement>(null);
+
+  // scenes rotate on their own every 4.5s until the visitor takes over
+  useEffect(() => {
+    if (!auto) return;
+    const t = setInterval(() => setActive((a) => (a + 1) % scenes.length), 4500);
+    return () => clearInterval(t);
+  }, [auto]);
+  const pick = (i: number) => { setAuto(false); setActive(i); };
 
   const onMove = useCallback((clientX: number) => {
     const el = trackRef.current;
@@ -84,7 +93,10 @@ export default function GoveeLightShowcase() {
         {/* scene switcher */}
         <div className="rounded-2xl overflow-hidden shadow-lg border border-[#e2e8f0] bg-[#0b1220]">
           <div className="relative aspect-[4/3] sm:aspect-[16/10]">
-            <Image key={scene.key} src={scene.src} alt={scene.alt} fill priority={false} sizes="(max-width: 896px) 100vw, 896px" className="object-cover" />
+            {/* stacked crossfade — opacity swap instead of a hard image switch */}
+            {scenes.map((s, i) => (
+              <Image key={s.key} src={s.src} alt={i === active ? s.alt : ""} fill priority={false} sizes="(max-width: 896px) 100vw, 896px" className={`object-cover transition-opacity duration-700 ${i === active ? "opacity-100" : "opacity-0"}`} />
+            ))}
           </div>
           <div className="p-4 flex flex-col sm:flex-row sm:items-center gap-4 bg-white">
             <div className="flex flex-wrap gap-2" role="tablist" aria-label="Lighting scenes">
@@ -93,7 +105,7 @@ export default function GoveeLightShowcase() {
                   key={s.key}
                   role="tab"
                   aria-selected={i === active}
-                  onClick={() => setActive(i)}
+                  onClick={() => pick(i)}
                   className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all ${i === active ? "border-[#2563eb] text-[#1e3a5f] shadow-sm scale-105" : "border-[#e2e8f0] text-[#64748b] hover:border-[#94a3b8]"}`}
                 >
                   <span aria-hidden className="inline-block w-3.5 h-3.5 rounded-full border border-black/10" style={{ background: s.chip }} />

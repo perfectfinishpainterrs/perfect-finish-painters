@@ -115,8 +115,8 @@ select:focus-visible {
 /* Govee-style bulb string on the seasonal add-on banner (homepage). Color-cycles
    in a chase wave; reduced motion keeps the static multicolor inline colors. */
 .addon-bulb {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -126,9 +126,9 @@ select:focus-visible {
   }
 }
 @keyframes addon-govee {
-  0%, 100% { background: #ff5252; box-shadow: 0 0 9px 2px #ff5252; }
-  20% { background: #ffd54f; box-shadow: 0 0 9px 2px #ffd54f; }
-  40% { background: #69f0ae; box-shadow: 0 0 9px 2px #69f0ae; }
-  60% { background: #40c4ff; box-shadow: 0 0 9px 2px #40c4ff; }
-  80% { background: #e040fb; box-shadow: 0 0 9px 2px #e040fb; }
+  0%, 100% { background: #ff5252; box-shadow: 0 0 13px 3px #ff5252; }
+  20% { background: #ffd54f; box-shadow: 0 0 13px 3px #ffd54f; }
+  40% { background: #69f0ae; box-shadow: 0 0 13px 3px #69f0ae; }
+  60% { background: #40c4ff; box-shadow: 0 0 13px 3px #40c4ff; }
+  80% { background: #e040fb; box-shadow: 0 0 13px 3px #e040fb; }
 }
