@@ -47,7 +47,7 @@ const posts = [
   {
     slug: "govee-permanent-lighting-painters-south-jersey",
     title: "Why Should a Painter Install Your Govee Permanent Lighting?",
-    excerpt: "Govee track mounts to your fascia - the exact surface painting crews work every week. Why sound-wood checks, color-matching and sealed penetrations make a painter the right installer for permanent roofline lighting.",
+    excerpt: "Govee track mounts to your fascia - the exact surface painting crews work every week. Why sound-wood checks, color-matching and clean flush fastening make a painter the right installer for permanent roofline lighting.",
     date: "August 2026",
     image: "/exterior-siding-staining-before-after-egg-harbor-township-nj.webp",
     alt: "Exterior siding and trim work on an Egg Harbor Township NJ home",

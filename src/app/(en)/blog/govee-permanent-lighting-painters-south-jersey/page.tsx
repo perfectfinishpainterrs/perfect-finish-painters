@@ -105,7 +105,7 @@ export default function GoveePaintersPost() {
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Does Our Install Include?</h2>
             <p className="text-lg leading-relaxed">
-              Roofline measurement and run planning, aluminum channel fastened with white-head stainless screws, concealed low-voltage cable routing, sealed penetrations, a weatherproof controller mounted by your exterior outlet, and full Govee Home app setup — scenes, schedules and all. The complete walkthrough, materials list and FAQs are on our <Link href="/govee-permanent-lighting" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Govee permanent lighting page</Link>. Every penetration gets sealed with the same exterior-grade care we bring to caulking a paint job, because at the shore, water always finds sloppy work.
+              Roofline measurement and run planning, aluminum channel fastened with white-head stainless screws, concealed low-voltage cable routing, a weatherproof controller mounted by your exterior outlet, and full Govee Home app setup — scenes, schedules and all. The complete walkthrough, materials list and FAQs are on our <Link href="/govee-permanent-lighting" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Govee permanent lighting page</Link>. Every connection and cable run gets the same exterior-grade care we bring to a paint job, because at the shore, water always finds sloppy work.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">When Is the Right Time to Book?</h2>
@@ -116,7 +116,7 @@ export default function GoveePaintersPost() {
 
           <div className="mt-12 bg-[#f1f5f9] rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-[#1e3a5f] mb-3">Want Your Roofline Done Before the Holidays?</h2>
-            <p className="text-[#64748b] mb-6">Color-matched track, sealed penetrations, full app setup — installed by the crew that works your trim every day.</p>
+            <p className="text-[#64748b] mb-6">Color-matched track, clean concealed wiring, full app setup — installed by the crew that works your trim every day.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quiz?service=govee-lighting" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-lg">
                 Get Free Estimate

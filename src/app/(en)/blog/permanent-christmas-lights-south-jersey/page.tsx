@@ -100,7 +100,7 @@ export default function PermanentChristmasLightsPost() {
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Do They Hold Up at the Shore?</h2>
             <p className="text-lg leading-relaxed">
-              Better than anything you hang each year. Traditional strands die at the shore because every connection point is exposed to salt fog for months. A permanent system replaces dozens of exposed junctions with one sealed low-voltage run, stainless hardware and a weatherproof controller. It&apos;s the same logic we apply to exterior coatings in towns like <Link href="/painters-brigantine-nj" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Brigantine</Link> and <Link href="/painters-somers-point-nj" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Somers Point</Link>: fewer weak points, better materials, sealed against wind-driven rain.
+              Better than anything you hang each year. Traditional strands die at the shore because every connection point is exposed to salt fog for months. A permanent system replaces dozens of exposed junctions with one protected low-voltage run inside the channel, stainless hardware and a weatherproof controller. It&apos;s the same logic we apply to exterior coatings in towns like <Link href="/painters-brigantine-nj" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Brigantine</Link> and <Link href="/painters-somers-point-nj" className="text-[#2563eb] underline hover:text-[#1d4ed8] transition-colors">Somers Point</Link>: fewer weak points, better materials, built for wind-driven rain.
             </p>
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">Why Book in September Instead of November?</h2>
@@ -110,7 +110,7 @@ export default function PermanentChristmasLightsPost() {
 
             <h2 className="text-2xl font-bold text-[#1e3a5f] mt-10 mb-4">What Does the Process Look Like?</h2>
             <p className="text-lg leading-relaxed">
-              We measure your roofline and plan the runs, check the fascia is sound, mount the channel with white-head stainless screws, route and conceal the low-voltage cable, seal every penetration, mount the weatherproof controller by your exterior outlet, and set up the Govee Home app with you — scenes, schedules, the works. Most single-family installs are done in a day. By the time your neighbors are untangling strands in the cold, you&apos;re picking a scene from the couch.
+              We measure your roofline and plan the runs, check the fascia is sound, mount the channel with white-head stainless screws, route and conceal the low-voltage cable, mount the weatherproof controller by your exterior outlet, and set up the Govee Home app with you — scenes, schedules, the works. Most single-family installs are done in a day. By the time your neighbors are untangling strands in the cold, you&apos;re picking a scene from the couch.
             </p>
           </div>
 
