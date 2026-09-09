@@ -35,20 +35,28 @@ export const metadata: Metadata = {
 // to an entry and the tile swaps from placeholder to a real image, no markup change.
 const installPhotos: { label: string; caption: string; src?: string; alt?: string }[] = [
   {
-    label: "Fascia track run",
-    caption: "Aluminum channel fastened along the fascia, straight to the roofline.",
+    label: "Warm white, every night",
+    caption: "Classic warm-white scene tracing the rooflines and dormers — subtle by day, architectural by night.",
+    src: "/govee-permanent-lighting-warm-white-stone-ranch-south-jersey-nj.webp",
+    alt: "Warm white Govee permanent lighting outlining the rooflines of a stone-front ranch home at night",
   },
   {
-    label: "Screw detail",
-    caption: "White-head stainless screws set flush against white trim.",
+    label: "Holiday red, one tap",
+    caption: "The same channel run switched to a full red holiday scene from the Govee Home app — no ladders in December.",
+    src: "/govee-permanent-lighting-red-estate-porch-south-jersey-nj.webp",
+    alt: "Two-story home glowing red from Govee permanent eave lighting for the holidays",
   },
   {
-    label: "Controller mount",
-    caption: "Weatherproof controller enclosure beside the exterior GFCI.",
+    label: "Team colors",
+    caption: "Cool blue game-night scene — the fixtures disappear against the trim until you turn them on.",
+    src: "/govee-permanent-lighting-blue-roofline-south-jersey-nj.webp",
+    alt: "Blue Govee permanent lighting across the gables and garage line of a two-story home",
   },
   {
-    label: "Lit at dusk",
-    caption: "First evening scene set from the Govee Home app.",
+    label: "Full color zones",
+    caption: "Per-zone color control lets one house run multiple colors at once — gables, eaves, and porch each their own.",
+    src: "/govee-permanent-lighting-multicolor-ranch-south-jersey-nj.webp",
+    alt: "Ranch home with multicolor Govee permanent lighting zones in red, green, and purple",
   },
 ];
 

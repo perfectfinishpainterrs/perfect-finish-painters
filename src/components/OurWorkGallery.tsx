@@ -249,9 +249,122 @@ const projects = [
     title: "Framing to Paint-Ready",
     desc: "Open studs to fully primed walls — drywall hung, taped, finished, and primed without juggling multiple contractors.",
   },
+  // ── Govee permanent lighting installs (photos added 2026-09-08) ──
+  {
+    src: "/govee-permanent-lighting-warm-white-stone-ranch-south-jersey-nj.webp",
+    alt: "Warm white permanent lighting outlining the rooflines and dormers of a stone-front ranch at night",
+    category: "Lighting",
+    title: "Warm White Roofline",
+    desc: "Permanent eave lighting in classic warm white — architectural glow, every night.",
+  },
+  {
+    src: "/govee-permanent-lighting-blue-roofline-south-jersey-nj.webp",
+    alt: "Two-story home with blue permanent lighting across the gables and garage line",
+    category: "Lighting",
+    title: "Blue Scene, One Tap",
+    desc: "Full-house blue scene set from the app — fixtures invisible by day.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-estate-porch-south-jersey-nj.webp",
+    alt: "Large home glowing red from permanent eave lighting for the holidays",
+    category: "Lighting",
+    title: "Holiday Red Estate",
+    desc: "Whole-home red holiday scene with no December ladders.",
+  },
+  {
+    src: "/govee-permanent-lighting-multicolor-ranch-south-jersey-nj.webp",
+    alt: "Ranch home with multicolor permanent lighting zones in red, green, and purple",
+    category: "Lighting",
+    title: "Multicolor Zones",
+    desc: "Per-zone control runs multiple colors on one roofline.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-white-holiday-stucco-south-jersey-nj.webp",
+    alt: "Stucco two-story with red permanent eave lighting and white accent lighting at dusk",
+    category: "Lighting",
+    title: "Candy-Cane Classic",
+    desc: "Red eave scene over warm white accents on a stucco two-story.",
+  },
+  {
+    src: "/govee-permanent-lighting-cool-white-wreaths-south-jersey-nj.webp",
+    alt: "Stone-front home with cool white permanent lighting on every dormer and gable",
+    category: "Lighting",
+    title: "Cool White Dormers",
+    desc: "Crisp cool-white outline across a many-gabled stone front.",
+  },
+  {
+    src: "/govee-permanent-lighting-green-blue-wreath-garage-south-jersey-nj.webp",
+    alt: "Home with green and blue permanent lighting scenes and a lit wreath over the garage",
+    category: "Lighting",
+    title: "Green & Blue Split",
+    desc: "Two-tone scene — green garage wash under a blue gable run.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-estate-south-jersey-nj.webp",
+    alt: "Large estate home fully outlined in red permanent lighting at night",
+    category: "Lighting",
+    title: "Red Estate Outline",
+    desc: "Every peak and eave traced in red on a five-gable estate.",
+  },
+  {
+    src: "/govee-permanent-lighting-pink-splitlevel-reindeer-south-jersey-nj.webp",
+    alt: "Split-level home washed in pink permanent lighting with holiday yard decorations",
+    category: "Lighting",
+    title: "Pink Scene",
+    desc: "Full-wash pink scene proving the range beyond classic holiday colors.",
+  },
+  {
+    src: "/govee-permanent-lighting-soft-white-gables-south-jersey-nj.webp",
+    alt: "Multi-gable home outlined in soft white permanent lighting",
+    category: "Lighting",
+    title: "Soft White Gables",
+    desc: "Understated soft-white outline — the everyday setting.",
+  },
+  {
+    src: "/govee-permanent-lighting-pink-blue-red-dormers-south-jersey-nj.webp",
+    alt: "Home with pink, blue, and red permanent lighting zones across dormers at night",
+    category: "Lighting",
+    title: "Three-Zone Color",
+    desc: "Pink, blue, and red running simultaneously on separate zones.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-garage-glow-south-jersey-nj.webp",
+    alt: "Garage and rooflines washed in deep red permanent lighting",
+    category: "Lighting",
+    title: "Red Garage Wash",
+    desc: "Deep red scene wrapping the garage wing and eaves.",
+  },
+  {
+    src: "/govee-permanent-lighting-tricolor-white-red-green-south-jersey-nj.webp",
+    alt: "Home with white, red, and green permanent lighting sections at night",
+    category: "Lighting",
+    title: "Tri-Color Sections",
+    desc: "White, red, and green blocks across one continuous run.",
+  },
+  {
+    src: "/govee-permanent-lighting-patriotic-red-white-blue-south-jersey-nj.webp",
+    alt: "Home in red, white, and blue permanent lighting with patriotic yard decorations",
+    category: "Lighting",
+    title: "Red, White & Blue",
+    desc: "Patriotic scene for the Fourth — same lights, new holiday.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-accent-two-story-south-jersey-nj.webp",
+    alt: "Two-story home with red permanent accent lighting over holiday string lights",
+    category: "Lighting",
+    title: "Red Accent Line",
+    desc: "Permanent red accent row layered over traditional holiday décor.",
+  },
+  {
+    src: "/govee-permanent-lighting-red-eaves-daylight-south-jersey-nj.webp",
+    alt: "Daylight view of red permanent lighting dots along the eaves of a stucco home",
+    category: "Lighting",
+    title: "Daylight Look",
+    desc: "What the install looks like by day — a clean dotted line, no wires.",
+  },
 ];
 
-const categories = ["All", "Interior", "Exterior", "Drywall", "Flooring", "Commercial", "Specialty"];
+const categories = ["All", "Interior", "Exterior", "Drywall", "Flooring", "Commercial", "Specialty", "Lighting"];
 
 export default function OurWorkGallery() {
   const [filter, setFilter] = useState("All");
