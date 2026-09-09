@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
 import FloatingCTA from "@/components/FloatingCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import GoveeLightShowcase from "@/components/GoveeLightShowcase";
 
 export const metadata: Metadata = {
   title: "Govee Permanent Lights Atlantic County NJ | Perfect Finish",
@@ -37,26 +38,48 @@ const installPhotos: { label: string; caption: string; src?: string; alt?: strin
   {
     label: "Warm white, every night",
     caption: "Classic warm-white scene tracing the rooflines and dormers — subtle by day, architectural by night.",
-    src: "/govee-permanent-lighting-warm-white-stone-ranch-south-jersey-nj.webp",
+    src: "/govee-permanent-lighting-warm-white-stone-ranch-linwood-nj.webp",
     alt: "Warm white Govee permanent lighting outlining the rooflines of a stone-front ranch home at night",
   },
   {
     label: "Holiday red, one tap",
     caption: "The same channel run switched to a full red holiday scene from the Govee Home app — no ladders in December.",
-    src: "/govee-permanent-lighting-red-estate-porch-south-jersey-nj.webp",
+    src: "/govee-permanent-lighting-red-estate-porch-mays-landing-nj.webp",
     alt: "Two-story home glowing red from Govee permanent eave lighting for the holidays",
   },
   {
     label: "Team colors",
     caption: "Cool blue game-night scene — the fixtures disappear against the trim until you turn them on.",
-    src: "/govee-permanent-lighting-blue-roofline-south-jersey-nj.webp",
+    src: "/govee-permanent-lighting-blue-roofline-brigantine-nj.webp",
     alt: "Blue Govee permanent lighting across the gables and garage line of a two-story home",
   },
   {
     label: "Full color zones",
     caption: "Per-zone color control lets one house run multiple colors at once — gables, eaves, and porch each their own.",
-    src: "/govee-permanent-lighting-multicolor-ranch-south-jersey-nj.webp",
+    src: "/govee-permanent-lighting-multicolor-ranch-galloway-nj.webp",
     alt: "Ranch home with multicolor Govee permanent lighting zones in red, green, and purple",
+  },
+];
+
+// Close-up hardware shots — the proof-of-craft tier. Same drop-in contract as
+// installPhotos: add `src`/`alt` when the crew shoots them and the tile swaps
+// from placeholder to photo, no markup change.
+const hardwarePhotos: { label: string; caption: string; src?: string; alt?: string }[] = [
+  {
+    label: "Mounting bracket & channel clip",
+    caption: "The bracket that locks each module at a set angle in the channel — it's why every light aims the same way down the whole run instead of scattering.",
+  },
+  {
+    label: "Flush screw detail",
+    caption: "A white-head stainless screw set flush in white fascia — close enough to see there's no torn paint and no proud head to catch water.",
+  },
+  {
+    label: "Sealed penetration",
+    caption: "A fastener hole ringed with exterior-grade sealant before the screw lands — water never gets a path into the wood.",
+  },
+  {
+    label: "Controller in its enclosure",
+    caption: "The weatherproof enclosure mounted beside the exterior GFCI — dry, tucked out of the sightline, serviceable without a ladder.",
   },
 ];
 
@@ -217,6 +240,8 @@ export default function GoveePermanentLightingPage() {
         </div>
       </section>
 
+      <GoveeLightShowcase />
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal><h2 className="text-3xl font-bold text-[#1e3a5f] mb-8">What&apos;s Included in a Govee Permanent Lighting Install?</h2></ScrollReveal>
@@ -275,6 +300,33 @@ export default function GoveePermanentLightingPage() {
               </li>
             ))}
           </ul>
+
+          <ScrollReveal><h3 className="text-2xl font-bold text-[#1e3a5f] mt-12 mb-4">The Hardware, Up Close</h3></ScrollReveal>
+          <p className="text-[#64748b] mb-6 leading-relaxed">
+            The difference between a clean install and a callback lives in the details you can only see from a ladder. Close-up shots from our next installs land here — each tile explains what the part is for.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {hardwarePhotos.map((photo) => (
+              <figure key={photo.label} className="rounded-2xl overflow-hidden border border-[#e2e8f0] bg-white shadow-sm">
+                {photo.src ? (
+                  <Image src={photo.src} alt={photo.alt ?? photo.caption} width={600} height={400} loading="lazy" className="w-full h-auto" />
+                ) : (
+                  <div
+                    className="relative h-40 flex flex-col items-center justify-center text-center px-4 bg-gradient-to-br from-[#0f2438] via-[#1e3a5f] to-[#2563eb]"
+                    role="img"
+                    aria-label={`Placeholder — close-up photo coming soon: ${photo.label}`}
+                  >
+                    <svg className="w-7 h-7 text-white/70 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                    <span className="text-white font-semibold text-sm">{photo.label}</span>
+                    <span className="text-white/70 text-xs mt-1">Close-up coming soon</span>
+                  </div>
+                )}
+                <figcaption className="p-4 text-sm text-[#64748b]">{photo.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

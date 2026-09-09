@@ -209,6 +209,7 @@ const services: ServiceCard[] = [
   {
     title: "Govee Permanent Lighting",
     href: "/govee-permanent-lighting",
+    image: "/govee-permanent-lighting-warm-white-stone-ranch-linwood-nj.webp",
     shortDesc: "Permanent roofline lighting installed by the crew that already works your fascia and trim.",
     details: [
       "Govee Permanent Outdoor Lights Pro",
